@@ -62,7 +62,7 @@ function ajax(param, tipe, jn_bank ){
       {
     	 var x= document.forms[ 0 ].theEvent.value;
     	 var id= document.getElementById('selectedSmcId').value;
-    	  alert(x);
+    	//  alert(x);
     	  
     	
             if( document.forms[ 0 ].theEvent.value == 'onSelectRow2' )
@@ -73,7 +73,7 @@ function ajax(param, tipe, jn_bank ){
             }
             if( document.forms[ 0 ].theEvent.value == 'onSelectRow3' )
             {
-            	alert('tes');
+            //	alert('tes');
                 document.getElementById('targetParam').name = CEPR01030101JSP;
                 document.getElementById('formpost').submit();
             }  
