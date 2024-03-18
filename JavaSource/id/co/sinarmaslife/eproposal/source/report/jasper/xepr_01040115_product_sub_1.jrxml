@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040115_product_sub_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.HGuides" value="401"/>
+	<parameter name="tglProposal" class="java.lang.String">
+		<parameterDescription><![CDATA[tglProposal]]></parameterDescription>
+	</parameter>
+	<parameter name="totalDana" class="java.lang.String">
+		<parameterDescription><![CDATA[totalDana]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPersentaseUp" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPersentaseUp]]></parameterDescription>
+	</parameter>
+	<parameter name="namaAnak" class="java.lang.String">
+		<parameterDescription><![CDATA[namaAnak]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaAnak" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaAnak]]></parameterDescription>
+	</parameter>
+	<parameter name="namaOrangTua" class="java.lang.String">
+		<parameterDescription><![CDATA[namaOrangTua]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaOrangTua" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaOrangTua]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPembayaranPremi" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPembayaranPremi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="umur_tt" class="java.lang.Integer">
+		<parameterDescription><![CDATA[umur_tt]]></parameterDescription>
+	</parameter>
+	<parameter name="tingakatan" class="java.lang.String">
+		<parameterDescription><![CDATA[tingakatan]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{umur_tt}.intValue()<4?"tingkat dasar":$P{umur_tt}.intValue()>4&&$P{umur_tt}.intValue()<=10?"menengah pertama":"menengah atas"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '7' as tahunPolis, '12 Tahun' as usia, '15 %' as persentasePembayaran, '1,500,000.00' as danaPendidikan from dual
+l]]>
+	</queryString>
+	<field name="tahunPolis" class="java.lang.String">
+		<fieldDescription><![CDATA[tahunPolis]]></fieldDescription>
+	</field>
+	<field name="usia" class="java.lang.String">
+		<fieldDescription><![CDATA[usia]]></fieldDescription>
+	</field>
+	<field name="persentasePembayaran" class="java.lang.String">
+		<fieldDescription><![CDATA[persentasePembayaran]]></fieldDescription>
+	</field>
+	<field name="danaPendidikan" class="java.lang.String">
+		<fieldDescription><![CDATA[danaPendidikan]]></fieldDescription>
+	</field>
+	<title>
+		<band height="68">
+			<staticText>
+				<reportElement x="208" y="12" width="144" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="14" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe SISWA]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="0" y="48" width="521" height="20"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="78">
+			<textField hyperlinkType="None">
+				<reportElement x="0" y="18" width="474" height="54"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pada dasarnya polis ini merupakan polis bea siswa yang menjamin biaya sekolah putra-putri Anda dari sekolah "+$P{tingakatan}+" sampai perguruan tinggi. Program ini akan memberikan sejumlah pembayaran tunai sebagai dana pendidikan sesuai dengan masa sekolah putra-putri Anda. Apabila orang tua meninggal dunia dalam masa kontrak, maka akan diberikan 100 % Uang Pertanggungan, kontrak asuransi terus berjalan dan polis menjadi bebas premi. Apabila anak hidup terus dalam masa kontrak, maka akan diperoleh dana pendidikan sebagai berikut :"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="72" height="17"/>
+				<textElement>
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[MANFAAT :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31">
+			<staticText>
+				<reportElement x="256" y="0" width="105" height="31"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dana Pendidikan
+Yang Diterima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="89" height="31"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pada Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="89" height="31"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Persentase
+Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="31"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pada Akhir
+Tahun Polis]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13">
+			<textField hyperlinkType="None">
+				<reportElement x="80" y="0" width="65" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{usia}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="0" width="57" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{persentasePembayaran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="256" y="0" width="97" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{danaPendidikan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="0" y="0" width="81" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tahunPolis}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="352" y="0" width="9" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="150">
+			<rectangle>
+				<reportElement x="0" y="0" width="361" height="13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="24" y="0" width="57" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[T O T A L :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="0" width="57" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{totalPersentaseUp}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="256" y="0" width="97" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{totalDana}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

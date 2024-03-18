@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_manfaat_waiver_premium_disability" pageWidth="530" pageHeight="842" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<queryString>
+		<![CDATA[select
+	 '5 tahun.' as termOfPayment, 
+	'Apabila Tertanggung meninggal dunia karena kecelakaan dalam masa Pertanggungan PA Rider masih berlaku, maka akan dibayarkan Manfaat Asuransi Tambahan sebesar 100% Uang Pertanggungan Pokok (Seratus juta rupiah).' as paragraph1
+from dual]]>
+	</queryString>
+	<field name="paragraph1" class="java.lang.String"/>
+	<field name="termOfPayment" class="java.lang.String"/>
+	<pageHeader>
+		<band height="107">
+			<staticText>
+				<reportElement x="-1" y="39" width="178" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Waiver of Premium Disability (WPD)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="61" width="16" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="61" width="496" height="33"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Waiver of Premium Disability merupakan pertanggungan tambahan yang memberikan manfaat polis menjadi bebas premi tanpa mengurangi manfaat yang telah ditetapkan, apabila Tertanggung mengalami Cacat Tetap Total sebelum usia 60 tahun dan SMiLe Waiver of Premium Disability masih berlaku.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="93" width="16" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="93" width="496" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dengan diterimanya manfaat asuransi ini, maka seluruh asuransi tambahan (Rider) lainnya menjadi batal.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

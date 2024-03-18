@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+	<typeAlias alias="ViewListProviderDetail" type="id.co.sinarmaslife.standard.model.vo.ViewListProviderDetail"/>
+    <typeAlias alias="TotalPage" type="id.co.sinarmaslife.standard.model.vo.TotalPage"/>
+    
+    <!-- selectTotalPageResult -->
+    <resultMap id="selectTotalPageResult.result" class="TotalPage">
+        <result property="totalPage" column="total_pages" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+    
+    <!-- selectAllProviderResult -->
+    <resultMap id="selectAllProviderDetailResult.result" class="ViewListProviderDetail">
+        <result property="rsId" column="RSID" javaType="String" jdbcType="NUMBER"/>
+        <result property="rsNama" column="RSNAMA" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="rsAlamat" column="RSALAMAT" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="rsKodePos" column="RSKODEPOS" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="rsTelepon" column="RSTELEPON" javaType="String" jdbcType="NUMBER"/>
+        <result property="rsFax" column="RSFAX" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectAllProviderDetailList" resultClass="ViewListProviderDetail" resultMap="selectAllProviderDetailResult.result" parameterClass="java.util.Map">
+   				SELECT RSID, RSNAMA, RSALAMAT, RSKODEPOS, RSTELEPON, RSFAX
+   				FROM eka.LST_RUMAH_SAKIT@EB
+					where RSID = #RSID#
+    </select>
+    
+</sqlMap>

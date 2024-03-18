@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040209_product_sub_6" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<detail>
+		<band height="50"/>
+	</detail>
+	<pageFooter>
+		<band height="46"/>
+	</pageFooter>
+	<summary>
+		<band height="301">
+			<subreport>
+				<reportElement positionType="Float" x="1" y="176" width="553" height="20"/>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="118" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="85" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="98" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="85" width="544" height="9"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pembayaran Kontribusi/Premi(Kontribusi/Premi Pokok/ Top Up/ Rider) dengan kartu kredit akan dikenakan biaya sesuai dengan ketentuan yang berlaku.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="66" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="155" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[90 %
+5 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="179" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="251" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[0 %
+0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="7" width="536" height="9"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Penarikan Seluruhnya adalah sebesar : Faktor Biaya Penarikan x Dana Investasi Kontribusi/Premi Pokok atau Top Up :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="53" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="227" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[45 %
+0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="53" width="544" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal diatas adalah Manfaat Asuransi Syariah ditambah dengan Nilai Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="29" width="107" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dana Investasi Kontribusi/Premi Pokok
+Dana Investasi Kontribusi/Premi TopUp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="7" width="9" height="9"/>
+				<textElement verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[*]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="203" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[65 %
+0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="155" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="131" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[95 %
+5 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="227" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="251" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6 dst.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="66" width="544" height="16"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penarikan dan Penebusan Nilai Polis yang dilakukan sebelum Polis berjalan lebih dari 3(tiga) tahun akan dikenakan pajak penghasilan atas kelebihan Nilai
+Polis yang diambil terhadap Kontribusi/Premi Tahunan + Penambahan (Top-Up).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="98" width="544" height="16"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asumsi cuti kontribusi/premi di atas hanya merupakan illustrasi. Pemegang Polis dapat membatalkan asumsi cuti kontribusi/premi tersebut dengan cara mengajukan permintaan secara tertulis kepada Wakil Para Peserta.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="21" width="107" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Sumber \ Tahun Polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="118" width="544" height="8"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Illustrasi ini harus ditandatangani oleh Pemohon dan dilampirkan pada proposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="203" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="131" y="21" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="179" y="29" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[85 %
+0 %]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

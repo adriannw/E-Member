@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_hcp_ladies" pageWidth="500" pageHeight="842" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="5" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderHcpLadiesTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat SMiLe Ladies Hospital Protection"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderHcpLadiesIndex" class="java.lang.String"/>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000")]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan' as subject, 'R-100' as descr, '  ' as term,  10 as factor,  10 as fisioterapi
+from dual
+
+union
+
+select '- Rawat Inap krn sakit' as subject,  '100,000'  as descr, 'Maks 100 hari per satu tahun polis *)' as term, 10 as factor,  10 as fisioterapi
+from dual
+
+union
+
+select '- Rawat Inap di ruang ICU' as subject, '200,000' as descr, 'Maks 30 hari per satu tahun polis' as term, 10 as factor,  10 as fisioterapi
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<field name="factor" class="java.math.BigDecimal"/>
+	<field name="fisioterapi" class="java.math.BigDecimal"/>
+	<pageHeader>
+		<band height="24">
+			<frame>
+				<reportElement x="0" y="-1" width="472" height="25"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="24" y="13" width="432" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Maks. s/d usia 66 tahun dan setelah 30 hari polis diberlakukan]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="0" y="1" width="16" height="14"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{riderHcpLadiesIndex}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement x="23" y="0" width="433" height="14"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderHcpLadiesTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="12">
+			<frame>
+				<reportElement x="0" y="0" width="472" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="232" y="0" width="56" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="296" y="0" width="160" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{term}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement x="40" y="0" width="192" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="93">
+			<frame>
+				<reportElement x="0" y="0" width="472" height="93"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="40" y="54" width="416" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Total perawatan karena sakit, kecelakaan dan di ruang ICU maksimal 180 hari per satu tahun Polis.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="4" width="104" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[- Tindakan Pembedahan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="240" y="4" width="49" height="12"/>
+					<box padding="0">
+						<pen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Minor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="288" y="4" width="49" height="12"/>
+					<box padding="0">
+						<pen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Intermediate]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="336" y="4" width="49" height="12"/>
+					<box padding="0">
+						<pen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Major]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="384" y="4" width="48" height="12"/>
+					<box padding="0">
+						<pen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Complex]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="240" y="16" width="49" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<topPen lineWidth="0.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($P{baseBenefitHcpLad}.multiply($F{factor} ) )]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="288" y="16" width="49" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<topPen lineWidth="0.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($P{baseBenefitHcpLad}.multiply( $F{factor}.multiply( new BigDecimal( "2.0" ) ) ) )]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="336" y="16" width="49" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<topPen lineWidth="0.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($P{baseBenefitHcpLad}.multiply( $F{factor}.multiply( new BigDecimal( "3.0" ) ) ) )]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="384" y="16" width="48" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<topPen lineWidth="0.0" lineStyle="Solid"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($P{baseBenefitHcpLad}.multiply( $F{factor}.multiply( new BigDecimal( "4.0" ) ) ) )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="40" y="26" width="104" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[- Kemoterapi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="37" width="104" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[- Fisioterapi]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="296" y="26" width="168" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" markup="none">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Maks 10 kali kunjungan per satu tahun polis"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="296" y="37" width="168" height="9"/>
+					<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Left" markup="none">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Maks 10 kali kunjungan per satu tahun polis"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="232" y="26" width="56" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($P{baseBenefitHcpLad})]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="232" y="37" width="56" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.format0Digit($F{fisioterapi})]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="40" y="66" width="416" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Manfaat fisioterapi dapat diberikan selama dalam waktu rawat inap sampai dengan 30 hari setelah rawat inap selesai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="78" width="416" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Tidak ada pembayaran manfaat asuransi untuk hal-hal yang dikecualikan dalam polis]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

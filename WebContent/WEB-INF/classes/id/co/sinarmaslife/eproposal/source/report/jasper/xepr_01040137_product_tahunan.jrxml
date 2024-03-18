@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040137_product_tahunan" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="20" rightMargin="0" topMargin="30" bottomMargin="30" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="businessIdx" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfContract" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfPayment" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1,123,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["589,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["303,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["80"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["54"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsManfaatTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPersonalAccident" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPenyakitKritis" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPayorsClause" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatWaiverPremiumDisability" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsPremiumSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="swineRider" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRider]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRiderManfaat" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRiderManfaat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderSwineIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderSwineIndex]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '2' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '3' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '4' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '5' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '6' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '7' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '8' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '9' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '10' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '11' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '12' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '13' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '14' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '15' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '16' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '17' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '18' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '19' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '20' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual]]>
+	</queryString>
+	<field name="accumulatedPremium" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="oldAgeFund" class="java.lang.String"/>
+	<field name="yearNo" class="java.lang.String"/>
+	<background>
+		<band height="780">
+			<image>
+				<reportElement x="0" y="0" width="145" height="29">
+					<printWhenExpression><![CDATA[new Boolean( $V{PAGE_NUMBER}.equals( new Integer( "1" ) )  && ( $P{validityMsg} == null || "".equals( $P{validityMsg}.trim() ) ) )]]></printWhenExpression>
+				</reportElement>
+				<graphicElement/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="552" y="4" width="24" height="13"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="544" y="4" width="8" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="FixRelativeToBottom" x="520" y="4" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="0" y="0" width="553" height="37" forecolor="#808080"/>
+				<box border="None" padding="5"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="285">
+			<textField>
+				<reportElement positionType="Float" x="8" y="16" width="521" height="25"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["PRO SAFE " + $P{businessIdx}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="257" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatWaiverPremiumDisability}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_waiver_premium_disability.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="237" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatPayorsClause}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_payors_clause.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="217" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatPenyakitKritis}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_penyakit_kritis.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="197" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatPersonalAccident}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_personal_accident.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="177" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatTermRider}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_term_rider.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="157" width="520" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsManfaatHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_manfaat_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="120" width="521" height="33" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia dalam masa asuransi, kepada Ahli Waris akan dibayarkan 100% Uang Pertanggungan dan setelah itu kontrak asuransi berakhir. Tetapi bila Tertanggung hidup pada akhir tahun polis dimana Tertanggung berusia 79 tahun maka akan dibayarkan 100% Uang Pertangungan dan setelah itu kontrak asuransi berakhir.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="88" width="521" height="21" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Program asuransi ini pada dasarnya memberikan pertanggungan dengan masa asuransi seumur hidup. Namun manfaat dari program ini dapat dinikmati sampai dengan usia 79 tahun.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="72" width="65" height="17" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANFAAT]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="48" width="521" height="20"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement positionType="Float" x="8" y="108" width="520" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Premi dibayar selama " + $P{businessIdx} + " tahun, dan setelah itu polis menjadi bebas premi dan pertanggungan tetap berjalan."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" isSplitAllowed="false">
+			<staticText>
+				<reportElement positionType="Float" x="8" y="0" width="113" height="28"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Akhir
+Tahun Ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="120" y="0" width="49" height="28"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="168" y="0" width="121" height="28"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Akumulasi
+Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="288" y="0" width="121" height="28"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nilai
+Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="408" y="0" width="121" height="28"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dana
+Hari Tua]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13">
+			<frame>
+				<reportElement x="168" y="0" width="121" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="24" y="0" width="89" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{accumulatedPremium}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="120" y="0" width="49" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="0" y="0" width="49" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{age}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="8" y="0" width="113" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement positionType="Float" x="16" y="0" width="81" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Bottom">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{yearNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="288" y="0" width="121" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="24" y="0" width="81" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cashValue}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="408" y="0" width="121" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="24" y="0" width="89" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{oldAgeFund}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="153">
+			<frame>
+				<reportElement x="8" y="48" width="113" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="120" y="48" width="49" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="168" y="48" width="121" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="288" y="48" width="121" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="408" y="48" width="121" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<textField>
+				<reportElement positionType="Float" x="8" y="92" width="136" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="120" width="232" height="17"/>
+				<box padding="0" topBorder="1Point" leftBorder="None" bottomBorder="None" rightBorder="None"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="140" width="24" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[v1.0]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="8" y="0" width="113" height="49"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<staticText>
+					<reportElement x="16" y="4" width="80" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="16" width="80" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="16" y="32" width="81" height="13"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastYearNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="120" y="0" width="49" height="49"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="0" y="32" width="48" height="14"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastAge}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="168" y="0" width="121" height="49"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="288" y="0" width="121" height="49"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="23" y="31" width="90" height="14"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastCashValue}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="408" y="0" width="121" height="49"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textField>
+					<reportElement x="24" y="32" width="90" height="14"/>
+					<box border="None" padding="0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{totalSumInsured}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="56" width="497" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="currencySymbol">
+					<subreportParameterExpression><![CDATA[$P{currencySymbol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium3">
+					<subreportParameterExpression><![CDATA[$P{totalPremium3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium1">
+					<subreportParameterExpression><![CDATA[$P{totalPremium1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium2">
+					<subreportParameterExpression><![CDATA[$P{totalPremium2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsPremiumSummary}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040137_premium_summary.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="8" y="76" width="545" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040202_product_sub_2" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="35" bottomMargin="0" isSummaryNewPage="true">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeaderSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsEkalinkIllustration" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentChoiceSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentYield" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalAssumptionHi" class="java.lang.String"/>
+	<parameter name="totalAssumptionLow" class="java.lang.String"/>
+	<parameter name="totalAssumptionMid" class="java.lang.String"/>
+	<parameter name="totalInvestmentAllocation" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="dsNoteSekaligus" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsNoteBerkala" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="jenis" class="java.lang.String">
+		<parameterDescription><![CDATA[jenis]]></parameterDescription>
+	</parameter>
+	<parameter name="groupId" class="java.lang.String">
+		<parameterDescription><![CDATA[groupId]]></parameterDescription>
+	</parameter>
+	<parameter name="label_special_offer" class="java.lang.String">
+		<parameterDescription><![CDATA[label_special_offer]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Discount Premium"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="note_special_offer" class="java.lang.String">
+		<parameterDescription><![CDATA[note_special_offer]]></parameterDescription>
+		<defaultValueExpression><![CDATA["**  Special Offer berupa discount premium akan dikembalikan ke nasabah"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mnc" class="java.lang.String">
+		<parameterDescription><![CDATA[mnc]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePackage" class="java.lang.String"/>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="showMpp55Thn" class="java.lang.String">
+		<parameterDescription><![CDATA[showMpp55Thn]]></parameterDescription>
+	</parameter>
+	<parameter name="dsEkalinkIllustration2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsEkalinkIllustration2]]></parameterDescription>
+	</parameter>
+	<parameter name="dsInvestmentYield2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsInvestmentYield2]]></parameterDescription>
+	</parameter>
+	<parameter name="dsNoteSekaligus2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsNoteSekaligus2]]></parameterDescription>
+	</parameter>
+	<parameter name="dsNoteBerkala2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsNoteBerkala2]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderSmall2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderSmall2]]></parameterDescription>
+	</parameter>
+	<parameter name="dsInvestmentChoiceSmall2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsInvestmentChoiceSmall2]]></parameterDescription>
+	</parameter>
+	<parameter name="titleIllustration" class="java.lang.String">
+		<parameterDescription><![CDATA[titleIllustration]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="106">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="144" y="24" width="321" height="21" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titlePackage}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="46" width="257" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderSmall}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header_small.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="66" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(!$P{mnc}.equals("mnc"))]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{dsEkalinkIllustration}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_ekalink_illustration_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="256" y="46" width="297" height="18" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsInvestmentChoiceSmall}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_investment_choice_small_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="144" y="3" width="321" height="21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="86" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{mnc}.equals("mnc"))]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="note_special_offer">
+					<subreportParameterExpression><![CDATA[$P{note_special_offer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="label_special_offer">
+					<subreportParameterExpression><![CDATA[$P{label_special_offer}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsEkalinkIllustration}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_ekalink_illustration_mnc.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="60">
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="0" width="553" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsInvestmentYield}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_investment_yield.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="20" width="553" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsNoteSekaligus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040202_product_sub_2_note_sekaligus.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="40" width="553" height="20" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsNoteBerkala}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040202_product_sub_2_note_berkala.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="18">
+			<printWhenExpression><![CDATA[new Boolean($P{showMpp55Thn}.equals("show"))]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" x="1" y="0" width="555" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{showMpp55Thn}.equals("show"))]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsNoteBerkala2">
+					<subreportParameterExpression><![CDATA[$P{dsNoteBerkala2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderSmall">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderSmall}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titleIllustration">
+					<subreportParameterExpression><![CDATA[$P{titleIllustration}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentYield2">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentYield2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsNoteBerkala">
+					<subreportParameterExpression><![CDATA[$P{dsNoteBerkala}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentYield">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentYield}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsEkalinkIllustration">
+					<subreportParameterExpression><![CDATA[$P{dsEkalinkIllustration}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentChoiceSmall2">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentChoiceSmall2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsNoteSekaligus">
+					<subreportParameterExpression><![CDATA[$P{dsNoteSekaligus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderSmall2">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderSmall2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsNoteSekaligus2">
+					<subreportParameterExpression><![CDATA[$P{dsNoteSekaligus2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentChoiceSmall">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentChoiceSmall}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsEkalinkIllustration2">
+					<subreportParameterExpression><![CDATA[$P{dsEkalinkIllustration2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titlePackage">
+					<subreportParameterExpression><![CDATA[$P{titlePackage}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040202_product_sub_5.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

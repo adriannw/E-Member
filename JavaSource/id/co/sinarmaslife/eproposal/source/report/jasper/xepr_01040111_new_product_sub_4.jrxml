@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040111_new_product_sub_4" pageWidth="595" pageHeight="1000" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="40" bottomMargin="0" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="riderHcpFamilyTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat HCP Family Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="baseBenefitHcpFam" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="premiCiSekaligus" class="java.lang.String">
+		<parameterDescription><![CDATA[premiCiSekaligus]]></parameterDescription>
+	</parameter>
+	<parameter name="premiCiTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiCiTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiCiSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiCiSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiCiTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiCiTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiCiBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiCiBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTermSekaligus" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTermSekaligus]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTermTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTermTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTermSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTermSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTermTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTermTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTermBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTermBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpFamilySekaligus" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpFamilySekaligus]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpFamilyTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpFamilyTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpFamilySemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpFamilySemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpFamilyTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpFamilyTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpFamilyBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpFamilyBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="participantName0" class="java.lang.String"/>
+	<parameter name="participantAge0" class="java.lang.String"/>
+	<parameter name="participantName1" class="java.lang.String"/>
+	<parameter name="participantAge1" class="java.lang.String"/>
+	<parameter name="participantName3" class="java.lang.String"/>
+	<parameter name="participantAge3" class="java.lang.String"/>
+	<parameter name="participantName2" class="java.lang.String"/>
+	<parameter name="participantAge2" class="java.lang.String"/>
+	<parameter name="jenisSantunan" class="java.lang.String"/>
+	<parameter name="sub1" class="java.lang.String"/>
+	<parameter name="sub2" class="java.lang.String"/>
+	<parameter name="sub3" class="java.lang.String"/>
+	<parameter name="minor" class="java.lang.String"/>
+	<parameter name="intermediate" class="java.lang.String"/>
+	<parameter name="major" class="java.lang.String"/>
+	<parameter name="complex" class="java.lang.String"/>
+	<parameter name="termRiderManfaat" class="java.lang.String"/>
+	<parameter name="ciRiderManfaat" class="java.lang.String"/>
+	<parameter name="riderHcpFamilyIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderHcpFamily" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcpFamilyParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderTermRiderIndex" class="java.lang.String"/>
+	<parameter name="riderCiIndex" class="java.lang.String"/>
+	<parameter name="premiTotalSekaligus" class="java.lang.String"/>
+	<parameter name="premiTotalTahunan" class="java.lang.String"/>
+	<parameter name="premiTotalSemesteran" class="java.lang.String"/>
+	<parameter name="premiTotalTriwulanan" class="java.lang.String"/>
+	<parameter name="premiTotalBulanan" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+	</parameter>
+	<parameter name="participantExist" class="java.lang.String">
+		<parameterDescription><![CDATA[participantExist]]></parameterDescription>
+	</parameter>
+	<parameter name="subTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[subTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRider" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRider]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRiderManfaat" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRiderManfaat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderSwineIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderSwineIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="marketer" class="java.lang.String">
+		<parameterDescription><![CDATA[marketer]]></parameterDescription>
+	</parameter>
+	<parameter name="bisnis_id" class="java.lang.Integer">
+		<parameterDescription><![CDATA[bisnis_id]]></parameterDescription>
+	</parameter>
+	<parameter name="bisnis_no" class="java.lang.Integer">
+		<parameterDescription><![CDATA[bisnis_no]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="dsRiderEkaSehatParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantEkaSehat" class="java.lang.String">
+		<parameterDescription><![CDATA[participantEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderEkaSehatIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiverCiIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderEkaSehatInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderEkaSehatInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="participantEkaSehatInnerLimit" class="java.lang.String">
+		<parameterDescription><![CDATA[participantEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="riderEkaSehatInnerLimitIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderEkaSehatInnerLimitIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="riderTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["ASURANSI TAMBAHAN (RIDER) UNTUK EKALINK FAMILY"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderPaIndex" class="java.lang.String"/>
+	<parameter name="riderHcpIndex" class="java.lang.String"/>
+	<parameter name="riderPayorTpdDeathIndex" class="java.lang.String"/>
+	<parameter name="riderPayorCiDeathIndex" class="java.lang.String"/>
+	<parameter name="riderPayorCiIndex" class="java.lang.String"/>
+	<parameter name="riderPayorSpouseTpdDeathIndex" class="java.lang.String"/>
+	<parameter name="riderWaiverTpdIndex" class="java.lang.String"/>
+	<parameter name="riderWaiverCiIndex" class="java.lang.String"/>
+	<parameter name="riderTpdIndex" class="java.lang.String"/>
+	<parameter name="dsRiderPa" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcp" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorTpdDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorCiDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorSpouseTpdDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiverTpd" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiverCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderTpd" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsOneRow" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderPaRisk" class="java.lang.String"/>
+	<parameter name="dsRiderPaClone" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="biayaInap" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaInap]]></parameterDescription>
+		<defaultValueExpression><![CDATA["100,000"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="biayaIcu" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaIcu]]></parameterDescription>
+		<defaultValueExpression><![CDATA["200,000"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="limitKejadian" class="java.lang.String">
+		<parameterDescription><![CDATA[limitKejadian]]></parameterDescription>
+		<defaultValueExpression><![CDATA["12,500,000"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="maksPenggantian" class="java.lang.String">
+		<parameterDescription><![CDATA[maksPenggantian]]></parameterDescription>
+		<defaultValueExpression><![CDATA["50,000,000"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderTpd10" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderTpd10Index" class="java.lang.String"/>
+	<parameter name="dsRiderPayor10Ci" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderPayorCi10Index" class="java.lang.String"/>
+	<parameter name="dsRiderWaiver10Ci" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderWaiver10CiIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiver10CiIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderHcpProviderIndex" class="java.lang.String"/>
+	<parameter name="dsRiderHcpProvider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcpProviderParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="baseBenefitHcpPro" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderWaiverTpdCiIndex" class="java.lang.String"/>
+	<parameter name="dsRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Critical Illness Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderPayorTpdCiDeathIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderPayorTpdCiDeathIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderHcpLadies" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderHcpLadiesIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderHcpLadiesIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderLadiesInsIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesInsIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesInsTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesInsTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderLadiesMedExpenseParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantLadiesMedExpense" class="java.lang.String">
+		<parameterDescription><![CDATA[participantLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesMedExpenseIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesMedExpenseIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderLadiesMedExpenseInnerLimitIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesMedExpenseInnerLimitIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesInsSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcpLadiesParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="premiPaTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPaTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPaSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPaSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPaTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPaTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPaBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPaBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTpdTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTpdTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTpdSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTpdSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTpdTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTpdTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTpdBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTpdBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatIlTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatIlTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatIlSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatIlSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatIlTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatIlTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiEkaSehatIlBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiEkaSehatIlBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpProTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpProTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpProSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpProSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpProTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpProTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpProBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpProBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesInsTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesInsTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesInsSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesInsSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesInsTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesInsTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesInsBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesInsBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpLadTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpLadTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpLadSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpLadSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpLadTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpLadTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiHcpLadBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiHcpLadBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedIlTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedIlTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedIlSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedIlSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedIlTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedIlTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiLadiesMedIlBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiLadiesMedIlBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as idx, 'Fadly' as name, '26' as age from dual
+union
+select '2' as idx, 'Ane' as name, '26' as age from dual]]>
+	</queryString>
+	<field name="idx" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<summary>
+		<band height="239">
+			<staticText>
+				<reportElement positionType="Float" x="16" y="182" width="265" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null || $P{dsRiderCi} != null || $P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[note : premi rider akan meningkat sesuai dengan pertambahan usia]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="16" y="199" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="16" y="219" width="535" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(  $P{bisnis_id}.equals(new Integer(164)) && $P{bisnis_no}.equals(new Integer(2))  )]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer_note.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="96" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehatInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatIlBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="60" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcp} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="156" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpenseInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedIlTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="48" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderPa} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPaTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="24" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderCi} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiCiTriwulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="189" y="0" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Premi Tahunan]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="96" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehatInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatIlTriwulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="144" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpense} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Ladies Medical (Benefit As Charge)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="96" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehatInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatIlTahunan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="351" y="0" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Premi Triwulanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="48" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderPa} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Personal Accident]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="156" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpenseInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedIlTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="24" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderCi} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiCiSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="168" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTotalSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="48" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderPa} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPaTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="144" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpense} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="12" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTermTriwulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="36" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Hospital Protection(Family)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="84" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehat} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="12" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTermBulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="84" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehat} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Medical Rider (Benefit As Charge)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="270" y="0" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Premi Semesteran]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="36" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpFamilyTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="144" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpense} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="144" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpense} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="108" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpProvider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpProTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="108" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpProvider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpProTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="156" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpenseInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedIlSemesteran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="132" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpLadies} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Ladies Hospital Protection]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="156" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpenseInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Ladies Medical (Benefit Inner Limit)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="108" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpProvider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpProSemesteran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="96" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehatInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Medical Rider (Benefit Inner Limit)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="12" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Term Rider]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="120" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesIns} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesInsTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="72" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTpd} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTpdTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="84" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehat} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="108" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpProvider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpProBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="120" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesIns} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesInsSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="72" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTpd} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTpdSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="24" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderCi} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiCiBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="36" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpFamilyBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="84" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehat} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="36" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpFamilyTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="60" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcp} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="132" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpLadies} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpLadSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="12" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTermSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="120" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesIns} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesInsTriwulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="120" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesIns} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Ladies Insurance]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="108" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpProvider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Hospital Protection (+) (Provider Benefit)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="60" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcp} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpBulanan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="72" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTpd}!= null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[TPD Rider]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="60" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcp} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="72" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTpd} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTpdTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="168" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTotalTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="132" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpLadies} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpLadTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="132" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpLadies} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpLadTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="48" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderPa} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPaSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="144" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpense} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="36" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpFamily} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpFamilySemesteran}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="168" width="175" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Total Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="60" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcp} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Hospital Protection]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="0" width="175" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pembayaran Premi Rider]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="24" width="175" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderCi} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[CI Rider]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="24" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderCi} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiCiTahunan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="72" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTpd} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTpdBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="48" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderPa} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPaBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="84" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehat} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="351" y="168" width="81" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTotalTriwulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="132" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderHcpLadies} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiHcpLadBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="189" y="12" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderTermRider} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTermTahunan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="432" y="0" width="82" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Premi Bulanan]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="156" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesMedExpenseInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesMedIlBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="168" width="82" height="12" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTotalBulanan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="270" y="96" width="81" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderEkaSehatInnerLimit} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiEkaSehatIlSemesteran}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="432" y="120" width="82" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderLadiesIns} != null)]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiLadiesInsBulanan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

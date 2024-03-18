@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_eka_sehat_extra_summary" pageWidth="595" pageHeight="340" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.HGuides" value="479"/>
+	<property name="com.jasperassistant.designer.VGuides.Summary" value="55,60"/>
+	<parameter name="riderEkaSehatExtraIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderEkaSehatExtraParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderEkaSehatExtraParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="participantEkaSehatExtra" class="java.lang.String">
+		<parameterDescription><![CDATA[participantEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="providerType" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Provider"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as idx_eka_sehat, 'Samuel Jackson' as name_eka_sehat, '27' as age_eka_sehat from dual
+union
+select '2' as idx_eka_sehat, 'JONATHAN CHRISTOPHER ROCKY SINDHARTA' as name_eka_sehat, '28' as age_eka_sehat from dual]]>
+	</queryString>
+	<field name="idx_eka_sehat" class="java.lang.String"/>
+	<field name="name_eka_sehat" class="java.lang.String"/>
+	<field name="age_eka_sehat" class="java.lang.String"/>
+	<variable name="idx_eka_sehat" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Count">
+		<variableExpression><![CDATA[new Integer( "1" )]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer( "0" )]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="55">
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="2" width="528" height="53"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Medical Extra " + " : memberikan manfaat perlindungan atas risiko biaya perawatan kesehatan tertanggung selama di rumah sakit. Tertanggung tambahan adalah Suami, istri & Orang Tua dalam keluarga inti yang berusia 17-64 Tahun untuk kepesertaan awal atau sampai dengan 74 tahun untuk kepesertaan lanjutan dan Anak-anak yang sah (termasuk anak adopsi yang sah). Kategori anak (sebagai Tertanggung tambahan) adalah Anak-anak yang sah (termasuk anak adopsi yang sah) yang berusia 1 s/d 19 tahun atau 24 tahun jika masih terdaftar secara resmi sebagai pelajar penuh waktu pada sebuah lembaga pendidikan yang diakui asalkan anak-anak tersebut belum menikah dan belum bekerja serta tinggal bersama Tertanggung Utama. Apabila anak telah mencapai usia 25 tahun maka akan menggunakan rate Pasangan dan disesuaikan dengan usia anak tersebut."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="2" width="16" height="13"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderEkaSehatExtraIndex}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="16">
+			<staticText>
+				<reportElement positionType="Float" x="24" y="8" width="17" height="8" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{participantEkaSehatExtra}.equals( "yes"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="218" y="8" width="32" height="8" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{participantEkaSehatExtra}.equals( "yes"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="-1" width="225" height="9" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{participantEkaSehatExtra}.equals( "yes"))]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tertanggung Tambahan SMiLe Medical Extra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="8" width="177" height="8" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{participantEkaSehatExtra}.equals( "yes"))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="8">
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="0" width="17" height="8"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idx_eka_sehat}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="41" y="0" width="177" height="8"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{name_eka_sehat}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="218" y="0" width="32" height="8"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{age_eka_sehat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="261">
+			<staticText>
+				<reportElement x="35" y="24" width="513" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Semua jenis penyakit yang terjadi/timbul dalam 30 ( tiga puluh ) hari pertama dari saat Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini, kecuali yang disebabkan oleh Kecelakaan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="48" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="48" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pengerasan sumsum tulang (multiple Sclerosis)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="8" width="9" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="8" width="489" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Jenis penyakit yang diderita pada :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="16" width="481" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[30 (tiga puluh ) hari pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="16" width="17" height="8"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="24" width="17" height="9"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="33" width="481" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[12 ( dua belas ) bulan pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="57" width="403" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asma, TBC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="57" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="65" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pelebaran Pembuluh Darah/ Varises seperti Varises tungkai, haemorrhoids (wasir) dll.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="65" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="74" width="403" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Jantung, Tekanan darah Tinggi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="74" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="82" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ayan, Cerebro Vascular Disorder (Stroke)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="82" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="91" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="91" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Segala jenis Kanker dan segala jenis Tumor.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="100" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="100" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Gangguan Kelenjar Tyroid/ Gondok seperti Hypotiroid, Hyperthyroid (Pembesaran Kelenjar Thyroid).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="109" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Hepatitis B, Hepatitis Non A Non B, Hepatitis C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="109" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="118" width="504" height="16"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Gangguan Lambung dan Usus Besar, Usus Kecil, Appendix/ Usus Buntu, Hati, Kandung Empedu (contoh: Radang Kandung Empedu), dispepsia, Batu Empedu, dan Gangguan saluran pencernaan lainnya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="118" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="134" width="403" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kelainan kulit yang tidak membutuhkan Antibiotik untuk pengobatannya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="134" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="151" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Radang Persendian (Rheumatik/Gout) atau Gangguan tulang persendian dan penyakit otot lain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="151" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="160" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="160" width="481" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Katarak, Ketidaknormalan pada Nasal Septum atau Turbinates (Hidung atau Sinus) dan Tonsil yang sakit dan perlu dioperasi/ Operasi Amandel.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="169" width="403" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Gondok, Hernia (Turun Berok), Fistula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="169" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="177" width="481" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Endometriosis (Jaringan sejenis selaput lendir rahim di luar rongga rahim), termasuk kelainan sistem reproduksi (misalnya kista).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="178" width="9" height="7"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="227" width="17" height="10" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="35" y="227" width="481" height="9" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[18 (delapan belas) bulan pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="142" width="9" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="142" width="403" height="9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kencing Manis, Ginjal(Batu Ginja, Kolik), Batu pada organ saluran kencing(Kencing Batu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="185" width="17" height="10"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="185" width="481" height="10" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[12 (dua belas) bulan pertama dari tanggal Efektif KeTertanggungan Awal Asuransi Kesehatan ini]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="195" width="498" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Semua penyakit, cedera atau keadaan kesehatan Peserta yang timbul sebelum dan masih dalam pengobatan ataupun perawatan ataupun pengawasan medis dan telah ada sebelum tanggal efektif Polis atau untuk mana peserta :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="211" width="9" height="8" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="211" width="403" height="8" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Menerima perawatan untuk kondisi tersebut sebelum Tanggal Efektif, atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="219" width="9" height="8" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="219" width="489" height="8" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Menunjukkan gejala-gejala dari kondisi tersebut pada saat atau sebelum tanggal Efektif dan atas mana peserta sadar atau sewajar-wajarnya telah menyadarinya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="35" y="40" width="433" height="8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penyakit yang secara medis dinyatakan bersifat kronis meskipun belum pernah disadari sebelumnya yaitu :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="12" y="0" width="515" height="8"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Masa Tunggu pada produk SMiLe Medical Extra untuk pelayanan-pelayanan atau kondisi berikut ini :"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="35" y="236" width="498" height="23" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Semua jenis penyakit kronis yang telah diderita sebelum menjadi Tertanggung asuransi SMiLe Medical Extra. Setelah lebih dari 18 (delapan belas) bulan Tertanggung diasuransikan, penyakit tersebut akan dijamin asalkan selama 18 (delapan belas) bulan tersebut Tertanggung tidak pernah berkonsultasi, meminta advis dokter, tidak menerima perawatan maupun pengobatan yang berkaitan dengan penyakit tersebut.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

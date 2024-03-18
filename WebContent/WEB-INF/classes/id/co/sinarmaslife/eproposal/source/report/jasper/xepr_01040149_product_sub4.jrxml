@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040149_product_sub4" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="premi" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal(360000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ttlPremi" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal(30000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="premiBaby" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal(30000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="baby" class="java.lang.String">
+		<defaultValueExpression><![CDATA["FALSE"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="cbPremi" class="java.lang.String"/>
+	<parameter name="labelCb" class="java.lang.String">
+		<defaultValueExpression><![CDATA[" "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["SPP"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="130">
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="363" y="100" width="89" height="30"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tahapan *"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="40" width="230" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Total Kontribusi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="102" y="87" width="83" height="43"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pembayaran Kontribusi"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="268" y="40" width="201" height="14"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="styled">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+"Rp "+$P{REPORT_SCRIPTLET}.format0Digit($P{ttlPremi})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="244" y="18" width="7" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="72" y="87" width="30" height="43"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="45" y="87" width="27" height="43"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Akhir tahun Polis]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="274" y="100" width="89" height="30"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Nilai Tunai"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="185" y="100" width="89" height="30"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat Meninggal"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="245" y="41" width="7" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="2" y="34" width="541" height="3"/>
+				<box padding="0">
+					<pen lineStyle="Double"/>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="185" y="87" width="267" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[BENEFIT ASURANSI  SYARIAH DASAR]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="267" y="18" width="119" height="14"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+					<topPen lineStyle="Solid"/>
+					<leftPen lineStyle="Solid"/>
+					<bottomPen lineStyle="Solid"/>
+					<rightPen lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="styled">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+"Rp "+$P{REPORT_SCRIPTLET}.format0Digit($P{premi})]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="2" y="2" width="254" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{baby}.equals("true") ? "C. " : "B.") + " KONTRIBUSI"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="3" y="55" width="294" height="13"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{baby}.equals("true") ? "D. " : "C.") + " Manfaat Asuransi Syariah"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="3" y="18" width="238" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Kontribusi "+$P{labelCb}+" Asuransi Syariah "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="0" y="69" width="297" height="14"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1. Asuransi Syariah Dasar  ("+$P{title}+")"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

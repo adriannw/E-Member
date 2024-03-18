@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040153_product_sub6" pageWidth="600" pageHeight="600" whenNoDataType="AllSectionsNoDetail" columnWidth="600" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<field name="labelRight" class="java.lang.String">
+		<fieldDescription><![CDATA[labelRight]]></fieldDescription>
+	</field>
+	<field name="contentRight" class="java.lang.String"/>
+	<summary>
+		<band height="199">
+			<staticText>
+				<reportElement positionType="Float" x="8" y="0" width="168" height="12"/>
+				<textElement>
+					<font size="8" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Disclaimer (penting untuk dibaca) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="14" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="15" width="476" height="21"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Anda telah membaca, menerima penjelasan, dan memahami produk asuransi jiwa berjangka sesuai Ringkasan Informasi Produk dan Layanan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="35" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="36" width="476" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Ringkasan Informasi Produk dan Layanan ini bukan merupakan bagian dari aplikasi pengajuan asuransi dan polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="47" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="48" width="476" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Anda wajib untuk tetap membaca, memahami, dan menandatangani aplikasi pengajuan asuransi dan polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="60" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="60" width="476" height="22"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Informasi yang tercakup dalam Ringkasan Informasi Produk dan Layanan ini berlaku sejak tanggal cetak dokumen sampai dengan 14 hari setelahnya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="82" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="82" width="476" height="24"/>
+				<textElement textAlignment="Justified">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Anda harus membaca dengan teliti Ringkasan Informasi Produk dan Layanan ini sebelum menyetujui pembelian produk dan berhak bertanya kepada pegawai Perusahaan Asuransi atas semua hal terkait Ringkasan Informasi Produk dan Layanan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="407" y="117" width="40" height="20"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="d MMMM yyyy" hyperlinkType="None">
+				<reportElement x="441" y="117" width="72" height="20"/>
+				<textElement markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="131" width="152" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Pegawai/ Petugas yang Menjelaskan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="131" width="152" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Konsumen]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="9" y="144" width="152" height="46"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="321" y="144" width="168" height="46"/>
+			</rectangle>
+		</band>
+	</summary>
+</jasperReport>

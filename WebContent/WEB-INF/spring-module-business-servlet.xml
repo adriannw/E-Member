@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>Spring Mapping, Servlets, and Controller</description>
+
+	<!-- ========== Business Objects ========== -->
+    <bean id="cepr01010101Business" class="id.co.sinarmaslife.eproposal.business.Cepr01010101Business" parent="standardParent"/>
+</beans>

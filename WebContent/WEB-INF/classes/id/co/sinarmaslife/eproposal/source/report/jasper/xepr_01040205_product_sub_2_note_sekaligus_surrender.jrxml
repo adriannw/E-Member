@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040205_product_sub_2_note_sekaligus_surrender" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<queryString>
+		<![CDATA[select 'row ie' as dummy from dual]]>
+	</queryString>
+	<field name="dummy" class="java.lang.String"/>
+	<detail>
+		<band height="120">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="111" width="544" height="8"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Proposal ini hanya sebuah ILUSTRASI, BUKAN SUATU KONTRAK ASURANSI, untuk penjelasan lebih lengkapnya lihat dokumen polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="103" width="544" height="8"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Illustrasi ini harus ditandatangani oleh Pemohon dan dilampirkan pada proposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="102" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="87" width="544" height="16"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penarikan dan Penebusan Nilai Polis yang dilakukan sebelum Polis berjalan lebih dari 3(tiga) tahun akan dikenakan pajak penghasilan atas kelebihan Nilai
+Polis yang diambil terhadap Premi Sekaligus + Penambahan (Top-Up).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="87" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="79" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="79" width="544" height="8"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal diatas adalah Uang Pertanggungan ditambah dengan Nilai Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="41" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="41" width="544" height="38"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi Manfaat diatas sudah diperhitungkan dengan :
+* Biaya akuisisi sebesar 5% dari Premi Sekaligus. Biaya Top up sebesar 5% dari Premi Top Up.
+* Biaya pengelolaan investasi sesuai dengan jenis fund yang dipilih.
+* Biaya asuransi.
+* Biaya administrasi Rp.15,000/US$.2 per bulan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="25" width="544" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi diatas adalah berdasarkan nilai unit dan asumsi tingkat pertumbuhan bunga (net) yang tetap per tahun. Asumsi bunga bukan merupakan tolak ukur untuk perhitungan rata-rata tingkat pertumbuhan yang terendah dan yang tertinggi. Realisasi hasil pengembangan dapat lebih tinggi atau rendah dari tingkat pengembalian untuk ILUSTRASI diatas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="25" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="9" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="9" width="544" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Polis diatas hanya merupakan ILUSTRASI dan besarnya TIDAK DIJAMIN, tergantung pada kinerja investasi Penanggung dan tidak terlepas dari risiko investasi berdasarkan jenis investasi yang dipilih oleh Pemegang Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="1" width="80" height="8"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Catatan:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040151_product_sub2" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.VGuides.Page Header" value="196,206,310,316,420"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="512">
+			<staticText>
+				<reportElement positionType="Float" x="10" y="224" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="226" width="478" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Peserta mengalami Cacat Tetap Total dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="240" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="242" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah diisi dan ditandatangani oleh Yang Ditunjuk dan dokter;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="253" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="268" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Peserta (KTP/SIM/Passport) ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="266" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="280" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="281" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Yang Ditunjuk (KTP/SIM/Passport);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="293" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[e.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="294" width="461" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Laporan polisi bila diperlukan;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="306" width="17" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[f.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="307" width="460" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Surat keterangan dari dokter yang menyatakan Peserta menderita Cacat Tetap;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="320" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[g.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="322" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Keterangan dari Pemegang Polis dan copy saldo terakhir;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="334" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[h.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="335" width="473" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ringkasan catatan medis dari dokter yang merawat Peserta sehubungan dengan Cacat Tetap Total yang dialami Peserta;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="346" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="348" width="476" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Peserta Hidup pada akhir masa asuransi, dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="369" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="370" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah diisi dan ditandatangani oleh Pemegang Polis/ Yang Ditunjuk;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="381" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="395" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="396" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Bukti diri Pemegang Polis (KTP/SIM/Passport) yang masih berlaku;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="409" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Surat Pengajuan pembayaran Manfaat Asuransi Syariah dari Pemegang Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="408" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="422" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="423" width="505" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Wakil Para Peserta berhak menolak atau menunda proses pembayaran klaim apabila dokumen tidak lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="436" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="436" width="494" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Klaim harus diajukan selambat-lambatnya 90 (sembilan puluh) hari sejak Peserta meninggal dunia/cacat tetap total. Diluar jangka waktu tersebut Wakil Para Peserta berhak menolak pembayaran Manfaat Asuransi Syariah.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="456" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="457" width="494" height="31"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Wakil Para Peserta berhak untuk mengadakan penyelidikan atas sebab-sebab kematian/cacat tetap total yang dialami oleh Peserta dan atau berhak meminta dokumen lain yang dianggap perlu untuk mendukung dokumen sebagaimana dimaksud dalam ayat 2 dan 3 pasal ini, sepanjang relevan dengan pertanggungan dan wajar dalam proses penyelesaian klaim.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="488" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="489" width="494" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila berdasarkan penyelidikan ternyata penyebab kematian/cacat tetap total yang dialami oleh Peserta termasuk dalam pengecualian, maka Wakil Para Peserta berhak untuk menolak klaim tersebut serta tidak diwajibkan membayar Manfaat Asuransi Syariah.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="108" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="123" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[e.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="161" width="451" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Surat keterangan kematian atau akte kematian Peserta dari instansi berwenang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="94" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="57" width="494" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Peserta meninggal dunia dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="110" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Yang Ditunjuk (KTP/SIM/Passport);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="211" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[k.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="34" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="83" width="52" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="187" width="479" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Keterangan tertulis dari instansi berwenang atau dari pengadilan yang mencantumkan dengan jelas nama Yang Ditunjuk;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="136" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[f.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="35" width="478" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta meninggal dunia/ cacat tetap total dalam masa asuransi syariah, maka selambat-lambatnya dalam waktu 30 hari, Pemegang Polis atau Yang Ditunjuk wajib memberitahukan secara tertulis kepada Wakil Para Peserta sebagai laporan sementara.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="213" width="479" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Surat kuasa dari Yang Ditunjuk apabila Yang Ditunjuk lebih dari 1 (satu) orang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="124" width="477" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Formulir Surat Keterangan Dokter Confidential yang diisi lengkap dan ditandatangani oleh dokter yang merawat Peserta;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="82" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="96" width="361" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Peserta (KTP/SIM/Passport) ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="158" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[g.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="71" width="361" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah diisi dan ditandatangani oleh Yang Ditunjuk dan dokter;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="55" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="149" width="186" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Laporan polisi bila diperlukan;
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="70" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="198" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[j.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="172" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[h.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="200" width="479" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[j.	Surat Keterangan dari kedutaan besar Republik Indonesia setempat dalam hal meninggalnya di luar negeri;]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="10" y="19" width="329" height="14"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="9" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pengajuan Manfaat "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="99" y="83" width="76" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="175" y="83" width="55" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="255" width="51" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="173" y="255" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="95" y="255" width="78" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="383" width="52" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="96" y="383" width="76" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="172" y="383" width="55" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="137" width="72" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Visum et Repertum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="116" y="137" width="196" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[dalam hal meninggalnya tidak wajar;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="174" width="451" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Keterangan dari Pemegang Polis dan copy saldo terakhir;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="27" y="185" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[i.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

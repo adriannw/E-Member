@@ -1,0 +1,230 @@
+.tdFormLabel{
+	font-family: Arial;
+	font-size: 11px;
+    text-align: right;
+}
+.tdFormValue{
+	font-family: Arial;
+	font-size: 11px;
+    text-align: left;
+    color: blue;
+}
+.tdFormMessage{
+	font-family: Arial;
+	font-size: 11px;
+    text-align: left;
+}
+
+.tdFormError{
+	font-family: Arial;
+	font-size: 11px;
+    color: red;
+}
+
+.comErrorColor{
+	font-family: Arial;
+	font-size: 11px;
+    color: red;
+}
+
+.tdFormPercent{
+	font-family: Arial;
+	font-size: 11px;
+    width: 35px;
+}
+
+.line1 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_09.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.line2 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_10.jpg);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+.line3 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_11.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.line4 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_11.jpg);
+	background-repeat: repeat-y;
+	background-position: center center;
+}
+.line5 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_15.jpg);
+	background-repeat: repeat-y;
+	background-position: center center;
+}
+.line6 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_38.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.line7 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_39.jpg);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+.line8 {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_40.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.bgForm1 {
+	background-attachment: fixed;
+	background-image: url(../images/bg_form1.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+}
+.bgForm2 {
+	background-attachment: fixed;
+	background-image: url(../images/bg_form2.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: normal;
+	font-style: normal;
+}
+.bgForm3 {
+	background-attachment: fixed;
+	background-image: url(../images/bg_form3.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+}
+.bgForm4 {
+	background-attachment: fixed;
+	background-image: url(../images/bg_form4.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+}
+.bgOut {
+	background-attachment: fixed;
+	background-image: url(../images/bg_out.jpg);
+	background-repeat: repeat-x;
+	background-position: center top;
+}
+.fontLabel1 {
+	font-family: Arial;
+	font-size: 14px;
+	color: #FF9900;
+	font-weight: bold;
+}
+.fontLink {
+	font-family: Arial;
+	line-height: 1px;
+	font-size: 11px;
+}
+.banBot {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_41.jpg);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+.fontBot {
+	font-family: Arial;
+	font-size: 11px;
+	line-height: normal;
+}
+.banUp {
+	background-attachment: fixed;
+	background-image: url(../images/web_proposal_03.jpg);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+.fontUp {
+	font-family: Arial;
+	font-size: 9px;
+	font-style: normal;
+	color: #FFFFFF;
+	background-position: center;
+	line-height: normal;
+}
+.fontForm {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+}
+.nobottom {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FF5D2B;
+	border-right-color: #FF5D2B;
+	border-left-color: #FF5D2B;
+    border-bottom-color: #FF5D2B;
+    background-color: #CCCCCC;
+}
+.rowClass {
+    WORD-WRAP: break-word;
+}
+.thead {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #7f7f7f;
+	font-weight: bold;
+}
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+             	url(../images/pIkfp.gif)
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

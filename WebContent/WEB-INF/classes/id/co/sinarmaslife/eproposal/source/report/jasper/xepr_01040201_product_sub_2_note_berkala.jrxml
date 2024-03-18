@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040201_product_sub_2_note_berkala" pageWidth="560" pageHeight="842" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<detail>
+		<band height="131">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="90" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="106" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="26" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="42" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="42" width="544" height="42"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Illustrasi Manfaat diatas sudah diperhitungkan dengan :
+* Biaya akuisisi sebesar 90% dari Premi Tahun ke-1, 45% untuk thn ke-2, 15% untuk thn ke-3 s/d thn ke-5. Biaya Top up sebesar 5% dari Premi Top up.
+* Biaya pengelolaan investasi sesuai dengan jenis fund yang dipilih.
+* Biaya asuransi.
+* Biaya administrasi Rp.15,000/US$.2 per bulan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="118" width="544" height="13"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Proposal ini hanya sebuah ILLUSTRASI, BUKAN SUATU KONTRAK ASURANSI, untuk penjelasan lebih lengkapnya lihat dokumen polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="82" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="90" width="544" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Penarikan dan Penebusan Nilai Polis yang dilakukan sebelum Polis berjalan lebih dari 3(tiga) tahun akan dikenakan pajak penghasilan atas kelebihan Nilai
+Polis yang diambil terhadap Premi Tahunan + Penambahan (Top-Up).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="106" width="544" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Illustrasi ini harus ditandatangani oleh Pemohon dan dilampirkan pada proposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="10" width="544" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Nilai Polis diatas hanya merupakan ILLUSTRASI dan besarnya TIDAK DIJAMIN, tergantung pada kinerja investasi Penanggung dan tidak terlepas dari risiko investasi berdasarkan jenis investasi yang dipilih oleh Pemegang Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="2" width="80" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Catatan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="26" width="544" height="18"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Illustrasi diatas adalah berdasarkan nilai unit dan asumsi tingkat pertumbuhan bunga (net) yang tetap per tahun. Asumsi bunga bukan merupakan tolak ukur untuk perhitungan rata-rata tingkat pertumbuhan yang terendah dan yang tertinggi. Realisasi hasil pengembangan dapat lebih tinggi atau rendah dari tingkat pengembalian untuk ILLUSTRASI diatas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="82" width="544" height="10"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal diatas adalah Uang Pertanggungan ditambah dengan Nilai Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="10" width="10" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light" pdfEncoding="Cp1252"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

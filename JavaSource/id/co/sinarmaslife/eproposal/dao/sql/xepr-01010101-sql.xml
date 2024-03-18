@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <select id="selectToCheckAgentExistence" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+        SELECT a.msag_id, a.lca_id, a.msag_mws
+        FROM eka.mst_agent a, eka.mst_client_new b
+        WHERE
+            a.mcl_id = b.mcl_id
+		    AND b.mspe_email IS NOT NULL
+		    AND a.msag_active=1
+            AND UPPER( TRIM( b.mspe_email ) ) like UPPER( TRIM( #account#) )||'@%'
+    </select>
+    
+      <select id="selectToCheckUserExternalExistence" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+			select msag_id from eka.lst_user_external 
+            where UPPER( TRIM( id ) ) like UPPER( TRIM( #account#) )||'@%'
+                and flag_active = 1
+    </select>
+    
+     <select id="selectBancass1FromLst_Reff_Bii" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		select max(a.LRB_ID) lrb_id, trim(a.NAMA_REFF) NAMA_REFF
+		from eka.lst_reff_bii a,
+   		eka.lst_cabang_bii b
+		where a.lcb_no = b.lcb_no
+		and lower(b.team_name) like '%team%yanti%sumirkan%'
+		and a.flag_aktif = 1
+		and UPPER( TRIM(a.NAMA_REFF) ) = UPPER( TRIM( #account#) )
+		group by a.NAMA_REFF
+    </select>
+    
+     <select id="selectBancass2FromLst_Reff_Bii" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		select max(a.LRB_ID) lrb_id, trim(a.NAMA_REFF) NAMA_REFF
+		from eka.lst_reff_bii a,
+   		eka.lst_cabang_bii b
+		where a.lcb_no = b.lcb_no
+		and lower(b.team_name) like '%team%jan%rosadi%'
+		and a.flag_aktif = 1
+		and UPPER( TRIM(a.NAMA_REFF) ) = UPPER( TRIM( #account#) )
+		group by a.NAMA_REFF
+    </select>
+    
+    <select id="selectBancass3FromLst_Reff_Bii" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		select max(a.LRB_ID) lrb_id, trim(a.NAMA_REFF) NAMA_REFF
+		from eka.lst_reff_bii a,
+   		eka.lst_cabang_bii b
+		where a.lcb_no = b.lcb_no
+		and lower(b.team_name) like '%team%dewi%'
+		and a.flag_aktif = 1
+		and UPPER( TRIM(a.NAMA_REFF) ) = UPPER( TRIM( #account#) )
+		group by a.NAMA_REFF
+    </select>
+    
+    <select id="selectBancass4FromLst_Reff_Bii" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		select max(a.LRB_ID) lrb_id, trim(a.NAMA_REFF) NAMA_REFF
+		from eka.lst_reff_bii a,
+   		eka.lst_cabang_bii b
+		where a.lcb_no = b.lcb_no
+		and lower(b.team_name) like '%team%gideon%'
+		and a.flag_aktif = 1
+		and UPPER( TRIM(a.NAMA_REFF) ) = UPPER( TRIM( #account#) )
+		group by a.NAMA_REFF
+    </select>
+
+	<select id="selectUserHardcodedReferential" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		SELECT MSAG_ID, USERNAME, PASSWORD, GROUP_ID, DESCRIPTION
+		FROM eka.lst_user_hardcoded_referential
+		WHERE UPPER(USERNAME) = UPPER( TRIM( #account#) ) AND upper(eka.decrypt(PASSWORD)) = upper(#password#)
+		AND JENIS=7
+		AND FLAG_AKTIF='1'
+		<isNotNull property="kode">
+		    AND kode = #kode#
+		</isNotNull>
+    </select>
+
+    <select id="selectCheckCredentialsForFirstTime" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+        SELECT a.msag_id, b.mspe_date_birth
+        FROM eka.mst_agent a, eka.mst_client_new b
+        WHERE
+            a.mcl_id = b.mcl_id
+            AND a.msag_active = 1
+            AND a.msag_id = #msag_id#
+            AND TO_CHAR( b.mspe_date_birth, 'DDMMYYYY' ) = #mspe_date_birth#
+    </select>
+
+    <insert id="insertUserExternal" parameterClass="java.util.Map">
+        INSERT INTO eka.lst_user_external
+               (ID, PASSWORD, jenis, msag_id, email, flag_active, online_date, jn_bank)
+        VALUES ( UPPER( TRIM ( #id# ) ), eka.encrypt (#password#), #jenis#, #msag_id#, UPPER( TRIM ( #id# ) ), 1, sysdate, #jn_bank# )
+    </insert>
+
+    <resultMap id="selectLoginInfo.result" class="id.co.sinarmaslife.eproposal.model.vo.CredentialsVO">
+        <result property="userName" column="user_name" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="password" column="user_password" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="msagId" column="msag_id" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="jenis" column="jenis" javaType="java.lang.Integer" jdbcType="NUMBER"/>
+    </resultMap>
+
+    <select id="selectLoginInfo" resultMap="selectLoginInfo.result" parameterClass="java.util.Map">
+        SELECT eka.decrypt(password) as user_password, id as user_name, msag_id as msag_id, rownum, jenis
+        FROM eka.lst_user_external
+        WHERE jenis in (2,9,12,13,5,11,16,99)
+        <isNotNull property="account">
+        AND UPPER( id ) like '%'||UPPER( TRIM( #account#) )||'%'
+        </isNotNull>
+        <isNotNull property="msagId">
+        AND msag_id = #msagId#
+        </isNotNull>
+        AND flag_active=1
+        and rownum = 1
+    </select>
+    
+     <select id="selectMstConfig" parameterClass="java.util.HashMap" resultClass="java.util.HashMap">
+    	select name, name2, name3
+		from eka.mst_config
+		where app_id = #app_id#
+		and section = #section#
+		and sub_section = #sub_section#
+    </select>  
+    
+    <select id="selectDecrypt" resultClass="java.lang.String" parameterClass="java.util.Map" >
+    SELECT eka.decrypt(#decrypt#) from dual
+    </select>
+    
+    <select id="selectLoginInfoAjsDb" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+     select rownum, lus_login_name, lus_full_name, eka.decrypt(lus_password) password, lus_email, lus_id, jn_bank from eka.lst_user
+   where rownum = 1
+    <isNotNull property="jn_bank">
+  	and jn_bank = #jn_bank#
+   </isNotNull>
+   <isNotNull property="lusId">
+   and lus_id = #lusId#
+   </isNotNull>
+   <isNotNull property="lus_email">
+   and UPPER( lus_email ) like '%'||UPPER( TRIM( #"lus_email"#) )||'%'
+   </isNotNull>
+   <isNotNull property="password">
+   and upper(eka.decrypt(lus_password)) = upper(#password#)
+   </isNotNull>
+   and lus_active=1
+    </select>
+    
+    <select id="selectLoginInfoHardcodedAjsDb" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+        select
+            rownum, a.lus_login_name, a.lus_full_name, eka.decrypt(a.lus_password) password, a.lus_email, a.lus_id, a.jn_bank
+        from 
+            eka.lst_user a
+        where           
+            rownum = 1 
+            <isNotNull property="account">
+		    and UPPER(a.lus_login_name) = UPPER(#account#)
+		    </isNotNull>
+		    <isNotNull property="lus_email">
+		    and UPPER( a.lus_email ) like '%'||UPPER( TRIM( #"lus_email"#) )||'%'
+		    </isNotNull>
+		    <isNotNull property="password">
+		    and upper(eka.decrypt(a.lus_password)) = upper(#password#)
+		    </isNotNull>		  
+		    and jn_bank = 2 and lus_active = 1
+    </select>
+    
+    <insert id="insertUserHardcoded" parameterClass="java.util.HashMap">
+        INSERT INTO eka.lst_user_hardcoded_referential (
+            msag_id,
+            lus_id,
+            username,
+            password,
+            jenis,
+            group_id,
+            flag_aktif,
+            description,
+            kode
+        ) VALUES (
+            #msag_id#,
+            #lus_id#,
+            upper(trim(#username#)),
+            eka.encrypt(#password#),
+            #jenis#,
+            #group_id#,
+            #flag_aktif#,
+            #description#,
+            #kode#
+        )
+    </insert>
+    
+   <select id="selectLoginInfoEB" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+   select rownum, lus_login_name, lus_full_name, eka.decrypt(lus_password) password, lus_email, lus_msag_id, lca_id from eka.lst_user@eb 
+   where lde_id = '17'
+   and lus_active = 1
+   and rownum = 1
+   <isNotNull property="msagid">
+   and lus_msag_id = #msagid#
+   </isNotNull>
+   <isNotNull property="lus_email">
+   and UPPER( lus_email ) like '%'||UPPER( TRIM( #lus_email#) )||'%' 
+   </isNotNull>
+   <isNotNull property="password">
+   and upper(eka.decrypt(lus_password)) = upper(#password#)
+   </isNotNull>
+    </select>
+    
+   <select id="selectLoginLstUser" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+	select rownum, lus_login_name, lus_full_name, lus_id, eka.decrypt(lus_password) as password, lca_id, jn_bank
+	from 
+	eka.lst_user where 
+	lus_active = 1
+	and rownum = 1
+	<isNotNull property="jn_bank">
+		and jn_bank = #jn_bank#
+	</isNotNull>
+	<isNotNull property="lus_login_name">
+		and upper(lus_login_name) = upper(trim(#lus_login_name#))
+	</isNotNull>
+	   <isNotNull property="password">
+   and upper(eka.decrypt(lus_password)) = upper(#password#)
+   </isNotNull>
+    </select>
+    
+    <resultMap id="selectUserGroup.result" class="id.co.sinarmaslife.standard.model.vo.UserGroup">
+        <result property="msagId" column="msag_id" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="groupId" column="group_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="groupName" column="group_name" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectUserGroup" resultMap="selectUserGroup.result" parameterClass="java.util.Map">
+    	SELECT a.msag_id, a.group_id, b.group_name
+        FROM eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP b
+        WHERE a.group_id = b.group_id
+		and a.msag_id = #msag_id#
+		and rownum=1
+		<isNotNull property="group_id">
+		and a.group_id = #group_id#
+		</isNotNull>
+		<isNotNull property="jenis">
+		and a.jenis = #jenis#
+		</isNotNull>
+	</select>
+	
+	 <select id="selectUserGroupHardcodedReferential" resultMap="selectUserGroup.result" parameterClass="java.util.Map">
+    	 SELECT b.MSAG_ID, b.GROUP_ID, a.GROUP_NAME 
+		 FROM eka.LST_USER_PRODUCT_GROUP a, eka.lst_user_hardcoded_referential b
+		 where a.group_id=b.group_id 
+		 <isNotNull property="msag_id">
+		  and b.msag_id = #msag_id#
+		 </isNotNull>
+		 <isNotNull property="userName">
+		  AND UPPER( trim(b.username) ) like '%'||UPPER( TRIM( #userName#) )||'%'
+		  </isNotNull>
+		  and b.jenis = 7
+		  and b.flag_aktif=1
+	</select>	
+	
+	<select id="selectGroupId" resultClass="java.lang.String" parameterClass="java.util.Map">
+    	SELECT group_id
+        FROM eka.LST_USER_PRODUCT_GROUP
+        WHERE UPPER(GROUP_NAME) = UPPER(#GROUP_NAME#)
+	</select>
+	
+	<select id="selectGroup" resultClass="java.lang.String" parameterClass="java.util.Map">
+    	SELECT group_id
+        FROM eka.LST_USER_PRODUCT
+        WHERE UPPER(MSAG_ID) = UPPER(#msag_id#)
+	</select>
+	
+	<select id="selectAgentType" resultClass="java.lang.String" parameterClass="java.util.Map">
+		select lca_id from eka.mst_agent
+		where msag_active = 1 and msag_id = #msag_id#
+	</select>
+	
+	<insert id="insertNewUserProduct" parameterClass="java.util.Map">
+    	INSERT into eka.LST_USER_PRODUCT ( MSAG_ID, GROUP_ID ) values ( #MSAG_ID#, #GROUP_ID# )
+	</insert>
+
+	<insert id="insertUserProduct" parameterClass="java.util.Map">
+    	INSERT into eka.LST_USER_PRODUCT ( MSAG_ID, GROUP_ID, JENIS ) values ( #MSAG_ID#, #GROUP_ID#, #JENIS# )
+	</insert>
+
+    <update id="updateUserProduct" parameterClass="java.util.Map">
+    	UPDATE eka.LST_USER_PRODUCT set group_id = #group_id#
+        WHERE msag_id = #msag_id#
+	</update>
+
+    <select id="selectAuthenticateAsmUser" resultClass="java.lang.String" parameterClass="java.util.Map">
+        SELECT lus_full_name
+        FROM eka.lst_user
+        WHERE
+            lus_active = 1
+            AND lca_id = '55'
+            AND upper( lus_login_name ) = upper( trim( #account# ) )
+            AND upper( trim( #password# ) ) = eka.decrypt (lus_password)
+    </select>
+    
+    <insert id="insertMstLoginHist" parameterClass="java.util.HashMap">
+		INSERT INTO eka.mst_login_hist
+		            (jenis, remote_addr,
+		             remote_host, request_url,
+		             request_time, user_id,
+		             user_login_attempt, user_pass_entered
+		            )
+		     VALUES (#jenis:INTEGER#, UPPER (#remote_addr:VARCHAR#),
+		             UPPER (#remote_host:VARCHAR#), UPPER (#request_url:VARCHAR#),
+		             sysdate, UPPER (#user_id:VARCHAR#),
+		             #user_login_attempt:INTEGER#, UPPER (#user_pass_entered:VARCHAR#)
+		            )
+	</insert>
+	
+	<update id="updateOnlineDateLstUserExtenal" parameterClass="java.util.HashMap">
+    	UPDATE eka.LST_USER_EXTERNAL set online_date = sysdate
+        WHERE msag_id = #msag_id#
+        AND jenis = #jenis#
+        AND flag_active=1
+	</update>
+	
+	<select id="selectLoginUrlSecure" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+        select
+            key_id, link 
+        from 
+            eka.mst_url_secure
+        where 
+            rownum = 1 
+            <isNotNull property="idencrypt1">
+		    and id_encrypt_1 = #idencrypt1#
+		    </isNotNull>
+		    <isNotNull property="idencrypt2">
+		   	and id_encrypt_2 = #idencrypt2#
+		    </isNotNull>
+    </select>
+    
+    <delete id="deleteLoginUrlSecure" parameterClass="java.util.Map">
+    	delete eka.mst_url_secure
+    			where id_encrypt_1= #id_encrypt_1# and id_encrypt_2= #id_encrypt_2#
+	</delete>
+	
+	<insert id="insertAksesHist" parameterClass="java.util.HashMap">
+    	insert into eka.mst_akses_hist (MSAH_JENIS, MSAH_DATE, MSAH_URI, MSAH_IP, REMOTE_ADDR, JENIS_ID, USER_ID) VALUES
+		( #msah_jenis# , sysdate, #msah_uri#, #msah_ip#, #remote_addr# ,#jenis_id#, #user_id# )
+	</insert>
+		
+	 <select id="selectAgentBC" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		select agent_code , b. lca_id, a.jenis from eka.lst_reff_bii a,eka.mst_agent b where 
+		a.agent_code= b.msag_id and
+		a.LRBJ_ID1 = 366
+		and a.flag_aktif=1
+		and b.msag_id = #msag_id#
+    </select>
+    
+    <select id="selectMspeEmail" resultClass="java.util.HashMap" parameterClass="java.util.Map">		
+		SELECT b.mspe_email
+        FROM eka.mst_agent a, eka.mst_client_new b
+        WHERE
+        a.mcl_id = b.mcl_id
+        AND b.mspe_email IS NOT NULL
+        AND a.msag_active=1
+        AND a.msag_id = #msag_id#
+    </select>
+    
+     <select id="selectAgentBCVIP" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+		SELECT nama
+		FROM public.user
+		where id IN ('1')		
+    </select>
+       
+</sqlMap>

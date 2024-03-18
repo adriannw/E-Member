@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <select id="selectRiderPcRate" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = #ii_bisnis_id# ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #is_kurs_id# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #ii_usia_pp# ) AND
+        ( EKA.LST_RIDER.USIA_TT = 0 )
+    </select>
+
+    <select id="selectRiderWpdRate" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = #ii_bisnis_id# ) AND
+            ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+            ( EKA.LST_RIDER.LKU_ID = #is_kurs_id# ) AND
+            ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+            ( EKA.LST_RIDER.USIA_TT = #ii_usia_tt# )
+    </select>
+
+</sqlMap>

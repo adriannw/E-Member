@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+	<typeAlias alias="ViewListProvider" type="id.co.sinarmaslife.standard.model.vo.ViewListProvider"/>
+	<typeAlias alias="OptionVo" type="id.co.sinarmaslife.standard.model.vo.OptionVO"/>
+    <typeAlias alias="TotalPage" type="id.co.sinarmaslife.standard.model.vo.TotalPage"/>
+    
+    <!-- selectTotalPageResult -->
+    <resultMap id="selectTotalPageResult.result" class="TotalPage">
+        <result property="totalPage" column="total_pages" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+    
+    <!-- selectAllProviderResult -->
+    <resultMap id="selectAllProviderResult.result" class="ViewListProvider">
+    	<result property="rsId" column="RSID" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="rsNama" column="RSNAMA" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="rsAlamat" column="RSALAMAT" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+     <resultMap id="selectAllCityProvider.result" class="OptionVo">
+    	<result property="value" column="value" javaType="String" jdbcType="NUMBER"/>
+        <result property="label" column="label" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+     <select id="selectAllCityProvider" resultClass="OptionVo" resultMap="selectAllCityProvider.result" parameterClass="java.util.Map">
+             SELECT distinct b.lska_id as value, b.lska_note as label
+                   FROM eka.LST_RUMAH_SAKIT@EB a, eka.lst_kabupaten@EB b
+                    where a.RSPVD = 1 and a.rs_mcu_prov = 1 and a.rsaktif = 1
+                    and a.rskbt = b.lska_id
+                    order by lska_note
+    </select>
+                    
+                    
+    <select id="selectAllProviderList" resultClass="ViewListProvider" resultMap="selectAllProviderResult.result" parameterClass="java.util.Map">
+        SELECT * FROM (
+			SELECT ROWNUM as row_number, RSID, RSNAMA, RSALAMAT FROM 
+			(
+   				SELECT a.RSID, a.RSNAMA, a.RSALAMAT, b.lska_note
+   				FROM eka.LST_RUMAH_SAKIT@EB a, eka.lst_kabupaten@EB b
+					where a.RSPVD = 1 and a.rs_mcu_prov = 1 and a.rsaktif = 1
+					and a.rskbt = b.lska_id
+        <isNotNull property="RSNAMA">
+                and UPPER(a.RSNAMA) like '%' || UPPER(#RSNAMA#) || '%'
+        </isNotNull>
+        <isNotNull property="RSALAMAT">
+                and UPPER(a.RSALAMAT) like '%' || UPPER(#RSALAMAT#) || '%'
+        </isNotNull>
+         <isNotNull property="LSKA_ID">
+                and UPPER(b.LSKA_ID) like '%' || UPPER(#LSKA_ID#) || '%'
+        </isNotNull>
+		<isNotNull property="sortRow">
+					order by $sortRow$ Asc
+		</isNotNull>
+			))
+			WHERE 
+  				( row_number <![CDATA[>]]> ( ( #noPage# - 1 ) * #noRow# ) )
+				AND ( row_number <![CDATA[<=]]> ( #noPage# * #noRow# )  )  
+    </select>
+    
+    <select id="selectTotalProviderPage" resultClass="TotalPage" resultMap="selectTotalPageResult.result" parameterClass="java.util.Map">
+      SELECT CEIL( count( * ) / #noRow# ) as total_pages
+       FROM eka.LST_RUMAH_SAKIT@EB a, eka.lst_kabupaten@EB b
+					where a.RSPVD = 1 and a.rs_mcu_prov = 1 and a.rsaktif = 1
+					and a.rskbt = b.lska_id
+        <isNotNull property="RSNAMA">
+                and UPPER(a.RSNAMA) like '%' || UPPER(#RSNAMA#) || '%'
+		</isNotNull>
+		<isNotNull property="RSALAMAT">
+                and UPPER(a.RSALAMAT) like '%' || UPPER(#RSALAMAT#) || '%'
+        </isNotNull>
+    </select>
+    
+</sqlMap>

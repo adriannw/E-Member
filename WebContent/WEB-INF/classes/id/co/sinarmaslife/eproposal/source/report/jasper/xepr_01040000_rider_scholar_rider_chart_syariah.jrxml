@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_scholar_rider_chart_syariah" pageWidth="450" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="450" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select '1' as year, '12313' as upSekaligus, '12313' as upTahunan from dual
+union
+select '2' as year, '12313' as upSekaligus, '12313' as upTahunan from dual]]>
+	</queryString>
+	<field name="year" class="java.lang.Integer"/>
+	<field name="upSekaligus" class="java.lang.Double"/>
+	<field name="upTahunan" class="java.lang.Double"/>
+	<summary>
+		<band height="183">
+			<bar3DChart>
+				<chart evaluationTime="Report" hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="0" width="417" height="178"/>
+					<chartTitle color="#000000">
+						<font fontName="Aharoni" size="8"/>
+						<titleExpression><![CDATA["Grafik Manfaat SMiLe Scholarship Syariah"]]></titleExpression>
+					</chartTitle>
+					<chartSubtitle color="#000000">
+						<font size="8"/>
+					</chartSubtitle>
+					<chartLegend textColor="#000000" backgroundColor="#FFFFFF">
+						<font size="8"/>
+					</chartLegend>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Manfaat UP Sekaligus"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{year}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{upSekaligus}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot backcolor="#FFFFFF"/>
+					<categoryAxisLabelExpression><![CDATA["Tahun"]]></categoryAxisLabelExpression>
+					<categoryAxisFormat>
+						<axisFormat>
+							<labelFont>
+								<font size="8"/>
+							</labelFont>
+							<tickLabelFont>
+								<font size="8" isItalic="true"/>
+							</tickLabelFont>
+						</axisFormat>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat>
+							<labelFont>
+								<font size="8"/>
+							</labelFont>
+							<tickLabelFont>
+								<font size="8"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

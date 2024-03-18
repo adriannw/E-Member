@@ -1,0 +1,30 @@
+==> remove left part of business id from
+    id/co/sinarmaslife/dao/sql/xepr-01030101-sql.xml
+    and rewrite business id in HardcodedProducts like step below
+
+==> goto file HardcodedProducts.java
+    add something like this:
+    productVO = new HardcodedProductVO( 162, "EKA LINK 88 PLUS",
+                    new OptionVO[]{
+                            new OptionVO( "162~X7", "EKA LINK 88 PLUS SINGLE" ),
+                            new OptionVO( "162~X8", "EKA LINK 88 PLUS REGULER" ), } );
+            hardcodedProductVOList.add( productVO );
+
+==> goto file product mapper like Cepr01030213Mapper.java
+    add something like this:
+        public static final int X5 = 5;
+        public static final int X6 = 6;
+        public static final int X7 = 7;
+        public static final int X8 = 8;
+    and add:
+        // Eka Link 88 Plus
+        subProductMap.put( X7, X5, new Cepr01030213Entry( eproposalManager, editorUtil, command, errors ) );
+        subProductMap.put( X8, X6, new Cepr01030213Entry( eproposalManager, editorUtil, command, errors ) );
+
+==> goto file Cepr01030213Business.java
+    add something like this:
+    setSekaligusRightPartCdArr( new Integer[]{ Cepr01030213Mapper.X1, Cepr01030213Mapper.X5, Cepr01030213Mapper.X7 } );
+    setBerkalaRightPartCdArr( new Integer[]{ Cepr01030213Mapper.X2, Cepr01030213Mapper.X6, Cepr01030213Mapper.X8 } );
+
+==> goto all files Cepr01030213Entry, Cepr01030213Business.java, Cepr01030213DownloadController
+    add all conditional that similiar like if( ...

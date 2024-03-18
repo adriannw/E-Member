@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040111_new_product_sub_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentChoice" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsMonthlyPremium" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["STABLE LINK"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="subTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[subTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRider" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRider]]></parameterDescription>
+	</parameter>
+	<parameter name="marketer" class="java.lang.String">
+		<parameterDescription><![CDATA[marketer]]></parameterDescription>
+	</parameter>
+	<parameter name="bisnis_id" class="java.lang.Integer">
+		<parameterDescription><![CDATA[bisnis_id]]></parameterDescription>
+	</parameter>
+	<parameter name="bisnis_no" class="java.lang.Integer">
+		<parameterDescription><![CDATA[bisnis_no]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="534">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="59" width="528" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsInvestmentChoice}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_investment_choice.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="87" width="105" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="149" width="474" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Pada akhir/jatuh tempo Masa Target Investasi (MTI)]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="0" y="55" width="529" height="1" isRemoveLineWhenBlank="true"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="100" width="489" height="49" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia baik yang diakibatkan suatu penyakit maupun kecelakaan dan Asuransi masih berlaku maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 100% Uang Pertanggungan dan ditambah dengan Nilai Polis yang besarnya mengikuti ketentuan yang tercantum pada Syarat-Syarat Umum Polis dan selanjutnya Asuransi berakhir.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="31" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="149" width="9" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="100" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="120" y="0" width="321" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="213" width="489" height="37" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Pemegang Polis melakukan penarikan atau mengambil Nilai Polis pada akhir/jatuh tempo Masa Target Investasi, maka jumlah Nilai Polis yang dibayarkan adalah sebesar Total Premi + Target Investasi + Bonus Performance dan sejak saat itu Polis berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="213" width="9" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="263" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="283" width="537" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(  $P{bisnis_id}.equals(new Integer(164)) && $P{bisnis_no}.equals(new Integer(2))  )]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer_note.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="161" width="9" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="161" width="474" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Memperpanjang (Roll Over) Nilai Polis; atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="174" width="474" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Memperpanjang (Roll Over) Premi saja dan mengambil hasil investasinya; atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="174" width="9" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="187" width="9" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="187" width="474" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Mengambil Nilai Polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="200" width="474" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Pemegang Polis memilih butir c, maka sejak saat itu Asuransi otomatis berakhir.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="426"/>
+	</summary>
+</jasperReport>

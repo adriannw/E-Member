@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+		xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<description>Spring formatter and editor</description>
+
+	<!-- ========== Formatters ========== -->
+
+		<bean id="defaultNumberFormat" class="java.text.NumberFormat" factory-method="getNumberInstance"/>
+
+		<bean id="defaultDateFormat" class="java.text.SimpleDateFormat">
+			<constructor-arg value="dd/MM/yyyy" />
+		</bean>
+	
+		<bean id="completeDateFormat" class="java.text.SimpleDateFormat">
+			<constructor-arg value="dd/MM/yyyy (HH:mm)" />
+		</bean>
+
+        <bean id="defaultCurrencyFormat" class="java.lang.String">
+			<constructor-arg value="###,###,###,###,##0.00" />
+		</bean>
+	
+	<!-- ========== Property Editors ========== -->
+	
+		<bean id="integerEditor" class="org.springframework.beans.propertyeditors.CustomNumberEditor">
+			<constructor-arg value="java.lang.Integer" />
+			<constructor-arg ref="defaultNumberFormat" />
+			<constructor-arg value="true" />
+		</bean>
+	
+		<bean id="doubleEditor" class="org.springframework.beans.propertyeditors.CustomNumberEditor">
+			<constructor-arg value="java.lang.Double" />
+			<constructor-arg ref="defaultNumberFormat" />
+			<constructor-arg value="true" />
+		</bean>
+
+		<bean id="dateEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+			<constructor-arg ref="defaultDateFormat" />
+			<constructor-arg value="true" />
+		</bean>
+	
+		<bean id="completeDateEditor" class="org.springframework.beans.propertyeditors.CustomDateEditor">
+			<constructor-arg ref="completeDateFormat" />
+			<constructor-arg value="true" />
+		</bean>
+
+        <bean id="currencyEditor" class="id.co.sinarmaslife.standard.propertyeditors.CurrencyFormatEditor">
+			<constructor-arg ref="defaultCurrencyFormat" />
+		</bean>    
+
+</beans>

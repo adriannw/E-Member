@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_payor_5_tpd_10_ci_death_summary" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderPayor5Tpd10CiDeathIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titlePayor5Tpd10CiDeath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as idx, 'Samuel' as name, '27' as age from dual
+union
+select '2' as idx, 'Nela' as name, '28' as age from dual]]>
+	</queryString>
+	<field name="idx" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<pageHeader>
+		<band height="127">
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="3" width="16" height="9"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderPayor5Tpd10CiDeathIndex}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="32" y="15" width="520" height="112"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pemegang Polis meninggal dunia atau menderita Cacat Tetap Total atau terdiagnosa salah satu dari 31 Penyakit Kritis maka Tertanggung dibebaskan dari Pembayaran Premi Pokok dan Premi Top Up Berkala (jika ada) berikutnya sampai selama masa pembayaran premi.  \n"+
+"Total akumulasi besarnya pembayaran premi lanjutan yang dibebaskan untuk setiap Tertanggung yang sama adalah maksimum sebesar Rp. 2.000.000.000,- (dua milyar Rupiah) atau US$ 200.000,- (dua ratus ribu Dollar Amerika Serikat)  \n"+
+"Pemegang Polis yang memiliki lebih dari satu asuransi yang memberikan manfaat CI, maka Total akumulasi besarnya manfaat CI yang dapat dibayarkan untuk setiap Tertanggung yang sama dari manfaat asuransi CI tersebut adalah maksimum sebesar Rp. 2.000.000.000,- (dua milyar Rupiah) atau US$ 200,000,- (dua ratus ribu Dollar Amerika Serikat).  \n"+
+"Pemegang Polis yang memiliki lebih dari satu asuransi yang memberikan manfaat TPD, maka Total akumulasi besarnya manfaat TPD yang dapat dibayarkan untuk setiap Tertanggung yang sama dari manfaat asuransi TPD tersebut adalah maksimum sebesar Rp. 2.000.000.000,- (dua milyar Rupiah) atau US$ 200,000,- (dua ratus ribu Dollar Amerika Serikat).  \n"+
+"Pembebasan pembayaran premi asuransi ini dimulai pada jatuh tempo pembayaran premi asuransi berikutnya setelah dinyatakan Meninggal Dunia atau menderita Cacat Tetap Total atau didiagnosa menderita salah satu dari 31 Penyakit Kritis."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="12" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="30" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="48" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="73" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="100" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="3" width="400" height="12"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Payor " + $P{titlePayor5Tpd10CiDeath} + " TPD/CI/Death "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

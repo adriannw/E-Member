@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040213_product_sub_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="namaPemegangPolis" class="java.lang.String">
+		<parameterDescription><![CDATA[namaPemegangPolis]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaPemegangPolis" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaPemegangPolis]]></parameterDescription>
+	</parameter>
+	<parameter name="namaTertanggung" class="java.lang.String">
+		<parameterDescription><![CDATA[namaTertanggung]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaTertanggung" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaTertanggung]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPokok" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPokok]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="tipeMedisCalonTertanggung" class="java.lang.String">
+		<parameterDescription><![CDATA[tipeMedisCalonTertanggung]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPembayaranPremi" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPembayaranPremi]]></parameterDescription>
+	</parameter>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<parameterDescription><![CDATA[currencySymbol]]></parameterDescription>
+	</parameter>
+	<parameter name="alokasiBiayaAkuisisi" class="java.lang.String">
+		<parameterDescription><![CDATA[alokasiBiayaAkuisisi]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiPokok" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiPokok]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAdministrasi" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAdministrasi]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTopUpBerkala" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTopUpBerkala]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaTopUpBerkala" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaTopUpBerkala]]></parameterDescription>
+	</parameter>
+	<parameter name="totalAlokasi" class="java.lang.String">
+		<parameterDescription><![CDATA[totalAlokasi]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPokok2" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPokok2]]></parameterDescription>
+	</parameter>
+	<parameter name="r3" class="java.lang.String">
+		<parameterDescription><![CDATA[r3]]></parameterDescription>
+	</parameter>
+	<parameter name="r2" class="java.lang.String">
+		<parameterDescription><![CDATA[r2]]></parameterDescription>
+	</parameter>
+	<parameter name="tipeMedisCalonPemegangPolis" class="java.lang.String">
+		<parameterDescription><![CDATA[tipeMedisCalonPemegangPolis]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan1" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan1]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan2" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan2]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan3" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan3]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan1" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan1]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan2" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan2]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan3" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan3]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeader]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan4" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan4]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan5" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan5]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan6" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan6]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan4" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan4]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan5" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan5]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan6" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiTambahan6]]></parameterDescription>
+	</parameter>
+	<parameter name="asuransiTambahan7" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan7]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiTambahan7" class="java.lang.String">
+		<parameterDescription><![CDATA[asuransiTambahan7]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPokokLabel" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPokokLabel]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTopBerkalaLabel" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTopBerkalaLabel]]></parameterDescription>
+	</parameter>
+	<parameter name="biayaAsuransiPokokLabel" class="java.lang.String">
+		<parameterDescription><![CDATA[biayaAsuransiPokokLabel]]></parameterDescription>
+	</parameter>
+	<parameter name="BiayaAdministrasiLabel" class="java.lang.String">
+		<parameterDescription><![CDATA[BiayaAdministrasiLabel]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="currencyCd" class="java.lang.String">
+		<parameterDescription><![CDATA[currencyCd]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual
+union
+select '2' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="76">
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="112" y="26" width="305" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="56" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="7">
+			<line>
+				<reportElement x="0" y="3" width="537" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="6" width="537" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<summary>
+		<band height="405">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="258" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="0" y="18" width="145" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perhitungan Alokasi Investasi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Alokasi Biaya Akuisisi Premi Pokok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="66" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Biaya Top Up Berkala]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="175" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Alokasi Investasi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="30" width="9" height="12" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="42" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="66" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="78" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="163" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="175" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="54" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="30" width="17" height="12" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="42" width="17" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="54" width="17" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="66" width="17" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="78" width="17" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="163" width="17" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="175" width="17" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="54" width="105" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTopUpBerkala}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="42" width="105" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{alokasiBiayaAkuisisi}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="30" width="105" height="12" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPokok2}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="175" width="105" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{totalAlokasi}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="78" width="105" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiPokok}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="163" width="105" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAdministrasi}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="66" width="105" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaTopUpBerkala}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="102" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiTambahan2}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="102" width="17" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="102" width="9" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="114" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan3} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiTambahan3}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="114" width="17" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan3} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="114" width="9" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan3} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="102" width="145" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{asuransiTambahan2}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="114" width="145" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan3} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{asuransiTambahan3}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="102" width="8" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan2} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="114" width="8" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan3} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="175" width="9" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="126" width="17" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan4} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="126" width="8" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan4} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="126" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan4} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiTambahan4}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="126" width="145" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan4} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{asuransiTambahan4}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="126" width="9" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan4} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="0" y="30" width="161" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPokokLabel}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="0" y="54" width="161" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTopBerkalaLabel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="138" width="8" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan5} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="138" width="145" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan5} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{asuransiTambahan5}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="138" width="9" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan5} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="138" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan5} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiTambahan5}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="138" width="17" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan5} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="78" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Biaya Asuransi Pokok Perbulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Biaya Asuransi Tambahan Perbulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="163" width="161" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Biaya Administrasi Perbulan]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="150" width="17" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan6} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="150" width="8" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan6} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="150" width="9" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan6} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="150" width="145" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan6} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{asuransiTambahan6}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="184" y="150" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{asuransiTambahan6} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{biayaAsuransiTambahan6}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

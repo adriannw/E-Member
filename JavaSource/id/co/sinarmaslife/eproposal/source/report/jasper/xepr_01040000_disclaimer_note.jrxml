@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_disclaimer_note" pageWidth="550" pageHeight="70" whenNoDataType="AllSectionsNoDetail" columnWidth="550" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<defaultValueExpression><![CDATA["C001"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 23 September 2007"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="18">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="537" height="18" forecolor="#FF0000"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Produk ini adalah Produk Asuransi Jiwa yang dijamin oleh PT Asuransi Jiwa Sinarmas MSIG Tbk. BUKAN merupakan PRODUK BANK, sehingga TIDAK DIJAMIN OLEH BANK serta TIDAK TERMASUK DALAM CAKUPAN OBYEK PROGRAM PENJAMINAN atau LEMBAGA PENJAMINAN PINJAMAN.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

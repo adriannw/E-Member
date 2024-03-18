@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040130_produk" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.VGuides.Title" value="12"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="type" class="java.lang.String">
+		<parameterDescription><![CDATA[type]]></parameterDescription>
+	</parameter>
+	<parameter name="tglProposal" class="java.lang.String">
+		<parameterDescription><![CDATA[tglProposal]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as tgl  from dual]]>
+	</queryString>
+	<title>
+		<band height="140">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="48" width="505" height="26" backcolor="#FFFFFF"/>
+				<box border="None" padding="0"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EKAWARSA]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="81" width="545" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="116" width="545" height="20" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<subreportParameter name="tglProposal">
+					<subreportParameterExpression><![CDATA[$P{tglProposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040130_product_sub_1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+</jasperReport>

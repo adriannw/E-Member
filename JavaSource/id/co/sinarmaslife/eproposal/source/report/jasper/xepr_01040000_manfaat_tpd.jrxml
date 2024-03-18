@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_manfaat_tpd" pageWidth="530" pageHeight="842" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select
+	 '5 tahun.' as termOfPayment, 
+	'Apabila Tertanggung meninggal dunia karena kecelakaan dalam masa Pertanggungan PA Rider masih berlaku, maka akan dibayarkan Manfaat Asuransi Tambahan sebesar 100% Uang Pertanggungan Pokok (Seratus juta rupiah).' as paragraph1
+from dual]]>
+	</queryString>
+	<field name="paragraph1" class="java.lang.String"/>
+	<field name="termOfPayment" class="java.lang.String"/>
+	<pageHeader>
+		<band height="166">
+			<staticText>
+				<reportElement x="-1" y="-1" width="215" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Total Permanent Disability (TPD)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="15" width="127" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Masa Pertanggungan SMiLe TPD :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="128" y="15" width="104" height="12"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{termOfPayment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="29" width="496" height="31"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asuransi Tambahan ini akan memberikan Pembayaran sekaligus sejumlah 100% Uang Pertanggungan Pokoknya apabila Tertanggung menderita cacat tetap total yang menyebabkan tertanggung tidak pernah akan dapat melakukan suatu pekerjaan, memegang suatu jabatan atau profesi apapun untuk memperoleh penghasilan, imbalan atau keuntungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="-1" y="29" width="17" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="-1" y="60" width="17" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="60" width="496" height="41"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Cacat tetap total tersebut harus belum ada sebelum atau pada tanggal mulai berlakunya pertanggungan dasar atau pemulihan pertanggungan polis dasar. Cacat Tetap Total sebagaimana dimaksud di atas, sekurang-kurangnya harus sudah berlangsung selama 180 (seratus delapan puluh) hari sejak Tertanggung dinyatakan menderita Cacat Tetap Total secara terus menerus dan diakui sebagai Cacat Tetap Total oleh Penanggung.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="101" width="496" height="65"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asuransi Tambahan ini akan memberikan Pembayaran sekaligus sejumlah Uang Pertanggungan apabila Tertanggung menderita cacat tetap total yang menyebabkan tertanggung tidak pernah akan dapat melakukan suatu pekerjaan, memegang suatu jabatan atau profesi apapun untuk memperoleh penghasilan, imbalan atau keuntungan. Cacat tetap total tersebut harus belum ada sebelum atau pada tanggal mulai berlakunya pertanggungan dasar atau pemulihan pertanggungan polis dasar. Cacat Tetap Total sebagaimana dimaksud di atas, sekurang-kurangnya harus sudah berlangsung selama 180 (seratus delapan puluh) hari sejak Tertanggung dinyatakan menderita Cacat Tetap Total secara terus menerus dan diakui sebagai Cacat Tetap Total oleh Penanggung.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="-1" y="101" width="17" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

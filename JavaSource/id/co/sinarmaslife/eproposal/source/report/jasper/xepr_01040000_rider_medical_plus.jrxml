@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_medical_plus" pageWidth="570" pageHeight="842" columnWidth="570" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="3" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.HGuides" value="257"/>
+	<parameter name="riderMedicalPlusIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderMedicalPlusTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["SMiLe Medical+"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="standalone" class="java.lang.String">
+		<defaultValueExpression><![CDATA["standalone"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as no, 'Biaya Kamar Menginap di rumah Sakit (365 hari) per hari' as subject, 10000 as descr, '-' as riderMedicalPlusType, 0 as maxClaimPerYear
+from dual
+union
+select '2' as no, 'Biaya Operasi/Pembedahan                                                                          (termasuk Biaya Pembiusan dan Biaya Kamar Bedah)' as subject, 0 as descr, '-' as riderMedicalPlusType, 0 as maxClaimPerYear
+from dual
+union
+select '3' as no, 'Biaya bla bla bla' as subject, 30000 as descr, '-' as riderMedicalPlusType, 0 as maxClaimPerYear
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.math.BigDecimal"/>
+	<field name="riderMedicalPlusType" class="java.lang.String"/>
+	<field name="maxClaimPerYear" class="java.math.BigDecimal"/>
+	<field name="no" class="java.lang.String"/>
+	<pageHeader>
+		<band height="53">
+			<staticText>
+				<reportElement x="14" y="27" width="184" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tabel Manfaat Jaminan Dasar Rawat Inap (RI)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="305" y="39" width="120" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{riderMedicalPlusType}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="0" y="0" width="16" height="14" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderMedicalPlusIndex}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="23" y="-1" width="433" height="14" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderMedicalPlusTitle}+"  ("+$F{riderMedicalPlusType}+") "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="16" width="432" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maks. s/d usia 75 tahun]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="9" y="0" width="472" height="53">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement x="9" y="39" width="23" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["No."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="32" y="39" width="273" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["   Manfaat"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="13">
+			<printWhenExpression><![CDATA[new Boolean( ( ( $F{subject} != null ) && ( !"".equals($F{subject} ) ) )  ||( ( $F{descr} != null ) && ( !"".equals($F{subject}) ) ) )]]></printWhenExpression>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement stretchType="RelativeToTallestObject" x="32" y="0" width="273" height="13"/>
+				<box padding="0">
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement stretchType="RelativeToBandHeight" x="305" y="0" width="104" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}.intValue() == 0? "As Charge       " :$P{REPORT_SCRIPTLET}.formatCurrency("",$F{descr})+ "       "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="409" y="0" width="16" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="9" height="13">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement stretchType="RelativeToTallestObject" x="9" y="0" width="23" height="13"/>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="464" y="0" width="8" height="13">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="221">
+			<staticText>
+				<reportElement x="6" y="208" width="252" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Untuk informasi selengkapnya dapat merujuk pada polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="41" width="464" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[  - Berlaku masa tunggu untuk Pre-existing Condition dan Penyakit-Penyakit khusus]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="53" width="250" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Catatan "+$P{riderMedicalPlusTitle}+"  ("+$F{riderMedicalPlusType}+") "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="8" y="18" width="120" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Catatan Rawat Inap (RI) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="30" width="464" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[* Dalam 30 hari sesudah selesai perawatan dengan maksimal 10 kali per tahun]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="9" y="0" width="472" height="221" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement x="8" y="65" width="460" height="111" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[  - Polis berlaku di seluruh dunia
+  - Tidak ada pembayaran manfaat asuransi untuk hal-hal yang dikecualikan dalam polis
+  - Peningkatan kelas jaminan hanya dapat dilakukan pada saat perpanjangan polis
+  - Jika biaya kamar dan Menginap yang dipilih ternyata melebihi biaya yang tercantum dalam tabel  Jaminan Polis yang dipilih, 
+    maka biaya-biaya yang dapat dibayar oleh Penanggung akan dihitung secara proporsional berdasarkan rumus :
+    B  =  (BI  x TB)/BK
+   Dimana: 
+   B : Biaya yang dapat dibayar             BI :  Biaya Kamar & Menginap sesuai ikhtisar Polis
+   TB : Total Biaya Sebenarnya           	  BK:  Biaya Kamar & Menginap yang digunakan pada saat rawat menginap
+   Asalkan tidak melebihi Batas Maksimum Penggantian perjenis Jaminan untuk tiap perawatan dan Batas Maksimum
+   Penggantian Per-Tahun. Selisih dari Biaya yang tidak dapat dibayar menjadi tanggung jawab dari Tertanggung.
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="9" y="0" width="23" height="4"/>
+				<box padding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="32" y="0" width="273" height="4"/>
+				<box padding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="305" y="0" width="120" height="4"/>
+				<box padding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="9" y="4" width="23" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement markup="none"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="32" y="4" width="273" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Batas Klaim per tahun "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="305" y="4" width="104" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{REPORT_SCRIPTLET}.formatCurrency("",$F{maxClaimPerYear})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement stretchType="RelativeToTallestObject" x="409" y="4" width="16" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="176" width="451" height="31" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Khusus untuk rawat inap di Malaysia dengan Biaya Kamar dan Menginap yang tercantum dalam Tabel Jaminan Polis lebih besar atau sama dengan Rp. 1.000.000,- Tertanggung berhak mendapatkan kelas kamar perawatan satu kamar satu tempat tidur dengan rate terendah dan akan berlaku manfaat asuransi kesehatan yang sesuai dengan kelas manfaat yang diambil]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

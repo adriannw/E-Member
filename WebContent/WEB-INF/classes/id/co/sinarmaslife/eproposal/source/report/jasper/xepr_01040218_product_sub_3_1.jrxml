@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040218_product_sub_3_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="7" bottomMargin="0" isSummaryNewPage="true">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["ASURANSI TAMBAHAN (RIDER) UNTUK EKALINK FAMILY"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsOneRow" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="dsRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRjIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRjIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRgIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRgIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRbIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRbIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusPkIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusPkIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePackage" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="20">
+			<subreport>
+				<reportElement x="0" y="0" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderMedicalPlus}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderMedicalPlus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_syariah.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="81">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderMedicalPlusRj}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderMedicalPlusRjIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRjIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusRj">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRj}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderMedicalPlusRj}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rj.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="20" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderMedicalPlusRg}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRiderMedicalPlusRg">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusRgIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRgIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderMedicalPlusRg}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rg.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="40" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderMedicalPlusRb}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderMedicalPlusRbIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRbIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusRb">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderMedicalPlusRb}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rb_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="60" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRiderMedicalPlusPk}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRiderMedicalPlusPk">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusPk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusPkIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusPkIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderMedicalPlusPk}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_pk_syariah.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

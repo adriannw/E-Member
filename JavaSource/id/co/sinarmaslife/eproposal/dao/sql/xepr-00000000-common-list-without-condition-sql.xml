@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <typeAlias alias="OptionVO" type="id.co.sinarmaslife.standard.model.vo.OptionVO"/>
+
+    <!--Product 39, 95, 155 hidden-->
+    <!--Product 162, 142, 158, 164
+        initialized hardcoded in Cepr01030102Business (Selected Show)-->
+
+    <resultMap id="selectCurrencyOptionVOList.result" class="OptionVO">
+        <result property="value" column="lku_id" javaType="String" jdbcType="CHAR"/>
+        <result property="label" column="lku_symbol" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectCurrencyOptionVOList" resultClass="OptionVO" resultMap="selectCurrencyOptionVOList.result">
+        SELECT lku_id, lku_symbol
+        FROM eka.lst_kurs
+        <isNotNull property="cdList">
+            <iterate prepend="WHERE lku_id in" property="cdList" open="(" close=")" conjunction=",">
+                #cdList[]#
+            </iterate>
+        </isNotNull>
+        ORDER BY lku_id
+    </select>
+
+    <resultMap id="selectPayModeOptionVOList.result" class="OptionVO">
+        <result property="value" column="lscb_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="label" column="lscb_pay_mode" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+
+    <select id="selectPayModeOptionVOList" resultClass="OptionVO" parameterClass="java.util.HashMap" resultMap="selectPayModeOptionVOList.result" >
+        SELECT lscb_id, lscb_pay_mode
+        FROM eka.lst_pay_mode
+        <isNotNull property="cdList">
+            <iterate prepend="WHERE lscb_id in" property="cdList" open="(" close=")" conjunction=",">
+                #cdList[]#
+            </iterate>
+        </isNotNull>
+        ORDER BY lscb_id
+    </select>
+
+</sqlMap>

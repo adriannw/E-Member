@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_product_lama" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SIMAS PRIME LINK (RIDER SAVE)"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincian" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincian]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="dsRiderPa" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsEkalinkRider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsEkalinkRider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="pageRider" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="tanggal" class="java.lang.String">
+		<parameterDescription><![CDATA[tanggal]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="dsCommonBiayaRincian" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincian]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTerm" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTerm]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTerm" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTerm]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTpd" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTpd" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPaRisk" class="java.lang.String"/>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayorTpd10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayorTpd10]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayorTpd10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayorTpd10]]></parameterDescription>
+	</parameter>
+	<parameter name="riderTpd10Title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat SMiLe Payor 5/10 TPD/Death - Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayorCi10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayorCi10]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayorCi10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayorCi10]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPayorCi10Title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat SMiLe Payor 5/10 CI/Death - Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiverTpd10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiverTpd10]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiverTpd10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiverTpd10]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiver10TpdTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Waiver 10 - TPD Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiverCi10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiverCi10]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiverCi10" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiverCi10]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiver10CiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Waiver 10 - CI Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRincianRiderHcpFamilyParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpFamilyParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiver5Tpd10Ci" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiver5Tpd10Ci]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiver5Tpd10Ci" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiver5Tpd10Ci]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiver5Tpd10CiTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiver5Tpd10CiTitle]]></parameterDescription>
+		<defaultValueExpression><![CDATA["5/10"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titlePayor5Tpd10CiDeath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5/10"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titlePackage" class="java.lang.String">
+		<parameterDescription><![CDATA[titlePackage]]></parameterDescription>
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["60"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiverTpdCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiverTpdCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayorTpdCiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayorTpdCiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesIns]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesIns]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesInsTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Paket C"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpProviderParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpProviderParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderScholar" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderScholar]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderScholar" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderScholar]]></parameterDescription>
+	</parameter>
+	<parameter name="jenis" class="java.lang.String">
+		<parameterDescription><![CDATA[jenis]]></parameterDescription>
+		<defaultValueExpression><![CDATA["0"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="standalone" class="java.lang.String"/>
+	<parameter name="dsOneRow22" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatExtraParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatExtraParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaMaxTerm" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaMaxTerm]]></parameterDescription>
+		<defaultValueExpression><![CDATA["70"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<background>
+		<band height="960">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="909" width="208" height="10"/>
+				<box topPadding="1" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Rincian ini merupakan bagian dari polis]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="919" width="89" height="8"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[ResourceBundle.getBundle("eproposal").getString("proposal.version") + "(EP)"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="496" y="15" width="22" height="13"/>
+				<textElement markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="484" y="13" width="11" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="465" y="15" width="18" height="13"/>
+				<textElement textAlignment="Right" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="638">
+			<subreport>
+				<reportElement x="6" y="76" width="539" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincian}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="18" y="144" width="518" height="105"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Volatility Nilai Polis : Risiko yang disebabkan oleh kondisi Makro Ekonomi dan keamanan, dimana dapat menyebabkan Nilai Polis bergerak Naik-turun.
+Risiko Gagal Kredit : Risiko yang terjadi akibat Suatu kondisi dimana Surat Utang atau Instrumen Pasar Uang tidak mampu membayar Bunga dan Pokok.
+Risiko Politik & Ekonomi : Risiko yang terjadi akibat perubahan kondisi ekonomi baik dalam dan luar negeri, kebijakan POLHUKAM (Politik, Hukum, dan HAM), dan peraturan pemerintah yang berkaitan pada Usaha Keuangan yang dijalankan
+Risiko Likuiditas : Risiko yang terjadi apabila Manajer Investasi tidak memiliki dana atau dengan segera menyiapkan dana untuk membeli kembali unit yang dijual.
+Risiko Nilai Tukar Mata Uang : Risiko yang akan terjadi apabila pembayaran premi atau manfaat menggunakan mata uang yang berbeda dari Polis asuransi, dimana nilai tukar tersebut bergerak naik-turun mengikuti pasar.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="127" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="251" width="137" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="9" y="266" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincian}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="9" y="102" width="522" height="21"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title} + " adalah Unit Link produk yang merupakan penggabungan antara asuransi yang memberikan proteksi kepada risiko keuangan atas meninggal Dunia dan Investasi"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="8" y="530" width="529" height="67">
+					<printWhenExpression><![CDATA[new Boolean( !$P{title}.equals("SIMAS MAGNA LINK (Karyawan)") && !$P{title}.equals("SIMAS PRIME LINK")  && (!$P{title}.equals("SIMAS MAGNA LINK") && !$P{jenis}.equals("1")) && !$P{title}.equals("SMiLe LINK PROASSET") && !$P{title}.equals("SMiLe LINK PRECIOUS") && !$P{title}.equals("SMiLe LINK PRO") && !$P{title}.equals("SMiLe LINK PLUS") &&  !$P{title}.equals("B SMiLe PROTECTION")  && !$P{title}.equals("JEMPOL LINK") && !$P{title}.equals("SMiLe LINK INVESTA") && !$P{title}.equals("B SMiLe INSURANCE")  && !$P{title}.equals("SMiLe PREMIUM LINK") && !$P{title}.equals("SMiLe LINK PRO 100") &&  !$P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") && !$P{title}.equals("SMART PLATINUM LINK"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0"/>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="2" width="225" height="16"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Manfaat  "+$P{title}+"  "+$P{titlePackage}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="18" width="16" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="16" y="18" width="487" height="22"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Apabila Tertanggung meninggal Dunia dan asuransi masih berlaku, maka kepada yang ditunjuk akan dibayarkan 100% Uang Pertanggungan ditambah Nilai Polis (Nilai Dana Investasi) dan selanjutnya pertanggungan berakhir.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="38" width="16" height="15"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="16" y="40" width="482" height="23">
+						<printWhenExpression><![CDATA[new Boolean($P{title}.equals("EXCELLENT LINK") || $P{title}.equals("SIMAS POWER LINK") || $P{title}.equals("EXCELLENT LINK (FOR YOUR HEALTH)") || $P{title}.equals("SMiLe LINK SATU"))]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Apabila Tertanggung mencapai usia 100 tahun dan Tertanggung masih hidup, maka kepada Pemegang Polis akan dibayarkan manfaat asuransi sebesar  Uang Pertanggungan ditambah Nilai Polis dan selanjutnya pertanggungan berakhir.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="16" y="40" width="482" height="23">
+						<printWhenExpression><![CDATA["EXCELLENT LINK".equals( $P{title} ) || "SIMAS POWER LINK".equals( $P{title} ) ||  "EXCELLENT LINK (FOR YOUR HEALTH)".equals( $P{title} ) || "SMiLe LINK SATU".equals( $P{title} ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Apabila Tertanggung hidup pada Akhir masa kontrak asuransi dan asuransi masih berlaku, maka kepada Pemegang Polis (yang berhak) akan dibayarkan manfaat asuransi sebesar Nilai Polis (Nilai Dana Investasi) dan selanjutnya Pertanggungan berakhir.]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="19" y="504" width="505" height="23">
+					<printWhenExpression><![CDATA[new Boolean( !$P{title}.equals("SMART PLATINUM LINK") )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[note : * Biaya Administrasi dapat berubah mengikuti inflasi tahun sebelumnya
+          ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="483" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[">=8"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="483" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SIMAS MAGNA LINK".equals( $P{title}) || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ? "0%" : "0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="483" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="464" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="464" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"0%":$P{title}.equals("SMiLe LINK PRO 100")?"5%":"0%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="464" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)")  )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}.equals("SMiLe LINK PRO 100")?"7":">=7"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="445" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SIMAS PRIME LINK") || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))   ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[(($P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)")) ?"6 dst":"6")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="445" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SIMAS PRIME LINK") || $P{title}.equals("SMiLe LINK PROASSET")  || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"5%":$P{title}.equals("SMiLe LINK PRO 100")?"10%":"0%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="445" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)")  || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="426" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="426" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["5"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="426" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SIMAS PRIME LINK")  || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))   ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"10%":$P{title}.equals("SMiLe LINK PRO 100")?"20%":"1%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="407" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="407" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  ||   $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"20%":$P{title}.equals("SMiLe LINK PRO 100")?"30%":"2%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="407" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  || $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["4"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="388" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK")) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))   ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["3"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="388" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals($P{title}) || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"30%":$P{title}.equals("SMiLe LINK PRO 100")?"40%":"3%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="388" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="369" width="92" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="369" width="95" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals($P{title}) || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ?"40%":$P{title}.equals("SMiLe LINK PRO 100")?"50%":"4%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="369" width="47" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  ||   $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["2"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="354" width="47" height="15" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK")  || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="354" width="95" height="15" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK")  || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ? "50%" : $P{title}.equals("SMiLe LINK PRO 100")?"60%":"4%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="354" width="92" height="15" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" 0%"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="317" width="92" height="37" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)")  || $P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals($P{title}) || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Faktor Biaya Penarikan dari Dana Investasi Premi TopUp"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="66" y="317" width="95" height="37">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || ($P{title}.equals("SIMAS PRIME LINK")) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals($P{title}) || $P{title}.equals("JEMPOL LINK")  || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SIMAS MAGNA LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("JEMPOL LINK")  || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO 100") ? "Faktor Biaya Penarikan dari Dana Investasi Premi Pokok":"Faktor Biaya Penarikan dari Dana Investasi")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="19" y="317" width="47" height="37" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals($P{title})  || $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tahun Polis"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="13" y="303" width="297" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(($P{title}.equals("SIMAS PRIME LINK") ) ||  $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("JEMPOL LINK") ||  $P{title}.equals("SMiLe LINK PROASSET") || $P{title}.equals("SMiLe LINK PRO 100")  || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Faktor Biaya Penarikan  x  Dana Investasi Premi Pokok / Premi TopUp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="289" width="186" height="14" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe LINK PRO")  || $P{title}.equals("SMiLe LINK PLUS")  || $P{title}.equals("JEMPOL LINK") || ($P{title}.equals("SIMAS PRIME LINK") ) || $P{title}.equals("SMiLe LINK PROASSET") ||  $P{title}.equals("SMiLe LINK PRO 100") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Biaya Penarikan 		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="143" width="10" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="164" width="10" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="185" width="10" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="204" width="10" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="224" width="10" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="147" y="35" width="249" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom" markup="none">
+					<font fontName="Ubuntu Light" size="11" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+ $P{title} +"    "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="156" y="54" width="209" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
+					<font fontName="Ubuntu Light" size="9" isBold="false" isUnderline="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titlePackage}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="19" y="504" width="505" height="23">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SMART PLATINUM LINK") )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[note : * Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="465" y="15" width="18" height="13"/>
+				<textElement textAlignment="Right" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="496" y="15" width="22" height="13"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="484" y="13" width="11" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="823">
+			<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") ||  ($P{title}.equals("SIMAS PRIME LINK")) || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1"))  ||  $P{title}.equals("SMiLe LINK PROASSET")  ||  $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PLUS") || "B SMiLe PROTECTION".equals( $P{title} ) ||  $P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PRO 100") ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="615" width="482" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title}) )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal Dunia dan asuransi masih berlaku, maka kepada yang ditunjuk akan dibayarkan 100% Uang Pertanggungan ditambah Nilai Polis (Nilai Dana Investasi) dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="615" width="15" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title}) )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="636" width="482" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals($P{title}) || "SMiLe LINK PLUS".equals($P{title}) || "B SMiLe PROTECTION".equals($P{title}) || "SIMAS MAGNA LINK".equals($P{title}) || "SIMAS MAGNA LINK (Karyawan)".equals($P{title}) || "SMiLe LINK PRO 100".equals($P{title})  ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia yang diakibatkan oleh kecelakaan dan asuransi masih berlaku, maka kepada yang ditunjuk akan diberikan tambahan 100% Uang Pertanggungan dan selanjutnya pertanggungan berakhir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="657" width="482" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title}) || "B SMiLe PROTECTION".equals($P{title})  )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung mencapai usia 100 tahun dan Tertanggung masih hidup, maka kepada Pemegang Polis akan dibayarkan manfaat asuransi sebesar  Nilai Polis dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="599" width="227" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title}) ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="9" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pembayaran Manfaat  Asuransi"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="512" width="521" height="22" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} )  || "B SMiLe PROTECTION".equals($P{title})  )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Premi adalah sejumlah uang yang dibayarkan oleh Anda (atau pihak ketiga yang akan ditunjuk) kepada Kami sehubungan dengan diadakannya Polis yang terdiri dari :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="495" width="121" height="14" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") ||  "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) ||  "B SMiLe PROTECTION".equals($P{title}) )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isBold="true" isUnderline="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pembayaran Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="636" width="15" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title}) || "B SMiLe PROTECTION".equals($P{title}) || "SIMAS MAGNA LINK".equals( $P{title}) || "SIMAS MAGNA LINK (Karyawan)".equals($P{title}) || "SMiLe LINK PRO 100".equals($P{title}) ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="472" width="121" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title}) )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Simulasi]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="8" y="36" width="537" height="353" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO") || $P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SMiLe LINK PLUS") || $P{title}.equals("B SMiLe PROTECTION")  ||  $P{title}.equals("JEMPOL LINK"))]]></printWhenExpression>
+				</reportElement>
+				<staticText>
+					<reportElement x="8" y="8" width="439" height="22"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Sehubungan dengan pemotongan biaya penarikan, perusahaan akan membatalkan sejumlah Unit yang nilainya setara
+dengan biaya penarikan berdasarkan Harga Unit.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="10" y="33" width="15" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="10" y="44" width="15" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="26" y="44" width="183" height="11"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Biaya Cuti Premi (Premi Terhenti)         :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="26" y="33" width="182" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Biaya Pokok (Maintenance Fee)            :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="62" y="60" width="80" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[A / (1-A) X B]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="78" width="183" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[dimana: A = Faktor Biaya Cuti Premi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="62" y="91" width="273" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[B = Biaya Administrasi, Biaya Asuransi Pokok, Biaya Pokok]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="113" width="394" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" isItalic="false" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Untuk tahun polis pertama dan kedua tidak tersedia fasilitas premi terhenti.]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="138" width="68" height="33"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Tahun Polis"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="138" width="125" height="33"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Faktor BiayaPremi Terhenti  (A)"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="170" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["1"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="170" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Tidak Tersedia *)"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="186" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Tidak Tersedia *)"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="186" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["2"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="202" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["3"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="202" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["90%"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="218" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["85%"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="218" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["4"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="234" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["5"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="234" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["80%"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="92" y="250" width="125" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["0%"]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="250" width="68" height="16"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[">=6"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="31" y="272" width="96" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Catatan  :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="31" y="285" width="446" height="32"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Apabila Premi untuk 2 tahun pertama tidak dibayar lunas selambat-lambatnya dalam masa leluasa pembayaran
+Premi yang bersangkutan, maka otomatis Polis menjadi batal dan dianggap sebagai penarikan seluruh Dana
+Investasi serta akan dikenakan Biaya Penarikan.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="33" y="321" width="449" height="21"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*    Biaya Administrasi dapat berubah mengikuti inflasi tahun sebelumnya
+**  Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="8" y="321" width="25" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[note:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="240" y="33" width="264" height="22"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe LINK PRO 100") ? "sebesar 0,5% per bulan dari Dana Investasi Premi Pokok selama 5 tahun": ($P{title}.equals("JEMPOL LINK") || $P{title}.equals("SMiLe LINK PLUS") ||  $P{title}.equals("SMiLe LINK PRO")) ?  "4.5% per tahun dari dana investasi Premi Pokok selama 7 tahun" :  ($P{title}.equals("B SMiLe PROTECTION")) ? "4.75% per tahun dari dana investasi Premi Pokok selama 7 tahun" :   "sebesar 0,33% per bulan dari Dana Investasi Premi Pokok selama 5 tahun" )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="45" y="342" width="428" height="11" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)"))]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Harga Jual dan Harga Beli Unit memiliki selisih 5%.]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="8" y="537" width="559" height="57" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) ||  $P{title}.equals("SMiLe LINK PRO 100") || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)"))]]></printWhenExpression>
+				</reportElement>
+				<staticText>
+					<reportElement positionType="Float" x="22" y="3" width="505" height="52"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Premi Pokok
+Premi Top Up Sekaligus
+Premi yang Anda bayarkan akan diinvestasikan setelah dikurangi biaya-biaya, seperti  Biaya Administrasi, biaya Asuransi, serta Biaya Pengelolaan Dana Investasi dan biaya pokok. Kemudian premi tersebut akan dialokasikan dan dihitung ke dalam unit dengan menggunakan harga jual unit yang berlaku saat itu
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="25" width="15" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="14" width="15" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="6" y="3" width="15" height="11"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font size="8" isBold="true" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[-]]></text>
+				</staticText>
+				<frame>
+					<reportElement positionType="Float" x="0" y="0" width="559" height="49" isRemoveLineWhenBlank="true">
+						<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS PRIME LINK") || $P{title}.equals("SMiLe LINK PROASSET")  || $P{title}.equals("SMiLe LINK PRECIOUS") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title})  || $P{title}.equals("SMiLe PREMIUM LINK")  ||  $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)"))]]></printWhenExpression>
+					</reportElement>
+					<staticText>
+						<reportElement positionType="Float" x="5" y="3" width="15" height="11"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font size="8" isBold="true" isItalic="false"/>
+						</textElement>
+						<text><![CDATA[-]]></text>
+					</staticText>
+					<staticText>
+						<reportElement positionType="Float" x="5" y="14" width="15" height="11"/>
+						<textElement textAlignment="Center" verticalAlignment="Top">
+							<font size="8" isBold="true" isItalic="false"/>
+						</textElement>
+						<text><![CDATA[-]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="24" y="3" width="511" height="42"/>
+						<textElement>
+							<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+						</textElement>
+						<text><![CDATA[Premi Sekaligus
+Premi yang Anda bayarkan akan diinvestasikan setelah dikurangi biaya-biaya, seperti  Biaya Administrasi, biaya Asuransi, serta Biaya Pengelolaan Dana Investasi dan biaya pokok. Kemudian premi tersebut akan dialokasikan dan dihitung ke dalam unit dengan menggunakan harga Unit yang berlaku saat itu
+]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="686" width="489" height="137" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title})  )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Catatan  :
+Penanggung tidak menjamin hasil dari investasi Pemegang Polis. Semua resiko, kerugian dan manfaat yang dihasilkan dari investasi akan sepenuhnya menjadi tanggung jawab Pemegang Polis.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="657" width="15" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[( $P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title})  )? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[(($P{title}.equals("SIMAS PRIME LINK") && $P{jenis}.equals("5")) ||  $P{title}.equals("SMiLe LINK PROASSET") ||  $P{title}.equals("SMiLe LINK PRECIOUS")  || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SIMAS PRIME LINK (RIDER SAVE)") || $P{title}.equals("SMiLe LINK PROASSET (RIDER SAVE)")? "3.":"2.")]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="8" y="449" width="537" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[($P{title}.equals("SMiLe LINK PRO") || "JEMPOL LINK".equals( $P{title} ) ||  "SMiLe LINK PLUS".equals( $P{title} ) || "B SMiLe PROTECTION".equals($P{title}) )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsOneRow22">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow22}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsOneRow22}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_product_sub1.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="390" width="80" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Komposisi Investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="55" y="402" width="43" height="22" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Thn  1"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="98" y="402" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Thn  2"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="141" y="402" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Thn  3 s/d Thn 5"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="184" y="402" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Thn  6 dst"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="184" y="424" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe LINK PRO 100") ? "100%":"105%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="141" y="424" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe LINK PRO 100") ? "85%":"100%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="98" y="424" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe LINK PRO 100") ? "60%":"90%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="55" y="424" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe LINK PRO 100") ? "30%":"50%")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="12" y="424" width="43" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Komposisi Investasi"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="12" y="402" width="43" height="22" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SMiLe LINK PRO 100") )]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" - "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="39">
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="8" y="20" width="537" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( !$P{title}.equals("SIMAS PRIME LINK") && !$P{title}.equals("SIMAS MAGNA LINK") && !$P{title}.equals("SIMAS MAGNA LINK (Karyawan)") && !$P{title}.equals("SMiLe OPTIMA LINK") && !$P{title}.equals("SMiLe LINK INVESTA") && !$P{title}.equals("B SMiLe INSURANCE") && !$P{title}.equals("SMiLe PREMIUM LINK")  )]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tanggal">
+					<subreportParameterExpression><![CDATA[$P{tanggal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_uraian_sop.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="8" y="1" width="537" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub3".equals( $P{pageRider} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderHcpFamilyParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpFamilyParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayorTpdCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayorTpdCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayorTpdCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayorTpdCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesIns">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesIns}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPLadies">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiver5Tpd10Ci">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiver5Tpd10Ci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderScholar">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderScholar}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titlePayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{titlePayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsEkalinkRider">
+					<subreportParameterExpression><![CDATA[$P{dsEkalinkRider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderTerm">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesIns">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesIns}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusPk">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusPk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiver5Tpd10Ci">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiver5Tpd10Ci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderLadiesMedExpenseParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderEarlyStageCi99">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEarlyStageCi99}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHCPFamily">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHCPFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRb">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHcpLadies">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiver10TpdTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver10TpdTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEarlyStageCi99">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEarlyStageCi99}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderTerm5575">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm5575}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiver10CiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver10CiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayorCi10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayorCi10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiverTpdCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiverTpdCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHCPProvider">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHCPProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayorTpd10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayorTpd10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderScholar">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderScholar}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHcpParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayorCi10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayorCi10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorCi10Title">
+					<subreportParameterExpression><![CDATA[$P{riderPayorCi10Title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaMaxTerm">
+					<subreportParameterExpression><![CDATA[$P{usiaMaxTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPaRisk">
+					<subreportParameterExpression><![CDATA[$P{riderPaRisk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiverCi10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiverCi10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHcpProviderParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpProviderParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiverTpd10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiverTpd10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiverTpd10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiverTpd10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesInsTitle">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesInsTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRj">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRj}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatExtraParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatExtraParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderTerm">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRg">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPFamily">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiverTpdCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiverTpdCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayorTpd10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayorTpd10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPProvider">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiverCi10">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiverCi10}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPFamily">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderTerm5575">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTerm5575}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPProvider">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tanggal">
+					<subreportParameterExpression><![CDATA[$P{tanggal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpLad">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpLad}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiver5Tpd10CiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver5Tpd10CiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderTpd10Title">
+					<subreportParameterExpression><![CDATA[$P{riderTpd10Title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdCiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdCiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPLadies">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsEkalinkRider}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="8" y="20" width="537" height="19" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{title}.equals("SIMAS PRIME LINK")  || ($P{title}.equals("SIMAS MAGNA LINK") && $P{jenis}.equals("1")) || $P{title}.equals("SIMAS MAGNA LINK (Karyawan)") || $P{title}.equals("SMiLe OPTIMA LINK") || $P{title}.equals("SMiLe LINK INVESTA") || "B SMiLe INSURANCE".equals($P{title}) || $P{title}.equals("SMiLe PREMIUM LINK") || $P{title}.equals("SIMAS PRIME LINK (RIDER SAVE)") )]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tanggal">
+					<subreportParameterExpression><![CDATA[$P{tanggal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_uraian_sop_bancass.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

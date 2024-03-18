@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040136_product_subreport" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="businessIdx" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfContract" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfPayment" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["79"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beforeLastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["46"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beforeLastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["69"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beforeLastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="halfTotalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["50,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="displayBeforeLast" class="java.lang.String">
+		<parameterDescription><![CDATA[displayBeforeLast]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRider" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRider]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRiderManfaat" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRiderManfaat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderSwineIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderSwineIndex]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '2' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '3' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '4' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '5' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '6' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '7' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '8' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '9' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '10' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '11' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '12' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '13' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '14' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '15' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '16' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '17' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '18' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '19' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual
+union
+select '20' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund  from dual]]>
+	</queryString>
+	<field name="accumulatedPremium" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="oldAgeFund" class="java.lang.String"/>
+	<field name="yearNo" class="java.lang.String"/>
+	<title>
+		<band height="28">
+			<staticText>
+				<reportElement positionType="Float" x="419" y="0" width="129" height="28"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Dana
+Hari Tua]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="291" y="0" width="129" height="28"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Nilai
+Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="163" y="0" width="129" height="28"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Akumulasi
+Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="115" y="0" width="49" height="28"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="0" width="113" height="28"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" isBold="true" pdfFontName="Ubuntu Light" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Akhir
+Tahun Ke]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="13">
+			<frame>
+				<reportElement positionType="Float" x="163" y="0" width="129" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="0" width="89" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{accumulatedPremium}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="0" width="18" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="115" y="0" width="49" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="0" y="0" width="49" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{age}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="3" y="0" width="113" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="0" width="81" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{yearNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="291" y="0" width="129" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="0" width="89" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cashValue}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="0" width="18" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="419" y="0" width="129" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="28" y="0" width="85" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{oldAgeFund}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="0" width="18" height="13"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="73">
+			<frame>
+				<reportElement positionType="Float" x="3" y="68" width="113" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="115" y="68" width="49" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="163" y="68" width="129" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="291" y="68" width="129" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="419" y="68" width="129" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="3" y="0" width="113" height="69"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="16" y="4" width="80" height="13">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="36" width="80" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="16" y="52" width="81" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastYearNo}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="16" y="20" width="81" height="13">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{beforeLastYearNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="115" y="0" width="49" height="69"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="0" y="52" width="48" height="12"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastAge}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="0" y="20" width="48" height="12">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{beforeLastAge}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="163" y="0" width="129" height="69"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="291" y="0" width="129" height="69"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="52" width="90" height="14"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{lastCashValue}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="52" width="19" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="20" width="90" height="14">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{beforeLastCashValue}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="20" width="19" height="14">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="419" y="0" width="129" height="69"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="29" y="53" width="86" height="14"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{halfTotalSumInsured}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="9" y="53" width="19" height="14"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="28" y="20" width="86" height="14">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{halfTotalSumInsured}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="8" y="20" width="21" height="14">
+						<printWhenExpression><![CDATA[new Boolean( $P{displayBeforeLast} =="available" )]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

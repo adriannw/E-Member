@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <typeAlias alias="HashMap" type="java.util.HashMap"/>
+    <typeAlias alias="OptionVO" type="id.co.sinarmaslife.standard.model.vo.OptionVO"/>
+    <typeAlias alias="MstDataProposal" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstDataProposal"/>
+    <typeAlias alias="MstProposalProduct" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProduct"/>
+    <typeAlias alias="MstProposalProductPacket" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProductPacket"/>
+    <typeAlias alias="MstProposalProductPeserta" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProductPeserta"/>
+    <typeAlias alias="MstProposalProductRider" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProductRider"/>
+    <typeAlias alias="MstProposalProductTopUp" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProductTopUp"/>
+    <typeAlias alias="MstProposalProductUlink" type="id.co.sinarmaslife.eproposal.model.data_proposal.table.MstProposalProductUlink"/>
+    <typeAlias alias="Email" type="id.co.sinarmaslife.eproposal.model.Email"/>
+
+    <select id="selectNowDate" resultClass="java.util.Date">
+		select sysdate as now_date from dual
+	</select>
+
+   <select id="selectTitleBisnis" resultClass="java.lang.String" >        
+		SELECT DECODE(#flag#,'1',lsbs_name,
+                   lsbs_name0)
+ 		FROM EKA.LST_BISNIS
+		WHERE LSBS_ID = #lsbsId#
+    </select>
+
+    <select id="selectRate" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT lstab_value
+        FROM eka.lst_table
+        WHERE 1=1
+            AND lstab_jenis = #lstabJenis#
+            AND lsbs_id = #leftPartOfBusinessCd#
+            AND lku_id = #currencyCd#
+            AND lscb_id = #paymentModeCd#
+            AND lstab_lama_bayar = #termOfPayment#
+            AND lstab_age = #insuredAge#
+            <isNotNull property="lstabLamaTanggung">
+                AND lstab_lama_tanggung = #lstabLamaTanggung#
+            </isNotNull>
+            <isNotNull property="yearNoList">
+                <iterate prepend="AND lstab_tahun_ke in" property="yearNoList" open="(" close=")" conjunction=",">
+                    #yearNoList[]#
+                </iterate>
+            </isNotNull>
+        ORDER BY lstab_tahun_ke
+    </select>
+    
+    
+    <select id="selectRateNew" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT lstab_value
+        FROM eka.lst_table_new
+        WHERE 1=1
+            AND lstab_jenis = #lstabJenis#
+            AND lsbs_id = #leftPartOfBusinessCd#
+            AND lsdbs_number = #lsdbsNumber#
+            AND lku_id = #currencyCd#
+            AND lscb_id = #paymentModeCd#
+            AND lstab_lama_bayar = #termOfPayment#
+            AND lstab_age = #insuredAge#
+            <isNotNull property="lstabLamaTanggung">
+                AND lstab_lama_tanggung = #lstabLamaTanggung#
+            </isNotNull>
+            <isNotNull property="lstabLamaBayar">
+                AND lstab_lama_bayar = #lstabLamaBayar#
+            </isNotNull>
+            <isNotNull property="yearNoList">
+                <iterate prepend="AND lstab_tahun_ke in" property="yearNoList" open="(" close=")" conjunction=",">
+                    #yearNoList[]#
+                </iterate>
+            </isNotNull>
+        ORDER BY lstab_tahun_ke
+    </select>
+    
+    
+        <select id="selectRateForLoopingYearNo" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT lstab_value
+        FROM eka.lst_table
+        WHERE 1=1
+            AND lstab_jenis = #lstabJenis#
+            AND lsbs_id = #leftPartOfBusinessCd#
+            AND lku_id = #currencyCd#
+            AND lscb_id = #paymentModeCd#
+            AND lstab_lama_bayar = #termOfPayment#
+            AND lstab_age = #insuredAge#
+            <isNotNull property="lstabLamaTanggung">
+                AND lstab_lama_tanggung = #lstabLamaTanggung#
+            </isNotNull>
+            <isNotNull property="yearNoList">
+                AND lstab_tahun_ke = #yearNoList#
+            </isNotNull>
+        ORDER BY lstab_tahun_ke
+    </select>
+    
+          <select id="selectRateForLoopingYearNoNew" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT lstab_value
+        FROM eka.lst_table_new
+        WHERE 1=1
+            AND lstab_jenis = #lstabJenis#
+            AND lsdbs_number = #lsdbsNumber#
+            AND lsbs_id = #leftPartOfBusinessCd#
+            AND lku_id = #currencyCd#
+            AND lscb_id = #paymentModeCd#
+            AND lstab_lama_bayar = #termOfPayment#
+            AND lstab_age = #insuredAge#
+            <isNotNull property="lstabLamaTanggung">
+                AND lstab_lama_tanggung = #lstabLamaTanggung#
+            </isNotNull>
+            <isNotNull property="yearNoList">
+                AND lstab_tahun_ke = #yearNoList#
+            </isNotNull>
+        ORDER BY lstab_tahun_ke
+    </select>
+
+    <select id="selectFMax" resultClass="java.lang.Integer" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE_FMAX.FAKTOR
+        FROM EKA.LST_TABLE_FMAX  
+        WHERE ( EKA.LST_TABLE_FMAX.LSBS_ID = #li_tf# ) AND
+		      ( EKA.LST_TABLE_FMAX.UMUR = #li_usia# )
+    </select>
+
+    <select id="selectAddMonths" resultClass="java.util.Date" parameterClass="java.util.Map">
+        SELECT ADD_MONTHS( #beginDate#, #noOfMonths# )
+        FROM DUAL
+    </select>
+
+    <!--MEDICAL CHECKUP-->
+    <!--I got it from d_jns_medis-->
+    <select id="selectJenisMedicalPrefix" resultClass="java.lang.String" >
+          SELECT DISTINCT(EKA.LST_TIPEMEDIS.TIPE_MEDIS)
+          FROM EKA.MST_MEDICAL,
+               EKA.LST_TIPEMEDIS
+          WHERE ( EKA.MST_MEDICAL.LTM_ID = EKA.LST_TIPEMEDIS.LTM_ID ) and
+                ( EKA.MST_MEDICAL.MSTM_TGL_PERIODE = 
+                    ( SELECT MAX(EKA.X.MSTM_TGL_PERIODE )
+                        FROM EKA.MST_MEDICAL X          
+                        WHERE 
+                        X.LSTB_ID=1 AND X.LSBP_ID=0
+                    ) 
+                )
+          AND
+                ( EKA.MST_MEDICAL.LSTB_ID = 1 ) AND
+                ( EKA.MST_MEDICAL.LSBP_ID = 0 ) AND
+               ( EKA.MST_MEDICAL.ID_RANGE_AGE = #li_ageid# ) AND
+               ( EKA.MST_MEDICAL.ID_RANGE_SAR = #li_sarid# ) AND
+               ( EKA.MST_MEDICAL.LKU_ID = #kurs_id# )
+    </select>
+
+	<select id="selectJenisMedicalPrefixNew" resultClass="java.lang.String" >
+	SELECT DISTINCT(LST_TIPEMEDIS.TIPE_MEDIS) 
+	FROM eka.MST_MEDIS_NEW,
+	eka.LST_TIPEMEDIS 
+	WHERE ( eka.MST_MEDIS_NEW.LTM_ID = eka.LST_TIPEMEDIS.LTM_ID )
+ 	and (eka.MST_MEDIS_NEW.PERIODE = 
+ 	( SELECT MAX(X.PERIODE ) 
+ 	FROM eka.MST_MEDIS_NEW X 
+ 	WHERE X.LSTB_ID=1 AND X.LSBP_ID=0
+  	AND X.FLAG=  #flag_vip#
+   	AND (#li_usia#<![CDATA[>=]]> X.AGE_FROM) AND ( #li_usia# <![CDATA[<=]]> X.AGE_TO) 
+   	and (#li_sar_new# <![CDATA[>=]]> x.UP_FROM) and (#li_sar_new# <![CDATA[<=]]> x.UP_TO) 
+   	and (x.LKU_ID = #li_kurs_new# )) ) AND ( eka.MST_MEDIS_NEW.LSTB_ID = 1 ) 
+   	AND ( eka.MST_MEDIS_NEW.LSBP_ID = 0 ) AND ( eka.MST_MEDIS_NEW.FLAG = #flag_vip# ) 
+   	AND ( (#li_sar_new# <![CDATA[>=]]> eka.MST_MEDIS_NEW.UP_FROM) AND ( #li_sar_new# <![CDATA[<=]]> eka.MST_MEDIS_NEW.UP_TO) ) 
+   	AND ( #li_usia#  <![CDATA[>=]]> eka.MST_MEDIS_NEW.AGE_FROM ) AND (#li_usia#  <![CDATA[<=]]> eka.MST_MEDIS_NEW.AGE_TO )
+   	AND  eka.MST_MEDIS_NEW.LKU_ID = #li_kurs_new#
+	</select>
+	
+	 <select id="selectIdRangeSar" resultClass="java.lang.Integer" >       
+       SELECT DISTINCT EKA.LST_MEDICAL_RANGE_SAR.ID_RANGE_SAR
+        FROM EKA.LST_MEDICAL_RANGE_SAR, EKA.MST_MEDICAL
+        WHERE ( #sar# <![CDATA[>=]]> EKA.LST_MEDICAL_RANGE_SAR.SAR_AWAL ) AND
+              ( #sar# <![CDATA[<=]]> EKA.LST_MEDICAL_RANGE_SAR.SAR_AKHIR ) AND
+              ( EKA.LST_MEDICAL_RANGE_SAR.LKU_ID = #kurs_id# ) AND
+              EKA.LST_MEDICAL_RANGE_SAR.ID_RANGE_SAR = EKA.MST_MEDICAL.ID_RANGE_SAR AND
+              EKA.MST_MEDICAL.LSTB_ID = 1 AND EKA.MST_MEDICAL.LSBP_ID = 0 and
+              EKA.MST_MEDICAL.MSTM_TGL_PERIODE = (SELECT MAX(X.MSTM_TGL_PERIODE) FROM EKA.MST_MEDICAL X WHERE X.LSTB_ID = 1 AND X.LSBP_ID = 0)   
+    </select>
+
+    <select id="selectIdRangeAge" resultClass="java.lang.Integer" >
+        SELECT DISTINCT EKA.LST_MEDICAL_RANGE_AGE.ID_RANGE_AGE
+        FROM EKA.LST_MEDICAL_RANGE_AGE, EKA.MST_MEDICAL
+        WHERE ( #li_usia# <![CDATA[>=]]> EKA.LST_MEDICAL_RANGE_AGE.USIA_AWAL ) AND
+              ( #li_usia# <![CDATA[<=]]> EKA.LST_MEDICAL_RANGE_AGE.USIA_AKHIR ) AND
+              EKA.LST_MEDICAL_RANGE_AGE.ID_RANGE_AGE = EKA.MST_MEDICAL.ID_RANGE_AGE AND
+               EKA.MST_MEDICAL.LSTB_ID = 1 AND EKA.MST_MEDICAL.LSBP_ID = 0 and
+             EKA.MST_MEDICAL.MSTM_TGL_PERIODE = (SELECT MAX(X.MSTM_TGL_PERIODE) FROM EKA.MST_MEDICAL X WHERE X.LSTB_ID = 1 AND X.LSBP_ID = 0) 
+    </select>
+
+    <select id="selectSar" resultClass="java.lang.Double" >
+        SELECT LSTAW_VALUE
+        FROM EKA.LST_TABLE_AWAL
+        WHERE ( EKA.LST_TABLE_AWAL.LSTAW_TYPE = 2 ) AND
+            ( EKA.LST_TABLE_AWAL.LSBS_ID = #ar_plan# ) AND
+            ( EKA.LST_TABLE_AWAL.LKU_ID = #kurs_id# ) AND
+            ( EKA.LST_TABLE_AWAL.LSTAW_LAMA_BAYAR = #ar_lbayar# ) AND
+            ( EKA.LST_TABLE_AWAL.LSTAW_ENTRY_AGE = #umur_tt# )
+    </select>
+    
+    <select id="selectTableFactor" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT RATE 
+		FROM EKA.LST_TABLE_FACTOR
+		WHERE 
+			( LSBS_ID = #lsbsId# ) AND  
+			( LSDBS_NUMBER = #liJenis# ) AND  
+			( USIA = #liUsia# ) AND  
+			( LKU_ID = #kursId# ) 
+    </select>
+    
+    <select id="selectNumericData" resultClass="java.math.BigDecimal" parameterClass="java.lang.String" remapResults="true">
+    	$value$
+    </select>
+    
+    <select id="selectMstDataProposal" parameterClass="string" resultClass="MstDataProposal">
+        SELECT * FROM eka.mst_data_proposal where no_proposal = #no_proposal#
+    </select>
+    
+    <select id="selectMstProposalProduct" parameterClass="string" resultClass="MstProposalProduct">
+        SELECT * FROM eka.mst_proposal_product where no_proposal = #no_proposal#
+    </select>
+    
+    <select id="selectListMstProposalProductPacket" parameterClass="string" resultClass="MstProposalProductPacket">
+        SELECT * FROM eka.mst_proposal_product_packet where no_proposal = #no_proposal#
+    </select>
+    
+    <select id="selectListMstProposalProductPeserta" parameterClass="string" resultClass="MstProposalProductPeserta">
+        SELECT * FROM eka.mst_proposal_product_peserta where no_proposal = #no_proposal# order by peserta_ke
+    </select>
+    
+    <select id="selectListMstProposalProductRider" parameterClass="string" resultClass="MstProposalProductRider">
+        SELECT * FROM eka.mst_proposal_product_rider where no_proposal = #no_proposal#
+    </select>
+    
+    <select id="selectListMstProposalProductTopUp" parameterClass="string" resultClass="MstProposalProductTopUp">
+        SELECT * FROM eka.mst_proposal_product_topup where no_proposal = #no_proposal# order by thn_ke
+    </select>
+    
+    <select id="selectListMstProposalProductUlink" parameterClass="string" resultClass="MstProposalProductUlink">
+        SELECT * FROM eka.mst_proposal_product_ulink where no_proposal = #no_proposal#
+    </select>
+    
+     <select id="selectFlagInvestFund" resultClass="java.lang.Integer" parameterClass="java.lang.String">
+      select b.flag_invest_fund
+		from eka.mst_proposal_product a,eka.lst_product_setup b, eka.lst_product_calc c
+		where a.lsbs_id=b.product_code and a.lsdbs_number=B.PLAN and b.pset_id=c.pset_id
+		and a.lku_id=c.lku_id and a.cara_bayar = c.lscb_id
+		and a.no_proposal = #noProposal#
+		and b.effective_from = (select max(effective_from) 
+                                                from eka.lst_product_setup 
+                                                where product_code = b.product_code 
+                                                    and plan = b.plan 
+                                                    and effective_from <![CDATA[<=]]> sysdate)
+    </select>
+    
+    <select id="selectLabelProductName" resultClass="java.lang.String" parameterClass="java.util.HashMap">
+        select lsbs_id || '==>' || lsdbs_name from eka.lst_det_bisnis where lsbs_id = #lsbs_id# and lsdbs_number = #lsdbs_number#
+    </select>
+    
+    <select id="selectSeqEmailId" resultClass="string">
+		SELECT eka.pac_counter.get_email_id() FROM dual
+	</select>
+	
+    <insert id="insertMstEmail" parameterClass="Email">
+    	insert into eka.mst_email
+    	(me_id, me_system, me_show_system, me_show_footer,
+    	 me_from, me_from_alias, me_to, me_cc,
+    	 me_bcc, me_subject, me_message, mec_id,
+    	 me_html, me_status, me_status_message, me_count,
+    	 me_lus_id, me_input_date, me_sent_date, me_reg_spaj, lje_id, priority)
+    	 values(
+    	 #me_id#, #me_system#, #me_show_system#, #me_show_footer#,
+    	 #me_from#, #me_from_alias#, #me_to#, #me_cc#,
+    	 #me_bcc#, #me_subject#, #me_message#, #mec_id#,
+    	 #me_html#, #me_status#, #me_status_message#, #me_count#,
+    	 #me_lus_id#, #me_input_date#, #me_sent_date#, #me_reg_spaj#,#lje_id#,30
+    	 )
+    </insert>
+    
+    <select id="selectLineBus" resultClass="java.lang.Integer" parameterClass="java.lang.Integer">
+     	select lsbs_linebus
+		from eka.lst_bisnis 
+		where lsbs_id = #lsbsId#
+    </select>
+    
+    <select id="selectRateForBenefitofReturnPremium" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+       SELECT a.lpr_rate FROM eka.lst_pwrsave_rate a, eka.lst_pwrsave_flag b
+		WHERE ((trunc(SYSDATE) BETWEEN lpr_begdate AND lpr_enddate) OR lpr_begdate > SYSDATE)
+		AND  b.lsbs_id =  #leftPartOfBusinessCd#  and b.lsdbs_number = #lsdbsNumber#
+		AND a.lpr_flag = b.lpr_flag
+    </select>
+    
+</sqlMap>

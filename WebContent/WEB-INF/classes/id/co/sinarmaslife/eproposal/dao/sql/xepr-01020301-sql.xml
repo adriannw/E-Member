@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <resultMap id="selectAgent.result" class="id.co.sinarmaslife.standard.model.vo.ViewListAgent">
+        <result property="msagId" column="msag_id" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="idAccount" column="id" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="mclFirst" column="mcl_first" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lcaNama" column="lca_nama" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lcaId" column="lca_id" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lwkNama" column="lwk_nama" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lsrgNama" column="lsrg_nama" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="groupId" column="group_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="groupName" column="group_name" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="tglLahir" column="tglLahir" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectAllAgentList" resultMap="selectAgent.result" parameterClass="java.util.Map">
+    	SELECT * FROM (
+			SELECT ROWNUM as row_number, msag_id, id, mcl_first, lca_nama, lca_id, lwk_nama, lsrg_nama, GROUP_ID, GROUP_NAME, to_char(mspe_date_birth, 'ddMMyyyy') as tglLahir FROM 
+			(
+				SELECT * from
+				(
+				select distinct m.msag_id, m.mspe_email as id, m.mcl_first, m.lca_nama, m.lwk_nama, m.lsrg_nama, m.GROUP_ID, m.GROUP_NAME, m.lca_id, m.mspe_date_birth from(
+   					select y.msag_id, y.mspe_email, y.mcl_first, y.lca_nama, y.lwk_nama, y.lsrg_nama, x.GROUP_ID, x.GROUP_NAME, y.lca_id, y.mspe_date_birth
+					from
+						(
+							SELECT a.msag_id, a.GROUP_ID, b.GROUP_NAME
+        						FROM eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP b
+								where a.GROUP_ID=b.GROUP_ID
+							union		
+							SELECT msag_id, null as GROUP_ID, null as GROUP_NAME
+        						FROM eka.LST_USER_EXTERNAL 
+								where msag_id not in(
+									SELECT msag_id
+        							FROM eka.LST_USER_PRODUCT 
+								)
+						) x
+						,
+						(
+					SELECT a.msag_id, b.mcl_first, c.lca_nama, d.lwk_nama, e.lsrg_nama, e.lca_id, b.mspe_email, b.mspe_date_birth
+  					FROM eka.mst_agent a,
+       					eka.mst_client_new b,
+       					eka.lst_cabang c,
+       					eka.lst_wakil d,
+       					eka.lst_region e
+ 							WHERE a.msag_active = 1 
+								AND a.mcl_id = b.mcl_id
+   								AND a.lca_id = c.lca_id
+   								AND a.lca_id = d.lca_id
+   								AND a.lwk_id = d.lwk_id
+   								AND a.lca_id = e.lca_id
+   								AND a.lwk_id = e.lwk_id
+   								AND a.lsrg_id = e.lsrg_id
+						) y
+					where x.msag_id(+) = y.msag_id
+					)m, eka.LST_USER_EXTERNAL n
+					where n.msag_id(+) = m.msag_id 
+				)
+				where 1=1
+				<isNotNull property="acPassNotNull">
+                	and UPPER(id) is not null
+        		</isNotNull>
+        		<isNotNull property="acPassNull">
+                	and UPPER(id) is null
+        		</isNotNull>
+        		<isNotNull property="MSAG_ID">
+                	and UPPER(msag_id) like '%' || TRIM(UPPER(#MSAG_ID#)) || '%'
+				</isNotNull>
+				<isNotNull property="account">
+                	and UPPER(id) like '%' || TRIM(UPPER(#account#)) || '%'
+				</isNotNull>
+				<isNotNull property="MCL_FIRST">
+                	and UPPER(mcl_first) like '%' || TRIM(UPPER(#MCL_FIRST#)) || '%'
+				</isNotNull>
+				<isNotNull property="LCA_NAMA">
+                	and UPPER(lca_nama) like '%' || TRIM(UPPER(#LCA_NAMA#)) || '%'
+				</isNotNull>
+				<isNotNull property="LCA_ID_WORKSITE">
+                	and UPPER(lca_id) = 08 or UPPER(lca_id) = 42
+				</isNotNull>
+				<isNotNull property="LCA_ID_REGIONAL">
+                	and UPPER(lca_id) not in(37,08,42,46,09)
+				</isNotNull>
+				<isNotNull property="LCA_ID_GENERAL">
+                	and UPPER(lca_id) = #LCA_ID_GENERAL#
+				</isNotNull>
+				<isNotNull property="LWK_NAMA">
+                	and UPPER(lwk_nama) like '%' || TRIM(UPPER(#LWK_NAMA#)) || '%'
+				</isNotNull>
+				<isNotNull property="LSRG_NAMA">
+                	and UPPER(lsrg_nama) like '%' || TRIM(UPPER(#LSRG_NAMA#)) || '%'
+				</isNotNull>
+				<isNotNull property="GROUP_NAME">
+                	and UPPER(group_name) like '%' || TRIM(UPPER(#GROUP_NAME#)) || '%'
+        		</isNotNull>
+        		<isNotNull property="sortRow">
+						order by $sortRow$ Asc
+				</isNotNull>
+			))
+			WHERE 
+  				( row_number <![CDATA[>]]> ( ( #noPage# - 1 ) * #noRow# ) )
+				AND ( row_number <![CDATA[<=]]> ( #noPage# * #noRow# )  )  
+	</select>
+	
+	<!-- selectTotalPageResult -->
+    <resultMap id="selectTotalPageResult.result" class="id.co.sinarmaslife.standard.model.vo.TotalPage">
+        <result property="totalPage" column="total_pages" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+	
+	<select id="selectTotalAgentPage" resultClass="TotalPage" resultMap="selectTotalPageResult.result" parameterClass="java.util.Map">
+       SELECT CEIL( count( * ) / #noRow# ) as total_pages FROM
+       (
+       		SELECT * from
+				(
+				select distinct m.msag_id, m.mspe_email as id, m.mcl_first, m.lca_nama, m.lwk_nama, m.lsrg_nama, m.GROUP_ID, m.GROUP_NAME, m.lca_id, m.mspe_date_birth from(
+   					select y.msag_id, y.mspe_email, y.mcl_first, y.lca_nama, y.lwk_nama, y.lsrg_nama, x.GROUP_ID, x.GROUP_NAME, y.lca_id, y.mspe_date_birth
+					from
+						(
+							SELECT a.msag_id, a.GROUP_ID, b.GROUP_NAME
+        						FROM eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP b
+								where a.GROUP_ID=b.GROUP_ID
+							union		
+							SELECT msag_id, null as GROUP_ID, null as GROUP_NAME
+        						FROM eka.LST_USER_EXTERNAL 
+								where msag_id not in(
+									SELECT msag_id
+        							FROM eka.LST_USER_PRODUCT 
+								)
+						) x
+						,
+						(
+					SELECT a.msag_id, b.mcl_first, c.lca_nama, d.lwk_nama, e.lsrg_nama, e.lca_id, b.mspe_email, b.mspe_date_birth
+  					FROM eka.mst_agent a,
+       					eka.mst_client_new b,
+       					eka.lst_cabang c,
+       					eka.lst_wakil d,
+       					eka.lst_region e
+ 							WHERE a.msag_active = 1 
+								AND a.mcl_id = b.mcl_id
+   								AND a.lca_id = c.lca_id
+   								AND a.lca_id = d.lca_id
+   								AND a.lwk_id = d.lwk_id
+   								AND a.lca_id = e.lca_id
+   								AND a.lwk_id = e.lwk_id
+   								AND a.lsrg_id = e.lsrg_id
+						) y
+					where x.msag_id(+) = y.msag_id
+					)m, eka.LST_USER_EXTERNAL n
+					where n.msag_id(+) = m.msag_id 
+				)
+			where 1=1
+			<isNotNull property="acPassNotNull">
+                	and UPPER(id) is not null
+        	</isNotNull>
+        	<isNotNull property="acPassNull">
+                	and UPPER(id) is null
+        	</isNotNull>
+			<isNotNull property="MSAG_ID">
+                and UPPER(msag_id) like '%' || TRIM(UPPER(#MSAG_ID#)) || '%'
+			</isNotNull>
+			<isNotNull property="account">
+                	and UPPER(id) like '%' || TRIM(UPPER(#account#)) || '%'
+				</isNotNull>
+			<isNotNull property="MCL_FIRST">
+                and UPPER(mcl_first) like '%' || TRIM(UPPER(#MCL_FIRST#)) || '%'
+			</isNotNull>
+			<isNotNull property="LCA_NAMA">
+                and UPPER(lca_nama) like '%' || TRIM(UPPER(#LCA_NAMA#)) || '%'
+			</isNotNull>
+			<isNotNull property="LCA_ID_WORKSITE">
+                	and UPPER(lca_id) = 08 or UPPER(lca_id) = 42
+			</isNotNull>
+			<isNotNull property="LCA_ID_REGIONAL">
+                	and UPPER(lca_id) not in(37,08,42,46,09)
+			</isNotNull>
+			<isNotNull property="LCA_ID_GENERAL">
+                	and UPPER(lca_id) = #LCA_ID_GENERAL#
+			</isNotNull>
+			<isNotNull property="LWK_NAMA">
+                and UPPER(lwk_nama) like '%' || TRIM(UPPER(#LWK_NAMA#)) || '%'
+			</isNotNull>
+			<isNotNull property="LSRG_NAMA">
+                and UPPER(lsrg_nama) like '%' || TRIM(UPPER(#LSRG_NAMA#)) || '%'
+			</isNotNull>
+			<isNotNull property="GROUP_NAME">
+                and UPPER(group_name) like '%' || TRIM(UPPER(#GROUP_NAME#)) || '%'
+        	</isNotNull>
+        )
+    </select>
+    
+    <resultMap id="selectAllGroup.result" class="id.co.sinarmaslife.standard.model.vo.OptionVO">
+        <result property="value" column="group_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="label" column="group_name" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectAllGroupList" resultMap="selectAllGroup.result" parameterClass="java.util.Map">
+    	 select group_id, group_name from eka.LST_USER_PRODUCT_GROUP
+	</select>
+	
+	<delete id="selectDeleteAgentGroup" parameterClass="java.util.Map">
+		delete eka.LST_USER_PRODUCT where
+		<isNotNull property="msagIdList">
+            <iterate prepend="MSAG_ID in" property="msagIdList" open="(" close=")" conjunction=",">
+                #msagIdList[]#
+            </iterate>
+        </isNotNull>
+    </delete>
+	
+	<insert id="selectInsertAgentGroup" parameterClass="java.util.Map">
+    	 insert into eka.LST_USER_PRODUCT(MSAG_ID, GROUP_ID) values(#msagId#, #groupId#)
+	</insert>
+	
+	<update id="selectUpdateAgentGroup" parameterClass="java.util.Map">
+    	 update eka.LST_USER_PRODUCT set GROUP_ID = #groupId#
+			where MSAG_ID = #msagId#
+	</update>
+    
+    
+</sqlMap>

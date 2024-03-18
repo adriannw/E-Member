@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040119_product_hcp" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="15" bottomMargin="30" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="businessIdx" class="java.lang.String">
+		<defaultValueExpression><![CDATA["SEKALIGUS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfContract" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfPayment" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1,123,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["589,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["303,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["79"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["53"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsManfaatTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPersonalAccident" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPenyakitKritis" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPayorsClause" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatWaiverPremiumDisability" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsPremiumSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '4,000,000.00' as deathBenefit, '1,500,000.00' as hcpBenefit from dual
+union
+select '1' as yearNo, '22' as age, '1,312,000.00' as accumulatedPremium, '0.00' as cashValue, '4,000,000.00' as deathBenefit, '1,500,000.00' as hcpBenefit from dual
+union
+select '1' as yearNo, '22' as age, '1,643,000.00' as accumulatedPremium, '0.00' as cashValue, '4,000,000.00' as deathBenefit, '1,500,000.00' as hcpBenefit from dual]]>
+	</queryString>
+	<field name="accumulatedPremium" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="yearNo" class="java.lang.String"/>
+	<field name="deathBenefit" class="java.lang.String"/>
+	<field name="hcpBenefit" class="java.lang.String"/>
+	<background>
+		<band height="780">
+			<image>
+				<reportElement x="0" y="0" width="145" height="29">
+					<printWhenExpression><![CDATA[new Boolean( $V{PAGE_NUMBER}.equals( new Integer( "1" ) )  && ( $P{validityMsg} == null || "".equals( $P{validityMsg}.trim() ) ) )]]></printWhenExpression>
+				</reportElement>
+				<graphicElement/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="488" y="4" width="24" height="13"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="480" y="4" width="8" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="FixRelativeToBottom" x="456" y="4" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Transparent" x="0" y="0" width="505" height="37" forecolor="#808080"/>
+				<box border="None" padding="5"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="181">
+			<subreport>
+				<reportElement x="8" y="64" width="497" height="20"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="48" y="32" width="457" height="25"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["END CARE (Hospital Cash Plan)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="92" width="177" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANFAAT ASURANSI "END CARE"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="108" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="144" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="144" width="489" height="37" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Tertanggung mencapai usia 55 tahun dan pada saat itu Tertanggung masih hidup dan polis asuransinya masih berlaku maka Tertanggung akan menerima santunan rawat inap (hospital cash plan) selama 10 tahun dari sejak Tertanggung berusia 55 tahun dengan besarnya santunan HCP sesuai dengan plan yang dipilih *.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="108" width="489" height="37" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia atau menderita Cacat Tetap Total disebabkan oleh sebab apapun pada waktu kontrak Asuransi masih berlaku dan usia Tertanggung pada saat itu kurang dari 65 tahun, maka kepada Yang Ditunjuk akan dibayarkan 100% (seratus persen) Uang Pertanggungan dan asuransi  berakhir. ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="37" isSplitAllowed="false">
+			<staticText>
+				<reportElement x="376" y="4" width="97" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Santunan
+Hospitalization/hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="4" width="97" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Nilai Tunai *)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="4" width="97" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Manfaat
+Meninggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="4" width="89" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Akumulasi
+Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="64" y="4" width="33" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="4" width="49" height="33"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Akhir Thn
+Polis]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14">
+			<textField>
+				<reportElement positionType="Float" x="16" y="0" width="49" height="14"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{yearNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="64" y="0" width="33" height="13"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="0" width="89" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{accumulatedPremium}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="97" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{deathBenefit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="97" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cashValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="376" y="0" width="97" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="8"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{hcpBenefit}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="93">
+			<frame>
+				<reportElement x="16" y="0" width="49" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="64" y="0" width="33" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="184" y="0" width="97" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="96" y="0" width="89" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement x="280" y="0" width="97" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<textField>
+				<reportElement positionType="Float" x="16" y="32" width="104" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="60" width="200" height="17"/>
+				<box padding="0" topBorder="1Point" leftBorder="None" bottomBorder="None" rightBorder="None"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="80" width="9" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[v1.0]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="16" y="16" width="489" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{note}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="376" y="0" width="97" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

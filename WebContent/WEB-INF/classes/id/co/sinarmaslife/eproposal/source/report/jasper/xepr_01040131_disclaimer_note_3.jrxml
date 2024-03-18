@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040131_disclaimer_note_3" pageWidth="595" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, 
+'10,000,000.00' as nonCelaka, '20,000,000.00' as celaka, 
+'10,000,000.00' as lifeBenefit, '10,000,000.00' as lifeBenefitNotTake from dual]]>
+	</queryString>
+	<summary>
+		<band height="146">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="1" width="513" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[KETENTUAN ASURANSI TANPA PEMERIKSAAN DOKTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="15" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="15" width="513" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Bagi Tertanggung yang masuk asuransi tanpa pemeriksaan dokter, maka pembayaran manfaat sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="29" width="500" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia pada tahun Polis pertama, maka akan dibayarkan 60% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="29" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="43" width="500" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia pada tahun Polis kedua, maka akan dibayarkan 80% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="43" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="83" width="513" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Pembayaran manfaat pada butir 1 di atas, tidak berlaku bila Tertanggung meninggal dunia sebagai akibat:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="83" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="95" width="500" height="25"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Kecelakaan(sebagai akibat langsung dari/karena luka badan yang disebabkan oleh kekerasan dari luar yang tidak disengaja seketika itu atau dalam waktu 90 hari).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="95" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="120" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="120" width="500" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Melahirkan wajar, prematur, tidak termasuk keguguran.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="133" width="500" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Wabah di daerah tempat Tertanggung meninggal dunia yang dinyatakan oleh Menteri Kesehatan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="133" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="56" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="56" width="500" height="25"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia pada tahun Polis ketiga dan seterusnya, maka akan dibayarkan 100% Uang Pertanggungan.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

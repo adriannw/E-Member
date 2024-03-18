@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040222_product_sub_4" pageWidth="595" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="570" leftMargin="5" rightMargin="20" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsOneRow2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsDetail" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalByi" class="java.lang.String"/>
+	<parameter name="labelCb" class="java.lang.String">
+		<parameterDescription><![CDATA[labelCb]]></parameterDescription>
+		<defaultValueExpression><![CDATA["*Tahunan"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'plan asuransi' as value, '111' as label from dual]]>
+	</queryString>
+	<field name="value" class="java.lang.String"/>
+	<field name="label" class="java.lang.String"/>
+	<title>
+		<band height="29">
+			<staticText>
+				<reportElement x="3" y="4" width="89" height="11"/>
+				<textElement>
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Biaya Asuransi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="17" width="162" height="12"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Tabel Manfaat]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="163" y="17" width="76" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{labelCb}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="13">
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="1" y="0" width="162" height="13"/>
+				<box padding="0">
+					<pen lineStyle="Solid"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="163" y="0" width="76" height="13"/>
+				<box padding="0">
+					<pen lineStyle="Solid"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{label}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<summary>
+		<band height="21">
+			<staticText>
+				<reportElement positionType="Float" x="1" y="1" width="162" height="17"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Total Biaya Asuransi*]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="163" y="1" width="76" height="17"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{totalByi}+" "]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

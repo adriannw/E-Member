@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_waiver_5_tpd_10_ci_summary" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderWaiver5Tpd10CiIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["11"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderWaiver5Tpd10CiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Critical Illness Rider"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="128">
+			<staticText>
+				<reportElement x="32" y="34" width="520" height="94"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Total akumulasi besarnya pembayaran premi lanjutan yang dibebaskan untuk setiap Tertanggung yang sama adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+Tertanggung yang memilik lebih dari satu asuransi yang memberikan manfaat CI, maka Total akumulasi besarnya manfaat CI yang dapat dibayarkan untuk setiap Tertanggung yang sama dari manfaat asuransi CI tersebut adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+Tertanggung yang memiliki lebih dari satu asuransi yang memberikan manfaat TPD, maka Total akumulasi besarnya manfaat TPD yang dapat dibayarkan untuk setiap Tertanggung yang sama dari manfaat asuransi TPD tersebut adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+Pembebasan pembayaran premi asuransi ini dimulai pada jatuh tempo pembayaran premi asuransi berikutnya setelah dinyatakan menderita Cacat Tetap Total atau didiagnosa menderita salah satu dari 31 Penyakit Kritis.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="2" width="16" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderWaiver5Tpd10CiIndex}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="2" width="281" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Waiver " +$P{riderWaiver5Tpd10CiTitle}+" TPD/CI - Rider :"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="32" y="15" width="520" height="19"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tertanggung menderita cacat tetap total atau terdiagnosa salah satu dari 31 penyakit kritis maka Tertanggung dibebaskan dari pembayaran Premi Pokok dan Premi Top Up Berkala(Jika ada) berikutnya selama masa pembayaran premi ."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="14" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="32" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="51" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="77" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="102" width="9" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

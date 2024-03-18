@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <select id="selectCashDanaSejahtera" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE
+            ( EKA.LST_TABLE.LSTAB_JENIS = #lstabJenis# ) AND
+            ( EKA.LST_TABLE.LSBS_ID = #leftPartOfBusinessCd# ) AND
+            ( EKA.LST_TABLE.LKU_ID = #currencyCd# ) AND
+            ( EKA.LST_TABLE.LSCB_ID = #paymentModeCd# ) AND
+            ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = #termOfPayment# ) AND
+            ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = #lstabLamaTanggung# ) AND
+            ( EKA.LST_TABLE.LSTAB_AGE = #insuredAge# ) AND
+            ( EKA.LST_TABLE.LSTAB_TAHUN_KE = #yearNo# )
+        ORDER BY lstab_tahun_ke
+    </select>
+    
+     <select id="selectCashDanaSejahteraNew" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE_NEW.LSTAB_VALUE
+        FROM EKA.LST_TABLE_NEW
+        WHERE
+            ( EKA.LST_TABLE_NEW.LSTAB_JENIS = #lstabJenis# ) AND
+            ( EKA.LST_TABLE_NEW.LSBS_ID = #leftPartOfBusinessCd# ) AND
+            ( EKA.LST_TABLE_NEW.LSDBS_NUMBER = #lsdbsNumber# ) AND
+            ( EKA.LST_TABLE_NEW.LKU_ID = #currencyCd# ) AND
+            ( EKA.LST_TABLE_NEW.LSCB_ID = #paymentModeCd# ) AND
+            ( EKA.LST_TABLE_NEW.LSTAB_LAMA_BAYAR = #termOfPayment# ) AND
+            ( EKA.LST_TABLE_NEW.LSTAB_LAMA_TANGGUNG = #lstabLamaTanggung# ) AND
+            ( EKA.LST_TABLE_NEW.LSTAB_AGE = #insuredAge# ) AND
+            ( EKA.LST_TABLE_NEW.LSTAB_TAHUN_KE = #yearNo# )
+        ORDER BY lstab_tahun_ke
+    </select>
+
+    <!--I got it from of_hit_premi n_prod_163-->
+    <select id="selectPkRateForDanaSejahtera" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+		FROM EKA.LST_RIDER
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 801 ) AND
+				( EKA.LST_RIDER.LSR_JENIS = #businessNo# ) AND
+				( EKA.LST_RIDER.LKU_ID = #currencyCd# ) AND
+				( EKA.LST_RIDER.USIA_PP = 0 ) AND
+				( EKA.LST_RIDER.USIA_TT = #insuredAge# )
+    </select>
+    
+        <select id="selectPkRate" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+		FROM EKA.LST_RIDER
+		WHERE ( EKA.LST_RIDER.LSBS_ID = #lsbsId# ) AND
+				( EKA.LST_RIDER.LSR_JENIS = #businessNo# ) AND
+				( EKA.LST_RIDER.LKU_ID = #currencyCd# ) AND
+				( EKA.LST_RIDER.USIA_PP = 0 ) AND
+				( EKA.LST_RIDER.USIA_TT = #insuredAge# )
+    </select>
+
+</sqlMap>

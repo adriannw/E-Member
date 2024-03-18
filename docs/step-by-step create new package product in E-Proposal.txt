@@ -1,0 +1,22 @@
+step-by-step create new package product in E-Proposal.txt:
+
+1. tambahkan  di class id.co.sinarmaslife.eproposal.business.Cepr01030101Business.resetForm :
+	misal : 	if( cepr01030101Form.getAssurancePlanList().get(i).getValue().substring(0, 3).equals("160") ){
+        			assurancePlanPackageList.add( new OptionVO( value, "SMiLe Pension") );
+        			flag_display_package += 1;
+        		}
+2.tambahkan class id.co.sinarmaslife.eproposal.business.Cepr01030102Business.filterProductsByPackage :
+	misal :   	if( "160~X2".equals( optVO.getValue() ) ){ // produk nya tergantung sub berapa yg ada paket ny utk case ini sub 2 yg mempunyai paket
+        		optVO.setLabel("SMiLe LADIES EXCLUSIVE SYARIAH");
+        		optVO.setFlag_paket(1);
+        	}
+    
+3. tambahkan class id.co.sinarmaslife.eproposal.web.Cepr01030102Validator.validate() :
+   misal : 	    else if( cepr01030102Form.getLeftPartOfBusinessCd() == 160 ){// smile link syariah
+        			if( cepr01030102Form.getSmileLadiesPackageCd() <= 1 ){
+          				 errors.rejectValue( Cepr01030102FormConst.SMILE_LADIES_PACKAGE, "error.packageMustBeChoose", null, null );
+          			}
+       			}
+
+4. tambahkan product di table :  EDIT eka.lst_user_product_group_detail where group_id = '20'
+	

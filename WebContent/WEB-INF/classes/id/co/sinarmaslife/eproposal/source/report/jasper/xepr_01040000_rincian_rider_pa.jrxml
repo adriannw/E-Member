@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_pa" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="15">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Personal Accident  "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPaRisk" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Resiko A+B"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan1' as subject, 'R-100' as descr, ' 1 ' as term
+from dual
+union
+select 'Jenis Santunan2' as subject, 'R-200' as descr, ' 2  ' as term
+from dual
+union
+select 'Jenis Santunan3' as subject, 'R-300' as descr, '  3 ' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<title>
+		<band height="560">
+			<staticText>
+				<reportElement positionType="Float" x="7" y="53" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="123" width="505" height="25"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note : 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="31" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderPa}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="70" width="505" height="15"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	Tidak ada risiko investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="103" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderPa}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="86" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="151" y="5" width="274" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}+" ("+$P{riderPaRisk}+")"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="153" width="294" height="15"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Personal Accident ("+$P{riderPaRisk}+")"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="171" width="489" height="31" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A".equals($P{riderPaRisk} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung mengalami Kecelakaan yang mengakibatkan meninggal dunia seketika atau dalam waktu 90 (sembilan puluh) hari setelah terjadinya Kecelakaan, maka Penanggung akan membayarkan Manfaat Asuransi kepada Yang Ditunjuk sebesar Uang Pertanggungan Asuransi Tambahan SMiLe Personal Accident. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="171" width="13" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A".equals($P{riderPaRisk} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="221" width="13" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A".equals($P{riderPaRisk} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="220" width="489" height="168" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A".equals($P{riderPaRisk} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi Tambahan yang dapat dibayarkan oleh Penanggung untuk Tertanggung yang sama adalah maksimum sebesar Rp. 2.000.000.000,- (dua milyar Rupiah) untuk Polis dalam mata uang Rupiah atau US$. 200,000 (dua ratus ribu Dollar Amerika Serikat) untuk Polis dalam mata uang US Dollar atau yang senilai Rp. 2.000.000.000,- (dua milyar Rupiah) apabila Tertanggung memiliki Polis dalam mata uang Rupiah dan US Dollar.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="171" width="13" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="24" y="171" width="489" height="32" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penanggung akan membayar Manfaat Asuransi sesuai dengan macam asuransi yang meliputi risiko-risiko sebagai berikut :
+   a. risiko meninggal dunia akibat Kecelakaan;
+   b. risiko Cacat Tetap seluruh atau sebagian anggota badan akibat Kecelakaan;
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="221" width="13" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="219" width="489" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Besarnya Manfaat Asuransi untuk masing-masing risiko sebagaimana dimaksud dalam butir 1 adalah sebagai berikut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="203" width="478" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c. risiko biaya pengobatan dan perawatan di Rumah Sakit akibat Kecelakaan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="234" width="497" height="71" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a. Manfaat Asuransi risiko meninggal dunia karena Kecelakaan :
+Penanggung akan membayar manfaat Asuransi Tambahan ini apabila Tertanggung mengalami Kecelakaan pada masa Asuransi Tambahan ini masih berlaku yang mengakibatkan Tertanggung meninggal dunia seketika atau dalam waktu 90 (sembilan puluh) hari setelah terjadinya Kecelakaan.
+b. Manfaat Asuransi risiko Cacat Tetap seluruh atau sebagian anggota badan karena Kecelakaan :
+Apabila Tertanggung mengalami Kecelakaan yang mengakibatkan menderita Cacat Tetap seketika atau dalam waktu 90 (sembilan puluh) hari, maka Penanggung akan membayarkan Manfaat Asuransi kepada Pemegang Polis/Yang Ditunjuk sebagai berikut :
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="306" width="481" height="14" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.1.Cacat Tetap seluruh anggota badan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="320" width="468" height="32" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kehilangan fungsi secara total dan tetap/permanen atas kedua tangan atau kedua kaki atau kedua mata atau satu tangan dan satu kaki atau satu tangan dan satu mata atau satu kaki dan satu mata dibayarkan Manfaat Asuransi sebesar 100% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="352" width="481" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.2.Cacat Tetap sebagian anggota badan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="365" width="469" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kehilangan fungsi secara total dan tetap/permanen dari sebagian anggota badan akan dibayarkan Manfaat Asuransi sebesar prosentase tertentu dari Uang Pertanggungan sebagai berikut :]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="16" y="449" width="529" height="95"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="16" y="392" width="529" height="55"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</title>
+	<lastPageFooter>
+		<band height="24"/>
+	</lastPageFooter>
+	<summary>
+		<band height="613">
+			<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+			<staticText>
+				<reportElement x="102" y="61" width="136" height="142" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[lengan mulai dari bahu 
+lengan mulai dari siku     
+tangan mulai dari pergelangan	
+penglihatan sebelah mata       
+penglihatan sebelah telinga  *)
+satu kaki                             
+Jari tangan :
+   Jempol 
+   Jari telunjuk 
+   Jari telunjuk   
+   Jari kelingking
+   Jari tengah/jari manis 
+   salah satu jari kaki
+*) pendengaran kedua belah telinga]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="41" width="121" height="164" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kanan   	                     	Kiri
+
+70%                           56%
+65%                           52%
+50%                           60%
+50%                           50% 
+15%                           15% 
+50%                           50% 
+
+25%                          20% 
+15%                          12% 
+15%                          12% 
+12%                            7% 
+10%                            8% 
+  5%                            5%
+50%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="208" width="345" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Bagi mereka yang kidal, perkataan “kanan” dibaca “kiri”dan sebaliknya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="44" y="228" width="469" height="34" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dalam hal kehilangan sebagian fungsi secara tetap/permanen dari salah satu anggota badan sebagaimana tersebut dalam butir 2.b.2, pembayaran Manfaat Asuransi harus dikurangi secara proporsional,sedangkan dalam hal kehilangan dua atau lebih anggota badan bersama-sama, pembayaran Manfaat Asuransi tidak boleh lebih dari 100% Uang Pertanggungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="41" width="136" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kehilangan Fungsi Atas :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="347" width="13" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="346" width="489" height="48" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi Tambahan yang dapat dibayarkan oleh Penanggung untuk Tertanggung yang sama adalah maksimum sebesar Rp.2.000.000.000,- (dua milyar Rupiah) untuk Polis dalam mata uang Rupiah atau US$. 200.000 (dua ratus ribu Dollar Amerika Serikat) untuk Polis dalam mata uang US Dollar atau yang senilai Rp.2.000.000.000,- (dua milyar Rupiah) apabila Tertanggung memiliki Polis dalam mata uang Rupiah dan US Dollar.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="264" width="497" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.	Manfaat Asuransi risiko Biaya pengobatan dan Perawatan di Rumah Sakit akibat Kecelakaan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="43" y="277" width="467" height="65" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung mengalami Kecelakaan yang memerlukan biaya pengobatan/perwatan di Rumah Sakit,maka Penanggung akan membayar Manfaat Asuransi sebesar biaya yang dikenakan oleh dokter atau Rumah Sakit berdasarkan atas perhitungan biaya yang wajar dan perlu.
+Manfaat Asuransi berupa biaya pengobatan dan perawatan di Rumah Sakit yang dibayarkan oleh Penanggung sebagaimana dimaksud dalam butir 2 bagian c.1 maksimum sebesar 10% Uang Pertanggungan untuk setiap Kecelakaan dan dalam satu tahun Polis tidak dapat melebihi jumlah Uang Pertanggungan yang tercantum dalam Polis.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="278" width="12" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="308" width="12" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="228" width="14" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["Resiko A+B".equals($P{riderPaRisk} ) || "Resiko A+B+D".equals($P{riderPaRisk} )   ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.3.]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="16" y="399" width="529" height="97"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement positionType="FixRelativeToBottom" x="16" y="513" width="529" height="85"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

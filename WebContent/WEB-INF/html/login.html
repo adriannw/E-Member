@@ -1,0 +1,212 @@
+<!--/**********************************************************************-->
+ <!--* Program History-->
+ <!--*-->
+ <!--* Project Name      	: E-Proposal-->
+ <!--* Function Id         	:-->
+ <!--* Program Name   		: -->
+ <!--* Description         	:-->
+ <!--* Environment      	: Java  1.5.0_06-->
+ <!--* Author               : samuel-->
+ <!--* Version              : 1.0-->
+ <!--* Creation Date    	: Jun 25, 2008 11:17:31 AM-->
+ <!--*-->
+ <!--* Update history   Re-fix date      Person in charge      Description-->
+ <!--*-->
+ <!--*-->
+ <!--*-->
+ <!--* Copyright(C) 2007-Asuransi Jiwa Sinarmas. All Rights Reserved.-->
+ <!--***********************************************************************/-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Welcome to E-Proposal</title>
+
+    <script type="text/javascript">
+        function changeButtonOkToOrange()
+        {
+            document.getElementById( "buttonOkId" ).src = '../../include/images/button/ok-ro.gif';
+        }
+        function changeButtonOkToNormal()
+        {
+            document.getElementById( "buttonOkId" ).src = '../../include/images/button/ok.gif';
+        }
+    </script>
+</head>
+
+<body onload="document.getElementById( 'userId' ).focus();">
+
+<center>
+
+    <table>
+        <tr>
+            <td style="text-align: center;">
+                <img src="../../include/images/logo_sinarmas_msig_life.png" alt="" style=""/>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <table cellspacing="0">
+                    <tr style="height: 40px;">
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-top-lef.gif');">&nbsp;</td>
+                        <td style="padding: 0; width: 700px; background-image: url('../../include/images/accessories/bor-log-top-cen.gif');">&nbsp;</td>
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-top-rig.gif');">&nbsp;</td>
+                    </tr>
+                    <tr style="height: 50px;">
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-cen-lef.gif');">&nbsp;</td>
+                        <td style="padding: 0; width: 700px; background-image: url('../../include/images/accessories/blank.gif'); text-align: right;">&nbsp;</td>
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-cen-rig.gif'); text-align: left;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-cen-lef.gif');">&nbsp;</td>
+                        <td colspan="2" style="padding: 0; width: 800px;">
+                            <table cellspacing="0">
+                                <tr>
+                                    <td style="padding: 0; width: 450px; vertical-align: top; padding-top: 35px;">
+                                        <img src="../../include/images/logo_login.gif" alt="" style=""/>
+                                    </td>
+                                    <td style="padding: 0; width: 350px;">
+                                        <table cellspacing="0">
+                                            <tr style="height: 30px;">
+                                                <td style="padding: 0; width: 10px; background-image: url('../../include/images/accessories/blank.gif');">&nbsp;</td>
+                                                <td style="padding: 0; width: 240px; background-image: url('../../include/images/accessories/blank.gif'); text-align: right;">&nbsp;</td>
+                                                <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-cen-rig.gif');">&nbsp;</td>
+                                            </tr>
+                                            <tr style="height: 30px;">
+                                                <td style="padding: 0; width: 10px; background-image: url('../../include/images/accessories/blank.gif');"></td>
+                                                <td style="padding: 0; width: 240px; background-image: url('../../include/images/accessories/blank.gif'); text-align: right;">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 22px; font-weight: 300; color: #9A9A9A; text-align: right;">user</span>
+                                                </td>
+                                                <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-cen-rig.gif');">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 22px; font-weight: 300; color: #676767; text-align: right;">login</span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 10px;">
+                                                <td style="padding: 0; width: 10px; background-image: url('../../include/images/accessories/blank.gif');"></td>
+                                                <td style="padding: 0; width: 240px; background-image: url('../../include/images/accessories/bor-log-top-cen-box.gif');"></td>
+                                                <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-top-rig-box.gif');"></td>
+                                            </tr>
+                                            <!--todo-->
+                                            <tr style="height: 100px;">
+                                                <td style="padding: 0; width: 10px; background-image: url('../../include/images/accessories/bor-log-cen-lef-box.gif');"></td>
+                                                <td style="padding: 0; width: 340px; background-image: url('../../include/images/accessories/bor-log-in-the-box.gif'); " colspan="2">
+                                                    <table cellspacing="0">
+                                                        <tr>
+                                                            <td>
+                                                                <table cellspacing="0">
+                                                                    <tr style="height: 35px; vertical-align: middle;">
+                                                                        <td style="width: 80px; text-align: right;">
+                                                                            <span style="font-family: sans-serif; font-variant: normal; font-size: 18px; font-weight: 300; color: #737373;">
+                                                                                user
+                                                                            </span>
+                                                                        </td>
+                                                                        <td style="padding-left: 15px;">
+                                                                            <input type="text" name="" id="userId" onkeypress="checkEnter(event, 'formId');" style="border-style: groove; border-width: 3px;"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr style="height: 35px; vertical-align: middle;">
+                                                                        <td style="width: 80px; text-align: right;">
+                                                                            <span style="font-family: sans-serif; font-variant: normal; font-size: 18px; font-weight: 300; color: #737373;">
+                                                                                pwd
+                                                                            </span>
+                                                                        </td>
+                                                                        <td style="padding-left: 15px;">
+                                                                            <input type="text" name="" onkeypress="checkEnter(event, 'formId');" style="border-style: groove; border-width: 3px;"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                            <td style="padding-left: 15px; padding-top: 4px;">
+                                                                <a href="#" onmouseover="changeButtonOkToOrange();" onmouseout="changeButtonOkToNormal();">
+                                                                    <img src="../../include/images/button/ok.gif" alt="" style="border: 0;" id="buttonOkId"/>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <tr style="height: 10px;">
+                                                <td style="padding: 0; width: 10px; background-image: url('../../include/images/accessories/bor-log-bot-lef-box.gif');"></td>
+                                                <td style="padding: 0; width: 240px; background-image: url('../../include/images/accessories/bor-log-bot-cen-box.gif');"></td>
+                                                <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-bot-rig-box.gif');"></td>
+                                            </tr>
+                                            <tr style="height: 20px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding-left: 14px; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: left;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: red; text-align: right; padding-right: 30px;">
+                                                        Error Message
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 80px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                                                        Head Office: Wisma Eka Jiwa Lantai 8
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                                                        Jl. Mangga Dua Raya, Jakarta 10730
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                                                        Telp: (021) 6257808 (Hunting), Fax: (021) 6257837
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                                                        Customer Service: (021) 6257838, 26508300
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 15px;">
+                                                <td style="padding: 0; width: 350px; background-image: url('../../include/images/accessories/bor-log-ajs-info.gif'); text-align: right;" colspan="3">
+                                                    <span style="font-family: sans-serif; font-variant: normal; font-size: 12px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                                                        Website: www.sinarmaslife.co.id
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 20px;">
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-bot-lef.gif');">&nbsp;</td>
+                        <td style="padding: 0; width: 700px; background-image: url('../../include/images/accessories/bor-log-bot-cen.gif');">&nbsp;</td>
+                        <td style="padding: 0; width: 100px; background-image: url('../../include/images/accessories/bor-log-bot-rig.gif');">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center; vertical-align: top; padding-top: 10px;">
+                <span style="font-family: sans-serif; font-variant: normal; font-size: 11px; font-weight: 300; color: #737373; text-align: right; padding-right: 30px;">
+                    Copyright &copy 2008 PT. Asuransi Jiwa Sinarmas MSIG. All Right Reserved.
+                </span>
+            </td>
+        </tr>
+    </table>
+
+</center>
+
+</body>
+</html>

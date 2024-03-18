@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+	<select id="selectAllUsers" resultClass="id.co.sinarmaslife.eproposal.model.vo.User" parameterClass="java.util.HashMap">
+			select * from(
+				select distinct m.msag_id lus_id, m.mcl_first name, m.lca_nama cabang, m.lwk_nama wakil, m.group_name groupName from(
+   					select x.msag_id, y.mcl_first, y.lca_nama, y.lwk_nama, y.lsrg_nama, x.GROUP_ID, x.GROUP_NAME
+					from
+						(
+							SELECT a.msag_id, a.GROUP_ID, b.GROUP_NAME
+        						FROM eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP b
+								where a.GROUP_ID=b.GROUP_ID
+							union		
+							SELECT msag_id, null as GROUP_ID, null as GROUP_NAME
+        						FROM eka.LST_USER_EXTERNAL 
+								where msag_id not in(
+									SELECT msag_id
+        							FROM eka.LST_USER_PRODUCT 
+								)
+						) x
+						,
+						(
+					SELECT a.msag_id, b.mcl_first, c.lca_nama, d.lwk_nama, e.lsrg_nama
+  					FROM eka.mst_agent a,
+       					eka.mst_client_new b,
+       					eka.lst_cabang c,
+       					eka.lst_wakil d,
+       					eka.lst_region e
+ 							WHERE a.msag_active = 1
+ 							    AND a.mcl_id = b.mcl_id
+   								AND a.lca_id = c.lca_id
+   								AND a.lca_id = d.lca_id
+   								AND a.lwk_id = d.lwk_id
+   								AND a.lca_id = e.lca_id
+   								AND a.lwk_id = e.lwk_id
+   								AND a.lsrg_id = e.lsrg_id
+						) y
+					where x.msag_id(+) = y.msag_id
+					)m, eka.LST_USER_EXTERNAL n
+					where n.msag_id(+) = m.msag_id 
+				)
+				where 1=1
+        		<isNotNull property="MSAG_ID">
+                	and UPPER(lus_id) like '%' || UPPER(#MSAG_ID#) || '%'
+				</isNotNull>
+				<isNotNull property="MCL_FIRST">
+                	and UPPER(name) like '%' || UPPER(#MCL_FIRST#) || '%'
+				</isNotNull>
+				<isNotNull property="LCA_NAMA">
+                	and UPPER(cabang) like '%' || UPPER(#LCA_NAMA#) || '%'
+				</isNotNull>
+				<isNotNull property="LWK_NAMA">
+                	and UPPER(wakil) like '%' || UPPER(#LWK_NAMA#) || '%'
+				</isNotNull>
+				<isNotNull property="GROUP_NAME">
+                	and UPPER(groupName) like '%' || UPPER(#GROUP_NAME#) || '%'
+        		</isNotNull>
+        		<isNotNull property="sortRow">
+					order by $sortRow$ Asc
+				</isNotNull>
+	</select>
+	
+</sqlMap>

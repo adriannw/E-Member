@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_hcp_ladies_summary" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderHcpLadiesIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as idx, 'Samuel' as name, '27' as age from dual
+union
+select '2' as idx, 'Nela' as name, '28' as age from dual]]>
+	</queryString>
+	<field name="idx" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<variable name="idx" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Count">
+		<variableExpression><![CDATA[new Integer( "1" )]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer( "0" )]]></initialValueExpression>
+	</variable>
+	<title>
+		<band height="95">
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="2" width="513" height="29"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Ladies Hospital Protection Rider : Memberikan manfaat kemoterapi, fisioterapi, santunan harian rawat inap, ICU dan tindakan pembedahan oleh karena sakit ataupun kecelakaan. Apabila Tertanggung menderita salah satu penyakit di bawah ini, maka manfaat Asuransi yang dibayarkan adalah 2(dua) kali manfaat Asuransi dari plan yang diambil."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="2" width="16" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderHcpLadiesIndex}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="30" width="9" height="10"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="30" width="504" height="18"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kanker : Penyakit yang ditandai dengan adanya tumor ganas akibat pertumbuhan sel yang tidak terkontrol dan dibuktikan salah satunya dari hasil patologi Anatomi(PA) dan/atau pemeriksaan penunjang lainnya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="48" width="9" height="10"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="48" width="504" height="10"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tumor Jinak Tertentu : Tumor jinak pada kandung kemih, saluran kemih dan payudara.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="58" width="9" height="10"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[c. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="58" width="504" height="10"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penyakit Khusus Wanita : Endometriosis, Kista/tumor pada indung telur, Tumor rahim.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="68" width="9" height="10"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[d. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="68" width="504" height="27"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Komplikasi kehamilan dan kelahiran : Early miscarriage(Keguguran), Ectopic pregnancy(Kehamilan di luar rahim), Preeclampsia (Toksemia pada wanita hamil yang ditandai oleh adanya hipertensi, edema dan proteinuria), Forceps delivery(Persalinan dengan tarikan pada kepala menggunakan alat penjepit(forceps)), Vacuum extraction(Persalinan dengan tarikan kepala dengan alat penghisap(vacuum)).]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21">
+			<printWhenExpression><![CDATA[new Boolean($F{name}!= null)]]></printWhenExpression>
+			<staticText>
+				<reportElement positionType="Float" x="176" y="11" width="32" height="10" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Usia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="11" width="137" height="10" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="11" width="17" height="10" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="0" width="249" height="10" isRemoveLineWhenBlank="true"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tertanggung Tambahan SMiLe Ladies Hospital Protection]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10">
+			<printWhenExpression><![CDATA[new Boolean($F{name}!= null)]]></printWhenExpression>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="0" width="17" height="10"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idx}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="40" y="0" width="137" height="10"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="176" y="0" width="32" height="10"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

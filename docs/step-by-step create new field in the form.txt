@@ -1,0 +1,7 @@
+Step by Step Create New Form Field:
+==> Create field in Cepr01030102Form
+==> create in Cepr01030102FormConst
+==> Create in JSP
+==> Create in message.resources
+==> Tambah default di Cepr01040000Entry
+==> Cek kalau ada initialisasi (misalnya list) tambah di formBackingObject di Cepr01030000Controller

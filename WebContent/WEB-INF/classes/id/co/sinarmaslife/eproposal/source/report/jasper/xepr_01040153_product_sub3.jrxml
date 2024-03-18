@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040153_product_sub3" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="nama_pp" class="java.lang.String">
+		<defaultValueExpression><![CDATA["BRAIS"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usiaKandungan" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal(30000)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="planBaby" class="java.lang.String"/>
+	<parameter name="nama_tt" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Toto"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usiaTT" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[new Integer(10)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="usiaIbu" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="89">
+			<frame>
+				<reportElement positionType="Float" x="3" y="1" width="543" height="86" isRemoveLineWhenBlank="true"/>
+				<box padding="0"/>
+				<staticText>
+					<reportElement positionType="Float" x="1" y="3" width="417" height="12"/>
+					<textElement>
+						<font size="9" isUnderline="true"/>
+					</textElement>
+					<text><![CDATA[B. Pertanggungan Tambahan (SMiLe Baby)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="13" y="16" width="397" height="10"/>
+					<textElement>
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[* Hanya jika Tertanggung masih dalam kandungan(20 sampai 32 minggu)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="28" width="159" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Nama Ibu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="314" y="28" width="7" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="337" y="28" width="204" height="14"/>
+					<textElement markup="none">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Ibu "+$P{nama_tt}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="56" width="159" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Usia kandungan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="314" y="56" width="7" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="337" y="56" width="204" height="14"/>
+					<textElement markup="none">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{usiaKandungan} + " bulan"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="70" width="236" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Plan Pertanggungan Tambahan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="314" y="70" width="7" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="337" y="70" width="85" height="14"/>
+					<textElement markup="none">
+						<font size="9"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{planBaby}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="0" y="42" width="159" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[Usia Ibu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="314" y="42" width="7" height="14"/>
+					<textElement>
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="359" y="42" width="48" height="14"/>
+					<textElement verticalAlignment="Top">
+						<font size="9"/>
+					</textElement>
+					<text><![CDATA[tahun]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="337" y="42" width="21" height="14"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$P{usiaIbu}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageHeader>
+</jasperReport>

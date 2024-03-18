@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_early_stage_ci99_syariah" pageWidth="595" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Early Stage Critical Illness 99 Syariah"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan1' as subject, 'RXX' as descr, ' 1 ' as term
+from dual
+union
+select 'Jenis Santunan2' as subject, 'RXX' as descr, ' 2  ' as term
+from dual
+union
+select 'Jenis Santunan3' as subject, 'RXX' as descr, '  3 ' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<pageHeader>
+		<band height="661">
+			<staticText>
+				<reportElement positionType="Float" x="7" y="102" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="179" width="505" height="21"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi Syariah dapat berubah mengikuti pertambahan usia Peserta
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="120" width="497" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="162" width="505" height="16" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderEarlyStageCi99}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="146" y="2" width="279" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}+""]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="147" width="130" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="227" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="268" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="227" width="500" height="431"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta didiagnosa menderita salah satu dari 34 kondisi penyakit kritis pada tahap awal (dibuktikan dengan hasil pemeriksaan dokter ahli) seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 50% (lima puluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Wakil Para Peserta sebesar Rp. 500.000.000,-/USD 50.000,- per Peserta yang sama.
+Apabila Peserta didiagnosa  menderita salah satu dari 25 kondisi penyakit kritis pada tahap menengah (dibuktikan dengan hasil pemeriksaan dokter ahli) seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 100% (seratus per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Wakil Para Peserta sebesar Rp. 2.000.000.000,-/USD 200.000,- per Peserta yang sama dikurangi dengan manfaat yang sudah dibayarkan pada nomor 1 (jika ada), jika Uang Pertanggungan yang dimiliki oleh Peserta lebih besar dari Rp.2.000.000.000,-/USD 200.000,- maka pertanggungan tetap berjalan, namun apabila Uang Pertanggungan yang dimiliki oleh Peserta sama besar atau lebih kecil dari Rp.2.000.000.000,-/USD 200.000,- maka Pertanggungan Asuransi Tambahan ini berakhir.
+Apabila Peserta didiagnosa  menderita salah satu dari 38 kondisi penyakit kritis pada tahap akhir (dibuktikan dengan hasil pemeriksaan dokter ahli) seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 100% (seratus per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Wakil Para Peserta sebesar Rp. 5.000.000.000,-/USD 500.000,- per Peserta yang sama dikurangi dengan manfaat yang sudah dibayarkan pada nomor 1 dan nomor 2 (jika ada) dan selanjutnya Asuransi Tambahan ini berakhir.
+Apabila Peserta didiagnosa dan memerlukan perawatan berupa Angioplasti dan penatalaksanaan invasif lainnya untuk penyakit Pembuluh Darah Jantung (dibuktikan dengan hasil pemeriksaan dokter ahli) seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 10% (sepuluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 75.000.000,-/USD 7.500,- per Peserta yang sama. Pembayaran tambahan manfaat ini dapat diberikan apabila klaim Manfaat Penyakit Kritis Tahap Awal, Menengah dan Akhir belum pernah dibayarkan sepenuhnya. Tambahan manfaat ini hanya berlaku untuk 1 (satu) kali klaim. 
+Apabila Peserta didiagnosa menderita komplikasi diabetes (dibuktikan dengan hasil pemeriksaan dokter ahli) seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis dalam masa berlakunya Asuransi Tambahan ini , maka diberikan manfaat 20% (dua puluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Wakil Para Peserta sebesar Rp. 200.000.000,-/USD 20.000,- per Peserta yang sama. Pembayaran tambahan manfaat ini dapat diberikan apabila klaim Manfaat Penyakit Kritis Tahap Awal, Menengah dan Akhir belum pernah dibayarkan sepenuhnya. Tambahan manfaat ini hanya berlaku untuk 1 (satu) kali klaim.
+Jumlah keseluruhan Manfaat Asuransi Tambahan yang dapat dibayarkan sebagaimana dimaksud oleh ketentuan nomor 1, 2 dan 3 di atas, maksimum 100% (seratus per seratus) Uang Pertanggungan Asuransi Tambahan.
+Jumlah keseluruhan Manfaat Asuransi Tambahan yang dapat dibayarkan maksimum 130% (seratus tiga puluh per seratus) Uang Pertanggungan Asuransi Tambahan.
+Pembayaran manfaat Asuransi Tambahan ini tidak mengurangi besarnya manfaat kematian Asuransi Dasar.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="211" width="298" height="15"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Early Stage Critical Illness 99 Syariah "]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="36" width="522" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderEarlyStageCi99}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="58" width="519" height="31"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Program Asuransi SMiLe Early Stage Critical Illness 99 ini adalah Program Asuransi Jiwa Tambahan yang memberikan perlindungan keuangan terhadap risiko Kondisi Penyakit Kritis sejak tahap awal (early stage) baik karena penyakit atau kecelakaan seperti yang tercantum dalam Tabel Kondisi Penyakit Kritis.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="339" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="389" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="449" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="499" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="518" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="537" width="13" height="13"/>
+				<textElement>
+					<font size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[8.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="27"/>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040136_disclaimer_note" pageWidth="595" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, 
+'10,000,000.00' as nonCelaka, '20,000,000.00' as celaka, 
+'10,000,000.00' as lifeBenefit, '10,000,000.00' as lifeBenefitNotTake from dual]]>
+	</queryString>
+	<summary>
+		<band height="304">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="1" width="513" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[KETENTUAN ASURANSI TANPA PEMERIKSAAN DOKTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="1" y="15" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="15" width="528" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Bagi Tertanggung yang masuk asuransi tanpa pemeriksaan dokter, maka pembayaran manfaat kepada ahli waris (pihak yang ditunjuk) apabila Tertanggung meninggal dunia sebelum usianya 69 tahun adalah sebagai berikut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="38" width="516" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia bukan karena kecelakaan pada bulan pertama polis, maka tidak ada manfaat asuransi apapun dan akan dikembalikan 100% dari premi yang telah dibayarkan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="38" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="61" width="516" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia bukan karena kecelakaan setelah satu bulan pertama polis dan masih pada tahun pertama Polis, maka akan dibayarkan 60% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="61" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="84" width="516" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia bukan karena kecelakaan pada tahun Polis kedua, maka akan dibayarkan 80% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="84" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="107" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="107" width="516" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia bukan karena kecelakaan setelah tahun Polis kedua, maka akan dibayarkan 100% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="17" y="130" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="29" y="130" width="516" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[bila Tertanggung meninggal dunia karena kecelakaan dalam masa asuransi, maka akan dibayarkan 100% Uang Pertanggungan.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="188" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer_note_2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="208" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="155" width="9" height="13"/>
+				<textElement>
+					<font size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="155" width="528" height="23"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Bila Tertanggung meninggal dunia karena sebab apapun dan usia Tertanggung pada saat itu 69 tahun atau lebih, maka akan dibayarkan 50% Uang Pertanggungan dan setelah itu kontrak Asuransi berakhir.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

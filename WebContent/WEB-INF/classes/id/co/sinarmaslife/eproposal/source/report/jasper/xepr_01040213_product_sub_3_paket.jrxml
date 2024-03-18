@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040213_product_sub_3_paket" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="r1" class="java.lang.String">
+		<parameterDescription><![CDATA[r1]]></parameterDescription>
+	</parameter>
+	<parameter name="r2" class="java.lang.String">
+		<parameterDescription><![CDATA[r2]]></parameterDescription>
+	</parameter>
+	<parameter name="r3" class="java.lang.String">
+		<parameterDescription><![CDATA[r3]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggunganPa" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganPa]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggunganPa2" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganPa2]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggunganPa3" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganPa3]]></parameterDescription>
+	</parameter>
+	<parameter name="exr" class="java.lang.String">
+		<parameterDescription><![CDATA[exr]]></parameterDescription>
+	</parameter>
+	<parameter name="currencyCd" class="java.lang.String">
+		<parameterDescription><![CDATA[currencyCd]]></parameterDescription>
+	</parameter>
+	<parameter name="nilai_manfaat_kematian" class="java.lang.String">
+		<parameterDescription><![CDATA[nilai_manfaat_kematian]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 2.000.000.000,-" : "US$ 200.000,-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="santunan_harian" class="java.lang.String">
+		<parameterDescription><![CDATA[santunan_harian]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 500.000,-" : "US$ 50,-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="manfaat_icu" class="java.lang.String">
+		<parameterDescription><![CDATA[manfaat_icu]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 1.000.000,-" : "US$ 100,-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titleRider" class="java.lang.String">
+		<parameterDescription><![CDATA[titleRider]]></parameterDescription>
+	</parameter>
+	<parameter name="maks_ci" class="java.lang.String">
+		<parameterDescription><![CDATA[maks_ci]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 400.000.000,-" : "US$ 40.000,-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="total_bayar_ci" class="java.lang.String">
+		<parameterDescription><![CDATA[total_bayar_ci]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 2.000.000.000.-" : "US$ 200.000,-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="uangPertanggunganCI" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganCI]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="riderEkaSehatIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiverCiIndex]]></parameterDescription>
+		<defaultValueExpression><![CDATA["5."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="paket_no" class="java.lang.Integer">
+		<parameterDescription><![CDATA[paket_no]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderEkaSehatParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderEkaSehatParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="maks_waiver" class="java.lang.String">
+		<parameterDescription><![CDATA[maks_waiver]]></parameterDescription>
+		<defaultValueExpression><![CDATA[$P{currencyCd}.equals("01") ? "Rp. 2.000.000.000,-(dua milyar Rupiah)" : "US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat)"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="uangPertanggunganCIPaket" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganCIPaket]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual
+union
+select '2' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual]]>
+	</queryString>
+	<title>
+		<band height="620">
+			<staticText>
+				<reportElement x="1" y="409" width="497" height="180">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="313" y="87" width="152" height="16"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggunganPa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="265" width="232" height="18">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Bebas Premi akibat Penyakit Kritis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="48" width="497" height="76"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="57" width="232" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Kematian akibat Kecelakaan]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="1" y="24" width="505" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["ASURANSI TAMBAHAN (RIDER) UNTUK "+$P{titleRider}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="17" y="72" width="264" height="46"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Jika Tertanggung meninggal dunia akibat kecelakaan sebelum berusia 60 tahun maka kepada Yang Ditunjuk akan dibayarkan manfaat tambahan kecelakaan sebesar 200% Uang Pertanggungan (maksimum sebesar "+$P{nilai_manfaat_kematian}+")."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="265" width="497" height="144">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="17" y="292" width="264" height="81">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Jika Tertanggung didiagnosa menderita salah satu dari 31 Penyakit Kritis dalam masa pembayaran premi maka diberikan manfaat tambahan Bebas Premi akibat Penyakit Kritis. Bebasnya premi yang dibebaskan untuk setiap Tertanggung sebesar pembayaran Premi Pokok dan Premi Top Up Berkala (jika ada)berikutnya sampai selama masa pembayaran premi. Total akumulasi besarnya pembayaran premi lanjutan yang dibebaskan untuk setiap Tertanggung yang sama adalah maksimum sebesar "+$P{maks_waiver}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="313" y="310" width="152" height="16">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pembebasan Pembayaran Premi Lanjutan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="123" width="497" height="142"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="17" y="143" width="264" height="83"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Jika Tertanggung mengalami Cacat Tetap Total dalam masa pembayaran premi maka diberikan manfaat tambahan Bebas Premi akibat Cacat Tetap Total. Besarnya Premi yang dibebaskan untuk setiap Tertanggung sebesar pembayaran Premi Pokok dan Premi Top Up Berkala (jika ada)berikutnya sampai selama masa pembayaran premi. Total akumulasi besarnya pembayaran premi lanjutan yang dibebaskan untuk setiap Tertanggung yang sama adalah maksimum sebesar "+$P{maks_waiver}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="313" y="161" width="152" height="16"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pembebasan Pembayaran Premi Lanjutan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="128" width="232" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Bebas Premi akibat Cacat Tetap Total]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="17" y="536" width="457" height="51">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Maksimum total manfaat Asuransi tambahan atas salah satu dari 31 Jenis Penyakit Kritis  (termasuk manfaat poin a dan manfaat pada butir 3 apabila disebabkan oleh penyakit kritis) yang dapat  dibayarkan bagi Pemegang Polis yang sama adalah sebesar "+$P{total_bayar_ci}+" dan selanjutnya Asuransi Tambahan Penyakit Kritis ini akan berakhir. Masa Tunggu untuk manfaat asuransi ini adalah 90 hari sejak berlakunya pertanggungan, kecuali Pemegang Polis mengalami Kecelakaan yang mengakibatkan Pemegang Polis menderita Penyakit Kritis tidak ada Masa Tunggu."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="536" width="8" height="12">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="313" y="463" width="152" height="16">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggunganCIPaket}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="503" width="457" height="31">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apabila Pemegang Polis untuk yang pertama kali didiagnosa  mengalami kondisi kritis dari salah satu jenis 31 penyakit kritis yang dijamin dalam Asuransi Tambahan ini, maka akan dibayarkan manfaat Asuransi sebesar Uang Pertanggungan  atau  sisa dari Uang Pertanggungan dalam hal ketentuan pada poin a telah terpenuhi dan selanjutnya Asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="436" width="8" height="16">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="17" y="436" width="265" height="67">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Apabila Pemegang Polis  untuk yang pertama kali  selama Pertanggungan, didiagnosa mengalami kondisi kritis salah satu penyakit Kanker Stadium I , II, atau III (yang dapat dibuktikan dengan hasil pemeriksaan Patologi Anatomi) maka akan dibayarkan manfaat Asuransi sebesar 20% Uang Pertanggungan Penyakit Kritis sebanyak 1x (satu kali)(Maksimum sebesar "+ $P{maks_ci} +")."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="502" width="8" height="12">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="418" width="232" height="18">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Penyakit Kritis]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="600" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="8" y="266" width="9" height="16">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="419" width="9" height="16">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="127" width="9" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="57" width="9" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="227" width="449" height="32"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tertanggung yang memiliki lebih dari satu asuransi yang memberikan manfaat TPD, maka maksimum Total akumulasi manfaat TPD yang dapat dibayarkan untuk setiap Tertanggung yang sama adalah sebesar  " + $P{maks_waiver}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="375" width="449" height="25">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() >= 3)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Tertanggung yang memiliki lebih dari satu asuransi yang memberikan manfaat CI, maka maksimum Total akumulasi manfaat CI yang dapat dibayarkan untuk setiap Tertanggung yang sama adalah sebesar "+$P{maks_waiver}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<summary>
+		<band height="287">
+			<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() == 4 )]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="50" width="554" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{paket_no}.intValue() == 4 )]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderEkaSehatIndex">
+					<subreportParameterExpression><![CDATA[$P{riderEkaSehatIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRiderEkaSehat}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_eka_sehat_ver_2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="147" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

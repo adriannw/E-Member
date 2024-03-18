@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xmed_01030203_product_sub" pageWidth="1024" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="984" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="com.jasperassistant.designer.DataSource" value="AJSDBTEST"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select * from eka.member]]>
+	</queryString>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="ID" class="java.math.BigDecimal"/>
+	<field name="JK" class="java.math.BigDecimal"/>
+	<field name="NAMA" class="java.lang.String"/>
+	<field name="NOMOR_HP" class="java.lang.String"/>
+	<field name="NOMOR_KTP" class="java.lang.String"/>
+	<field name="PASSWORD" class="java.lang.String"/>
+	<field name="TGL_LAHIR" class="java.sql.Timestamp"/>
+	<detail>
+		<band height="50">
+			<textField hyperlinkType="None">
+				<reportElement x="82" y="18" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NAMA}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="165" y="20" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EMAIL}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="257" y="14" width="80" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{PASSWORD}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

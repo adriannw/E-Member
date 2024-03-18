@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040150_product_sub2" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.VGuides.Page Header" value="196,206,310,316,420"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="512">
+			<staticText>
+				<reportElement positionType="Float" x="7" y="216" width="16" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="217" width="473" height="21"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Tertanggung mengalami Cacat Tetap Total dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="238" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="239" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah  diisi dan ditandatangani oleh Yang Ditunjuk dan dokter;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="250" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="265" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Tertanggung (KTP/SIM/Passport) ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="263" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="277" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="279" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Yang Ditunjuk (KTP/SIM/Passport);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="290" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[e.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="293" width="461" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Laporan polisi bila diperlukan;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="303" width="17" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[f.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="305" width="460" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Surat keterangan dari dokter yang menyatakan  Tertanggung menderita Cacat Tetap;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="317" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[g.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="319" width="361" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Keterangan dari Pemegang Polis dan copy saldo terakhir;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="330" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[h.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="332" width="473" height="11"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Ringkasan catatan medis dari dokter yang merawat Tertanggung sehubungan dengan Cacat Tetap Total yang dialami Tertanggung;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="345" width="16" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="346" width="476" height="21"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Tertanggung Hidup pada akhir masa asuransi, dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="367" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="368" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah diisi dan ditandatangani oleh Pemegang Polis/ Yang Ditunjuk;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="380" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="393" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="394" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Bukti diri Pemegang Polis (KTP/SIM/Passport) yang masih berlaku;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="407" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Surat Pengajuan pembayaran Manfaat Asuransi dari Pemegang Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="406" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="419" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="25" y="420" width="505" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Penanggung berhak menolak  atau menunda proses pembayaran klaim apabila dokumen tidak lengkap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="432" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="25" y="433" width="473" height="21"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[klaim harus diajukan selambat-lambatnya 90 (sembilan puluh) hari sejak Tertanggung meninggal dunia / cacat tetap total. Diluar jangka waktu tersebut Penanggung berhak menolak pembayaran Manfaat Asuransi.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="453" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="25" y="454" width="476" height="31"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Penanggung berhak untuk mengadakan penyelidikan atas sebab-sebab kematian/ cacat tetap total yang dialami oleh Tertanggung dan atau berhak meminta dokumen lain yang dianggap perlu untuk mendukung dokumen sebagaimana  dimaksud dalam ayat 2 dan 3 pasal ini, sepanjang relevan dengan pertanggungan dan wajar dalam proses penyelesaian klaim.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="484" width="16" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="25" y="486" width="476" height="24"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apabila berdasarkan penyelidikan ternyata penyebab kematian/ cacat tetap total yang dialami oleh Tertanggung termasuk dalam pengecualian, maka Penanggung berhak untuk menolak klaim tersebut serta tidak diwajibkan membayar Manfaat Asuransi.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="99" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[d.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="113" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[e.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="151" width="451" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Surat keterangan kematian atau akte kematianTertanggung dari instansi berwenang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="85" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="48" width="494" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Dalam hal Tertanggung meninggal dunia dokumen-dokumen yang diperlukan dalam pengajuan klaim adalah sebagai berikut:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="100" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Yang Ditunjuk (KTP/SIM/Passport);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="202" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[k.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="23" width="16" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="74" width="52" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="176" width="479" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Keterangan tertulis dari instansi berwenang atau dari pengadilan yang mencantumkan dengan jelas nama Yang Ditunjuk;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="126" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[f.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="25" width="479" height="21"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia/ cacat tetap total dalam masa asuransi, maka selambat-lambatnya dalam waktu 30 hari, Pemegang Polis atau Yang Ditunjuk wajib memberitahukan secara tertulis kepada penanggung sebagai laporan sementara.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="203" width="479" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Surat kuasa dari Yang Ditunjuk apabila Yang Ditunjuk lebih dari 1 (satu) orang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="115" width="477" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Formulir Surat Keterangan Dokter Confidential yang diisi lengkap dan ditandatangani oleh dokter yang merawat Tertanggung;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="73" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="87" width="361" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Fotocopi tanda bukti diri Tertanggung (KTP/SIM/Passport) ;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="149" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[g.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="61" width="361" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Formulir Klaim yang sudah diisi dan ditandatangani oleh Yang Ditunjuk dan dokter;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="47" width="16" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="140" width="186" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Laporan polisi bila diperlukan;
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="60" width="17" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="189" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[j.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="163" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[h.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="191" width="479" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[j.	Surat Keterangan dari kedutaan besar Republik Indonesia setempat dalam hal meninggalnya di luar negeri;]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="8" width="329" height="14"/>
+				<textElement markup="none">
+					<font fontName="Tahoma" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pengajuan Manfaat "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="95" y="74" width="76" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="172" y="74" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="252" width="51" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="170" y="252" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="92" y="252" width="78" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="42" y="381" width="52" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis asli atau]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="95" y="381" width="76" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[ Print Out  Soft Copy]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="171" y="381" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Polis;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="128" width="72" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Visum et Repertum]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="113" y="128" width="196" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[dalam hal meninggalnya tidak wajar;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="41" y="163" width="451" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Keterangan dari Pemegang Polis dan copy saldo terakhir;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="176" width="17" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[i.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

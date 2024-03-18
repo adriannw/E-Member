@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040215_illustration" pageWidth="580" pageHeight="791" columnWidth="580" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select '1' as no, '12' as policyAge, '1,000' as premiSekaligus, '50' as topupAssumption, '40' as drawAssumption, '1,005' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual
+union
+select '2' as no, '24' as policyAge, '1,000' as premiSekaligus, '50' as topupAssumption, '40' as drawAssumption, '1,005' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual]]>
+	</queryString>
+	<field name="no" class="java.lang.String"/>
+	<field name="policyAge" class="java.lang.String"/>
+	<field name="premiSekaligus" class="java.lang.String"/>
+	<field name="topupAssumption" class="java.lang.String"/>
+	<field name="drawAssumption" class="java.lang.String"/>
+	<field name="valueLow" class="java.lang.String"/>
+	<field name="valueMid" class="java.lang.String"/>
+	<field name="valueHi" class="java.lang.String"/>
+	<field name="benefitLow" class="java.lang.String"/>
+	<field name="benefitMid" class="java.lang.String"/>
+	<field name="benefitHi" class="java.lang.String"/>
+	<pageHeader>
+		<band height="60">
+			<staticText>
+				<reportElement positionType="Float" x="104" y="59" width="58" height="1"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="19" width="57" height="38"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Premi
+Sekaligus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="56" width="57" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="104" y="19" width="57" height="38"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Premi
+Top Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="272" y="56" width="65" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="56" width="25" height="4"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="19" width="177" height="26"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Estimasi Nilai Polis (akhir periode)*]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="216" y="44" width="57" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Sedang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="56" width="25" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="448" y="44" width="65" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tinggi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="392" y="44" width="57" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Sedang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="44" width="57" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Rendah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="216" y="56" width="57" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="3" width="184" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ILUSTRASI PERKEMBANGAN DANA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="392" y="56" width="57" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="272" y="44" width="65" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Tinggi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="336" y="44" width="57" height="13"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Rendah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="336" y="19" width="177" height="26"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal (akhir periode)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="448" y="56" width="65" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="19" width="25" height="38"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Usia
+Polis
+(Bln)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="336" y="56" width="57" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="56" width="57" height="4"/>
+				<box border="1Point" padding="0"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="19" width="25" height="38"/>
+				<box padding="0" topBorder="1Point" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="10">
+			<textField>
+				<reportElement positionType="Float" x="448" y="0" width="65" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{benefitHi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="24" y="0" width="25" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="5" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{policyAge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="104" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{topupAssumption}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="25" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="5" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="216" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{valueMid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="160" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{valueLow}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="392" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{benefitMid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="48" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{premiSekaligus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="272" y="0" width="65" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{valueHi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="336" y="0" width="57" height="10"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="3"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{benefitLow}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="20">
+			<staticText>
+				<reportElement positionType="Float" x="272" y="0" width="65" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="104" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="336" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="0" width="25" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="448" y="0" width="65" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="25" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="392" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="216" y="0" width="57" height="6"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="6" width="570" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* Estimasi Nilai Polis (akhir periode) merupakan estimasi Nilai Polis yang akan diterima oleh Pemegang Polis setelah dikurangi Biaya Investasi.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

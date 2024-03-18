@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040133_product" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isSummaryNewPage="true" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="businessIdx" class="java.lang.String">
+		<defaultValueExpression><![CDATA["xx"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfContract" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfPayment" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1,123,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["589,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["303,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["79"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["53"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsManfaatPayorsClause" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatWaiverPremiumDisability" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsPremiumSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="totalTahapanPasti" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="paymentModeCd" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[new Integer( 3 )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsManfaatDetail" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeaderPage2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="tahapanBonusKe5" class="java.lang.String">
+		<parameterDescription><![CDATA[tahapanBonusKe5]]></parameterDescription>
+	</parameter>
+	<parameter name="tahapanBonusKe4" class="java.lang.String">
+		<parameterDescription><![CDATA[tahapanBonusKe4]]></parameterDescription>
+	</parameter>
+	<parameter name="tahapanBonusKe3" class="java.lang.String">
+		<parameterDescription><![CDATA[tahapanBonusKe3]]></parameterDescription>
+	</parameter>
+	<parameter name="tahapanBonusKe2" class="java.lang.String">
+		<parameterDescription><![CDATA[tahapanBonusKe2]]></parameterDescription>
+	</parameter>
+	<parameter name="tahapanBonusKe1" class="java.lang.String">
+		<parameterDescription><![CDATA[tahapanBonusKe1]]></parameterDescription>
+	</parameter>
+	<parameter name="akhirTahunKe5" class="java.lang.String">
+		<parameterDescription><![CDATA[akhirTahunKe5]]></parameterDescription>
+	</parameter>
+	<parameter name="akhirTahunKe4" class="java.lang.String">
+		<parameterDescription><![CDATA[akhirTahunKe4]]></parameterDescription>
+	</parameter>
+	<parameter name="akhirTahunKe3" class="java.lang.String">
+		<parameterDescription><![CDATA[akhirTahunKe3]]></parameterDescription>
+	</parameter>
+	<parameter name="akhirTahunKe2" class="java.lang.String">
+		<parameterDescription><![CDATA[akhirTahunKe2]]></parameterDescription>
+	</parameter>
+	<parameter name="akhirTahunKe1" class="java.lang.String">
+		<parameterDescription><![CDATA[akhirTahunKe1]]></parameterDescription>
+	</parameter>
+	<parameter name="totalTahapanBonus" class="java.lang.String">
+		<parameterDescription><![CDATA[totalTahapanBonus]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPremi" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPremi]]></parameterDescription>
+	</parameter>
+	<parameter name="investPersen" class="java.lang.String">
+		<parameterDescription><![CDATA[investPersen]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPremium4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["303,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsDetailList" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalPersentase" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPersentase]]></parameterDescription>
+	</parameter>
+	<parameter name="totalJumlah" class="java.lang.String">
+		<parameterDescription><![CDATA[totalJumlah]]></parameterDescription>
+	</parameter>
+	<parameter name="dsManfaatTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPersonalAccident" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPenyakitKritis" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<queryString>
+		<![CDATA[select 'sub1' as pageCode from dual
+union
+select 'sub2' as pageCode from dual]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String"/>
+	<background>
+		<band height="41">
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement mode="Transparent" x="-40" y="0" width="553" height="37" forecolor="#808080"/>
+				<box padding="5">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement mode="Transparent" x="0" y="0" width="553" height="37" forecolor="#808080"/>
+				<box padding="5">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="560" y="12" width="8" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="568" y="12" width="24" height="13"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="536" y="12" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image hyperlinkType="None">
+				<reportElement stretchType="RelativeToBandHeight" x="6" y="3" width="178" height="35"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="17">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="577" height="17"/>
+				<subreportParameter name="dsManfaatPersonalAccident">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatPersonalAccident}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="paymentModeCd">
+					<subreportParameterExpression><![CDATA[$P{paymentModeCd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTahapanPasti">
+					<subreportParameterExpression><![CDATA[$P{totalTahapanPasti}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="insuredName">
+					<subreportParameterExpression><![CDATA[$P{insuredName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatPayorsClause">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatPayorsClause}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPersentase">
+					<subreportParameterExpression><![CDATA[$P{totalPersentase}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderPage2">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderPage2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalJumlah">
+					<subreportParameterExpression><![CDATA[$P{totalJumlah}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium1">
+					<subreportParameterExpression><![CDATA[$P{totalPremium1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium2">
+					<subreportParameterExpression><![CDATA[$P{totalPremium2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termOfContract">
+					<subreportParameterExpression><![CDATA[$P{termOfContract}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="logoPath">
+					<subreportParameterExpression><![CDATA[$P{logoPath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="note">
+					<subreportParameterExpression><![CDATA[$P{note}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastYearNo">
+					<subreportParameterExpression><![CDATA[$P{lastYearNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="validityMsg">
+					<subreportParameterExpression><![CDATA[$P{validityMsg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termOfPayment">
+					<subreportParameterExpression><![CDATA[$P{termOfPayment}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatTermRider">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatTermRider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium3">
+					<subreportParameterExpression><![CDATA[$P{totalPremium3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsPremiumSummary">
+					<subreportParameterExpression><![CDATA[$P{dsPremiumSummary}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatWaiverPremiumDisability">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatWaiverPremiumDisability}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastAge">
+					<subreportParameterExpression><![CDATA[$P{lastAge}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatHeader">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="insuredAge">
+					<subreportParameterExpression><![CDATA[$P{insuredAge}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencySymbol">
+					<subreportParameterExpression><![CDATA[$P{currencySymbol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatPenyakitKritis">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatPenyakitKritis}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="businessIdx">
+					<subreportParameterExpression><![CDATA[$P{businessIdx}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsDetailList}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040133_product_sub_2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<summary>
+		<band height="17">
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="0" width="577" height="17" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="paymentModeCd">
+					<subreportParameterExpression><![CDATA[$P{paymentModeCd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTahapanPasti">
+					<subreportParameterExpression><![CDATA[$P{totalTahapanPasti}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="insuredName">
+					<subreportParameterExpression><![CDATA[$P{insuredName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatPayorsClause">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatPayorsClause}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="akhirTahunKe3">
+					<subreportParameterExpression><![CDATA[$P{akhirTahunKe3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="akhirTahunKe4">
+					<subreportParameterExpression><![CDATA[$P{akhirTahunKe4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="investPersen">
+					<subreportParameterExpression><![CDATA[$P{investPersen}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="akhirTahunKe5">
+					<subreportParameterExpression><![CDATA[$P{akhirTahunKe5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="akhirTahunKe1">
+					<subreportParameterExpression><![CDATA[$P{akhirTahunKe1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="akhirTahunKe2">
+					<subreportParameterExpression><![CDATA[$P{akhirTahunKe2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium1">
+					<subreportParameterExpression><![CDATA[$P{totalPremium1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium2">
+					<subreportParameterExpression><![CDATA[$P{totalPremium2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termOfContract">
+					<subreportParameterExpression><![CDATA[$P{termOfContract}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="logoPath">
+					<subreportParameterExpression><![CDATA[$P{logoPath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="note">
+					<subreportParameterExpression><![CDATA[$P{note}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastYearNo">
+					<subreportParameterExpression><![CDATA[$P{lastYearNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="validityMsg">
+					<subreportParameterExpression><![CDATA[$P{validityMsg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="termOfPayment">
+					<subreportParameterExpression><![CDATA[$P{termOfPayment}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium4">
+					<subreportParameterExpression><![CDATA[$P{totalPremium4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremium3">
+					<subreportParameterExpression><![CDATA[$P{totalPremium3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsPremiumSummary">
+					<subreportParameterExpression><![CDATA[$P{dsPremiumSummary}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremi">
+					<subreportParameterExpression><![CDATA[$P{totalPremi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tahapanBonusKe1">
+					<subreportParameterExpression><![CDATA[$P{tahapanBonusKe1}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="lastAge">
+					<subreportParameterExpression><![CDATA[$P{lastAge}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatWaiverPremiumDisability">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatWaiverPremiumDisability}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tahapanBonusKe2">
+					<subreportParameterExpression><![CDATA[$P{tahapanBonusKe2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tahapanBonusKe3">
+					<subreportParameterExpression><![CDATA[$P{tahapanBonusKe3}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalTahapanBonus">
+					<subreportParameterExpression><![CDATA[$P{totalTahapanBonus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsManfaatHeader">
+					<subreportParameterExpression><![CDATA[$P{dsManfaatHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tahapanBonusKe4">
+					<subreportParameterExpression><![CDATA[$P{tahapanBonusKe4}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tahapanBonusKe5">
+					<subreportParameterExpression><![CDATA[$P{tahapanBonusKe5}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="insuredAge">
+					<subreportParameterExpression><![CDATA[$P{insuredAge}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencySymbol">
+					<subreportParameterExpression><![CDATA[$P{currencySymbol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader2">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="businessIdx">
+					<subreportParameterExpression><![CDATA[$P{businessIdx}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsManfaatDetail}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040133_product_sub_1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_syariah" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="41" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeaderRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCPFamily" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCPFamily]]></parameterDescription>
+	</parameter>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTerm" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTerm]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTerm" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTerm]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTpd" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTpd" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPa" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPa]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPaRisk" class="java.lang.String"/>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="dsEkalinkRider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsEkalinkRider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpFamilyParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpFamilyParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePayor5Tpd10CiDeath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5/10"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiver5Tpd10Ci" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiver5Tpd10Ci]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiver5Tpd10Ci" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiver5Tpd10Ci]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiver5Tpd10CiTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiver5Tpd10CiTitle]]></parameterDescription>
+		<defaultValueExpression><![CDATA["5/10"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesIns]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesIns]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesInsTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Paket C"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderScholar" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderScholar]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderScholar" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderScholar]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["60"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderWaiverTpdCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderWaiverTpdCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayorTpdCiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayorTpdCiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpProviderParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpProviderParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHCPProvider" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHCPProvider]]></parameterDescription>
+	</parameter>
+	<parameter name="currencyCd" class="java.lang.String">
+		<defaultValueExpression><![CDATA["02"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatExtraParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatExtraParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaMaxTerm" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaMaxTerm]]></parameterDescription>
+		<defaultValueExpression><![CDATA["70"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<title>
+		<band height="281">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="21" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderHCPFamily}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderHcpFamilyParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpFamilyParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPFamily">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPFamily">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderHCPFamily}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_hcp_family_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="81" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderTerm}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderTerm">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderTerm">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_term_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="101" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderTpd}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonBiayaRincianRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencyCd">
+					<subreportParameterExpression><![CDATA[$P{currencyCd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderTpd}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_tpd_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="121" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderCi}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonBiayaRincianRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencyCd">
+					<subreportParameterExpression><![CDATA[$P{currencyCd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderCi}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_ci_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="1" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderPa}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderPaRisk">
+					<subreportParameterExpression><![CDATA[$P{riderPaRisk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderPa}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_pa_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="221" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderEkaSehat}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderEkaSehat}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_eka_sehat_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="161" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderPayor5Tpd10CiDeath}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="titlePayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{titlePayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayor5Tpd10CiDeath}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_payor_5_tpd_10_ci_death_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="201" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderWaiver5Tpd10Ci}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderWaiver5Tpd10CiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver5Tpd10CiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiver5Tpd10Ci">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiver5Tpd10Ci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiver5Tpd10Ci">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiver5Tpd10Ci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiver5Tpd10Ci}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_waiver_5_tpd_10_ci_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="241" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderEkaSehatInnerLimit}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderEkaSehatInnerLimit}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_eka_sehat_inner_limit_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="261" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderLadiesIns}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesIns">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesIns}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesIns">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesIns}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesInsTitle">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesInsTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesIns}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_ladies_ins_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="41" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderHCP}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHcpParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderHCP">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHCP}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderHCP}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_hcp_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="61" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderHCPProvider}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderHcpProviderParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpProviderParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPProvider">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPProvider">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderHCPProvider}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_hcp_provider_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="141" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderPayorTpdCiDeath}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonBiayaRincianRiderPayorTpdCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayorTpdCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderPayorTpdCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayorTpdCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayorTpdCiDeath}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_payor_tpd_ci_death_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="181" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderWaiverTpdCi}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderWaiverTpdCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiverTpdCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdCiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdCiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderWaiverTpdCi">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderWaiverTpdCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderWaiverTpdCi}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_waiver_tpd_ci_syariah.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<summary>
+		<band height="160">
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="99" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlus}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderMedicalPlusParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRj">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRj}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRb">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRg">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusPk">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusPk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_medical_plus_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="79" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderEarlyStageCi99}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderEarlyStageCi99">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEarlyStageCi99}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEarlyStageCi99">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEarlyStageCi99}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderEarlyStageCi99}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_early_stage_ci99_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="59" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderScholar}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderScholar">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderScholar}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderScholar">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderScholar}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderScholar}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_scholar_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="39" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderHcpLadies}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderHcpLadies">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderHcpLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderHCPLadies">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpLad">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpLad}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderHCPLadies">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPLadies}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_hcp_ladies_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="19" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderLadiesMedExpenseInnerLimit}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseInnerLimit}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_ladies_med_expense_inner_limit_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="-1" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderLadiesMedExpense}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderLadiesMedExpenseParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderLadiesMedExpense}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_ladies_med_expense_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="119" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderEkaSehatExtra}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRincianRiderEkaSehatExtraParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatExtraParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderEkaSehatExtra">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehatExtra}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderEkaSehatExtra}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_eka_sehat_extra_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement positionType="Float" x="1" y="139" width="553" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsCommonBiayaRincianRiderTerm5575}!= null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsCommonBiayaRincianRiderTerm5575">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderTerm5575}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderTerm5575">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm5575}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaMaxTerm">
+					<subreportParameterExpression><![CDATA[$P{usiaMaxTerm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm5575}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_term_5575_syariah.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <typeAlias alias="Cepr01040201PerformanceVO" type="id.co.sinarmaslife.eproposal.model.vo.Cepr00000000PerformanceVO"/>
+    <typeAlias alias="BigDecimal" type="java.math.BigDecimal"/>
+	 <typeAlias alias="HashMap" type="java.util.HashMap"/>
+ 
+    <select id="selectLdecRateToGetCoi" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 1 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 115 ) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = 1 ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# ) AND
+        ( EKA.LST_TABLE.LSTAB_SEX = #liSex#) 
+    </select>
+    
+    <select id="selectLdecRateToGetCoi_119" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 1 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 119 ) AND
+        ( EKA.LST_TABLE.LKU_ID = #kurs_id# ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 18 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 18 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = 1 ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# ) AND
+        ( EKA.LST_TABLE.LSTAB_SEX = #liSex#)
+    </select>
+
+ 	<select id="selectLdecRateToGetCoi_190" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 1 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 190 ) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = 1 ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# ) AND
+        ( EKA.LST_TABLE.LSTAB_SEX = #liSex#)
+    </select>
+
+    <select id="selectLdecRateToGetCoiBasic" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 1 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 115 ) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = 1 ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# ) AND
+        ( EKA.LST_TABLE.LSTAB_SEX = #liSex#)
+    </select>
+        
+    <select id="selectLdecRateToGetTunai" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 2 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 168 ) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 5 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 65 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = #liTahunKe# ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# )
+    </select>
+
+    <select id="selectLdecRatePa" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 810 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #paRisk# ) AND
+        ( EKA.LST_RIDER.LKU_ID = '01' ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liClass# ) AND
+        ( EKA.LST_RIDER.USIA_TT = 0 ) AND
+        ( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+
+    <select id="selectLdecRateHcp" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 811 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateTpd" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 812 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = 7 ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# ) AND
+        ( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+    
+    <select id="selectLdecRateTpd_120" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 812 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# ) AND
+        ( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+
+    <select id="selectLdecRateCi" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 813 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = 8 ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId#  ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# ) AND
+		( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+    
+    <select id="selectLdecRateCiRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 813 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId#  ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateWp60Tpd" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 814 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRateWp60Tpd_120" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 814 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #ai_th# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRateWp10Tpd" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 814 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRatePb25Tpd" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 815 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateWp60Ci" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 816 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRateWp60Ci_120" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 816 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #ai_th# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRateWp10Ci" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 816 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRatePb25CiDeath" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 817 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRatePb25Ci" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 817 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis#  ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRatePayorSpouse" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 815 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis#  ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe#  ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateHcpFamily" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 819 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateHcpFamilyPesertaTambahan" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 819 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateHcpLadies" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 831 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateHcpLadiesPesertaTambahan" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 831 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+<select id="selectLdecRateHcpProvider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 826 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <select id="selectLdecRateHcpProviderPesertaTambahan" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 826 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+
+    <resultMap id="selectInvestmentPerformanceLastFourYears.result" class="Cepr01040201PerformanceVO">
+        <result property="date" column="tgl" javaType="java.util.Date" jdbcType="DATE"/>
+        <result property="fixIncome" column="fix_income" javaType="BigDecimal" jdbcType="NUMBER"/>
+        <result property="dynamicFund" column="dynamic_fund" javaType="BigDecimal" jdbcType="NUMBER"/>
+        <result property="aggressiveFund" column="aggressive_fund" javaType="BigDecimal" jdbcType="NUMBER"/>
+        <result property="secureDollar" column="secure_dollar" javaType="BigDecimal" jdbcType="NUMBER"/>
+        <result property="dynamicDollar" column="dynamic_dollar" javaType="BigDecimal" jdbcType="NUMBER"/>
+    </resultMap>
+
+    <select id="selectInvestmentPerformanceLastFourYears"
+            parameterClass="java.util.HashMap"
+            resultClass="Cepr01040201PerformanceVO"
+            resultMap="selectInvestmentPerformanceLastFourYears.result">
+        SELECT
+            a.tgl as tgl,
+            a.rate as fix_income,
+            b.rate as dynamic_fund,
+            c.rate as aggressive_fund,
+            d.rate as secure_dollar,
+            e.rate as dynamic_dollar
+        FROM
+            eka.lst_kinerja_invest a,
+            eka.lst_kinerja_invest b,
+            eka.lst_kinerja_invest c,
+            eka.lst_kinerja_invest d,
+            eka.lst_kinerja_invest e
+        WHERE a.versi = b.versi
+            AND a.versi = c.versi
+            AND a.versi = d.versi
+            AND a.versi = e.versi
+            AND a.tgl = b.tgl
+            AND a.tgl = c.tgl
+            AND a.tgl = d.tgl
+            AND a.tgl = e.tgl
+            AND a.lji_id = '01'
+            AND b.lji_id = '02'
+            AND c.lji_id = '03'
+            AND d.lji_id = '04'
+            AND e.lji_id = '05'
+            AND
+            a.tgl BETWEEN sysdate - 4.4 * 365 - 183 AND sysdate
+        ORDER BY
+            a.tgl
+    </select>
+
+    <select id="selectLdecRateTermRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+		FROM EKA.LST_RIDER
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 818 ) AND
+			  ( EKA.LST_RIDER.LSR_JENIS = 2 ) AND
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRateTerm" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+		FROM EKA.LST_RIDER
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 818 ) AND
+			  ( EKA.LST_RIDER.LSR_JENIS = #li_jenis# ) AND
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+		<isNotNull property="liSex">
+			 and  ( EKA.LST_RIDER.LSR_SEX = #liSex#)
+		</isNotNull>
+    </select>
+    
+    <select id="selectLdecRateTermRider_120" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+		FROM EKA.LST_RIDER
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 818 ) AND
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectEkaSehatRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 823 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectEkaSehatInnerLimitRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 825 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLdecRatePayorTpdCiDeath" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 828 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# ) AND
+		( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+        
+    <select id="selectLdecRateWaiverTpdCi" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 827 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# ) AND
+		( EKA.LST_RIDER.LSR_SEX = #liSex#)
+    </select>
+    
+     <select id="selectLdecRateScholarship" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 835 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = 1 ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+     <select id="selectLdecRateBaby" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 836 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = 0 ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsiaBaby# )
+    </select>
+    
+     <select id="selectLdecRateEarlyStageCi99" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+     	 SELECT EKA.LST_RIDER.RATE 
+		 FROM EKA.LST_RIDER  
+		 WHERE ( EKA.LST_RIDER.LSBS_ID = 837 ) AND  
+		 ( EKA.LST_RIDER.LSR_JENIS = #lsr_jenis# ) AND  
+		 ( EKA.LST_RIDER.LKU_ID = #lku_id# ) AND  
+		 ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+		 ( EKA.LST_RIDER.USIA_TT = #li_usia# )
+    </select>
+    
+    <select id="selectLdecRateLadiesIns" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_RIDER.RATE
+        FROM EKA.LST_RIDER
+        WHERE ( EKA.LST_RIDER.LSBS_ID = 830 ) AND
+        ( EKA.LST_RIDER.LSR_JENIS = #liJenis# ) AND
+        ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND
+        ( EKA.LST_RIDER.USIA_PP = #liTahunKe# ) AND
+        ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLadiesMedExpenseRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 832 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectLadiesMedExpenseInnerLimitRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 833 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+     <select id="selectRateExtMortalita" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT LEM_YRT
+		FROM EKA.LST_EXT_MOR
+		WHERE ( LEM_UMUR = #liUsia# )
+    </select>
+    
+    <select id="selectRiderMedicalPlusList" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+   		select b.no_urut no,CAST(KET_BENEFIT AS VARCHAR(350)) KET_BENEFIT, NVL(b.nilai_benefit,0) NILAI_BENEFIT,b.nilai_benefit_ac
+        from eka.Lst_benefit_product a, eka.Lst_benefit b
+        where a.benefit_id=b.benefit_id and a.lsbs_id=838 and a.lsdbs_number = #lsdbs_number#
+        order by no asc
+    </select>
+    
+    <select id="selectRiderMedicalPlusRjList" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+   		select b.no_urut no,CAST(KET_BENEFIT AS VARCHAR(350)) KET_BENEFIT, NVL(b.nilai_benefit,0) NILAI_BENEFIT,b.nilai_benefit_ac
+        from eka.Lst_benefit_product a, eka.Lst_benefit b
+        where a.benefit_id=b.benefit_id and a.lsbs_id=839 and a.lsdbs_number = #lsdbs_number#
+        order by no asc 
+    </select>  
+    
+     <select id="selectMedicalPlusRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 838 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>  
+    
+     <select id="selectMedicalPlusRjRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 839 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>  
+    
+    <select id="selectProvestraRiRj" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 840 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectProvestraRgRbPk" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = #lsbsId# ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+    
+    <select id="selectPremiKid" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_PREMI_SS.LSPRSS_VALUE FROM EKA.LST_PREMI_SS  WHERE
+    				EKA.LST_PREMI_SS.LSBS_ID = #lsbs_id# AND
+    				EKA.LST_PREMI_SS.LSPRSS_PLAN = #plan# AND
+    				EKA.LST_PREMI_SS.LKU_ID = '01' AND
+    				EKA.LST_PREMI_SS.LSPRSS_AGE = #liUsia#
+    </select>
+    
+      <select id="selectNTKid" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		select lstab_value from eka.lst_table_new where lsbs_id=#lsbs_id# and lstab_jenis=2 and lsdbs_number=#plan#
+		and lstab_age=#liUsia# and lstab_tahun_ke=#yearNo#
+		<isNotNull property="lamaBayar">
+			and lstab_lama_bayar=#lamaBayar#
+			and lstab_lama_tanggung=#lamaBayar#	
+		</isNotNull>
+		<isNotNull property="cb_id">
+			 and lscb_id=#cb_id#
+		</isNotNull>
+    </select>
+    
+    <select id="selectLdecRateToGetCoi_220" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 1 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 220 ) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 80 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = 1 ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# ) AND
+        ( EKA.LST_TABLE.LSTAB_SEX = #liSex#)
+    </select>
+    
+    <select id="selectSMiLeMedicalExtraRider" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+		SELECT EKA.LST_RIDER.RATE 
+		FROM EKA.LST_RIDER  
+		WHERE ( EKA.LST_RIDER.LSBS_ID = 848 ) AND  
+			  ( EKA.LST_RIDER.LSR_JENIS = #riderBaru# ) AND  
+			  ( EKA.LST_RIDER.LKU_ID = #kursId# ) AND  
+			  ( EKA.LST_RIDER.USIA_PP = 0 ) AND  
+			  ( EKA.LST_RIDER.USIA_TT = #liUsia# )
+    </select>
+        
+</sqlMap>

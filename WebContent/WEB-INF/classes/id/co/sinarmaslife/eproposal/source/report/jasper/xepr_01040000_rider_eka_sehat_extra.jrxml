@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_eka_sehat_extra" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="ekaSehatTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[ekaSehatTitle]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Manfaat Eka Sehat"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderEkaSehatEkaExtraIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderEkaSehatEkaExtraIndex]]></parameterDescription>
+		<defaultValueExpression><![CDATA["2"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="providerType" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Provider"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '- Biaya Pemeriksaan Laboratorium & Test Diagnostik' as subject, 'Kamar dengan 1 Tempat Tidur****)' as descr, 'maks 365 hari/tahun' as detail, 'R-100' as plan
+from dual
+
+union
+
+select '- Rawat Inap di ruang ICU' as subject, 'Indonesia dan Malaysia' as descr, 'Maks 30 hari per satu tahun polis' as detail, 'R-100' as plan
+from dual
+
+union
+select '- Biaya Akomodasi (maks usia Tertanggung 17 Thn)' as subject, 'Seluruh dunia kecuali Amerika Serikat' as descr, 'Maks 30 hari per satu tahun polis' as detail, 'R-100' as plan
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="detail" class="java.lang.String"/>
+	<field name="plan" class="java.lang.String"/>
+	<pageHeader>
+		<band height="26">
+			<frame>
+				<reportElement x="0" y="-1" width="472" height="27"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="24" y="0" width="333" height="14"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Medical Extra "]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="1" y="1" width="16" height="14"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{riderEkaSehatEkaExtraIndex}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="24" y="16" width="432" height="11"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Maks. s/d usia 75 tahun]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="422" y="2" width="47" height="10"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[(dalam ribuan)]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="12">
+			<frame>
+				<reportElement x="0" y="0" width="472" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement x="385" y="0" width="86" height="12"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{detail}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="0" width="210" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="235" y="0" width="142" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="148">
+			<frame>
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="472" height="146"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="24" y="1" width="9" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[*]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="13" width="9" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[*]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="25" width="9" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[*]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="32" y="1" width="403" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Tidak ada pembayaran manfaat asuransi untuk hal-hal yang dikecualikan dalam polis.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="32" y="13" width="403" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Peningkatan kelas jaminan hanya dapat dilakukan pada saat perpanjangan polis.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="32" y="25" width="403" height="31"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Jika Biaya Kamar dan Menginap yang dipilih ternyata melebihi biaya yang tercantum dalam Tabel Jaminan Polis yang dipilih, maka biaya-biaya yang dapat dibayar  oleh Penanggung akan dihitung  secara proporsional berdasarkan rumus :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="56" width="403" height="11"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[B =  (BI  x  TB)/ BK]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="67" width="403" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Dimana :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="79" width="145" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[B : Biaya yang dapat dibayar]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="176" y="79" width="209" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[BI : Biaya Kamar & Menginap sesuai ikhtisar Polis]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="91" width="145" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[TB : Total Biaya Sebenarnya]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="176" y="91" width="281" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[BK : Biaya Kamar & Menginap yang digunakan pada saat rawat menginap]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="24" y="103" width="433" height="21"/>
+					<textElement verticalAlignment="Bottom">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Asalkan tidak melebihi Batas Maksimum Penggantian perjenis Jaminan untuk tiap perawatan dan Batasan Maksimum Penggantian Per-Tahun. Selisih dari Biaya yang tidak dapat dibayar menjadi tanggung jawab dari Tertanggung.]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="24" y="124" width="433" height="21" isRemoveLineWhenBlank="true"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{plan}.equals("Plan G-1500") ? "*) kamar rumah sakit dengan satu tempat tidur dengan harga terendah atau kamar rumah sakit tipe lain yang lebih tinggi dengan biaya tidak melebihi Rp 1.500.000 per hari"
+: $F{plan}.equals("Plan H-2000") ? "**) kamar rumah sakit dengan satu tempat tidur dengan harga terendah atau kamar rumah sakit tipe lain yang lebih tinggi dengan biaya tidak melebihi Rp 2.000.000 per hari"
+: $F{plan}.equals("Plan I-5000") ? "***) kamar rumah sakit dengan satu tempat tidur dengan harga terendah atau kamar rumah sakit tipe lain yang lebih tinggi dengan biaya tidak melebihi Rp 5.000.000 per hari"
+: $F{plan}.equals("Plan J-7500") ? "****) kamar rumah sakit dengan satu tempat tidur dengan harga terendah atau kamar rumah sakit tipe lain yang lebih tinggi dengan biaya tidak melebihi Rp 7.500.000 per hari"
+: " "]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

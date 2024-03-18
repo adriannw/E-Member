@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>Spring Mapping, Servlets, and Controller</description>
+
+    <!-- cepr01010101Interceptor (mencegah user masuk tanpa login terlebih dahulu) -->
+	<bean id="cepr01010101Interceptor" class="id.co.sinarmaslife.eproposal.web.Cepr01010101Interceptor">
+		<property name="eproposalManager" ref="eproposalManager"/>
+		<property name="cepr01010101Business" ref="cepr01010101Business"/>
+    </bean>
+
+    <!-- ========== Transactional Services ========== -->
+    <bean id="eproposalManager" class="id.co.sinarmaslife.eproposal.service.EproposalManager">
+        <property name="props" ref="eproposalConf" />
+        <property name="cepr01010101Dao" ref="cepr01010101Dao"/>
+        <property name="cepr01020201Dao" ref="cepr01020201Dao"/>
+        <property name="cepr01020202Dao" ref="cepr01020202Dao"/>
+        <property name="cepr01020301Dao" ref="cepr01020301Dao"/>
+        <property name="cepr01020401Dao" ref="cepr01020401Dao"/>
+        <property name="cepr01030101Dao" ref="cepr01030101Dao"/>
+		<property name="cepr01030102Dao" ref="cepr01030102Dao"/>
+        <property name="cepr01030501Dao" ref="cepr01030501Dao"/>
+		<property name="cepr01030502Dao" ref="cepr01030502Dao"/>
+
+        <!--products non unit links-->
+        <property name="cepr01040101Dao" ref="cepr01040101Dao"/>
+		<property name="cepr01040102Dao" ref="cepr01040102Dao"/>
+		<property name="cepr01040103Dao" ref="cepr01040103Dao"/>
+		<property name="cepr01040104Dao" ref="cepr01040104Dao"/>
+		<property name="cepr01040105Dao" ref="cepr01040105Dao"/>
+		<property name="cepr01040106Dao" ref="cepr01040106Dao"/>
+		<property name="cepr01040107Dao" ref="cepr01040107Dao"/>
+		<property name="cepr01040108Dao" ref="cepr01040108Dao"/>
+        <property name="cepr01040109Dao" ref="cepr01040109Dao"/>
+        <property name="cepr01040110Dao" ref="cepr01040110Dao"/>
+		<property name="cepr01040111Dao" ref="cepr01040111Dao"/>
+		<property name="cepr01040112Dao" ref="cepr01040112Dao"/>
+		<property name="cepr01040113Dao" ref="cepr01040113Dao"/>
+		<property name="cepr01040114Dao" ref="cepr01040114Dao"/>
+		<property name="cepr01040115Dao" ref="cepr01040115Dao"/>
+		<property name="cepr01040116Dao" ref="cepr01040116Dao"/>
+		<property name="cepr01040117Dao" ref="cepr01040117Dao"/>
+		<property name="cepr01040118Dao" ref="cepr01040118Dao"/>
+		<property name="cepr01040119Dao" ref="cepr01040119Dao"/>
+		<property name="cepr01040120Dao" ref="cepr01040120Dao"/>
+		<property name="cepr01040121Dao" ref="cepr01040121Dao"/>
+		<property name="cepr01040124Dao" ref="cepr01040124Dao"/>
+		<property name="cepr01040125Dao" ref="cepr01040125Dao"/>
+		<property name="cepr01040126Dao" ref="cepr01040126Dao"/>
+		<property name="cepr01040127Dao" ref="cepr01040127Dao"/>
+		<property name="cepr01040128Dao" ref="cepr01040128Dao"/>
+		<property name="cepr01040130Dao" ref="cepr01040130Dao"/>
+		<property name="cepr01040131Dao" ref="cepr01040131Dao"/>
+		<property name="cepr01040133Dao" ref="cepr01040133Dao"/>
+		<property name="cepr01040137Dao" ref="cepr01040137Dao"/>	
+		<property name="cepr01040147Dao" ref="cepr01040147Dao"/>	
+        <!--products unit links-->
+        <property name="cepr01040201Dao" ref="cepr01040201Dao"/>
+		<property name="cepr01040202Dao" ref="cepr01040202Dao"/>
+		<property name="cepr01040203Dao" ref="cepr01040203Dao"/>
+		<property name="cepr01040204Dao" ref="cepr01040204Dao"/>
+		<property name="cepr01040205Dao" ref="cepr01040205Dao"/>
+		<property name="cepr01040206Dao" ref="cepr01040206Dao"/>
+		<property name="cepr01040207Dao" ref="cepr01040207Dao"/>
+        <property name="cepr01040208Dao" ref="cepr01040208Dao"/>
+        <property name="cepr01040209Dao" ref="cepr01040209Dao"/>
+        <property name="cepr01040210Dao" ref="cepr01040210Dao"/>
+		<property name="cepr01040211Dao" ref="cepr01040211Dao"/>
+		<property name="cepr01040212Dao" ref="cepr01040212Dao"/>
+		<property name="cepr01040213Dao" ref="cepr01040213Dao"/>
+		<property name="cepr01040214Dao" ref="cepr01040214Dao"/>
+        <property name="cepr01040215Dao" ref="cepr01040215Dao"/>
+        <property name="cepr01040216Dao" ref="cepr01040216Dao"/>
+		<property name="cepr01040219Dao" ref="cepr01040219Dao"/>	
+		<property name="cepr01040220Dao" ref="cepr01040220Dao"/>	
+			
+        <property name="cepr00000000CommonDao" ref="cepr00000000CommonDao"/>
+    </bean>
+
+    <!--Parent-->
+    <bean id="standardParent" class="id.co.sinarmaslife.eproposal.common.parent.StandardParent" >
+        <property name="eproposalManager" ref="eproposalManager" />
+        <property name="editorUtil" ref="cepr00000000EditorUtil" />
+    </bean>
+    
+    <bean id="parentMultiController" abstract="true">
+		<property name="methodNameResolver">
+			<bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver" />
+		</property>
+		<property name="eproposalManager" ref="eproposalManager" />
+		<property name="props" ref="eproposalConf" />
+   		<property name="dateFormat" ref="defaultDateFormat" />
+        <property name="dateEditor" ref="dateEditor" />
+        <property name="integerEditor" ref="integerEditor" />
+        <property name="currencyEditor" ref="currencyEditor" />
+	</bean>
+
+    <bean id="cepr00000000EditorUtil" class="id.co.sinarmaslife.eproposal.common.util.Cepr00000000EditorUtil">
+        <property name="dateFormat" ref="defaultDateFormat" />
+        <property name="dateEditor" ref="dateEditor" />
+        <property name="integerEditor" ref="integerEditor" />
+        <property name="currencyEditor" ref="currencyEditor" />
+    </bean>
+
+    <!--Controllers-->
+
+    <bean id="cepr00000000Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000000Controller"/>
+    <bean id="cepr00000001Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000001Controller"/>
+    <bean id="cepr00000002Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000002Controller"/>
+    <bean id="cepr00000003Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000003Controller">
+    	<property name="eproposalManager" ref="eproposalManager" />
+    </bean>
+    <bean id="cepr00000004Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000004Controller"/>
+    <bean id="cepr00000005Controller" class="id.co.sinarmaslife.eproposal.web.Cepr00000005Controller"/>
+
+    <!--Login Controller (inherits SimpleFormController)-->
+    <bean id="cepr01010101Validator" class="id.co.sinarmaslife.eproposal.web.Cepr01010101Validator">
+        <property name="cepr01010101Business" ref="cepr01010101Business"/>
+        <property name="eproposalManager" ref="eproposalManager" />
+    </bean>
+    <bean id="cepr01010101Controller" class="id.co.sinarmaslife.eproposal.web.Cepr01010101Controller">
+    	<property name="eproposalManager" ref="eproposalManager" />
+    	<property name="cepr01010101Business" ref="cepr01010101Business"/>
+        <property name="sessionForm" value="true"/>
+        <property name="commandName" value="cepr01010101Form"/>
+        <property name="commandClass" value="id.co.sinarmaslife.eproposal.web.Cepr01010101Form"/>
+        <property name="formView" value="CEPR01010101JSP"/>
+    </bean>
+
+    <bean id="cepr01010102Controller" class="id.co.sinarmaslife.eproposal.web.Cepr01010102Controller"/>
+
+    <!-- Entry Form Controller (inherits AbstractWizardFormController) -->
+    <bean id="cepr01030000Controller" class="id.co.sinarmaslife.eproposal.web.Cepr01030000Controller">
+        <property name="eproposalManager" ref="eproposalManager" />
+        <property name="dateFormat" ref="defaultDateFormat" />
+        <property name="dateEditor" ref="dateEditor" />
+        <property name="integerEditor" ref="integerEditor" />
+        <property name="currencyEditor" ref="currencyEditor" />
+        <property name="editorUtil" ref="cepr00000000EditorUtil" />
+        <property name="commandName" value="cepr01030000HoldingForm" />
+        <property name="pages">
+            <list>
+                <value>CEPR01030101JSP</value>
+                <value>CEPR01030102JSP</value>
+                <value>CEPR01030301JSP</value>
+                <value>CEPR01030401JSP</value>          
+                <value>CEPR00000000DownloadDocumentJSP</value>
+                <value>CEPR01030103JSP</value>
+                <value>CEPR01030104JSP</value>
+                <value>CEPR01030105JSP</value>
+                <value>CEPR01030106JSP</value>
+                <value>CEPR01030501JSP</value>
+                <value>CEPR01030502JSP</value>
+                <value>CEPR01030701JSP</value>
+                <value>CEPR01030107JSP</value>
+                <value>CEPR01030108JSP</value>
+                <value>CEPR01030109JSP</value>
+                <value>CEPR01030110JSP</value>
+                <value>CEPR01030111JSP</value>
+                <value>CEPR01030112JSP</value>            
+                <value>CEPR01030901JSP</value>
+                <value>CEPR01030904JSP</value>
+                <value>CEPR01030113JSP</value>
+                <value>CEPR01030114JSP</value>       
+            </list>
+        </property>
+    </bean>
+    
+    
+    <bean id="cepr01050000Controller" class="id.co.sinarmaslife.eproposal.web.Cepr01050000Controller">
+        <property name="eproposalManager" ref="eproposalManager" />
+        <property name="dateFormat" ref="defaultDateFormat" />
+        <property name="dateEditor" ref="dateEditor" />
+        <property name="integerEditor" ref="integerEditor" />
+        <property name="currencyEditor" ref="currencyEditor" />
+        <property name="editorUtil" ref="cepr00000000EditorUtil" />
+        <property name="commandName" value="cepr01050000HoldingForm" />
+        <property name="pages">
+            <list>
+                <value>CEPR01050000JSP</value>
+            </list>
+        </property>
+    </bean>
+    
+    
+    <bean id="cepr01020000Controller" class="id.co.sinarmaslife.eproposal.web.Cepr01020000Controller">
+        <property name="eproposalManager" ref="eproposalManager" />
+        <property name="dateFormat" ref="defaultDateFormat" />
+        <property name="dateEditor" ref="dateEditor" />
+        <property name="integerEditor" ref="integerEditor" />
+        <property name="currencyEditor" ref="currencyEditor" />
+        <property name="editorUtil" ref="cepr00000000EditorUtil" />
+        <property name="commandName" value="cepr01020000HoldingForm" />
+        <property name="pages">
+            <list>
+                <value>CEPR01020101JSP</value>
+                <value>CEPR01020201JSP</value>
+                <value>CEPR01020202JSP</value>
+                <value>CEPR01020301JSP</value>
+                <value>CEPR01020401JSP</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- download product ilustration controllers (implement Controller) -->
+    <!--non unit link products-->
+    <bean id="cepr01040101DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040101.Cepr01040101DownloadController" parent="standardParent"/>
+    <bean id="cepr01040102DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040102.Cepr01040102DownloadController" parent="standardParent"/>
+    <bean id="cepr01040103DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040103.Cepr01040103DownloadController" parent="standardParent"/>
+    <bean id="cepr01040104DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040104.Cepr01040104DownloadController" parent="standardParent"/>
+    <bean id="cepr01040105DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040105.Cepr01040105DownloadController" parent="standardParent"/>
+    <bean id="cepr01040106DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040106.Cepr01040106DownloadController" parent="standardParent"/>
+    <bean id="cepr01040107DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040107.Cepr01040107DownloadController" parent="standardParent"/>
+    <bean id="cepr01040108DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040108.Cepr01040108DownloadController" parent="standardParent"/>
+    <bean id="cepr01040109DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040109.Cepr01040109DownloadController" parent="standardParent"/>
+    <bean id="cepr01040110DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040110.Cepr01040110DownloadController" parent="standardParent"/>
+    <bean id="cepr01040111DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040111.Cepr01040111DownloadController" parent="standardParent"/>
+    <bean id="cepr01040112DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040112.Cepr01040112DownloadController" parent="standardParent"/>
+    <bean id="cepr01040113DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040113.Cepr01040113DownloadController" parent="standardParent"/>
+    <bean id="cepr01040114DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040114.Cepr01040114DownloadController" parent="standardParent"/>
+    <bean id="cepr01040115DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040115.Cepr01040115DownloadController" parent="standardParent"/>
+    <bean id="cepr01040116DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040116.Cepr01040116DownloadController" parent="standardParent"/>
+    <bean id="cepr01040117DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040117.Cepr01040117DownloadController" parent="standardParent"/>
+    <bean id="cepr01040118DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040118.Cepr01040118DownloadController" parent="standardParent"/>
+    <bean id="cepr01040119DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040119.Cepr01040119DownloadController" parent="standardParent"/>
+    <bean id="cepr01040120DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040120.Cepr01040120DownloadController" parent="standardParent"/>
+    <bean id="cepr01040121DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040121.Cepr01040121DownloadController" parent="standardParent"/>
+    <bean id="cepr01040122DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040122.Cepr01040122DownloadController" parent="standardParent"/>
+    <bean id="cepr01040123DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040123.Cepr01040123DownloadController" parent="standardParent"/>
+    <bean id="cepr01040124DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040124.Cepr01040124DownloadController" parent="standardParent"/>
+    <bean id="cepr01040125DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040125.Cepr01040125DownloadController" parent="standardParent"/>
+    <bean id="cepr01040126DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040126.Cepr01040126DownloadController" parent="standardParent"/>
+    <bean id="cepr01040127DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040127.Cepr01040127DownloadController" parent="standardParent"/>
+    <bean id="cepr01040129DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040129.Cepr01040129DownloadController" parent="standardParent"/>
+    <bean id="cepr01040128DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040128.Cepr01040128DownloadController" parent="standardParent"/>
+    <bean id="cepr01040130DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040130.Cepr01040130DownloadController" parent="standardParent"/>
+    <bean id="cepr01040131DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040131.Cepr01040131DownloadController" parent="standardParent"/>
+    <bean id="cepr01040132DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040132.Cepr01040132DownloadController" parent="standardParent"/>
+    <bean id="cepr01040133DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040133.Cepr01040133DownloadController" parent="standardParent"/>
+    <bean id="cepr01040134DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040134.Cepr01040134DownloadController" parent="standardParent"/>
+    <bean id="cepr01040135DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040135.Cepr01040135DownloadController" parent="standardParent"/>
+    <bean id="cepr01040136DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040136.Cepr01040136DownloadController" parent="standardParent"/>
+    <bean id="cepr01040137DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040137.Cepr01040137DownloadController" parent="standardParent"/>
+    <bean id="cepr01040140DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040140.Cepr01040140DownloadController" parent="standardParent"/>
+    <bean id="cepr01040141DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040141.Cepr01040141DownloadController" parent="standardParent"/>
+    <bean id="cepr01040142DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040142.Cepr01040142DownloadController" parent="standardParent"/>
+    <bean id="cepr01040143DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040143.Cepr01040143DownloadController" parent="standardParent"/>
+    <bean id="cepr01040144DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040144.Cepr01040144DownloadController" parent="standardParent"/>
+    <bean id="cepr01040145DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040145.Cepr01040145DownloadController" parent="standardParent"/>
+    <bean id="cepr01040146DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040146.Cepr01040146DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040147DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040147.Cepr01040147DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040148DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040148.Cepr01040148DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040149DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040149.Cepr01040149DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040150DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040150.Cepr01040150DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040151DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040151.Cepr01040151DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040152DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040152.Cepr01040152DownloadController" parent="standardParent"/>
+   	<bean id="cepr01040153DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040153.Cepr01040153DownloadController" parent="standardParent"/>
+   	   	
+    <!--unit link products-->
+    <bean id="cepr01040201DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040201.Cepr01040201DownloadController" parent="standardParent"/>
+    <bean id="cepr01040202DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040202.Cepr01040202DownloadController" parent="standardParent"/>
+    <bean id="cepr01040203DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040203.Cepr01040203DownloadController" parent="standardParent"/>
+    <bean id="cepr01040204DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040204.Cepr01040204DownloadController" parent="standardParent"/>
+    <bean id="cepr01040205DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040205.Cepr01040205DownloadController" parent="standardParent"/>
+    <bean id="cepr01040206DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040206.Cepr01040206DownloadController" parent="standardParent"/>
+    <bean id="cepr01040207DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040207.Cepr01040207DownloadController" parent="standardParent"/>
+    <bean id="cepr01040208DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040208.Cepr01040208DownloadController" parent="standardParent"/>
+    <bean id="cepr01040209DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040209.Cepr01040209DownloadController" parent="standardParent"/>
+    <bean id="cepr01040210DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040210.Cepr01040210DownloadController" parent="standardParent"/>
+    <bean id="cepr01040211DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040211.Cepr01040211DownloadController" parent="standardParent"/>
+    <bean id="cepr01040212DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040212.Cepr01040212DownloadController" parent="standardParent"/>
+    <bean id="cepr01040213DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040213.Cepr01040213DownloadController" parent="standardParent"/>
+    <bean id="cepr01040214DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040214.Cepr01040214DownloadController" parent="standardParent"/>
+    <bean id="cepr01040215DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040215.Cepr01040215DownloadController" parent="standardParent"/>
+    <bean id="cepr01040216DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040216.Cepr01040216DownloadController" parent="standardParent"/>
+	<bean id="cepr01040218DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040218.Cepr01040218DownloadController" parent="standardParent"/>
+    <bean id="cepr01040219DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040219.Cepr01040219DownloadController" parent="standardParent"/>
+    <bean id="cepr01040220DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040220.Cepr01040220DownloadController" parent="standardParent"/>
+    <bean id="cepr01040221DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040221.Cepr01040221DownloadController" parent="standardParent"/>
+    <bean id="cepr01040222DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040222.Cepr01040222DownloadController" parent="standardParent"/> 
+    <bean id="cepr01040223DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040223.Cepr01040223DownloadController" parent="standardParent"/>    
+    <bean id="cepr01040224DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040224.Cepr01040224DownloadController" parent="standardParent"/>  
+    <bean id="cepr01040225DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040225.Cepr01040225DownloadController" parent="standardParent"/>   
+    <bean id="cepr01040227DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040227.Cepr01040227DownloadController" parent="standardParent"/>
+    <bean id="cepr01040228DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040228.Cepr01040228DownloadController" parent="standardParent"/>
+    <bean id="cepr01040229DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040229.Cepr01040229DownloadController" parent="standardParent"/>
+    <bean id="cepr01040139DownloadController" class="id.co.sinarmaslife.eproposal.product.product01040139.Cepr01040139DownloadController" parent="standardParent"/>  
+         
+    <!--other download controller (implement Controller)-->
+    <bean id="cepr01030302DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030302DownloadController" parent="standardParent"/>
+    <bean id="cepr01030402DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030402DownloadController" parent="standardParent"/>
+    <bean id="cepr01030601DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030601DownloadController" parent="standardParent"/>
+    <bean id="cepr01030801DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030801DownloadController" parent="standardParent"/>
+    <bean id="cepr01030802DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030802DownloadController" parent="standardParent"/>
+    <bean id="cepr01030803DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030803DownloadController" parent="standardParent"/>
+	<bean id="cepr01030902DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030902DownloadController" parent="standardParent"/>
+	<bean id="cepr01030904DownloadController" class="id.co.sinarmaslife.eproposal.web.Cepr01030904DownloadController" parent="standardParent"/>
+</beans>

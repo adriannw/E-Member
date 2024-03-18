@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_eka_sehat_extra_syariah" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="8" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Medical EXTRA Syariah"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderEkaSehatExtra" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderEkaSehatExtra]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderEkaSehatExtraParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderEkaSehatExtraParticipants]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan' as subject, 'R-100' as descr, '' as plan, '' as limit, '' as no
+from dual
+
+union
+
+select '- Rawat Inap krn sakit' as subject, '100,000' as descr, '' as plan, '' as limit, '' as no
+from dual
+
+union
+
+select '- Rawat Inap di ruang ICU' as subject, '200,000' as descr, '' as plan, '' as limit, '' as no
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="plan" class="java.lang.String"/>
+	<field name="limit" class="java.lang.String"/>
+	<field name="no" class="java.lang.String"/>
+	<pageHeader>
+		<band height="204">
+			<staticText>
+				<reportElement positionType="Float" x="8" y="82" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="31" y="186" width="331" height="18"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<staticText>
+					<reportElement x="120" y="3" width="81" height="13"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[BENEFIT]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="50" width="122" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="132" y="3" width="257" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="118" width="505" height="21"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi Syariah dapat berubah mengikuti pertambahan usia Peserta
+
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="362" y="186" width="120" height="18"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="19" y="3" width="90" height="13"/>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{plan}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="144" width="265" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat "+$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="24" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderEkaSehatExtra}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="97" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderEkaSehatExtra}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="66" width="497" height="11"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="160" width="537" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Peserta mulai berhak mendapatkan Manfaat Asuransi Syariah apabila Asuransi" + ($P{title}.equals("SMiLe MEDICAL (As CHARGE)") ||  $P{title}.equals("SMART MEDICAL CARE")? " " :" Tambahan ") +"ini telah berlaku dan melewati Masa Tunggu."]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="12">
+			<textField isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="63" y="0" width="299" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="362" y="0" width="120" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="31" y="0" width="32" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="245">
+			<frame>
+				<reportElement positionType="Float" x="31" y="0" width="32" height="17"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="63" y="0" width="299" height="17"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Batas Maksimum Penggantian Per Tahun"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="362" y="0" width="120" height="17"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{limit}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="5" y="146" width="528" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{dsRincianRiderEkaSehatExtraParticipants} != null )]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderEkaSehatExtraParticipants}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_participant_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="30" y="79" width="433" height="21"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asalkan tidak melebihi Batas Maksimum Penggantian perjenis Jaminan untuk tiap perawatan dan Batasan Maksimum Penggantian Per-Tahun. Selisih dari Biaya yang tidak dapat dibayar menjadi tanggung jawab dari Peserta.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="67" width="281" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[BK : Biaya Kamar & Menginap yang digunakan pada saat rawat menginap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="67" width="145" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[TB : Total Biaya Sebenarnya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="182" y="55" width="209" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[BI : Biaya Kamar & Menginap sesuai ikhtisar Polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="55" width="145" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[B : Biaya yang dapat dibayar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="19" width="433" height="21"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Jika Biaya Kamar dan Menginap yang dipilih ternyata melebihi biaya yang tercantum dalam Tabel Jaminan Polis yang dipilih, maka biaya-biaya yang dapat dibayar oleh Wakil Para Peserta akan dihitung  secara proporsional berdasarkan rumus :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="41" width="403" height="11"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[B =  (BI  x  TB)/ BK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="103" width="437" height="42"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Khusus untuk rawat inap di Malaysia dengan Biaya Kamar dan Menginap yang tercantum dalam Tabel Jaminan Polis lebih besar atau sama dengan Rp. 1.000.000,- Peserta berhak mendapatkan kelas kamar perawatan satu kamar satu tempat tidur dengan rate terendah dan akan berlaku manfaat asuransi kesehatan yang sesuai dengan kelas manfaat yang diambil.]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="9" y="173" width="529" height="65"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

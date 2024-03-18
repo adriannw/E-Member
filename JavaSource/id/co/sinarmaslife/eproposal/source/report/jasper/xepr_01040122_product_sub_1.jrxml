@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040122_product_sub_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentChoice" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsMonthlyPremium" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="masaPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="namaTertanggung" class="java.lang.String">
+		<parameterDescription><![CDATA[namaTertanggung]]></parameterDescription>
+	</parameter>
+	<parameter name="premiPokok" class="java.lang.String">
+		<parameterDescription><![CDATA[premiPokok]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTopUp" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTopUp]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPremi" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPremi]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaTertanggung" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaTertanggung]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="151">
+			<textField hyperlinkType="None">
+				<reportElement x="144" y="0" width="321" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="96" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Premi Top Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Usia Tertanggung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="120" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="60" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="108" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="96" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="132" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Uang Pertanggungan (UP)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="72" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Masa Pertanggungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="132" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Premi Sekaligus]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="84" width="152" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Premi Pokok]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="48" width="120" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{namaTertanggung}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="96" width="120" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiTopUp}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="48" width="152" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nama Tertanggung]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="84" width="120" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{premiPokok}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="60" width="120" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{usiaTertanggung}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="152" y="84" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="120" width="120" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{totalPremi}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="72" width="121" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{masaPertanggungan}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="160" y="132" width="120" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggungan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="108" width="121" height="13"/>
+				<textElement/>
+				<text><![CDATA[------------------------------------]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="48" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="72" width="8" height="12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="539">
+			<staticText>
+				<reportElement x="256" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="184" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="388" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="24" width="9" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<line>
+				<reportElement x="400" y="360" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="264" y="440" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="428" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="24" width="65" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[100%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="396" width="89" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Basket 2 (i) = 40% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="392" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="360" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(0)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="32" y="308" width="193" height="1"/>
+			</line>
+			<line>
+				<reportElement x="400" y="400" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="128" y="440" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="432" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="12" width="65" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Alokasi Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="348" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="400" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="280" width="17" height="9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="536" y="12" width="9" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="356" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 50% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="208" width="529" height="69" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Besarnya NIlai Tunai Polis yang akan diterima oleh Pemegang Polis adalah dalam jumlah yang terbesar antara :
+a. Premi Sekaligus; atau
+b. [ Premi sekaligus - Biaya Akuisisi] x[1 + 120% x Kinerja Basket]
+     Dimana :
+     - Premi Sekaligus = Premi Pokok + Premi Top Up
+     - Kinerja basket ditentukan berdasarkan perumusan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="148" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="392" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="0" y="4" width="553" height="1" isRemoveLineWhenBlank="true"/>
+			</line>
+			<staticText>
+				<reportElement x="264" y="388" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="100" width="105" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="464" width="105" height="37"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Index A (Equity)
+Index B (Equity)
+Index C (Fixed Income)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="24" width="393" height="69"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Balanced Portfolio Participating Index Plus Fund-2 (BPPI Plus Fund-2) :
+Penempatan maksimum 100% dana investasi pada investasi pendapatan tetap dalam Mata Uang Rupiah dan /
+Penempatan maksimum 100% dana investasi pada investasi pendapatan tetap dalam Mata Uang US Dollar dan /
+Penempatan maksimum 100% dana investasi pada instrumen investasim pasar modal (equity)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="148" width="529" height="37" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia akibat kecelakaan dan Asuransi masih berlaku, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 200% (dua ratus perseratus) Uang Pertanggungan ditambah dengan Nilai Tunai Polis dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="352" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="436" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 20% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="436" width="89" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Basket 3 (i) = 20% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="324" width="89" height="21"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[dimana :
+i = anniversary kuartalan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="288" width="177" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Max ( Basket 1(i), Basket 2(i), Basket 3(i) )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="388" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="284" width="17" height="21"/>
+				<textElement textAlignment="Center">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[∑]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="112" width="9" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="264" y="440" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="336" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="112" width="529" height="37" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia bukan akibat kecelakaan dan Asuransi masih berlaku, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 100% (seratus perseratus) Uang Pertanggungan ditambah dengan Nilai Tunai Polis dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="128" y="360" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="128" y="348" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="12" width="113" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Pilihan Dana Investasi :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<line>
+				<reportElement positionType="Float" x="0" y="8" width="553" height="1" isRemoveLineWhenBlank="true"/>
+			</line>
+			<staticText>
+				<reportElement x="352" y="396" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 30% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="184" width="529" height="25" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung hidup pada akhir Masa Asuransi dan asuransi masih berlaku, maka kepada Pemegang Polis akan dibayarkan Manfaat Asuransi sebesar Nilai Tunai Polis dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="400" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(0)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="400" y="440" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="264" y="428" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(i)]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="508" width="552" height="20"/>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="48" y="308" width="177" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[20]]></text>
+			</staticText>
+			<line>
+				<reportElement x="264" y="360" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="184" y="432" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="360" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="392" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="436" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 60% x]]></text>
+			</staticText>
+			<line>
+				<reportElement x="264" y="400" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="264" y="348" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="352" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<line>
+				<reportElement x="128" y="440" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="32" y="356" width="89" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Basket 1 (i) = 30% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="352" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="432" width="17" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[- 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="416" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="356" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 20% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="464" width="193" height="37"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[: Hang Seng China Enterprise Index (HSCEI)
+: Russian Depositary Index (USD) (RDXUSD)
+: Dow Jones CBOT Treasury Index (DJCBTI)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[(]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="376" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="128" y="400" width="49" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="232" y="300" width="9" height="13"/>
+				<textElement/>
+				<text><![CDATA[,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="428" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(i)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="336" width="9" height="41"/>
+				<textElement>
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="360" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index B(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="400" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index A(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="440" width="49" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[ Index C(0)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="396" width="41" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[+ 30% x]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="300" width="17" height="9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<text><![CDATA[i-1]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

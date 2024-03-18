@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040222_product" pageWidth="595" pageHeight="960" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="5" bottomMargin="0" isSummaryNewPage="true" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="businessIdx" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="insuredAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfContract" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="termOfPayment" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["100,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium1" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1,123,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium2" class="java.lang.String">
+		<defaultValueExpression><![CDATA["589,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="totalPremium3" class="java.lang.String">
+		<defaultValueExpression><![CDATA["303,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["79"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["57"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="lastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsManfaatTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPersonalAccident" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPenyakitKritis" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatPayorsClause" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatWaiverPremiumDisability" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsManfaatHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsPremiumSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="note" class="java.lang.String"/>
+	<parameter name="beforeLastYearNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["46"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beforeLastAge" class="java.lang.String">
+		<defaultValueExpression><![CDATA["69"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="beforeLastCashValue" class="java.lang.String">
+		<defaultValueExpression><![CDATA["3,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="halfTotalSumInsured" class="java.lang.String">
+		<defaultValueExpression><![CDATA["50,000,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="displayBeforeLast" class="java.lang.String">
+		<parameterDescription><![CDATA[displayBeforeLast]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRider" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRider]]></parameterDescription>
+	</parameter>
+	<parameter name="swineRiderManfaat" class="java.lang.String">
+		<parameterDescription><![CDATA[swineRiderManfaat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderSwineIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderSwineIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsDetail" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="sekaligusOrTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[sekaligusOrTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeaderAboveDetail" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="point1" class="java.lang.String">
+		<parameterDescription><![CDATA[point1]]></parameterDescription>
+	</parameter>
+	<parameter name="point2" class="java.lang.String">
+		<parameterDescription><![CDATA[point2]]></parameterDescription>
+	</parameter>
+	<parameter name="point3" class="java.lang.String">
+		<parameterDescription><![CDATA[point3]]></parameterDescription>
+	</parameter>
+	<parameter name="point4" class="java.lang.String">
+		<parameterDescription><![CDATA[point4]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPremium4" class="java.lang.String">
+		<defaultValueExpression><![CDATA["300,000.00"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dmTmOrNot" class="java.lang.String">
+		<parameterDescription><![CDATA[dmTmOrNot]]></parameterDescription>
+	</parameter>
+	<parameter name="marketer" class="java.lang.String">
+		<parameterDescription><![CDATA[marketer]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="dsRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRjIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRjIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="standalone" class="java.lang.String"/>
+	<parameter name="dsOneRow" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRgIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRgIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusRbIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusRbIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusPkIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusPkIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantMedicalPlus" class="java.lang.String">
+		<parameterDescription><![CDATA[participantMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeader2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsCommonHeaderRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsOneRow2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRincianBiayaAsuransi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianBiayaAsuransi]]></parameterDescription>
+	</parameter>
+	<parameter name="tanggal" class="java.lang.String">
+		<parameterDescription><![CDATA[tanggal]]></parameterDescription>
+	</parameter>
+	<parameter name="Parameter_1" class="java.lang.String"/>
+	<parameter name="jenis" class="java.lang.String">
+		<parameterDescription><![CDATA[jenis]]></parameterDescription>
+	</parameter>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="totalByi" class="java.lang.String">
+		<parameterDescription><![CDATA[totalByi]]></parameterDescription>
+	</parameter>
+	<parameter name="labelCb" class="java.lang.String">
+		<parameterDescription><![CDATA[labelCb]]></parameterDescription>
+		<defaultValueExpression><![CDATA["*Tahunan"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund, 'sub1' as pageCode  from dual
+union
+select '2' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund, 'sub2' as pageCode  from dual
+union
+select '3' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund, 'sub3' as pageCode  from dual
+union
+select '4' as yearNo, '22' as age, '1,123,000.00' as accumulatedPremium, '0.00' as cashValue, '' as oldAgeFund, 'sub4' as pageCode  from dual]]>
+	</queryString>
+	<field name="accumulatedPremium" class="java.lang.String"/>
+	<field name="age" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="oldAgeFund" class="java.lang.String"/>
+	<field name="yearNo" class="java.lang.String"/>
+	<field name="pageCode" class="java.lang.String"/>
+	<group name="Group_1" isResetPageNumber="true"/>
+	<background>
+		<band height="69">
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="0" y="6" width="489" height="33" forecolor="#808080"/>
+				<box padding="5">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+			<image hyperlinkType="None">
+				<reportElement x="8" y="16" width="145" height="29">
+					<printWhenExpression><![CDATA[new Boolean( $P{validityMsg} == null || "".equals( $P{validityMsg}.trim() ) )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+			<textField hyperlinkType="None">
+				<reportElement x="488" y="8" width="24" height="13">
+					<printWhenExpression><![CDATA["sub1".equals( $F{pageCode} ) || "sub2".equals( $F{pageCode} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Group" evaluationGroup="Group_1" hyperlinkType="None">
+				<reportElement x="520" y="8" width="24" height="13">
+					<printWhenExpression><![CDATA["sub1".equals( $F{pageCode} ) || "sub2".equals( $F{pageCode} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="512" y="8" width="8" height="13">
+					<printWhenExpression><![CDATA["sub1".equals( $F{pageCode} ) || "sub2".equals( $F{pageCode} ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="485" y="42" width="18" height="13">
+					<printWhenExpression><![CDATA["sub3".equals( $F{pageCode} )  ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="516" y="42" width="22" height="13">
+					<printWhenExpression><![CDATA["sub3".equals( $F{pageCode} )  ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="504" y="40" width="11" height="16">
+					<printWhenExpression><![CDATA["sub3".equals( $F{pageCode} )  ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</background>
+	<detail>
+		<band height="37">
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="19" width="555" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub2".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="dsRiderMedicalPlusRg">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusRbIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRbIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusRgIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRgIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusRb">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusPk">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusPk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader2">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusPkIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusPkIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040222_product_sub_1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="1" width="555" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub1".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusRjIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusRjIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusRj">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusRj}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040222_product_sub_2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="131">
+			<subreport>
+				<reportElement x="11" y="1" width="536" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+	<summary>
+		<band height="39">
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="1" width="555" height="18" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub6".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="labelCb">
+					<subreportParameterExpression><![CDATA[$P{labelCb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRb">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRb}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonBiayaRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonBiayaRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsDetail">
+					<subreportParameterExpression><![CDATA[$P{dsDetail}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRj">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRj}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow2">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusRg">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusRg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianBiayaAsuransi">
+					<subreportParameterExpression><![CDATA[$P{dsRincianBiayaAsuransi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalByi">
+					<subreportParameterExpression><![CDATA[$P{totalByi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlusPk">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlusPk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040222_product_sub_3.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="0" y="19" width="537" height="19" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="tanggal">
+					<subreportParameterExpression><![CDATA[$P{tanggal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040222_uraian_sop.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

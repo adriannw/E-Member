@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_waiver_tpd_ci_summary_syariah" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderWaiverTpdCiIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["11"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Critical Illness Rider"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="128">
+			<staticText>
+				<reportElement x="24" y="34" width="528" height="94"/>
+				<textElement textAlignment="Justified">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[2. total akumulasi besarnya pembayaran Kontribusi / Premi lanjutan yang dibebaskan untuk setiap Peserta yang sama adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+3. Peserta yang memiliki lebih dari satu asuransi yang memberikan manfaat CI, maka Total akumulasi besarnya manfaat CI yang dapat dibayarkan untuk setiap Peserta yang sama dari manfaat asuransi CI tersebut adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+4. Peserta yang memiliki lebih dari satu asuransi yang memberikan manfaat TPD, maka Total akumulasi besarnya manfaat TPD yang dapat dibayarkan untuk setiap Peserta yang sama dari manfaat asuransi TPD tersebut adalah maksimum sebesar Rp. 2.000.000.000,-(dua milyar Rupiah) atau US$ 200.000,-(dua ratus ribu Dollar Amerika Serikat).
+5. Pembebasan pembayaran Kontribusi / Premi asuransi ini dimulai pada jatuh tempo pembayaran Kontribusi / Premi asuransi berikutnya setelah dinyatakan menderita Cacat Tetap Total atau didiagnosa menderita salah satu dari 31 Penyakit Kritis.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="9" y="4" width="15" height="12"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderWaiverTpdCiIndex}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="76" y="2" width="14" height="12"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderWaiverTpdCiTitle}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="2" width="52" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[SMiLe Waiver]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="90" y="2" width="248" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["TPD/CI - Syariah :"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="15" width="528" height="19"/>
+				<textElement textAlignment="Justified">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1. Peserta menderita cacat tetap total atau terdignosa salah satu dari 31 penyakit kritis maka Peserta dibebaskan dari pembayaran Kontribusi / Premi Pokok dan Kontribusi / Premi Top Up Berkala (jika ada) berikutnya sampai Peserta berusia "+$P{riderWaiverTpdCiTitle} + " tahun"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

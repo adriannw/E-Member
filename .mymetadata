@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="E-Proposal"
+  id="myeclipse.1694792420003"
+  context-root="/E-Proposal"
+  j2ee-spec="6.0"
+  archive="E-Proposal.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebContent" />
+  </attributes>
+</project-module>
+

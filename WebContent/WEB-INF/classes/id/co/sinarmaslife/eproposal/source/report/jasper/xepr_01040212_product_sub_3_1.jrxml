@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040212_product_sub_3" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="r1" class="java.lang.String">
+		<parameterDescription><![CDATA[r1]]></parameterDescription>
+	</parameter>
+	<parameter name="r2" class="java.lang.String">
+		<parameterDescription><![CDATA[r2]]></parameterDescription>
+	</parameter>
+	<parameter name="r3" class="java.lang.String">
+		<parameterDescription><![CDATA[r3]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggunganPa" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganPa]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggunganPa2" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggunganPa2]]></parameterDescription>
+	</parameter>
+	<parameter name="exr" class="java.lang.String">
+		<parameterDescription><![CDATA[exr]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual
+union
+select '2' as yearNo, '33' as insuredAge, '1,000.00' as premiumTotal, '50.00' as topupAssumption, '40.00' as drawAssumption, '1,005.00' as valueLow, '1,020' as valueMid, '1,090' as valueHi, '2,010' as benefitLow, '2,050' as benefitMid, '2,100' as benefitHi from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="690">
+			<staticText>
+				<reportElement x="0" y="51" width="289" height="13"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASURANSI TAMBAHAN (RIDER) UNTUK CERDAS PROTEKSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="177" width="497" height="91"/>
+				<box topBorder="1Point" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="276" width="497" height="121"/>
+				<box topBorder="1Point" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="405" width="497" height="123"/>
+				<box topBorder="1Point" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="414" width="232" height="18"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Cacat Tetap Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="432" width="224" height="85"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika Tertanggung mengalami Cacat Tetap Total sebelum berusia 60 tahun maka akan dibayarkan manfaat Cacat Tetap Total sebesar 100% Uang Pertanggungan (maksimum sebesar Rp. 1.000.000.000). Cacat Tetap Total sebagaimana dimaksud diatas, sekurang-kurangnya harus sudah berlangsung selama 180 hari sejak Tertanggung dinyatakan menderita Cacat Tetap Total secara terus menerus dan diakui sebagai Cacat Tetap Total oleh Penanggung.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="186" width="232" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Kematian akibat Kecelakaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="201" width="224" height="46"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika Tertanggung meninggal dunia akibat kecelakaan sebelum berusia 60 tahun maka kepada Yang Ditunjuk akan dibayarkan manfaat tambahan kecelakaan sebesar 100% Uang Pertanggungan (maksimum sebesar Rp.1000.000.000).
+ 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="285" width="232" height="24"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Bebas Premi akibat Cacat Tetap Total atau Penyakit Kritis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="309" width="224" height="64"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika Tertanggung mengalami Cacat Tetap Total atau didiagnosa menderita salah satu dari 31 Penyakit Kritis dalam masa pembayaran premi maka diberikan manfaat tambahan Bebas Premi akibat Cacat Tetap Total atau Penyakit Kritis. Besarnya Premi yang dibebaskan untuk setiap Tertanggung sebesar pembayaran premi pokok sesuai cara bayar.   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="327" width="152" height="16"/>
+				<box border="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pembebasan Pembayaran Premi Pokok]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="666" width="497" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="0" y="268" width="497" height="8"/>
+				<box border="None"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="78" width="497" height="91"/>
+				<box topBorder="1Point" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="397" width="497" height="8"/>
+				<textElement/>
+			</staticText>
+			<textField>
+				<reportElement x="312" y="216" width="152" height="16"/>
+				<box border="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggunganPa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="117" width="152" height="16"/>
+				<box border="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggunganPa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="87" width="232" height="16"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Kematian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="169" width="497" height="8"/>
+				<box border="None"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="537" width="497" height="123">
+					<printWhenExpression><![CDATA[new Boolean($P{exr} != null )]]></printWhenExpression>
+				</reportElement>
+				<box topBorder="1Point" leftBorder="1Point" bottomBorder="None" rightBorder="1Point"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="102" width="224" height="46"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika Tertanggung meninggal dunia karena sebab apapun sebelum akhir tahun Polis ke-10 maka kepada Yang Ditunjuk akan dibayarkan manfaat tambahan kematian sebesar 100% Uang Pertanggungan.
+ 
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="312" y="459" width="152" height="16"/>
+				<box border="1Point"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{uangPertanggunganPa2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="564" width="224" height="64">
+					<printWhenExpression><![CDATA[new Boolean($P{exr} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika Tertanggung dirawat inap di Rumah Sakit sebelum berusia 60 tahun maka akan dibayarkan manfaat tambahan Rawat Inap. Total pembayaran manfaat dihitung sejak hari pertama rawat inap di rumah sakit dan 1 x 24 jam karena kecelakaan, dengan maksimum selama 100 hari dalam setahun.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="529" width="497" height="8"/>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="546" width="232" height="18">
+					<printWhenExpression><![CDATA[new Boolean($P{exr} != null )]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Tambahan Rawat Inap]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="564" width="209" height="76">
+					<printWhenExpression><![CDATA[new Boolean($P{exr} != null )]]></printWhenExpression>
+				</reportElement>
+				<box border="None"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[- Santunan Harian karena penyakit sebesar Rp 500.000
+  per hari, dengan maksimum selama 100 hari dalam
+  setahun.
+- Manfaat asuransi ICU/ICCU sebesar Rp.1.000.000 per
+  hari, dengan maksimum selama 30 hari dalam setahun.
+- Manfaat asuransi Santunan Harian karena kecelakaan
+  sebesar Rp.1.000.000 per hari, dengan maksimum
+  selama 100 hari dalam setahun.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

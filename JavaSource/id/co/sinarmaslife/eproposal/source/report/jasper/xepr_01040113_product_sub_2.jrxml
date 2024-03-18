@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040113_product_sub_2" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="tglProposal" class="java.lang.String">
+		<parameterDescription><![CDATA[tglProposal]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 'Nama Tertanggung' as label, 'Samuel' as content from dual
+union
+select 'Usia Tertanggung' as label, '22 tahun' as content from dual
+union
+select 'Masa Pertanggungan' as label, '27 tahun' as content from dual
+union
+select 'Masa Pembayaran Premi' as label, '5 tahun' as content from dual
+union
+select 'Uang Pertanggungan (UP)' as label, 'Rp.100,000,000.00' as content from dual]]>
+	</queryString>
+	<title>
+		<band height="477">
+			<staticText>
+				<reportElement x="0" y="0" width="71" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[MANFAAT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="527" height="32"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila tertanggung mengalami kecelakaan, dan dalam waktu 90 hari sejak terjadi kecelakaan tersebut,
+mengakibatkan tertanggung :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="64" width="16" height="16"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="48" width="16" height="16"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="48" width="513" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Meninggal Dunia : dibayarkan sebesar      ..........................................................................................................     100 % UP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="64" width="513" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Cacat Tetap :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="80" width="22" height="16"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="80" width="419" height="35"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Cacat Tetap Seluruh anggota badan : dibayarkan   Sebesar :   ................................................................     100 % UP
+Kehilangan fungsi secara total dan tetap/permanent atas kedua tangan atau kedua kaki atau kedua mata atau satu tangan dan satu kaki atau satu tangan dan satu mata atau satu kaki dan satu mata.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="114" width="419" height="33"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Cacat Tetap Sebagian anggota badan :
+Kehilangan fungsi secara total dan tetap/permanent dari sebagian anggota badan akan dibayarkan Manfaat Asuransi sebesar prosentase tertentu dari Uang Pertanggungan sebagai berikut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="114" width="22" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="150" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Kehilangan fungsi atas :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="150" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="150" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kiri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="163" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Lengan mulai dari bahu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="163" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[70 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="163" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[56 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="176" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Lengan mulai dari siku]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="176" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[65 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="176" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[52 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="189" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="sansserif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ Tangan mulai dari pergelangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="189" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[60 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="189" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="202" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Penglihatan sebelah mata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="202" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="sansserif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="202" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="215" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Pendengaran sebelah telinga*)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="215" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[15 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="215" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[15 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="228" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Satu kaki]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="228" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="228" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="241" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Jempol]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="241" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="sansserif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[25 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="241" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[20 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="254" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Jari telunjuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="254" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[15 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="254" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[12 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="267" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Jari kelingking]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="267" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[12 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="267" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[7 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="280" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Jari tengah/jari manis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="280" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[10 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="280" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[8 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="293" width="169" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Salah satu jari kaki]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="224" y="293" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="293" width="57" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="306" width="281" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="sansserif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ *) Pendengaran keduabelah telinga secara sekaligus  .......  50 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="333" width="22" height="16"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="333" width="403" height="45"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dalam hal kehilangan sebagian fungsi secara tetap/permanent dari salah satu anggota badan sebagaimana tersebut dalam butir 2.2 di atas, pembayaran manfaat Asuransi harus dikurangi secara proporsional, sedangkan dalam hal kehilangan dua atau lebih anggota badan bersama-sama, pembayaran Manfaat Asuransi tidak boleh lebih dari 100% Uang Pertanggungan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="378" width="513" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asuransi ini dapat diperpanjang kembali sebelum Tertanggung mencapai usia 60 tahun.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="378" width="16" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="394" width="513" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tidak ada pembayaran Manfaat Asuransi untuk hal-hal yang dikecualikan dalam polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="394" width="16" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="319" width="281" height="14"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Bagi mereka yang kidal, perkataan "kanan dibaca kiri"]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="438" width="545" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+</jasperReport>

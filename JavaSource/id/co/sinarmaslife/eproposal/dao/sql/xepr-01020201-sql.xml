@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <resultMap id="selectAllGroup.result" class="id.co.sinarmaslife.standard.model.vo.ViewListGroup">
+        <result property="groupId" column="group_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="groupName" column="group_name" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectGroupList" resultMap="selectAllGroup.result" parameterClass="java.util.Map">
+    	SELECT * FROM (
+			SELECT ROWNUM as row_number, group_id, group_name FROM 
+			(
+				select group_id, group_name from eka.LST_USER_PRODUCT_GROUP
+					where 1=1
+				<isNotNull property="group_name">
+       				and UPPER(group_name) like '%' || UPPER(#group_name#) || '%'
+				</isNotNull>
+					order by group_id Asc
+			))
+		WHERE 
+  			( row_number <![CDATA[>]]> ( ( #noPage# - 1 ) * #noRow# ) )
+			AND ( row_number <![CDATA[<=]]> ( #noPage# * #noRow# )  )  
+	</select>
+	
+	<!-- selectTotalPageResult -->
+    <resultMap id="selectTotalPageResult.result" class="id.co.sinarmaslife.standard.model.vo.TotalPage">
+        <result property="totalPage" column="total_pages" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+	
+	<select id="selectTotalGroupPage" resultClass="TotalPage" resultMap="selectTotalPageResult.result" parameterClass="java.util.Map">
+       SELECT CEIL( count( * ) / #noRow# ) as total_pages FROM
+       (
+       		select group_id, group_name from eka.LST_USER_PRODUCT_GROUP
+       			where 1=1
+       <isNotNull property="group_name">
+       		and UPPER(group_name) like '%' || UPPER(#group_name#) || '%'
+	   </isNotNull>
+	   )
+    </select>
+    
+    <select id="selectAllGroup" resultMap="selectAllGroup.result" parameterClass="java.util.Map">
+    	select group_id, group_name FROM eka.LST_USER_PRODUCT_GROUP
+    		where 1 = 1
+    		<isNotNull property="GROUP_NAME">
+       			and UPPER(GROUP_NAME) like UPPER(#GROUP_NAME#)
+	  		</isNotNull>
+    			order by group_id Asc
+	</select>
+	
+	<insert id="insertNewGroup" parameterClass="java.util.Map">
+    	insert into eka.LST_USER_PRODUCT_GROUP(GROUP_ID, GROUP_NAME) values(#GROUP_ID#, #GROUP_NAME#)
+	</insert>
+	
+	<resultMap id="selectAllUserGroupList.result" class="id.co.sinarmaslife.standard.model.vo.UserGroupId">
+        <result property="groupId" column="group_id" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+	
+	<select id="selectAllUserGroup" resultMap="selectAllUserGroupList.result" parameterClass="java.util.Map">
+    	select distinct group_id FROM eka.LST_USER_PRODUCT
+    			order by group_id Asc
+	</select>
+	
+	<delete id="deleteSelectedGroup" parameterClass="java.util.Map">
+    	delete eka.LST_USER_PRODUCT_GROUP
+    			where group_id = #group_id#
+	</delete>
+	
+	<delete id="deleteSelectedGroupDetail" parameterClass="java.util.Map">
+    	delete eka.LST_USER_PRODUCT_GROUP_DETAIL
+    			where group_id = #group_id#
+	</delete>
+
+</sqlMap>

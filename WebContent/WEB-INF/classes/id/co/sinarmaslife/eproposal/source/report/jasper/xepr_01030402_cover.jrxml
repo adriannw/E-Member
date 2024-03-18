@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01030402_cover" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="12"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/MSIG_Logo.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="customerName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rita"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="branchName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Mangga Dua"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="homePhoneNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["-"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="mobilePhoneNo" class="java.lang.String">
+		<defaultValueExpression><![CDATA["-"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="773">
+			<staticText>
+				<reportElement x="12" y="36" width="541" height="46"/>
+				<textElement textAlignment="Center">
+					<font size="36" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[PROPOSAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="106" width="541" height="27"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNTUK YANG TERHORMAT:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="12" y="132" width="541" height="37"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{customerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="262" width="541" height="171"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apakah Anda mencintai keluarga Anda?
+
+Inginkah hidup Anda mempunyai arti bagi orang lain?
+
+Apakah Anda yakin kesuksesan masa depan Anda
+ditentukan oleh persiapan dan perencanaan yang matang?
+
+Jika jawaban Anda 'YA',
+maka Asuransi Jiwa Sinarmas MSIG adalah solusi terbaik bagi Anda.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="503" width="541" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Untuk keterangan lebih lanjut silakan hubungi:]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="78" y="536" width="434" height="123"/>
+				<staticText>
+					<reportElement x="15" y="15" width="127" height="20"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="15" y="39" width="127" height="20"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Regional/Cabang]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="15" y="63" width="127" height="20"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No Telp]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="86" width="127" height="20"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No HP]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="15" width="13" height="20"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="39" width="13" height="20"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="63" width="13" height="20"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="147" y="87" width="13" height="20"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField hyperlinkType="None">
+					<reportElement x="173" y="15" width="248" height="19"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{agentName}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="174" y="40" width="248" height="19"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{branchName}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="174" y="64" width="248" height="19"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{homePhoneNo}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="174" y="88" width="248" height="19"/>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{mobilePhoneNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image hyperlinkType="None">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="181" height="49"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+</jasperReport>

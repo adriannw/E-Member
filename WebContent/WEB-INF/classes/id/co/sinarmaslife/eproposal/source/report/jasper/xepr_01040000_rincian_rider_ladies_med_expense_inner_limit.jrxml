@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_ladies_med_expense_inner_limit" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Ladies Medical (Benefit Inner Limit) "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan' as subject, 'R-100' as descr, '' as plan, '' as limit, '' as no
+from dual
+
+union
+
+select '- Rawat Inap krn sakit' as subject, '100,000' as descr, '' as plan, '' as limit, '' as no
+from dual
+
+union
+
+select 'Biaya Sebelum dan Sesudah Perawatan Rumah Sakit (7 hari sebelum Rawat Inap dan 30 hari setelah Rawat Inap)' as subject, '200,000' as descr, '' as plan, '' as limit, '' as no
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="plan" class="java.lang.String"/>
+	<field name="limit" class="java.lang.String"/>
+	<field name="no" class="java.lang.String"/>
+	<pageHeader>
+		<band height="227">
+			<frame>
+				<reportElement positionType="Float" x="32" y="204" width="331" height="23"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<staticText>
+					<reportElement x="120" y="5" width="81" height="12"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[BENEFIT]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="363" y="204" width="105" height="23"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="5" y="6" width="90" height="12"/>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{plan}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="137" width="505" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="164" width="281" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Ladies Medical Syariah (Benefit Inner Limit) "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="179" width="505" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA["Tertanggung mulai berhak mendapatkan Manfaat Asuransi apabila Asuransi Tambahan ini telah berlaku dan melewati Masa Tunggu"]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="117" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderLadiesMedExpenseInnerLimit}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="102" width="114" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="132" y="7" width="263" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="38" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderLadiesMedExpenseInnerLimit}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="64" width="122" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="80" width="497" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="12">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement stretchType="RelativeToBandHeight" x="64" y="0" width="299" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement stretchType="RelativeToBandHeight" x="363" y="0" width="105" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement stretchType="RelativeToBandHeight" x="32" y="0" width="32" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[$F{subject}!= null ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="25"/>
+	</pageFooter>
+	<summary>
+		<band height="295">
+			<staticText>
+				<reportElement positionType="Float" x="31" y="21" width="482" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Jika Biaya Kamar dan Menginap yang dipilih ternyata melebihi biaya yang tercantum dalam Tabel Jaminan Polis yang dipilih, maka selisih dari Biaya yang dapat dibayar menjadi tanggung jawab dari Tertanggung.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="24" y="48" width="505" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $P{dsRincianRiderLadiesMedExpenseInnerLimitParticipants} != null )]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderLadiesMedExpenseInnerLimitParticipants}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_participant_syariah.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement positionType="Float" x="32" y="0" width="32" height="19"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="64" y="0" width="299" height="19"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Batas Maksimum Penggantian Per Tahun"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="363" y="0" width="105" height="19"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{limit}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="16" y="105" width="529" height="184"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

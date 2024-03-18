@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="JavaSource"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_6_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ajaxtags-1.2-beta1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ajs-utils.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/aspectjweaver.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/bcmail-jdk14-138.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/bcprov-jdk16-145.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/cglib-nodep-2.1_2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-digester-1.7.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-io.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-javaflow-20060411.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-net-3.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/displaytag-1.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ibatis-2.3.0.677.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/itext-2.1.3-norestriction.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasperreports-3.1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jasypt-1.9.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/java-json.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-impl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxb-xjc.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxws-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxws-rt.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jaxws-tools.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jcaptcha-all-1.0-RC6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jcommon-1.0.12.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-client-1.0.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-core-1.0.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jersey-server-1.0.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jfreechart-1.0.10.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/joda-time-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsr311-api-1.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/junit-4.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/log4j.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/OLITE40.JAR"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-3.0.1-final-20070705.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/saaj-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/saaj-impl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sitemesh-2.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/stax-ex.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/streambuffer.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/webtogo.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.generic_6.0"/>
+	<classpathentry kind="con" path="com.genuitec.runtime.library/com.genuitec.jstl_1.2">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jst.web.jstl"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/DELL-WIN10/Downloads/postgresql-42.7.2.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

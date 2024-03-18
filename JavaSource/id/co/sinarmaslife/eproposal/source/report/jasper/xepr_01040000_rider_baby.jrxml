@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_baby" pageWidth="500" pageHeight="820" whenNoDataType="AllSectionsNoDetail" columnWidth="480" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="riderBabyIndex" class="java.lang.String"/>
+	<parameter name="planBaby" class="java.lang.String">
+		<parameterDescription><![CDATA[planBaby]]></parameterDescription>
+		<defaultValueExpression><![CDATA["2"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, '10,000,000.00' as nonAccidentBenefit, '20,000,000.00' as accidentBenefit, '10,000,000.00' as estimatedBalance, '10,000,000.00' as lifeBenefit from dual]]>
+	</queryString>
+	<summary>
+		<band height="266">
+			<rectangle>
+				<reportElement x="0" y="1" width="473" height="29"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="20" y="4" width="151" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat SMiLe Baby]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="18" width="193" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Jenis Santunan]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="241" y="16" width="73" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["PLAN "+ $P{planBaby}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="30" width="233" height="27"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="6" y="35" width="201" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Pertanggungan jiwa atas janin/calon bayi di masa kehamilan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="233" y="30" width="136" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="369" y="30" width="104" height="27"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="240" y="33" width="129" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pengembalian seluruh Premi dikurangi Penarikan dana (bila ada)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="34" width="80" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[per kejadian]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="57" width="233" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="369" y="57" width="104" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="233" y="57" width="136" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="240" y="60" width="129" height="28"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Mana yang lebih besar, Rp 50 juta, atau pengembalian seluruh Premi dikurangi penarikan dana (bila ada)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="62" width="89" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[per kejadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="63" width="201" height="25"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Pertanggungan jiwa atas ibu atau ibu dan janin/calon bayi (terjadi bersamaan) di masa kehamilan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="92" width="233" height="62"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="98" width="201" height="22"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Komplikasi kehamilan dan komplikasi setelah kelahiran]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="233" y="92" width="136" height="62"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="240" y="98" width="80" height="20">
+					<printWhenExpression><![CDATA["1".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10,000,000.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="98" width="80" height="20">
+					<printWhenExpression><![CDATA["2".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[20,000,000.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="98" width="80" height="20">
+					<printWhenExpression><![CDATA["3".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[30,000,000.00]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="369" y="92" width="104" height="62"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="95" width="99" height="55"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai dengan maksimal manfaat dari plan yang diambil, atau sampai dengan bayi berusia 30 hari (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="154" width="233" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="164" width="201" height="24"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Perawatan bayi di inkubator/intensive care unit(ICU)/High Dependency Unit(HDU) setelah kejadian]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="233" y="154" width="136" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="240" y="162" width="80" height="20">
+					<printWhenExpression><![CDATA["2".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[500,000 Per Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="162" width="80" height="20">
+					<printWhenExpression><![CDATA["1".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[250,000 Per Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="162" width="80" height="20">
+					<printWhenExpression><![CDATA["3".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1,000,000 Per Hari]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="369" y="154" width="104" height="48"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="160" width="98" height="38"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimal 20x manfaat dari plan yang diambil, atau sampai dengan bayi berusia 60 hari (mana yang leb ih dahulu)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="201" width="233" height="65"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="209" width="201" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- Kelainan bawaan pada anak]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="233" y="202" width="136" height="64"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="240" y="209" width="80" height="20">
+					<printWhenExpression><![CDATA["1".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[50,000,000.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="208" width="80" height="20">
+					<printWhenExpression><![CDATA["2".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[100,000,000.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="208" width="80" height="20">
+					<printWhenExpression><![CDATA["3".equals( $P{planBaby} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[150,000,000.00]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="369" y="202" width="104" height="64"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="372" y="206" width="97" height="55"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai dengan maksimal manfaat dari plan yang diambil, atau sampai dengan anak berusia 5 tahun (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="2" y="2" width="14" height="13"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderBabyIndex}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

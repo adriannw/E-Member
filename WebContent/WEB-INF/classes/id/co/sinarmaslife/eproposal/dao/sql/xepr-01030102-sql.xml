@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <typeAlias alias="HashMap" type="java.util.HashMap"/>
+    <typeAlias alias="OptionVO" type="id.co.sinarmaslife.standard.model.vo.OptionVO"/>   
+   	<typeAlias alias="assurancePlanList" type="id.co.sinarmaslife.standard.model.vo.AssurancePlanList"/>
+   
+    <resultMap id="selectSpecificLstBusinessOptionVOList.result" class="assurancePlanList">
+        <result property="value" column="bisnis_id" javaType="String" jdbcType="NUMBER"/>
+        <result property="label" column="LSDBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="flag_aktif" column="LSDBS_AKTIF" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+
+    <select id="selectSpecificLstBusinessOptionVOList" parameterClass="HashMap" resultClass="assurancePlanList"
+            resultMap="selectSpecificLstBusinessOptionVOList.result">
+        SELECT TO_CHAR(a.LSBS_ID ) || '~X' || TO_CHAR( a.LSDBS_NUMBER) as bisnis_id, a.LSDBS_NAME, a.LSDBS_AKTIF
+        FROM EKA.LST_DET_BISNIS a,
+        EKA.LST_BISNIS b
+        WHERE ( a.LSBS_ID = b.LSBS_ID ) and
+         ( b.LSBS_ID <![CDATA[<]]> 300 )
+        <isNotNull property="lsbsIdList">
+            <iterate prepend="AND a.lsbs_id in" property="lsbsIdList" open="(" close=")" conjunction=",">
+                #lsbsIdList[]#
+            </iterate>
+        </isNotNull>
+        ORDER BY LSDBS_NUMBER ASC
+    </select>
+
+    <!--select for filtering products-->
+    <select id="selectLstProductsFilteredOptionVOList" parameterClass="java.lang.String" resultClass="java.lang.String" >
+        select distinct b.lsbs_id || '~X' || b.lsdbs_number as value
+        from eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP_DETAIL b, eka.LST_BISNIS c, eka.LST_DET_BISNIS d
+        where 1 = 1
+			and a.msag_id = #msag_id#
+            and a.group_id = b.group_id
+        	and b.lsbs_id = c.lsbs_id
+			and b.lsdbs_number = d.lsdbs_number
+    </select>
+    
+    
+        <!--select for filtering package products-->
+    <select id="selectLstProductsPackageFilteredOptionVOList" parameterClass="java.lang.String" resultClass="java.lang.String" >
+     select distinct b.lsbs_id || '~X' || b.lsdbs_number as value
+        from eka.LST_USER_PRODUCT_GROUP_DETAIL b, eka.LST_BISNIS c, eka.LST_DET_BISNIS d
+        where 1 = 1
+            and b.group_id = 20
+            and b.lsbs_id = c.lsbs_id
+            and b.lsdbs_number = d.lsdbs_number
+    </select>
+
+	<!-- <select id="selectNoProposal" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+      select msco_value+1 as "msco_value"
+      from eka.mst_counter 
+      where msco_number=159 and lca_id=01 
+      and msco_month_year = #mmyyyy#
+    </select> -->
+    
+    <select id="selectNoProposal" parameterClass="java.util.Map" resultClass="java.util.HashMap">
+      select eka.pac_counter.GET_NO_PROPOSAL() as "NO_PROPOSAL" from dual
+    </select>
+
+    <update id="updateNoProposal" parameterClass="java.util.Map">
+    	UPDATE eka.mst_counter
+    	SET MSCO_VALUE= #noProposal#
+    	<isNotNull property="mmyyyy">
+    	,MSCO_MONTH_YEAR= #mmyyyy#
+    	</isNotNull>
+    	 WHERE MSCO_NUMBER=159 AND LCA_ID=01
+	</update>
+
+	<insert id="insertMstDataProposal" parameterClass="java.util.Map">
+    	INSERT into eka.mst_data_proposal (id, no_proposal, nama_pp, tgl_lahir_pp, umur_pp, sex_pp, nama_tt, tgl_lahir_tt, umur_tt, sex_tt, nama_agen, msag_id, lstb_id, id_dist, jenis_id, lead_id ,tgl_input, flag_aktif, flag_test, nama_user, kode_agen, LRB_ID, LCB_NO, FLAG_TT_CALON_BAYI, FLAG_VIP)
+    	SELECT NVL(max(id),0)+1 ,#no_proposal#, #nama_pp#, #tgl_lahir_pp#, #umur_pp#, #sex_pp#, #nama_tt#, #tgl_lahir_tt#, #umur_tt#, #sex_tt#, #nama_agen#, #msag_id#, #lstb_id#, #id_dist#, #jenis_id#, #lead_id#, #tgl_input#, #flag_aktif#, #flag_test#, #nama_user#, #kode_agen#, #lrb_id#, #lcb_no#, #flag_tt_calon_bayi#, #flag_vip# from eka.mst_data_proposal
+	</insert>
+  
+   <insert id="insertMstProductProposal" parameterClass="java.util.Map">
+    	INSERT into eka.mst_proposal_product (
+    	    NO_PROPOSAL,LSBS_ID,LSDBS_NUMBER,LKU_ID,GRP_PRODUCT_NAME,PREMI,PREMI_KOMB,PREMI_POKOK,PREMI_TOPUP,
+    	    UP,CARA_BAYAR,THN_CUTI_PREMI,THN_MASA_KONTRAK,THN_LAMA_BAYAR,INV_FIX,INV_DYNAMIC,INV_AGGRESSIVE,LJI_FIX,LJI_DYNAMIC,LJI_AGGRESIVE
+    	)
+    	values ( 
+    	    #no_proposal#, #lsbs_id#, #lsdbs_number#, #lku_id#, 
+    	    (SELECT nama_packet_print FROM eka.lst_packet WHERE flag_packet = #flag_packet#), #premi#,
+    	    #premi_komb#, #premi_pokok#, #premi_topup#, #up#, #cara_bayar#, #thn_cuti_premi#, #thn_masa_kontrak#, #thn_lama_bayar#,
+    	    #inv_fix#, #inv_dynamic#, #inv_aggresive#, #lji_fix#, #lji_dynamic#, #lji_aggresive#
+    	)
+	</insert>
+	
+	<select id="selectCredentialsVOLogin" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+	    SELECT a.mcl_first FROM eka.mst_client_new a, eka.mst_agent b where a.mcl_id = b.mcl_id
+		and b.msag_id =  #msagid#
+    </select>
+    
+    <insert id="insertMstPacketProposal" parameterClass="java.util.Map">
+        INSERT INTO eka.mst_proposal_product_packet ( 
+            NO_PROPOSAL, FLAG_PACKET, FLAG_NO 
+        ) VALUES (
+            #no_proposal#, #flag_packet#, #flag_no#
+        )
+    </insert>
+    
+    <insert id="insertMstRiderProposal" parameterClass="java.util.Map">
+        INSERT INTO eka.mst_proposal_product_rider (
+            NO_PROPOSAL, LSBS_ID, LSDBS_NUMBER, LKU_ID, PREMI, UP, PERSEN_UP, KELAS, JML_UNIT, BULAN_KE
+        ) VALUES (
+            #no_proposal#, #lsbs_id#, #lsdbs_number#, #lku_id#, #premi#, #up#, #persen_up#, #kelas#, #jml_unit#, #bulan_ke#
+        )
+    </insert>
+    
+    <insert id="insertMstPesertaRiderProposal" parameterClass="java.util.Map">
+        INSERT INTO eka.mst_proposal_product_peserta (
+            NO_PROPOSAL, LSBS_ID, LSDBS_NUMBER, NAMA_PESERTA, TGL_LAHIR, USIA, LSRE_ID, PESERTA_KE, SEX
+        ) VALUES (
+            #no_proposal#, #lsbs_id#, #lsdbs_number#, #nama_peserta#, #tgl_lahir#, #usia#, #lsre_id#, #peserta_ke#, #sex#
+        )
+    </insert>
+    
+    <select id="selectRelationOptionVOList" resultClass="OptionVO">
+        SELECT
+		    lsre_id value,
+		    decode(lsre_id, 0, 'Lain-Lain', lsre_relation) label
+		FROM
+		    eka.lst_relation
+		WHERE
+		    lsre_id in (1,7,8,4,22,21,13,3,9,6,15,10,17,2,16,11,12,18,19,5,14,0,34,35,32,36)
+		ORDER BY
+		    lsre_id asc
+    </select>
+    
+      <insert id="insertProposalProductUlink" parameterClass="java.util.Map">
+      	 INSERT INTO EKA.MST_PROPOSAL_PRODUCT_ULINK (
+            NO_PROPOSAL, LJI_ID, MDU_PERSEN) 
+         VALUES (
+            #no_proposal#, #lji_id#, #mdu_persen#
+       	 )      
+      </insert>
+      
+      <insert id="insertProposalProductTopupAndDraw" parameterClass="java.util.Map">        
+    	INSERT INTO eka.mst_proposal_product_topup (NO_PROPOSAL, THN_KE, TOPUP, TARIK)
+    	VALUES (#no_proposal#, #thn_ke#, #topup#, #draw#)
+   	 </insert>
+   	 
+   	 <select id="selectLstPacket" resultClass="OptionVO">
+ 		SELECT
+            FLAG_PACKET value,
+            NAMA_PACKET_PRINT label
+        FROM
+            eka.lst_packet
+        WHERE FLAG_PACKET = #value#
+        OR FLAG_PACKET=0        
+        AND FLAG_ACTIVE=1
+        ORDER BY FLAG_PACKET
+   	  </select>
+   	  
+   	  
+   	   <select id="selectNamaAdminBCList" resultClass="java.util.HashMap" parameterClass="java.util.Map">
+   	    SELECT UPPER(reff_id) kode_agent,
+            reff_name nama 
+            FROM(      
+		SELECT   a.LRB_ID reff_id,
+		            a.NAMA_REFF reff_name,
+		            a.LCB_NO bank_branch_id,
+		            D.NAMA_CABANG bank_branch_name,
+		            a.NO_REK account_number,
+		            A.CAB_REK account_branch,
+		            A.ATAS_NAMA behalf_name,
+		            A.FLAG_AKTIF isReff_Active,
+		            A.JENIS bank_type,
+		            A.LRBJ_ID reff_position_id,
+		            B.VC_LRBJ_DESC reff_position_name,
+		            A.LRBJ_ID1 bc_position_id,
+		            C.VC_LRBJ_DESC bc_position_name,
+		            A.AGENT_CODE bank_agent_code,
+		            A.FLAG_LISENSI isLicense,
+		            A.NIK NIK,
+		            A.PRE_NIK PRE_NIK,
+		            A.KODE_AGENT bank_agent_code_new
+		     FROM   eka.lst_reff_bii a,
+		            EKA.LST_REFF_BII_JAB B,
+		            EKA.LST_REFF_BII_JAB C,
+		            EKA.LST_CABANG_BII D
+		    WHERE       A.LRBJ_ID = B.LRBJ_ID(+)
+		            AND A.LRBJ_ID1 = C.LRBJ_ID(+)
+		            AND A.LCB_NO = D.LCB_NO
+		            and A.flag_aktif = 1
+		            and A.FLAG_LISENSI = 1	             
+		            and A.jenis = 2
+		    <isNotNull property="cariNamaAdminBC">
+		   			 and UPPER(trim(a.NAMA_REFF))  like '%' || UPPER(trim(#cariNamaAdminBC#)) || '%'
+		    </isNotNull>
+		     <isNotNull property="cariKodeAdminBC">
+		   			 and UPPER(trim(a.LRB_ID))  like '%' || UPPER(trim(#cariKodeAdminBC#)) || '%'
+		    </isNotNull>		    
+		    )		    	    	
+    </select>
+    
+    <select id="selectDetailAdminBC" parameterClass="java.lang.String" resultClass="java.util.HashMap" >
+        select AGENT_CODE, LCB_NO from eka.lst_reff_bii where lrb_id = #lrbId#
+    </select>
+
+   	 <select id="getPacketTabelList" parameterClass="java.util.Map" resultClass="OptionVO">
+	   	select a.flag_packet value, a.nama_packet label
+		from eka.lst_packet a,
+		eka.lst_packet_det b
+		where a.flag_packet = b.flag_packet
+		and b.lsbs_id=#lsbs_id# and b.lsdbs_number=#lsdbs_number#
+   	</select>
+     	
+</sqlMap>

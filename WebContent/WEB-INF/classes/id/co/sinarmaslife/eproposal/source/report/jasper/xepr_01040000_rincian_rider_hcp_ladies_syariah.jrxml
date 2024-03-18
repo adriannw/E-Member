@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_hcp_ladies_syariah" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="5" isSummaryNewPage="true" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeaderRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCPLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCPLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpLadies" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpLadies]]></parameterDescription>
+	</parameter>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan' as subject, 'R-100' as descr, '  ' as term,  10 as factor,  10 as fisioterapi
+from dual
+
+union
+
+select '- Rawat Inap krn sakit' as subject,  '100,000'  as descr, 'Maks 100 hari per satu tahun polis *)' as term, 10 as factor,  10 as fisioterapi
+from dual
+
+union
+
+select '- Rawat Inap di ruang ICU' as subject, '200,000' as descr, 'Maks 30 hari per satu tahun polis' as term, 10 as factor,  10 as fisioterapi
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<field name="factor" class="java.math.BigDecimal"/>
+	<field name="fisioterapi" class="java.math.BigDecimal"/>
+	<pageHeader>
+		<band height="692">
+			<textField hyperlinkType="None">
+				<reportElement x="112" y="4" width="281" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" RINCIAN SMiLe Ladies Hospital Protection Syariah"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="40" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCPLadies}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="61" width="505" height="40"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Program asuransi  kesehatan  tambahan  Santunan Rawat Inap  ini merupakan asuransi yang memberikan manfaat berupa pembayaran manfaat Kemoterapi, Fisioterapi, dan Santunan Harian Rawat Inap apabila Peserta menjalani rawat inap di Rumah Sakit baik yang disebabkan oleh penyakit maupun kecelakaan baik itu Perawatan Biasa dan Tindakan Pembedahan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="110" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="128" width="497" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="153" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi Syariah]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="171" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCPLadies}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="191" width="505" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Peserta
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="232" width="282" height="15"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Ladies Hospital Protection Syariah"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="257" width="467" height="34"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Peserta mulai berhak mendapatkan Manfaat Asuransi Tambahan apabila Asuransi Tambahan ini telah berlaku dan melewati Masa Tunggu.
+Manfaat Asuransi Tambahan ini :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="257" width="11" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="14" y="277" width="11" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="30" y="292" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="47" y="292" width="450" height="157"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta menjalani Rawat Inap di Rumah Sakit sekurang-kurangnya selama 48 (empat puluh delapan) jam karena sakit atau sekurang-kurangnya 24 (dua puluh empat) jam karena kecelakaan, maka Wakil Para Peserta akan memberikan Santunan Harian Rawat Inap berdasarkan jenis Santunan Harian Rawat Inap selama dirawat di Rumah Sakit sebesar yang telah ditetapkan dalam Polis dengan jangka waktu maksimum 180 (seratus delapan puluh) hari perawatan untuk satu tahun Polis.
+Apabila Peserta menjalani Rawat Inap di Rumah Sakit karena Tindakan Pembedahan (Surgical) pada saat asuransi tambahan masih berlaku, maka Wakil Para Peserta akan memberikan Santunan Tunai Tindakan Pembedahan sebesar yang telah ditetapkan dalam Polis. Besarnya Santunan Tunai Tindakan Pembedahan sesuai dengan tingkat kesulitan Tindakan Bedah seperti yang tercantum dalam Tabel Kategori Tindakan Pembedahan (Terlampir).
+Jumlah hari perawatan di Rumah Sakit yang dapat dijamin dalam satu tahun Polis baik perawatan yang disebabkan karena Penyakit dan atau Kecelakaan termasuk perawatan di Unit Perawatan Intensive (ICU) maksimum adalah 180 (seratus delapan puluh) hari. Jumlah hari perawatan di ICU/ICCU maksimum adalah 30 hari perawatan untuk satu tahun Polis.
+Apabila Peserta menderita salah satu penyakit di bawah ini, maka manfaat Asuransi Tambahan yang dibayarkan adalah 2(dua) kali manfaat Asuransi Tambahan dari plan yang diambil]]></text>
+			</staticText>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" x="152" y="456" width="40" height="22"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Jenis Penyakit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="192" y="456" width="161" height="22"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Kategori]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="152" y="478" width="40" height="45"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Kanker]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="192" y="478" width="161" height="45"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Penyakit yang ditandai dengan adanya tumor ganas akibat pertumbuhan sel yang tidak terkontrol dan dibuktikan salah satunya dari hasil Patologi Anatomi (PA) dan/atau pemeriksaan penunjang lainnya]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="152" y="523" width="40" height="23"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Tumor Jinak tertentu]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="192" y="523" width="161" height="23"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Tumor jinak pada kandung kemih, saluran kemih dan payudara]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="152" y="546" width="40" height="28"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Penyakit khusus wanita]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="192" y="546" width="161" height="28"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[- Endometriosis
+- Kista/tumor pada indung telur
+- Tumor rahim]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="152" y="574" width="40" height="88"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[Komplikasi kehamilan dan persalinan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="192" y="574" width="161" height="88"/>
+					<box padding="0">
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[- Early miscariage (Keguguran)
+- Ectopic pregnancy (Kehamilan di luar rahim)
+- Preeclampsia (Toksemia pada wanita hamil yang ditandai oleh adanya hipertensi, edema, dan proteinuria)
+- Forceps delivery (Persalinan dengan tarikan pada kepala menggunakan alat penjepit (forceps))
+- Vacuum extraction  (Persalinan dengan tarikan kepala dengan alat penghisap (vacuum))]]></text>
+				</staticText>
+			</elementGroup>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="344" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="382" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="413" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.4.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="24"/>
+	</pageFooter>
+	<summary>
+		<band height="441">
+			<staticText>
+				<reportElement positionType="Float" x="47" y="16" width="458" height="195"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta menjalani Kemoterapi pada saat asuransi tambahan masih berlaku, maka akan dibayarkan manfaat per kunjungan per hari yang besarnya sesuai dengan plan yang diambil. Maksimum manfaat yang dibayarkan adalah 10 (sepuluh) kali kunjungan dalam satu tahun polis.
+Apabila Peserta menjalani Fisioterapi pada saat asuransi tambahan masih berlaku, maka akan dibayarkan manfaat per kunjungan per hari yang besarnya sesuai dengan plan yang diambil. Manfaat fisioterapi dapat diberikan selama dalam waktu rawat inap sampai dengan 30 hari setelah rawat inap selesai. Maksimum manfaat yang dibayarkan adalah 10 (sepuluh) kali kunjungan dalam satu tahun polis.
+Apabila Peserta mempunyai lebih dari satu Polis yang diterbitkan oleh Wakil Para Peserta yang juga memberikan manfaat santunan harian Rawat Inap, maka besarnya santunan harian Rawat Inap yang dapat dibayarkan oleh Wakil Para Peserta untuk Peserta yang sama ditetapkan tidak melebihi Rp. 2.000.000,- (dua juta Rupiah) / US$ 200,- (dua ratus US Dollar) per hari atau mata uang yang setara dengan Rp. 2.000.000,- (dua juta Rupiah) / US$ 200,- (dua ratus US Dollar) per hari per Rawat Inap. Khusus untuk manfaat Asuransi Tambahan Kemoterapi maksimum manfaat Asuransi Tambahan yang dapat dibayarkan oleh Wakil Para Peserta untuk Peserta yang sama adalah Rp. 2.000.000,- (dua juta Rupiah) / US$ 200,- (dua ratus US Dollar) per kunjungan per hari dan maksimum manfaat Fisioterapi yang dibayarkan oleh Wakil Para Peserta untuk Peserta yang sama adalah Rp 300.000,- (tiga ratus ribu Rupiah) / US$ 30,- (tiga puluh US Dollar) per kunjungan per hari.
+Apabila Peserta mempunyai lebih dari satu Polis yang diterbitkan oleh Wakil Para Peserta yang juga memberikan manfaat santunan harian Rawat Inap dan Peserta menderita salah satu penyakit yang disebutkan pada butir 2.4 di atas, maka maksimum manfaat asuransi yang dapat dibayarkan adalah 2x (dua kali) dari maksimum manfaat asuransi seperti yang dijelaskan pada ketentuan butir 2.7 di atas.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="16" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="47" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="87" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="167" width="15" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.8.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="48" y="219" width="537" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="baseBenefitHcpLad">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpLad}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderHcpLadies}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_hcp_ladies_summary.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="42" y="244" width="511" height="177"/>
+				<textElement/>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

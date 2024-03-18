@@ -1,0 +1,128 @@
+ 00000000 Common Download PDF
+ 00000001 Frame Produk
+ 00000002 Menu Atas
+ 00000003 Menu Bawah
+ 00000004 Content (bisa brochure atau bisa juga input proposal)
+
+ 01010101 Halaman Utama Login
+ 01010102 Logout
+
+ 01020101 maintenance
+ 01020201 Product Access Group
+ 01020202 ubah business
+ 01020301 Look Up Agent
+ 01020401 Console
+
+ 01030301 membuat surat (tidak dipakai lagi)
+ 01030302 download surat
+ 01030302 preview surat
+ 01030401 membuat cover
+ 01030402 preview cover
+ 01030501 lihat provider
+ 01030502 lihat detail provider
+ 01030601 lihat dokumen Tindakan Medis
+ 01030701 lihat Swine Flu provider
+ 01030901 preview DPLK
+ 01030902 update proposal eas
+ 
+ // halaman pada proposal
+ 01030101 data proposal
+ 01030102 detail proposal
+ 01030103 rider page
+ 01030104 top up / draw page
+ 01030105 class page
+ 01030106 additional participant page
+ 01030107 additional participant eka sehat page
+ 01030108 additional participant eka sehat inner limit page
+ 01030109 additional participant hcp provider page
+ 01030110 additional participant Ladies HCP
+ 01030111 additional participant Ladies Med. Expense
+ 01030112 additional participant Ladies Med. Expense inner limit
+
+TRADITIONAL PRODUCTS
+ 01040101 Super Protection (45)         (tidak dijual lagi)             Fadly - Hide {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040102 Super Sehat (53)              (tidak dijual lagi)             Fadly - Hide {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040103 Super Sehat Plus (54)         (tidak dijual lagi)             Fadly - Hide {PopUp Download & Save PDF ke \\EBSERVER}
++01040104 Dana Sejahtera New -> SMiLe Dana Sejahtera(163) (BSIM) 		Fadly 		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040105 Super sejahtera (39)          (tidak dijual lagi)             Fadly - Hide
+ 01040106 Power Simponi Rupiah (95)     (tidak dijual lagi)	            Fadly - Hide
++01040107 Power Save New (142)                   Selected Show          Fadly        {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040108 Power Save Bulanan (158)   (tidak dijual lagi)-Selected Show  Fadly 		 {PopUp Download & Save PDF ke \\EBSERVER} 
+ 01040108 STABLE SAVE MANFAAT BULANAN  (158)  (tidak dijual lagi)  		Andy  - Hide {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040109 Platinum Save (155)                 (tidak dijual lagi)       Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}	
+ 01040110 Hidup Bahagia (167)                 (tidak dijual lagi)       Fadly        {PopUp Download & Save PDF ke \\EBSERVER}	
+ 01040111 Stable Link (164)                   (tidak dijual lagi)       Fadly        {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040112 MAXI DEPOSIT NEW  (137)             (tidak dijual lagi)       Andy  		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040113 Personal accident -> SMiLe Personal Accident (73) 			Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040114 Eduvest -> SMiLe Eduvest (141)	 	(tidak dijual lagi)	 	Fadly 		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040115 Ekasiswa Emas New - SMiLe SISWA(172)  (tidak dijual lagi) 	Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040116 Eka Sarjana Mandiri New -> smile sarjana(173) (tdk dijual lg) Andy		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040117 MAXI DEPOSIT US DOLLAR  (114)       (tidak dijual lagi)       Andy	     {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040118 STABLE SAVE  (184)                  (tidak dijual lagi)       Andy	     {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040119 End Care (168)                      (tidak dijual lagi)       Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040120 Power Save Syariah (175)                                      Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040121 Power Save Syariah Bulanan (176)                              Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040122 INVESTIMAX 2 (165) -> not finished(tidak dijual lagi)         Andy
++01040123 Medivest -> SMiLe Medivest (140)       						Andy   		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040124 Power Simponi	US$	(110)	(tidak dijual lagi)					Fadly
+ 01040125 Simponi/Secure Rupiah	(150)	(tidak dijual lagi)				Fadly
+ 01040126 Simponi/Secure $ (151)	(tidak dijual lagi)					Fadly
+ 01040127 Simponi 8 (112)			(tidak dijual lagi)					Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040128 Prolife (179)				(tidak dijual lagi)					Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
++01040129 Eka Sehat --> smile medical (Benefit As Charge) (183)			Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040130 Ekawarsa (1)													Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
++01040131 Ekawaktu(new) -> SMiLe Ekawaktu (169)    (tidak dijual lagi)	Fadly & Andy {PopUp Download & Save PDF ke \\EBSERVER}
++01040132 Multi Invest  -> SMiLe Multi Invest (96) (tidak dijual lagi)	Andy & Fadly {PopUp Download & Save PDF ke \\EBSERVER}        
+ 01040133 Prosaver (180)						   (tidak dijual lagi)	Andy		 {PopUp Download & Save PDF ke \\EBSERVER}  
++01040134 Multi Invest Syariah -> SMile Multi Invest Syariah(182)     	Andy & Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040135 STABLE SAVE (premi bulanan) (177)	 	   (tidak dijual lagi)	Andy		 {PopUp Download & Save PDF ke \\EBSERVER}
++01040136 Super sejahtera(new) -> SMiLe Super Sejahtera (185) (tdk dijual)     Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040137 Pro safe (298) 								                Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040138 Pro safe (192)  									            Fadly		
+ 01040139 smart kid(208)	=>> New SImas KID!!											Fadly
+ 01040140 smile progressive save syariah(207)		(tidak dijual lagi)	Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040141 SMiLe Personal accident syariah (198)							Fadly	     {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040142 smile medical syariah (Benefit As Charge) (189)  				Fadly		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040143 smile medical Inner limit (193)						        Fadly	     {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040144 smile medical Inner limit Syariah (201)						Fadly	     {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040145 simas maxi save(111)											Fadly 		 {PopUp Download & Save PDF ke \\EBSERVER}
++01040146 MEDIVEST SYARIAH -> SMiLe Link Medivest Syariah(199)			Fadly    	 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040147 SMiLe Link Eduvest Syariah (206)	 	  (tidak dijual lagi) 	Adrian		 {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040148 VIP HOSPITAL PLAN (195)										Adrian
+ 01040149 SIMAS KID SYARIAH (219)										Adrian
+ 01040150 SMART LIFE CARE PLUS/TERM ROP (212)							Adrian
+ 01040151 SMiLe LIFE SYARIAH (223)										Adrian
+ 01040152 SIMAS LEGACY (226)
+ 01040153 SMiLe INCOME PROTECTION X-TRA (227)							Iga
+ 
+UNIT LINK PRODUCTS
+ 01040201 Eka Link Family -> SMiLe Link (159)    (tidak dijual lagi)	            Fadly {PopUp Download & Save PDF ke \\EBSERVER}
++01040202 Eka Link Family Syariah -> SMiLe Link Syariah (160)                       Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040203 Artha Link (162)   (tidak dijual lagi)-Selected Show (rupiah dollar)      Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+*01040203 Eka Link 88(162)   (tidak dijual lagi)-Selected Show (rupiah only)        Fadly
+*01040203 Eka Link 88 Plus (162)                 (tidak dijual lagi)                Fadly
++01040204 Eka Link 80 (115)                                                         Fadly {PopUp Download & Save PDF ke \\EBSERVER}
++01040205 Eka Link 80 Plus -> SMiLe LINK 88 (116)                                   Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+*01040206 Eka Link 80 Syariah (152)            (tidak dijual lagi)                  Fadly {PopUp Download & Save PDF ke \\EBSERVER}
++01040207 Eka Link 80 Plus Syariah -> SMiLe LINK 88 SYARIAH(153)                    Fadly {PopUp Download & Save PDF ke \\EBSERVER}
++01040208 Platinum Link (134)                                                       Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040209 Amanah Link (166)                     (tidak dijual lagi)                 Andy  {PopUp Download & Save PDF ke \\EBSERVER}          
+ 01040210 Eka Link 18 (119) 					(tidak dijual lagi) 				Andy  {PopUp Download & Save PDF ke \\EBSERVER}
++01040211 Cerdas -> Cerdas/Excellent/sp(120)                                        Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040212 Cerdas Proteksi -> Excellent Protection (128)								Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040213 Cerdas Sejahtera -> Excellent Pension(129) (tidak dijual lagi)			Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040214 Cerdas Siswa -> Excellent Education(127)									Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040215 Stable Link Syariah(174)				(tidak dijual lagi)					Andy  {PopUp Download & Save PDF ke \\EBSERVER}
++01040216 Rencana cerdas(191)														Fadly {PopUp Download & Save PDF ke \\EBSERVER}
+ 01040217 Smart medicare(178)														Fadly 
++01040218 Excellent link syariah(202)												Fadly {PopUp Download & Save PDF ke \\EBSERVER}
++01040219 SMiLe Link Bridge/99/VIP Family Plan (190)								Adrian{PopUp Download & Save PDF ke \\EBSERVER}
++01040220 SMiLe Link Bridge Syariah/99 Syariah (200)						        Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040221 SIMAS MAGNA LINK (213)						    					    Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040222 PROVESTARA SMART HEALTH (214)												Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040223 SIMAS PRIME LINK SYARIAH (215) (Premium link syariah=prime link syariah)	Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040224 SIMAS MAGNA LINK SYARIAH (216)						    				Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040225 SMiLe Link Pro 100 (217)				    								Adrian{PopUp Download & Save PDF ke \\EBSERVER}
+ 01040227 SMiLe Link Pro 100 SYARIAH (218)											Adrian
+ 01040228 SMiLe LINK PLUS/JEMPOL LINK (220)											Adrian
+ 01040229 SMiLe LINK PRO SYARIAH (224)												Adrian

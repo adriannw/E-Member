@@ -1,0 +1,1041 @@
+<%@ include file="/include/taglibs.jsp" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<HEAD>
+<link href="${path}/include/css/general.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="${path}/include/js/top/cepr01030103JSP_top.js"></script>
+<script type="text/javascript">
+var path = '${path}';
+</script>
+
+<style type="text/css">
+<!--
+.style2 {font-size: 20px}
+.style3 {color: #FF9900}
+.style5 {color: #FFFFFF}
+-->
+</style>
+
+</HEAD>
+<BODY style="background-color: #FFFFFF ; margin-left: 0; margin-bottom: 0; margin-right: 0; margin-top: 0;">
+
+<form:form id="formpost" commandName="cepr01030000HoldingForm">
+
+<form:hidden path="cepr01030103Form.paRiskListIsDisabled" />
+<form:hidden path="cepr01030103Form.paClassListIsDisabled" />
+<form:hidden path="cepr01030103Form.paUnitQtyListIsDisabled" />
+<form:hidden path="cepr01030103Form.hcpListIsDisabled" />
+<form:hidden path="cepr01030103Form.buttonClassIsDisabled" />
+<form:hidden path="cepr01030103Form.termRiderAmountIsDisabled" />
+<form:hidden path="cepr01030103Form.ciRiderAmountIsDisabled" />
+<form:hidden path="cepr01030103Form.esci99RiderAmountIsDisabled" />
+<form:hidden path="cepr01030103Form.ciChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.waiverTpdCiChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.ladiesInsListIsDisabled" />
+<form:hidden path="cepr01030103Form.scholarshipListIsDisabled" />
+<form:hidden path="cepr01030103Form.scholarshipChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.ladiesInsChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.babyChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.babyListIsDisabled" />
+<form:hidden path="cepr01030103Form.esci99ChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.medicalPlusChooseListIsDisabled" />
+<form:hidden path="cepr01030103Form.medicalPlusRjFlagIsDisabled" />
+<form:hidden path="cepr01030103Form.medicalPlusRgFlagIsDisabled" />
+<form:hidden path="cepr01030103Form.medicalPlusRbFlagIsDisabled" />
+<form:hidden path="cepr01030103Form.medicalPlusPkFlagIsDisabled" />
+<form:hidden path="cepr01030103Form.term5575RiderAmountIsDisabled" />
+<form:hidden path="cepr01030103Form.term5575RiderChooseListIsDisabled" />
+
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+  <!--DWLayoutTable-->
+  <c:if test="${cepr01030000HoldingForm.credentialsVO.msagId != '999993'}">
+	<TR>
+		<TD width="178" height="38" valign="top" style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;"><!--DWLayoutEmptyCell-->&nbsp;</TD>
+		<TD COLSPAN=3 style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;"><div align="center">
+		  <p class="fontUp">WELCOME TO MSIGLIFE E-PROPOSAL [${sessionScope.deebee}]</p>
+		</div></TD>
+		<TD COLSPAN=4 style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;"><!--DWLayoutEmptyCell-->&nbsp;			</TD>
+	  <TD style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;">
+		 <%--  <div align="right"><a href="${path}/wepr00000001.htm" target="_top" onmouseover="changeButtonHomeToGlow();" onmouseout="changeButtonHomeToNormal();">
+	      <img src="${path}/include/images/bt_home.gif" alt="" align="absbottom" id="buttonHomeId" style="border: 0;">
+		    </a>
+	    </div> --%></TD>
+		<TD style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;"><span class="style5"> 			</span></TD>
+		<TD COLSPAN=2 style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;">
+		<a href="${path}/wepr01010102.htm" target="_top" onmouseover="changeButtonLogOffToGlow();" onmouseout="changeButtonLogOffToNormal();">
+		<img src="${path}/include/images/bt_logoff.gif" alt="" align="absbottom" id="buttonLogOffId" style="border: 0;">
+		</a> 
+		</TD>
+		<TD width="100%" valign="top" style="background-image:url(${path}/include/images/web_proposal_03.jpg); background-repeat:repeat-x; background-position:bottom;"><!--DWLayoutEmptyCell-->&nbsp;</TD>
+    </TR>
+	<TR>
+	  <TD ROWSPAN=6>&nbsp;</TD>
+	  <TD height="19" style="background-image:url(${path}/include/images/web_proposal_09.jpg); ">&nbsp;			</TD>
+		<TD COLSPAN=9 style="background-image:url(${path}/include/images/web_proposal_10.jpg); background-repeat:repeat-x; ">&nbsp;			</TD>
+		<TD style="background-image:url(${path}/include/images/web_proposal_11.jpg); ">&nbsp;			</TD>
+        <TD ROWSPAN=6>&nbsp;</TD>
+	</TR>
+	<TR>
+	  <TD ROWSPAN=4 style="background-image:url(${path}/include/images/web_proposal_12.jpg); ">&nbsp;			</TD>
+		<TD height="40" colspan="9" class="fontLabel1 style2"><fmt:message key="words.riders"/>			</TD>
+	    <TD ROWSPAN=4 style="background-image:url(${path}/include/images/web_proposal_15.jpg); ">&nbsp;			</TD>
+	</TR>
+	</c:if>
+	<TR>
+		<TD colspan="9" style="background-image:url(${path}/include/images/bg_form1.jpg); background-repeat:repeat-x; ">
+	      <p>&nbsp;</p>
+      
+	  <table>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.paDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.paFlag" cssClass="fontForm" id="cepr01030103Form.paFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.paFlagIsDisabled}" onclick="handleClickPaFlag(this.checked);"/>
+       
+         <label for="cepr01030103Form.paFlag">
+            <c:choose>
+        		<c:when test="${cepr01030000HoldingForm.credentialsVO.msagId eq '999976' || cepr01030000HoldingForm.credentialsVO.type eq 'bsm'}">
+        			<fmt:message key="words.personalAccident_0"/>
+        		</c:when>
+        		<c:otherwise>
+        			<fmt:message key="words.personalAccident"/>
+        		</c:otherwise>
+        	</c:choose>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">&nbsp;
+        
+        
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.paDisplay}">
+    <td align="right" class="fontForm">
+        <fmt:message key="words.risk"/>&nbsp;
+    </td>
+    <td style="text-align: left;">
+        
+        <form:select path="cepr01030103Form.paRiskCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.paRiskList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.paRiskListIsDisabled}"
+                />
+        
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonClassIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+		
+    </td>
+    <td style="text-align: left;"><div>
+	<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonClass'; checkEvent()" onmouseover="changeButtonClassToGlow();" onmouseout="changeButtonClassToNormal();">
+		<img src="${path}/include/images/bt_kelas.gif"  alt="" style="border: 0; " id="buttonClassId"> 
+		</a>
+			</div>
+	</td>
+    <td style="text-align: left;" class="fontForm">
+	<form:select path="cepr01030103Form.paClassCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.paClassList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.paClassListIsDisabled}"
+                />
+        &nbsp;
+        <fmt:message key="words.unitAmount"/>
+        <form:select path="cepr01030103Form.paUnitQtyCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.paUnitQtyList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.paUnitQtyListIsDisabled}"
+                /> 
+        &nbsp;
+	</td>
+    <td>
+        <form:errors path="cepr01030103Form.paFlag" cssClass="comErrorColor"/>
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.hcpDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.hcpFlag" cssClass="fontForm" id="cepr01030103Form.hcpFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpFlagIsDisabled}" onclick="handleClickHcpFlag(this.checked);"/>
+        <label for="cepr01030103Form.hcpFlag">
+            <fmt:message key="words.hospitalCashPlanHCP"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:select path="cepr01030103Form.hcpCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.hcpList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpListIsDisabled}"
+                />
+        
+        
+    </td>
+    <td colspan="2" style="text-align: left;">
+		<form:errors path="cepr01030103Form.hcpFlag" cssClass="comErrorColor"/>
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.hcpFamilyDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.hcpFamilyFlag" cssClass="fontForm" id="cepr01030103Form.hcpFamilyFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpFamilyFlagIsDisabled}" onclick="handleClickHcpFamilyFlag(this.checked);"/>
+        <label for="cepr01030103Form.hcpFamilyFlag">
+            <c:choose>
+        		<c:when test="${cepr01030000HoldingForm.credentialsVO.msagId eq '999976' || cepr01030000HoldingForm.credentialsVO.type eq 'bsm'}">
+        			<fmt:message key="words.hcpFamily_0"/>
+        		</c:when>
+        		<c:otherwise>
+        			<fmt:message key="words.hcpFamily"/>
+        		</c:otherwise>
+        	</c:choose>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.hcpFamilyListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantIsDisabled" />
+        <form:select path="cepr01030103Form.hcpFamilyCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.hcpFamilyList}"
+                     itemLabel="label" itemValue="value"
+
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpFamilyListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipant'; checkEvent()" onmouseover="changeButtonParticipantToGlow();" onmouseout="changeButtonParticipantToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.hcpFamilyFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.hcpProviderDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.hcpProviderFlag" cssClass="fontForm" id="cepr01030103Form.hcpProviderFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpProviderFlagIsDisabled}" onclick="handleClickHcpProviderFlag(this.checked);"/>
+        <label for="cepr01030103Form.hcpProviderFlag">
+            <fmt:message key="words.hcpProvider"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.hcpProviderListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantHcpProviderIsDisabled" />
+        <form:select path="cepr01030103Form.hcpProviderCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.hcpProviderList}"
+                     itemLabel="label" itemValue="value"
+
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpProviderListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantHcpProviderIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantHcpProvider'; checkEvent()" onmouseover="changeButtonParticipantHcpProviderToGlow();" onmouseout="changeButtonParticipantHcpProviderToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantHcpProviderId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.hcpProviderFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.hcpLadiesDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.hcpLadiesFlag" cssClass="fontForm" id="cepr01030103Form.hcpLadiesFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpLadiesFlagIsDisabled}" onclick="handleClickHcpLadiesFlag(this.checked);"/>
+        <label for="cepr01030103Form.hcpLadiesFlag">
+            <fmt:message key="words.hcpLadies"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.hcpLadiesListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantHcpLadiesIsDisabled" />
+        <form:select path="cepr01030103Form.hcpLadiesCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.hcpLadiesList}"
+                     itemLabel="label" itemValue="value"
+
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.hcpLadiesListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantHcpLadiesIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantHcpLadies'; checkEvent()" onmouseover="changeButtonParticipantToGlow();" onmouseout="changeButtonParticipantToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.hcpLadiesFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payor5Tpd10TpdDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payor5Tpd10TpdDeathFlag" cssClass="fontForm" id="cepr01030103Form.payor5Tpd10TpdDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payor5Tpd10TpdDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payor5Tpd10TpdDeathFlag">
+            <fmt:message key="words.payor5Tpd10TpdDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payor5Tpd10TpdDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payor5Tpd10CiDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payor5Tpd10CiDeathFlag" cssClass="fontForm" id="cepr01030103Form.payor5Tpd10CiDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payor5Tpd10CiDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payor5Tpd10CiDeathFlag">
+            <fmt:message key="words.payor5tpd10CiDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payor5Tpd10CiDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+    </td>
+</tr>
+
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payorTpdDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payorTpdDeathFlag" cssClass="fontForm" id="cepr01030103Form.payorTpdDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payorTpdDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payorTpdDeathFlag">
+            <fmt:message key="words.payorTpdDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payorTpdDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payor5Ci10CiDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payor5Ci10CiDeathFlag" cssClass="fontForm" id="cepr01030103Form.payor5Ci10CiDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payor5Ci10CiDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payor5Ci10CiDeathFlag">
+            <fmt:message key="words.payor5Ci10CiDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payor5Ci10CiDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payorCiDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payorCiDeathFlag" cssClass="fontForm" id="cepr01030103Form.payorCiDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payorCiDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payorCiDeathFlag">
+            <fmt:message key="words.payorCiDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payorCiDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payorCiDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payorCiFlag" cssClass="fontForm" id="cepr01030103Form.payorCiFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payorCiFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payorCiFlag">
+            <fmt:message key="words.payorCi"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payorCiFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payorSpouseTpdDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payorSpouseTpdDeathFlag" cssClass="fontForm" id="cepr01030103Form.payorSpouseTpdDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payorSpouseTpdDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payorSpouseTpdDeathFlag">
+            <fmt:message key="words.payorSpouseTpdDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payorSpouseTpdDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.payorTpdCiDeathDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.payorTpdCiDeathFlag" cssClass="fontForm" id="cepr01030103Form.payorTpdCiDeathFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.payorTpdCiDeathFlagIsDisabled}"/>
+        <label for="cepr01030103Form.payorTpdCiDeathFlag">
+            <fmt:message key="words.payorTpdCiDeath"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.payorTpdCiDeathFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiver5Tpd10TpdDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiver5Tpd10TpdFlag" cssClass="fontForm" id="cepr01030103Form.waiver5Tpd10TpdFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiver5Tpd10TpdFlagIsDisabled}"/>
+        <label for="cepr01030103Form.waiver5Tpd10TpdFlag">
+            <fmt:message key="words.waiver5Tpd10Tpd"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiverTpdFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiverTpdDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiverTpdFlag" cssClass="fontForm" id="cepr01030103Form.waiverTpdFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiverTpdFlagIsDisabled}"/>
+        <label for="cepr01030103Form.waiverTpdFlag">
+            <fmt:message key="words.waiverTpd"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiverTpdFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiverTpdCiDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiverTpdCiFlag" cssClass="fontForm" id="cepr01030103Form.waiverTpdCiFlag" 
+        value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiverTpdCiFlagIsDisabled}" onclick="handleClickWaiverTpdCiFlag(this.checked);"/>
+        <label for="cepr01030103Form.waiverTpdCiFlag">
+            <fmt:message key="words.waiverTpdCi"/>
+        </label>
+    </td>
+            <td>
+  <form:select path="cepr01030103Form.waiverTpdCiChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.waiverTpdCiChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.waiverTpdCiChooseListIsDisabled}"
+                />
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiverTpdCiFlag" cssClass="comErrorColor"/>
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiver5Ci10CiDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiver5Ci10CiFlag" cssClass="fontForm" id="cepr01030103Form.waiver5Ci10CiFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiver5Ci10CiFlagIsDisabled}"/>
+        <label for="cepr01030103Form.waiver5Ci10CiFlag">
+            <fmt:message key="words.waiver5Ci10Ci"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiver5Ci10CiFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiver5Tpd10CiDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiver5Tpd10CiFlag" cssClass="fontForm" id="cepr01030103Form.waiver5Tpd10CiFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiver5Tpd10CiFlagIsDisabled}"/>
+        <label for="cepr01030103Form.waiver5Tpd10CiFlag">
+            <fmt:message key="words.waiver5Tpd10Ci"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiver5Tpd10CiFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.waiverCiDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.waiverCiFlag" cssClass="fontForm" id="cepr01030103Form.waiverCiFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.waiverCiFlagIsDisabled}"/>
+        <label for="cepr01030103Form.waiverCiFlag">
+            <fmt:message key="words.waiverCi"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.waiverCiFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.tpdDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.tpdFlag" cssClass="fontForm" id="cepr01030103Form.tpdFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.tpdFlagIsDisabled}"/>
+        <label for="cepr01030103Form.tpdFlag">
+            <fmt:message key="words.totalPermanentDisabilityTpd"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.tpdFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ciDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ciFlag" cssClass="fontForm" id="cepr01030103Form.ciFlag" value="true" 
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.ciFlagIsDisabled}" onclick="handleClickCiFlag(this.checked);"/>
+        <label for="cepr01030103Form.ciFlag">
+            <fmt:message key="words.criticalIllnessEng"/>
+        </label>
+    </td>
+	<!-- /**Pembukaan UP untuk rider Critical Illness, ESCI 99 dan Term Insurance**/ -->
+	 <td colspan="3" style="text-align: left;">
+        <form:input path="cepr01030103Form.ciRiderAmount" cssClass="fontForm" disabled="${cepr01030000HoldingForm.cepr01030103Form.ciRiderAmountIsDisabled}" onfocus="showForm( 'ciRiderAmountHelper', 'true' );" onblur="showForm( 'ciRiderAmountHelper', 'false' );" onchange="this.value=formatCurrency( this.value );" onkeyup="showFormatCurrency('ciRiderAmountHelper', this.value);" />
+        <input type="text" id="ciRiderAmountHelper" disabled="disabled" style="display: none; font-family:Arial; font-size:11px" tabindex="-1"/>
+        <form:errors path="cepr01030103Form.ciFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.termRiderDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.termRiderFlag" cssClass="fontForm" id="cepr01030103Form.termRiderFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.termRiderFlagIsDisabled}" onclick="handleClickTermRiderFlag(this.checked);"/>
+        <label for="cepr01030103Form.termRiderFlag">
+            <fmt:message key="words.termRider"/>
+        </label>
+    </td>
+    <td colspan="3" style="text-align: left;">
+        <form:input path="cepr01030103Form.termRiderAmount" cssClass="fontForm" disabled="${cepr01030000HoldingForm.cepr01030103Form.termRiderAmountIsDisabled}" onfocus="showForm( 'termRiderAmountHelper', 'true' );" onblur="showForm( 'termRiderAmountHelper', 'false' );" onchange="this.value=formatCurrency( this.value );" onkeyup="showFormatCurrency('termRiderAmountHelper', this.value);" />
+        <input type="text" id="termRiderAmountHelper" disabled="disabled" style="display: none; font-family:Arial; font-size:11px" tabindex="-1"/>
+        <form:errors path="cepr01030103Form.termRiderFlag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ekaSehatDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ekaSehatFlag" cssClass="fontForm" id="cepr01030103Form.ekaSehatFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatFlagIsDisabled}" onclick="handleClickEkaSehatFlag(this.checked);"/>
+        <label for="cepr01030103Form.ekaSehatFlag">
+            <fmt:message key="words.ekaSehat"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.ekaSehatListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantEkaSehatIsDisabled" />
+       
+    
+        <form:select path="cepr01030103Form.ekaSehatCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantEkaSehatIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantEkaSehat'; checkEvent()" onmouseover="changeButtonParticipantEkaSehatToGlow();" onmouseout="changeButtonParticipantEkaSehatToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantEkaSehatId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.ekaSehatFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ekaSehatInnerLimitDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ekaSehatInnerLimitFlag" cssClass="fontForm" id="cepr01030103Form.ekaSehatInnerLimitFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatInnerLimitFlagIsDisabled}" onclick="handleClickEkaSehatInnerLimitFlag(this.checked);"/>
+        <label for="cepr01030103Form.ekaSehatInnerLimitFlag">
+            <fmt:message key="words.ekaSehatIL"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.ekaSehatInnerLimitListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantEkaSehatInnerLimitIsDisabled" />
+       
+    
+        <form:select path="cepr01030103Form.ekaSehatInnerLimitCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatInnerLimitList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatInnerLimitListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantEkaSehatInnerLimitIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantEkaSehatInnerLimit'; checkEvent()" onmouseover="changeButtonParticipantEkaSehatInnerLimitToGlow();" onmouseout="changeButtonParticipantEkaSehatInnerLimitToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantEkaSehatInnerLimitId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.ekaSehatInnerLimitFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ladiesInsDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ladiesInsFlag" cssClass="fontForm" id="cepr01030103Form.ladiesInsFlag" value="true" 
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesInsFlagIsDisabled}" onclick="handleClickLadiesInsFlag(this.checked);"/>
+        <label for="cepr01030103Form.ladiesInsFlag">
+            <fmt:message key="words.ladiesIns"/>
+        </label>
+    </td>
+        <td>
+          <form:select path="cepr01030103Form.ladiesInsCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ladiesInsList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesInsListIsDisabled}"
+                />
+                 </td>
+                <td class="fontForm">
+  <form:select path="cepr01030103Form.ladiesInsChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ladiesInsChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesInsChooseListIsDisabled}"
+                />
+                % UP
+                
+        </td>
+   
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.ladiesInsFlag" cssClass="comErrorColor"/>
+    </td>
+
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ladiesMedExpenseFlag" cssClass="fontForm" id="cepr01030103Form.ladiesMedExpenseFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseFlagIsDisabled}" onclick="handleClickLadiesMedExpenseFlag(this.checked);"/>
+        <label for="cepr01030103Form.ladiesMedExpenseFlag">
+            <fmt:message key="words.ladiesMedExpense"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.ladiesMedExpenseListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantLadiesMedExpenseIsDisabled" />
+       
+    
+        <form:select path="cepr01030103Form.ladiesMedExpenseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantLadiesMedExpenseIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantLadiesMedExpense'; checkEvent()" onmouseover="changeButtonParticipantLadiesMedExpenseToGlow();" onmouseout="changeButtonParticipantLadiesMedExpenseToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantLadiesMedExpenseId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.ladiesMedExpenseFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseInnerLimitDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ladiesMedExpenseInnerLimitFlag" cssClass="fontForm" id="cepr01030103Form.ladiesMedExpenseInnerLimitFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseInnerLimitFlagIsDisabled}" onclick="handleClickLadiesMedExpenseInnerLimitFlag(this.checked);"/>
+        <label for="cepr01030103Form.ladiesMedExpenseInnerLimitFlag">
+            <fmt:message key="words.ladiesMedExpenseInnerLimit"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.ladiesMedExpenseInnerLimitListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantLadiesMedExpenseInnerLimitIsDisabled" />
+       
+    
+        <form:select path="cepr01030103Form.ladiesMedExpenseInnerLimitCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseInnerLimitList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ladiesMedExpenseInnerLimitListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantLadiesMedExpenseInnerLimitIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantLadiesMedExpenseInnerLimit'; checkEvent()" onmouseover="changeButtonParticipantLadiesMedExpenseInnerLimitToGlow();" onmouseout="changeButtonParticipantLadiesMedExpenseInnerLimitToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantLadiesMedExpenseInnerLimitId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.ladiesMedExpenseInnerLimitFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.scholarshipDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.scholarshipFlag" cssClass="fontForm" id="cepr01030103Form.scholarshipFlag" value="true" 
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.scholarshipFlagIsDisabled}" onclick="handleClickScholarshipFlag(this.checked);"/>
+        <label for="cepr01030103Form.scholarshipFlag">
+            <fmt:message key="words.scholarship"/>
+        </label>
+    </td>
+        <td>
+          <form:select path="cepr01030103Form.scholarshipCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.scholarshipList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.scholarshipListIsDisabled}"
+                />
+                 </td>
+                <td>
+  <form:select path="cepr01030103Form.scholarshipChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.scholarshipChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.scholarshipChooseListIsDisabled}"
+                />
+        </td>
+   
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.scholarshipFlag" cssClass="comErrorColor"/>
+    </td>
+
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.babyDisplay}">
+     <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.babyFlag" cssClass="fontForm" id="cepr01030103Form.babyFlag" value="true" 
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.babyFlagIsDisabled}" onclick="handleClickBabyFlag(this.checked);"/>
+        <label for="cepr01030103Form.babyFlag">
+        
+            <fmt:message key="words.baby"/>
+        </label>
+    </td>
+        <td>
+  <form:select path="cepr01030103Form.babyCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.babyList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.babyListIsDisabled}"
+                />    
+                       
+        
+    </td>
+     <td class="fontForm">   
+     Bulan Ke-
+ 	<form:select path="cepr01030103Form.babyChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.babyChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.babyChooseListIsDisabled}"
+                />
+        </td>
+    <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.babyFlag" cssClass="comErrorColor"/>
+    </td>
+
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.earlyStageCi99Display}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.earlyStageCi99Flag" cssClass="fontForm" id="cepr01030103Form.earlyStageCi99Flag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.earlyStageCi99FlagIsDisabled}" onclick="handleClickEsci99Flag(this.checked);"/>
+        <label for="cepr01030103Form.earlyStageCi99Flag">
+            <fmt:message key="words.earlyStageCi99"/>
+        </label>
+    </td>
+    <!-- /**Pembukaan UP untuk rider Critical Illness, ESCI 99 dan Term Insurance**/ -->
+
+    <td colspan="3" style="text-align: left;">
+        <form:input path="cepr01030103Form.esci99RiderAmount" cssClass="fontForm" disabled="${cepr01030000HoldingForm.cepr01030103Form.esci99RiderAmountIsDisabled}" onfocus="showForm( 'esci99RiderAmountHelper', 'true' );" onblur="showForm( 'esci99RiderAmountHelper', 'false' );" onchange="this.value=formatCurrency( this.value );" onkeyup="showFormatCurrency('esci99RiderAmountHelper', this.value);" />
+        <input type="text" id="esci99RiderAmountHelper" disabled="disabled" style="display: none; font-family:Arial; font-size:11px" tabindex="-1"/>
+        <form:errors path="cepr01030103Form.earlyStageCi99Flag" cssClass="comErrorColor"/>
+    </td>
+    <td>&nbsp;
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.medicalPlusDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.medicalPlusFlag" cssClass="fontForm" id="cepr01030103Form.medicalPlusFlag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusFlagIsDisabled}" onclick="handleClickMedicalPlusFlag(this.checked);"/>
+        <label for="cepr01030103Form.medicalPlusFlag">
+            <fmt:message key="words.medicalPlus"/>
+        </label>
+     </td>
+  	 <td class="fontForm">    
+        <form:select path="cepr01030103Form.medicalPlusChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusChooseListIsDisabled}"/> &nbsp;
+    </td>      
+    
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantMedicalPlus'; checkEvent()" onmouseover="changeButtonParticipantMedicalPlusToGlow();" onmouseout="changeButtonParticipantMedicalPlusToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantMedicalPlusId"> 
+		</a>
+			</div>
+    </td>   
+     <td colspan="3" style="text-align: left;">
+        <form:errors path="cepr01030103Form.medicalPlusFlag" cssClass="comErrorColor"/>
+    </td>
+</tr>
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.medicalPlusDisplay}">
+	<td class="fontForm"> 
+  	 &nbsp;&nbsp;&nbsp; &nbsp;
+      <form:checkbox path="cepr01030103Form.medicalPlusRjFlag" cssClass="fontForm" id="cepr01030103Form.medicalPlusRjFlag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusRjFlagIsDisabled}" onclick="handleClickMedicalPlusRjFlag(this.checked);"/>  <fmt:message key="words.medicalPlusRj"/>                
+      &nbsp;&nbsp;
+        <form:checkbox path="cepr01030103Form.medicalPlusRgFlag" cssClass="fontForm" id="cepr01030103Form.medicalPlusRgFlag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusRgFlagIsDisabled}" onclick=""/> <fmt:message key="words.medicalPlusRg"/>      
+     &nbsp;&nbsp;
+        <form:checkbox path="cepr01030103Form.medicalPlusRbFlag" cssClass="fontForm" id="cepr01030103Form.medicalPlusRbFlag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusRbFlagIsDisabled}" onclick=""/> <fmt:message key="words.medicalPlusRb"/>      
+     &nbsp;&nbsp;
+        <form:checkbox path="cepr01030103Form.medicalPlusPkFlag" cssClass="fontForm" id="cepr01030103Form.medicalPlusPkFlag" value="true"
+        disabled="${cepr01030000HoldingForm.cepr01030103Form.medicalPlusPkFlagIsDisabled}" onclick=""/> <fmt:message key="words.medicalPlusPk"/>      
+    </td>
+
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.ekaSehatExtraDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.ekaSehatExtraFlag" cssClass="fontForm" id="cepr01030103Form.ekaSehatExtraFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatExtraFlagIsDisabled}" onclick="handleClickEkaSehatExtraFlag(this.checked);"/>
+        <label for="cepr01030103Form.ekaSehatExtraFlag">
+            <fmt:message key="words.ekaSehatExtra"/>
+        </label>
+    </td>
+    <td style="text-align: left;">
+        <form:hidden path="cepr01030103Form.ekaSehatExtraListIsDisabled" />
+        <form:hidden path="cepr01030103Form.buttonParticipantEkaSehatExtraIsDisabled" />
+       
+    
+        <form:select path="cepr01030103Form.ekaSehatExtraCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatExtraList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.ekaSehatExtraListIsDisabled}"
+                />
+        <c:set var="buttonDisabledAddition" value=""/>
+        <c:if test="${cepr01030000HoldingForm.cepr01030103Form.buttonParticipantEkaSehatExtraIsDisabled=='true'}">
+            <c:set var="buttonDisabledAddition" value="disabled"/>
+        </c:if>
+        
+        
+    </td>
+    <td style="text-align: left;"><div>
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonParticipantEkaSehatExtra'; checkEvent()" onmouseover="changeButtonParticipantEkaSehatExtraToGlow();" onmouseout="changeButtonParticipantEkaSehatExtraToNormal();">
+		<img src="${path}/include/images/bt_peserta.gif"  alt="" style="border: 0;" id="buttonParticipantEkaSehatExtraId"> 
+		</a>
+			</div>
+        </td>
+    <td style="text-align: left;">
+		<form:errors path="cepr01030103Form.ekaSehatExtraFlag" cssClass="comErrorColor"/>
+	
+	&nbsp;
+	</td>
+    <td>&nbsp;
+        
+    </td>
+</tr>
+
+<tr style="display: ${cepr01030000HoldingForm.cepr01030103Form.term5575RiderDisplay}">
+    <td class="fontForm">
+        <form:checkbox path="cepr01030103Form.term5575RiderFlag" cssClass="fontForm" id="cepr01030103Form.term5575RiderFlag" value="true" disabled="${cepr01030000HoldingForm.cepr01030103Form.term5575RiderFlagIsDisabled}" onclick="handleClickTerm5575RiderFlag(this.checked);"/>
+        <label for="cepr01030103Form.term5575RiderFlag">
+            <fmt:message key="words.term5575Rider"/>
+        </label>
+    </td>
+       
+    <td  style="text-align: left;">
+        <form:input path="cepr01030103Form.term5575RiderAmount" cssClass="fontForm" disabled="${cepr01030000HoldingForm.cepr01030103Form.term5575RiderAmountIsDisabled}" onfocus="showForm( 'term5575RiderAmountHelper', 'true' );" onblur="showForm( 'term5575RiderAmountHelper', 'false' );" onchange="this.value=formatCurrency( this.value );" onkeyup="showFormatCurrency('term5575RiderAmountHelper', this.value);" />
+        <input type="text" id="term5575RiderAmountHelper" disabled="disabled" style="display: none; font-family:Arial; font-size:11px" tabindex="-1"/>
+    </td>
+    
+      <td>
+        <form:select path="cepr01030103Form.term5575RiderChooseCd" cssClass="fontForm"
+                     items="${cepr01030000HoldingForm.cepr01030103Form.term5575RiderChooseList}"
+                     itemLabel="label" itemValue="value"
+                     disabled="${cepr01030000HoldingForm.cepr01030103Form.term5575RiderChooseListIsDisabled}"
+                />
+    </td>
+    
+      <td colspan="3" style="text-align: left;">
+            <form:errors path="cepr01030103Form.term5575RiderFlag" cssClass="comErrorColor"/>
+    
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">
+        <br/>
+        <input type="hidden" id="targetParam"/>
+        <input type="hidden" name="theEvent" id="theEvent"/>
+        
+    </td>
+</tr>
+
+</table>
+	  
+	  </TD>
+	</TR>
+	<TR>   
+		
+		<TD ><div align="center">
+		<a href="#" onclick="document.forms[ 0 ].theEvent.value='onPressButtonOk'; checkEvent()" onmouseover="changeButtonOkToGlow();" onmouseout="changeButtonOkToNormal();">
+		<img src="${path}/include/images/bt_ok.gif"  alt="" style="border: 0;" id="buttonOkId"> 
+		</a>
+		</div></TD>
+		
+		<TD COLSPAN=2><div align="center">
+		<a href="#" onclick="" onmouseover="changeButtonResetToGlow();" onmouseout="changeButtonResetToNormal();">
+		<img src="${path}/include/images/bt_reset.gif"  alt="" style="border: 0;" id="buttonResetId">
+		</a>
+	    </div></TD>
+	    
+		
+		<TD COLSPAN=5>&nbsp;			</TD>
+    </TR>
+	
+	<TR>
+	  <TD  colspan="9">&nbsp;
+	  
+		</TD>
+  </TR>
+   <c:if test="${cepr01030000HoldingForm.credentialsVO.msagId != '999993'}">
+	<TR>
+		<TD height="19" style="background-image:url(${path}/include/images/web_proposal_38.jpg); ">&nbsp;			</TD>
+		<TD COLSPAN=9 style="background-image:url(${path}/include/images/web_proposal_39.jpg); ">&nbsp;			</TD>
+		<TD style="background-image:url(${path}/include/images/web_proposal_40.jpg); ">&nbsp;			</TD>
+    </TR>
+	<TR>
+		<TD height="100" COLSPAN=13 style="background-image:url(${path}/include/images/web_proposal_41.jpg); ">			<div align="center" class="fontBot">Copyright &copy; 2023 PT MSIG Life Insurance Indonesia Tbk  All Right Reserved.<br>
+		  Head Office: Sinarmas MSIG Tower Lantai 6  <br>
+		Jl. Jend. Sudirman Kav. 21, Jakarta 12920  <br>
+		Telp: (021) 5060 9999 atau (021) 2650 8300  <br>	
+		Website: www.msiglife.co.id  
+		</div></TD>
+	</TR>
+	</c:if>
+	<TR>
+		<TD height="1">
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=178 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=38 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=135 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=71 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=68 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=150 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=64 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=223 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=79 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=7 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=50 HEIGHT=1 ALT=""></TD>
+		<TD>
+			<IMG SRC="${path}/include/images/spacer.gif" WIDTH=40 HEIGHT=1 ALT=""></TD>
+		<TD></TD>
+    </TR>
+</TABLE>
+</form:form>
+
+
+</BODY>
+</HTML>

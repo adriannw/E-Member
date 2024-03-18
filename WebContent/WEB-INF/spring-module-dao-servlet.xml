@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>Spring Mapping, Servlets, and Controller</description>
+
+
+
+	<!-- ========== Data Access Objects ========== -->
+
+    <!--Dao Parent-->
+    <bean id="eproposalDao" class="id.co.sinarmaslife.eproposal.common.parent.EproposalDao">
+        <property name="sqlMapClient">
+		    <bean class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		        <property name="configLocation" value="WEB-INF/ibatis-sql-map.xml" />
+				<property name="dataSource" ref="eproposalDataSource"/>
+		    </bean>
+		</property>
+    </bean>
+ 
+    <!--Collection of DAO instance-->
+    <bean id="cepr00000000CommonDao" class="id.co.sinarmaslife.eproposal.dao.Cepr00000000CommonDao" parent="eproposalDao"/>
+    <bean id="cepr01010101Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01010101Dao" parent="eproposalDao"/>
+    <bean id="cepr01020201Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01020201Dao" parent="eproposalDao"/>
+    <bean id="cepr01020202Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01020202Dao" parent="eproposalDao"/>
+    <bean id="cepr01020301Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01020301Dao" parent="eproposalDao"/>
+    <bean id="cepr01020401Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01020401Dao" parent="eproposalDao"/>
+    <bean id="cepr01030101Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01030101Dao" parent="eproposalDao"/>
+    <bean id="cepr01030102Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01030102Dao" parent="eproposalDao"/>
+    <bean id="cepr01030501Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01030501Dao" parent="eproposalDao"/>
+    <bean id="cepr01030502Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01030502Dao" parent="eproposalDao"/>
+
+    <!--products Dao-->
+    <!--non unit link products-->
+    <bean id="cepr01040101Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040101Dao" parent="eproposalDao"/>
+    <bean id="cepr01040102Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040102Dao" parent="eproposalDao"/>
+    <bean id="cepr01040103Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040103Dao" parent="eproposalDao"/>
+    <bean id="cepr01040104Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040104Dao" parent="eproposalDao"/>
+    <bean id="cepr01040105Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040105Dao" parent="eproposalDao"/>
+    <bean id="cepr01040106Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040106Dao" parent="eproposalDao"/>
+    <bean id="cepr01040107Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040107Dao" parent="eproposalDao"/>
+    <bean id="cepr01040108Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040108Dao" parent="eproposalDao"/>
+    <bean id="cepr01040109Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040109Dao" parent="eproposalDao"/>
+    <bean id="cepr01040110Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040110Dao" parent="eproposalDao"/>
+    <bean id="cepr01040111Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040111Dao" parent="eproposalDao"/>
+    <bean id="cepr01040112Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040112Dao" parent="eproposalDao"/>
+    <bean id="cepr01040113Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040113Dao" parent="eproposalDao"/>
+    <bean id="cepr01040114Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040114Dao" parent="eproposalDao"/>
+    <bean id="cepr01040115Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040115Dao" parent="eproposalDao"/>
+    <bean id="cepr01040116Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040116Dao" parent="eproposalDao"/>
+    <bean id="cepr01040117Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040117Dao" parent="eproposalDao"/>
+    <bean id="cepr01040118Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040118Dao" parent="eproposalDao"/>
+    <bean id="cepr01040119Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040119Dao" parent="eproposalDao"/>
+    <bean id="cepr01040120Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040120Dao" parent="eproposalDao"/>
+    <bean id="cepr01040121Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040121Dao" parent="eproposalDao"/>
+    <bean id="cepr01040124Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040124Dao" parent="eproposalDao"/>
+    <bean id="cepr01040125Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040125Dao" parent="eproposalDao"/>
+    <bean id="cepr01040126Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040126Dao" parent="eproposalDao"/>
+    <bean id="cepr01040127Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040127Dao" parent="eproposalDao"/>
+    <bean id="cepr01040128Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040128Dao" parent="eproposalDao"/>
+    <bean id="cepr01040130Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040130Dao" parent="eproposalDao"/>
+    <bean id="cepr01040131Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040131Dao" parent="eproposalDao"/>
+    <bean id="cepr01040133Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040133Dao" parent="eproposalDao"/>
+    <bean id="cepr01040136Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040136Dao" parent="eproposalDao"/>
+    <bean id="cepr01040137Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040137Dao" parent="eproposalDao"/>
+   	<bean id="cepr01040147Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040147Dao" parent="eproposalDao"/>
+    <!--unit link products-->
+    <bean id="cepr01040201Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040201Dao" parent="eproposalDao"/>
+    <bean id="cepr01040202Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040202Dao" parent="eproposalDao"/>
+    <bean id="cepr01040203Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040203Dao" parent="eproposalDao"/>
+    <bean id="cepr01040204Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040204Dao" parent="eproposalDao"/>
+    <bean id="cepr01040205Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040205Dao" parent="eproposalDao"/>
+    <bean id="cepr01040206Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040206Dao" parent="eproposalDao"/>
+    <bean id="cepr01040207Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040207Dao" parent="eproposalDao"/>
+    <bean id="cepr01040208Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040208Dao" parent="eproposalDao"/>
+    <bean id="cepr01040209Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040209Dao" parent="eproposalDao"/>
+    <bean id="cepr01040210Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040210Dao" parent="eproposalDao"/>
+    <bean id="cepr01040211Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040211Dao" parent="eproposalDao"/>
+    <bean id="cepr01040212Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040212Dao" parent="eproposalDao"/>
+    <bean id="cepr01040213Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040213Dao" parent="eproposalDao"/>
+    <bean id="cepr01040214Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040214Dao" parent="eproposalDao"/>
+    <bean id="cepr01040215Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040215Dao" parent="eproposalDao"/>
+    <bean id="cepr01040216Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040216Dao" parent="eproposalDao"/>
+	<bean id="cepr01040219Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040219Dao" parent="eproposalDao"/>
+	<bean id="cepr01040220Dao" class="id.co.sinarmaslife.eproposal.dao.Cepr01040220Dao" parent="eproposalDao"/>
+</beans>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>Spring Mapping</description>
+
+<!-- Unsecured URL Mappings -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="alwaysUseFullPath" value="true" />
+        <property name="mappings">
+            <props>
+                <prop key="/wepr01010101.htm">cepr01010101Controller</prop>
+            </props>
+        </property>
+    </bean>
+
+<!-- Secured URL Mappings -->
+    <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">     
+        <property name="mappings">
+            <props>
+                <prop key="/wepr00000000.htm">cepr00000000Controller</prop>
+
+                <prop key="/wepr01010102.htm">cepr01010102Controller</prop>
+                <prop key="/wepr01030000.htm">cepr01030000Controller</prop>
+                <prop key="/wepr01050000.htm">cepr01050000Controller</prop>
+                <prop key="/wepr01020000.htm">cepr01020000Controller</prop>
+
+                <!--these are other download-->
+                <prop key="/wepr01030302.pdf">cepr01030302DownloadController</prop>
+                <prop key="/wepr01030402.pdf">cepr01030402DownloadController</prop>
+                <prop key="/wepr01030601.pdf">cepr01030601DownloadController</prop>
+                <prop key="/wepr01030801.pdf">cepr01030801DownloadController</prop>
+                <prop key="/wepr01030802.pdf">cepr01030802DownloadController</prop>
+                <prop key="/wepr01030803.pdf">cepr01030803DownloadController</prop>
+				<prop key="/wepr01030902.pdf">cepr01030902DownloadController</prop>
+				<prop key="/wepr01030904.pdf">cepr01030904DownloadController</prop>
+				
+                <!--these are products downloads-->
+                <!--products non unit link-->
+                <prop key="/wepr01040101.pdf">cepr01040101DownloadController</prop>
+                <prop key="/wepr01040102.pdf">cepr01040102DownloadController</prop>
+                <prop key="/wepr01040103.pdf">cepr01040103DownloadController</prop>
+                <prop key="/wepr01040104.pdf">cepr01040104DownloadController</prop>
+                <prop key="/wepr01040105.pdf">cepr01040105DownloadController</prop>
+                <prop key="/wepr01040106.pdf">cepr01040106DownloadController</prop>
+                <prop key="/wepr01040107.pdf">cepr01040107DownloadController</prop>
+                <prop key="/wepr01040108.pdf">cepr01040108DownloadController</prop>
+                <prop key="/wepr01040109.pdf">cepr01040109DownloadController</prop>
+                <prop key="/wepr01040110.pdf">cepr01040110DownloadController</prop>
+                <prop key="/wepr01040111.pdf">cepr01040111DownloadController</prop>
+                <prop key="/wepr01040112.pdf">cepr01040112DownloadController</prop>
+				<prop key="/wepr01040113.pdf">cepr01040113DownloadController</prop>
+				<prop key="/wepr01040114.pdf">cepr01040114DownloadController</prop>
+				<prop key="/wepr01040115.pdf">cepr01040115DownloadController</prop>
+				<prop key="/wepr01040116.pdf">cepr01040116DownloadController</prop>
+				<prop key="/wepr01040117.pdf">cepr01040117DownloadController</prop>
+				<prop key="/wepr01040118.pdf">cepr01040118DownloadController</prop>
+				<prop key="/wepr01040119.pdf">cepr01040119DownloadController</prop>
+				<prop key="/wepr01040120.pdf">cepr01040120DownloadController</prop>
+				<prop key="/wepr01040121.pdf">cepr01040121DownloadController</prop>
+				<prop key="/wepr01040122.pdf">cepr01040122DownloadController</prop>
+				<prop key="/wepr01040123.pdf">cepr01040123DownloadController</prop>
+				<prop key="/wepr01040124.pdf">cepr01040124DownloadController</prop>
+				<prop key="/wepr01040125.pdf">cepr01040125DownloadController</prop>
+				<prop key="/wepr01040126.pdf">cepr01040126DownloadController</prop>
+				<prop key="/wepr01040127.pdf">cepr01040127DownloadController</prop>
+				<prop key="/wepr01040129.pdf">cepr01040129DownloadController</prop>
+				<prop key="/wepr01040128.pdf">cepr01040128DownloadController</prop>
+				<prop key="/wepr01040130.pdf">cepr01040130DownloadController</prop>
+				<prop key="/wepr01040131.pdf">cepr01040131DownloadController</prop>
+				<prop key="/wepr01040132.pdf">cepr01040132DownloadController</prop>
+				<prop key="/wepr01040133.pdf">cepr01040133DownloadController</prop>
+				<prop key="/wepr01040134.pdf">cepr01040134DownloadController</prop>
+				<prop key="/wepr01040135.pdf">cepr01040135DownloadController</prop>
+				<prop key="/wepr01040137.pdf">cepr01040137DownloadController</prop>
+				<prop key="/wepr01040140.pdf">cepr01040140DownloadController</prop>
+				<prop key="/wepr01040141.pdf">cepr01040141DownloadController</prop>
+				<prop key="/wepr01040142.pdf">cepr01040142DownloadController</prop>
+				<prop key="/wepr01040143.pdf">cepr01040143DownloadController</prop>
+				<prop key="/wepr01040144.pdf">cepr01040144DownloadController</prop>
+				<prop key="/wepr01040145.pdf">cepr01040145DownloadController</prop>
+				<prop key="/wepr01040146.pdf">cepr01040146DownloadController</prop>
+				<prop key="/wepr01040147.pdf">cepr01040147DownloadController</prop>
+				<prop key="/wepr01040148.pdf">cepr01040148DownloadController</prop>
+				<prop key="/wepr01040149.pdf">cepr01040149DownloadController</prop>
+				<prop key="/wepr01040150.pdf">cepr01040150DownloadController</prop>
+				<prop key="/wepr01040151.pdf">cepr01040151DownloadController</prop> 
+				<prop key="/wepr01040152.pdf">cepr01040152DownloadController</prop>
+				<prop key="/wepr01040153.pdf">cepr01040153DownloadController</prop>
+				
+                <!--product unit link-->
+                <prop key="/wepr01040201.pdf">cepr01040201DownloadController</prop>
+                <prop key="/wepr01040202.pdf">cepr01040202DownloadController</prop>
+                <prop key="/wepr01040203.pdf">cepr01040203DownloadController</prop>
+                <prop key="/wepr01040204.pdf">cepr01040204DownloadController</prop>
+                <prop key="/wepr01040205.pdf">cepr01040205DownloadController</prop>
+                <prop key="/wepr01040206.pdf">cepr01040206DownloadController</prop>
+                <prop key="/wepr01040207.pdf">cepr01040207DownloadController</prop>
+                <prop key="/wepr01040208.pdf">cepr01040208DownloadController</prop>
+                <prop key="/wepr01040209.pdf">cepr01040209DownloadController</prop>
+                <prop key="/wepr01040210.pdf">cepr01040210DownloadController</prop>
+                <prop key="/wepr01040211.pdf">cepr01040211DownloadController</prop>
+                <prop key="/wepr01040212.pdf">cepr01040212DownloadController</prop>
+                <prop key="/wepr01040213.pdf">cepr01040213DownloadController</prop>
+                <prop key="/wepr01040214.pdf">cepr01040214DownloadController</prop>
+                <prop key="/wepr01040215.pdf">cepr01040215DownloadController</prop>
+                <prop key="/wepr01040216.pdf">cepr01040216DownloadController</prop>
+                <prop key="/wepr01040218.pdf">cepr01040218DownloadController</prop>
+                <prop key="/wepr01040219.pdf">cepr01040219DownloadController</prop>  
+                <prop key="/wepr01040220.pdf">cepr01040220DownloadController</prop>   
+                <prop key="/wepr01040221.pdf">cepr01040221DownloadController</prop> 
+                <prop key="/wepr01040222.pdf">cepr01040222DownloadController</prop>
+                <prop key="/wepr01040223.pdf">cepr01040223DownloadController</prop>
+                <prop key="/wepr01040224.pdf">cepr01040224DownloadController</prop>
+                <prop key="/wepr01040225.pdf">cepr01040225DownloadController</prop>               
+                <prop key="/wepr01040227.pdf">cepr01040227DownloadController</prop>
+                <prop key="/wepr01040228.pdf">cepr01040228DownloadController</prop>
+                <prop key="/wepr01040139.pdf">cepr01040139DownloadController</prop>
+                <prop key="/wepr01040229.pdf">cepr01040229DownloadController</prop>
+                <prop key="/wepr01040136.pdf">cepr01040136DownloadController</prop>
+
+                <prop key="/wepr00000001.htm">cepr00000001Controller</prop>
+                <prop key="/wepr00000002.htm">cepr00000002Controller</prop>
+                <prop key="/wepr00000003.htm">cepr00000003Controller</prop>
+                <prop key="/wepr00000004.htm">cepr00000004Controller</prop>
+                <prop key="/wepr00000005.htm">cepr00000005Controller</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

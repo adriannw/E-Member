@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_term_5575" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="2" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Term Insurance"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderTerm5575" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderTerm5575]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaMaxTerm" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaMaxTerm]]></parameterDescription>
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan1' as subject, 'R-100' as descr, ' 1 ' as term
+from dual
+union
+select 'Jenis Santunan2' as subject, 'R-200' as descr, ' 2  ' as term
+from dual
+union
+select 'Jenis Santunan3' as subject, 'R-300' as descr, '  3 ' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<pageHeader>
+		<band height="541">
+			<textField hyperlinkType="None">
+				<reportElement x="129" y="10" width="265" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title} + " "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="180" width="233" height="19"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isItalic="false" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Term Insurance "]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="38" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderTerm5575}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="204" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="125" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderTerm5575}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="87" width="497" height="15"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="244" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="145" width="505" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="111" width="114" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isItalic="false" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="69" width="129" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isItalic="false" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="287" width="13" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="16" y="348" width="545" height="183"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="24" y="204" width="489" height="32"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Apabila Tertanggung meninggal dunia sebelum usia "+ $P{usiaMaxTerm} + "tahun dan meninggalnya terjadi pada masa berlakunya Syarat-Syarat Khusus Asuransi Tambahan SMiLe Term Insurance maka Manfaat Asuransi yang akan dibayarkan sebesar 100% (seratus per seratus) Uang Pertanggungan Asuransi Tambahan SMiLe Term Insurance "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="24" y="244" width="485" height="32"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pembayaran Manfaat Asuransi sebagaimana dimaksud di dalam Syarat-Syarat Khusus Asuransi Tambahan SMiLe Term Insurance ini dilakukan setelah dikurangi dengan Biaya Asuransi terhutang yang timbul dari kekurangan pembayaran Biaya Asuransi dan Biaya Administrasi (Bila ada)."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="27" y="287" width="491" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Dalam hal Tertanggung masih hidup pada Tanggal Akhir Pertanggungan Asuransi Tambahan SMiLe Term Insurance "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="24" y="298" width="491" height="39"/>
+				<textElement markup="none">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" Penanggung tidak berkewajiban membayar bagian Uang Pertanggungan Asuransi Tambahan SMiLe Term Insurance "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46">
+			<frame>
+				<reportElement positionType="Float" x="16" y="12" width="545" height="24"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="33">
+			<frame>
+				<reportElement positionType="Float" x="16" y="4" width="545" height="24"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</pageFooter>
+</jasperReport>

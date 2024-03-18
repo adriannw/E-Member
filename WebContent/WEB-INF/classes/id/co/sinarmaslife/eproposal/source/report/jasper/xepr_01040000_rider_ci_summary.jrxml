@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_ci_summary" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderCiIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["11"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<summary>
+		<band height="128">
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="24" y="0" width="528" height="128" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Critical Illness  : \n" +
+"1. Apabila Tertanggung untuk yang pertama kali selama Pertanggungan, didiagnosa mengalami kondisi kritis salah satu penyakit Kanker Stadium I , II, atau III (yang dapat dibuktikan dengan hasil pemeriksaan Patologi Anatomi) maka akan dibayarkan manfaat Asuransi sebesar 20% Uang Pertanggungan sebanyak 1x (satu kali), dengan tetap memperhatikan maksimum total manfaat Asuransi pada nomor 3.  \n" +
+"2. Apabila Tertanggung untuk yang pertama kali didiagnosa mengalami kondisi kritis dari salah satu jenis 31 penyakit kritis yang dijamin dalam Asuransi Tambahan ini, maka akan dibayarkan manfaat Asuransi sebesar 100% Uang Pertanggungan atau sisa dari Uang Pertanggungan dalam hal ketentuan pada no 1 telah terpenuhi dan selanjutnya Asuransi berakhir.  \n" +
+"3. Maksimum total manfaat Asuransi untuk salah satu penyakit Kanker yang diderita pertama kali untuk Stadium I , II, atau III yang dapat dibayarkan bagi Tertanggung yang sama adalah sebesar Rp. 400.000.000,- untuk polis dalam mata uang rupiah atau sebesar US$. 40.000, - untuk polis dalam mata uang US Dollar, atau jumlah nilai yang setara Rp. 400.000.000, - apabila polis dalam mata uang rupiah dan US Dollar. \n" +
+"4. Maksimum total manfaat Asuransi tambahan atas salah satu dari 31 Jenis Penyakit Kritis (termasuk kondisi kritis salah satu penyakit kanker stadium I, II, atau III yang pertama kalinya jika diderita) yang dapat dibayarkan bagi Tertanggung yang sama adalah sebesar Rp. 5.000.000.000,- untuk polis dalam mata uang rupiah atau sebesar US$. 500.000, - untuk polis dalam mata uang US Dollar atau jumlah nilai yang setara Rp. 5.000.000.000, - apabila polis dalam mata uang rupiah dan US Dollar. Setelah total manfaat Asuransi ini dibayarkan, maka secara otomatis manfaat Asuransi Tambahan Penyakit Kritis ini akan berakhir."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="0" width="16" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderCiIndex}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

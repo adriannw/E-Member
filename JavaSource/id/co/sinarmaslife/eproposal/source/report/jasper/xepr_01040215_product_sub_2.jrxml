@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040215_product_sub_2" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeaderSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsStableLinkIllustration" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentChoiceSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentYield" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalAssumptionHi" class="java.lang.String"/>
+	<parameter name="totalAssumptionLow" class="java.lang.String"/>
+	<parameter name="totalAssumptionMid" class="java.lang.String"/>
+	<parameter name="totalInvestmentAllocation" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["STABLE LINK SYARIAH"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsNoteSekaligus" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsNoteBerkala" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="68">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="28" width="257" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderSmall}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header_small.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="48" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsStableLinkIllustration}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040111_illustration.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="256" y="28" width="273" height="18" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsInvestmentChoiceSmall}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_investment_choice_small.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement positionType="Float" x="120" y="0" width="321" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="394">
+			<subreport>
+				<reportElement positionType="Float" mode="Transparent" x="0" y="0" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsInvestmentYield}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_investment_yield.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="258" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="28" width="40" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Catatan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="39" width="520" height="20"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Estimasi Nilai Polis (akhir periode) diatas hanya merupakan ILLUSTRASI dan besarnya TIDAK DIJAMIN, tergantung pada kinerja investasi Penanggung dan tidak terlepas dari risiko investasi yang sepenuhnya menjadi tanggung jawab Pemegang Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="57" width="520" height="20"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pada Proposal ini diasumsikan bahwa investasi dilanjutkan (Roll Over) selama 5 periode ( 5 x Roll Over ) dengan memilih MTI lanjutan ( Roll Over ) adalah sama dengan MTI  di awal Asuransi.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="75" width="520" height="28"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi diatas adalah berdasarkan nilai unit dan asumsi tingkat hasil investasi (net) yang tetap per tahun. Asumsi hasil investasi bukan merupakan tolak ukur untuk perhitungan rata-rata tingkat pertumbuhan yang terendah dan tertinggi. Realisasi hasil pengembangan dapat lebih tinggi atau rendah dari tingkat pengembalian untuk ILLUSTRASI diatas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="102" width="520" height="55"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Illustrasi Estimasi Nilai Polis (akhir periode) diatas sudah memperhitungkan biaya investasi dan ditentukan dengan perumusan:
+ENP = (Total Premi + Target Investasi) + FBP x [ NP - (Total Premi + Target Investasi) ]
+        dimana: ENP = Estimasi Nilai Polis (akhir periode)
+                      ENP = Faktor Bonus Performance
+                      NP   = Nilai Polis
+Dimana besarnya Faktor Biaya Investasi ditetapkan oleh Penanggung sebagai berikut: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="102" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="177" width="520" height="12"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal diatas adalah Uang Pertanggungan ditambah dengan estimasi Nilai Polis (akhir periode).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="39" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="57" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="75" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="177" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="186" width="520" height="19"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Penarikan dan Penebusan Nilai Polis yang dilakukan sebelum Polis Berjalan lebih dari 3 (tiga) tahun akan dikenakan pajak penghasilan atas kelebihan Nilai Polis yang diambil terhadap Premi Sekaligus+ Premi Top-Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="186" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="204" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="204" width="520" height="28"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Apabila Pemegang Polis melakukan penarikan atau mengambil Nilai Polis bukan pada jatuh tempo Masa Target Investasi (MTI), maka besarnya Nilai Polis yang dibayarkan adalah sebesar Total Premi + Target Investasi + Bonus Performance dan dikenakan biaya penarikan sebesar 15% (lima belas perseratus), dan sejak saat itu Asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="231" width="520" height="10"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Illustrasi ini harus ditandatangani oleh Pemohon dan dilampirkan pada proposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="231" width="8" height="10"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="243" width="520" height="10"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Proposal ini hanya sebuah ILLUSTRASI, BUKAN SUATU KONTRAK ASURANSI, untuk penjelasan lebih lengkapnya lihat dokumen polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="156" width="81" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[MTI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="165" width="81" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[Faktor Biaya Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="104" y="156" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[3 bulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="104" y="165" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[2,5%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="136" y="156" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[6 bulan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="136" y="165" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[5,0%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="168" y="156" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Left">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[>=1 thn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="168" y="165" width="33" height="10"/>
+				<box border="1Point" topPadding="0" leftPadding="4" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[10,0%]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

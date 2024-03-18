@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01030302_letter" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="15" bottomMargin="15">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="3"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="5"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/MSIG_Logo.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="policyHolderName" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Andy"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2008"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="proposalUser" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Samuel Baktiar"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT 'EKALINK FAMILY' as productName FROM DUAL
+UNION
+SELECT 'DANA SEJAHTERA' as productName FROM DUAL
+UNION
+SELECT 'EKALINK 80' as productName FROM DUAL]]>
+	</queryString>
+	<field name="productName" class="java.lang.String"/>
+	<pageHeader>
+		<band height="380">
+			<textField hyperlinkType="None">
+				<reportElement x="84" y="80" width="421" height="16"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{policyHolderName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="59" y="65" width="446" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kepada Yth.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="140" width="449" height="231"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dengan hormat,
+
+Pada umumnya orang menghabiskan waktu hanya untuk mengamankan keuangan mereka yang diperuntukkan bagi masa depannya. Sebab masa depan yang cerah adalah impian bagi setiap orang. Dan untuk mencapainya hanya Anda sendiri yang dapat mewujudkannya. Anda tentu mendambakan keluarga dapat tinggal dirumah yang indah, anak-anak mendapatkan pendidikan yang bermutu, jaminan untuk hari tua atau bahkan untuk wiraswasta, meski resiko apapun yang menimpa diri Anda.
+
+PT Asuransi Jiwa Sinarmas MSIG Tbk. sebagai salah satu perusahaan asuransi jiwa terbesar di Indonesia, merupakan salah satu anak perusahaan Sinarmas Group. Dengan didukung tenaga-tenaga ahli dan profesional dalam bidangnya, kami memperkenalkan program asuransi jiwa sebagai alternatif investasi sekaligus proteksi yang tepat untuk Bapak/Ibu sekeluarga guna mewujudkan impian Anda.
+
+Dengan program asuransi yang dapat disesuaikan dengan kebutuhan setiap nasabah, investasi yang Anda tanamkan akan bertumbuh terus, sementara Anda dan keluarga tetap terlindung dari segala kemungkinan yang tidak Anda inginkan. Sebagai perkenalan kami ingin menginformasikan beberapa program asuransi jiwa yang sangat bermanfaat bagi Anda, yaitu:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="80" width="19" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Sdr.]]></text>
+			</staticText>
+			<image hyperlinkType="None">
+				<reportElement stretchType="RelativeToTallestObject" x="2" y="2" width="181" height="56"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="16">
+			<textField hyperlinkType="None">
+				<reportElement x="80" y="0" width="400" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{productName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="72" y="0" width="8" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="273">
+			<staticText>
+				<reportElement x="56" y="9" width="448" height="66"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Selanjutnya, kami akan menghubungi Bapak/Ibu untuk melakukan kunjungan singkat dan menjelaskan manfaat program tersebut serta mendiskusikan beberapa ide berharga mengenai rencana keuangan Bapak/Ibu di masa depan.
+
+Demikian kami sampaikan, untuk segala perhatian Bpk/Ibu kami ucapkan terima kasih.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="56" y="116" width="208" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="56" y="132" width="208" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Hormat Kami,]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="56" y="192" width="448" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{proposalUser}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

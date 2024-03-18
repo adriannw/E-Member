@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040129_uraian_sop" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="25" bottomMargin="3" isSummaryNewPage="true">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="tanggal" class="java.lang.String">
+		<parameterDescription><![CDATA[tanggal]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="340">
+			<staticText>
+				<reportElement x="16" y="15" width="505" height="247" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[•	 Penanggung mempunyai hak melakukan perubahan biaya asuransi yang akan dikenakan baik untuk polis baru maupun polis perpanjangan, dengan menginformasikan ke calon Pemegang Polis atau Pemegang Polis terlebih dahulu.
+•	 Informasi diatas dipersiapkan oleh PT MSIG Life Insurance Indonesia Tbk  dalam bentuk suatu rangkuman guna memberikan gambaran mengenai manfaat dari asuransi ini kepada anda. Segala persyaratan dan ketentuan secara lengkap dan terperinci terkait dengan asuransi ini, termasuk prosedur pengajuan klaim adalah sebagaimana yang tertulis di dalam polis. 
+]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="810">
+			<staticText>
+				<reportElement x="120" y="36" width="288" height="53"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[URAIAN STANDARD OPERATION PROCEDURE 
+PENANGANAN KELUHAN/ PENGADUAN NASABAH
+PT MSIG Life Insurance Indonesia Tbk
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="318" width="505" height="56"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nasabah akan memperoleh jawaban atas keluhannya dalam dalam waktu +20 hari kerja, dalam hal terjadi kondisi Kantor Penanggung tempat Nasabah menyampaikan keluhannya tidak sama dengan kantor Penanggung tempat terjadinya permasalahan dan terdapat kendala komunikasi, atau diperlukan penelitian khusus terhadap dokumen-dokumen Penanggung, atau adanya keterlibatan Pihak Ketiga, maka Penanggung akan mengirimkan pemberitahuan kepada Nasabah mengenai penambahan waktu yang dibutuhkan untuk menyelesaikan keluhan dari Nasabah.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="246" width="505" height="46"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila keluhan Nasabah di atas merupakan keluhan atas klaim manfaat produk maka petugas layanan pelanggan akan memberikan formulir keluhan pelanggan berikut permintaan untuk memberikan kronologis dan dokumen pendukungnya dan apabila keluhan tersebut sesuai dengan ketentuan peraturan yang dikeluarkan oleh Otoritas Jasa Keuangan dimana keluhan tersebut disampaikan paling lambat 30 hari sejak diketahui adanya ketidak sesuaian atas manfaat yang dijanjikan dengan manfaat/ tidak adanya manfaat yang diberikan ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="295" width="57" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahap III]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="223" width="57" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahap IIb]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="177" width="505" height="45"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Setelah dilakukan verifikasi, pertanyaan/ keluhan yang diterima oleh petugas layanan pelanggan akan diolah untuk memberikan jawaban terbaik atas pertanyaan nasabah (dihari yang sama apabila melalui telepon/ +1 hari kerja apabila melalui e-mail) atau solusi atas keluhan nasabah (non-claim manfaat produk) akan diselesaikan dalam waktu +1 hari kerja, apabila dalam waktu +1 hari kerja tersebut petugas layanan pelanggan akan menghubungi nasabah untuk menyampaikan bahwa keluhan yang bersangkutan sedang dalam proses.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="154" width="57" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahap IIa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="95" width="57" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahap I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="738" width="88" height="10"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tanda Tangan Agen :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="8" y="728" width="225" height="10"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Kode Agen : "+$P{agentCode}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="8" y="699" width="201" height="10"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="232" y="710" width="272" height="32"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pernyataan Pemohon :
+Saya menyatakan telah membaca dan mengerti isi proposal dan illustrasi terlampir.
+Tanda Tangan Pemohon :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="8" y="791" width="208" height="10"/>
+				<box topPadding="1" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="8" y="719" width="225" height="9">
+					<printWhenExpression><![CDATA[new Boolean($P{agentName}!= null)]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Disajikan Oleh : " + $P{agentName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="8" y="709" width="225" height="10">
+					<printWhenExpression><![CDATA[new Boolean($P{agentName}!= null)]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="7" isBold="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["No Proposal : " +$P{no_proposal}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="801" width="89" height="8"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[ResourceBundle.getBundle("eproposal").getString("proposal.version") + "(EP)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="381" width="57" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahap IV]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="401" width="505" height="38"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila dicapai kesepakatan diantara nasabah dengan PT MSIG Life Insurance Indonesia Tbk (penanggung) maka keluhan/ pengaduan dianggap selesai. Namun apabila tidak tercapai kesepakatan maka nasabah dapat meminta untuk difasilitasi oleh Otoritas Jasa Keuangan atau melalui Lembaga Alternatif Penyelesaian Sengketa (LAPS) atau melalui Pengadilan Negeri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="112" width="505" height="36"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nasabah dapat menyampaikan pertanyaan/keluhan atas produk dan atau layanan kepada PT MSIG Life Insurance Indonesia Tbk (Penanggung) melalui Layanan Pelanggan di (021) 5060 9999 atau (021) 2650 8300 atau e-mail cs@msiglife.co.id untuk selanjutnya dilakukan verifikasi apakah informasi yang disampaikan dilakukan oleh Nasabah sebenarnya. ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

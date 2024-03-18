@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040204_product" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentChoice" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsMonthlyPremium" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalInvestmentAllocation" class="java.lang.String"/>
+	<parameter name="dsCommonHeaderSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalAssumptionMid" class="java.lang.String"/>
+	<parameter name="totalAssumptionHi" class="java.lang.String"/>
+	<parameter name="dsInvestmentChoiceSmall" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentYield" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalAssumptionLow" class="java.lang.String"/>
+	<parameter name="dsEkalinkIllustration" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsInvestmentPerformance" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPa" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcp" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcpFamily" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorTpdDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorCiDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorSpouseTpdDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiverTpd" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiverCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderTpd" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsOneRow" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Surabaya, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<defaultValueExpression><![CDATA["0101010101"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderPaIndex" class="java.lang.String"/>
+	<parameter name="riderHcpIndex" class="java.lang.String"/>
+	<parameter name="riderHcpFamilyIndex" class="java.lang.String"/>
+	<parameter name="riderPayorTpdDeathIndex" class="java.lang.String"/>
+	<parameter name="riderPayorCiDeathIndex" class="java.lang.String"/>
+	<parameter name="riderPayorCiIndex" class="java.lang.String"/>
+	<parameter name="riderPayorSpouseTpdDeathIndex" class="java.lang.String"/>
+	<parameter name="riderWaiverTpdIndex" class="java.lang.String"/>
+	<parameter name="riderWaiverCiIndex" class="java.lang.String"/>
+	<parameter name="riderTpdIndex" class="java.lang.String"/>
+	<parameter name="riderCiIndex" class="java.lang.String"/>
+	<parameter name="baseBenefitHcpFam" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderHcpFamilyParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="currencyCd" class="java.lang.String">
+		<defaultValueExpression><![CDATA["01"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderTermRiderIndex" class="java.lang.String"/>
+	<parameter name="dsRiderTermRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="riderPaRisk" class="java.lang.String"/>
+	<parameter name="dsRiderPaClone" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsNoteSekaligus" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsNoteBerkala" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderEkaSehatInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantEkaSehatInnerLimit" class="java.lang.String">
+		<parameterDescription><![CDATA[participantEkaSehatInnerLimit]]></parameterDescription>
+	</parameter>
+	<parameter name="riderEkaSehatInnerLimitIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderEkaSehatInnerLimitIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderEkaSehatInnerLimit" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderHcpProviderIndex" class="java.lang.String"/>
+	<parameter name="dsRiderHcpProvider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderHcpProviderParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="baseBenefitHcpPro" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000")]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderEkaSehat" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderEkaSehatParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantEkaSehat" class="java.lang.String">
+		<parameterDescription><![CDATA[participantEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderEkaSehatIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiverCiIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="baseBenefitHcpLad" class="java.math.BigDecimal">
+		<defaultValueExpression><![CDATA[new BigDecimal( "100000" )]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsRiderBaby" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsChartUpSekaligus" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderEarlyStageCi99" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderEarlyStageCi99]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderHcpLadies" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderHcpLadiesIndex" class="java.lang.String"/>
+	<parameter name="dsRiderHcpLadiesParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesIns" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesInsSummary" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesMedExpense" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderLadiesMedExpenseInnerLimit" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRincianRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderLadiesMedExpenseInnerLimitParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderLadiesMedExpenseParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderPayorTpdCiDeath" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderScholarRider" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiver5Tpd10Ci" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsRiderWaiverTpdCi" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsTableFactor" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsUpSekaligusTahunan" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="participantLadiesMedExpense" class="java.lang.String">
+		<parameterDescription><![CDATA[participantLadiesMedExpense]]></parameterDescription>
+	</parameter>
+	<parameter name="participantMedicalPlus" class="java.lang.String">
+		<parameterDescription><![CDATA[participantMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="riderBabyIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderBabyIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderEarlyStageCi99Index" class="java.lang.String">
+		<parameterDescription><![CDATA[riderEarlyStageCi99Index]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesInsIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesInsIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesInsTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesInsTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesMedExpenseIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesMedExpenseIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderLadiesMedExpenseInnerLimitIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderLadiesMedExpenseInnerLimitIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderMedicalPlusIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderMedicalPlusIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPayor5Tpd10CiDeathIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderPayor5Tpd10CiDeathIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderPayorTpdCiDeathIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderPayorTpdCiDeathIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="riderScholarRiderIndex" class="java.lang.String">
+		<defaultValueExpression><![CDATA["12"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderScholarRiderTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat SMiLe Scholarship Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="riderWaiver5Tpd10CiIndex" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiver5Tpd10CiIndex]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRiderLadiesMedExpenseInnerLimitParticipants" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="riderWaiver5Tpd10CiTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiver5Tpd10CiTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiverTpdCiIndex" class="java.lang.String"/>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Manfaat Critical Illness Rider"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titlePackage" class="java.lang.String">
+		<parameterDescription><![CDATA[titlePackage]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePayor5Tpd10CiDeath" class="java.lang.String">
+		<parameterDescription><![CDATA[titlePayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="usia_scholar" class="java.lang.String">
+		<parameterDescription><![CDATA[usia_scholar]]></parameterDescription>
+		<defaultValueExpression><![CDATA["22"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'sub1' as pageCode from dual
+union
+select 'sub2' as pageCode from dual
+union
+select 'sub3' as pageCode from dual
+union
+select 'sub4' as pageCode from dual]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String"/>
+	<background>
+		<band height="51">
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="568" y="12" width="24" height="13"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="560" y="12" width="8" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="536" y="12" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image hyperlinkType="None">
+				<reportElement x="16" y="12" width="145" height="29">
+					<printWhenExpression><![CDATA[new Boolean( $P{validityMsg} == null || "".equals( $P{validityMsg}.trim() ) )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement mode="Transparent" x="0" y="0" width="553" height="37" forecolor="#808080"/>
+				<box padding="5">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<detail>
+		<band height="89">
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="35" width="593" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub4".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentPerformance">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentPerformance}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencyCd">
+					<subreportParameterExpression><![CDATA[$P{currencyCd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040201_product_sub_4.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="18" width="593" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub2".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="totalInvestmentAllocation">
+					<subreportParameterExpression><![CDATA[$P{totalInvestmentAllocation}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeaderSmall">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeaderSmall}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionHi">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionHi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionMid">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionMid}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentChoiceSmall">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentChoiceSmall}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentYield">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentYield}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsEkalinkIllustration">
+					<subreportParameterExpression><![CDATA[$P{dsEkalinkIllustration}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalAssumptionLow">
+					<subreportParameterExpression><![CDATA[$P{totalAssumptionLow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040204_product_sub_2.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="52" width="593" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub3".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderHcpIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderTermRider">
+					<subreportParameterExpression><![CDATA[$P{dsRiderTermRider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorCiDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorCiDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPaRisk">
+					<subreportParameterExpression><![CDATA[$P{riderPaRisk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpFamilyParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpFamilyParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderHcpFamilyIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpFamilyIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcp">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcp}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpFamily">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpFam">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpFam}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPaClone">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPaClone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderTpdIndex">
+					<subreportParameterExpression><![CDATA[$P{riderTpdIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPaIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPaIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorTpdDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorTpdDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderTermRiderIndex">
+					<subreportParameterExpression><![CDATA[$P{riderTermRiderIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiverTpd">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiverTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorSpouseTpdDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorSpouseTpdDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorTpdDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorTpdDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiverCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiverCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorSpouseTpdDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorSpouseTpdDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsOneRow}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040201_product_sub_3.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="1" width="593" height="17" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub1".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsInvestmentChoice">
+					<subreportParameterExpression><![CDATA[$P{dsInvestmentChoice}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsMonthlyPremium">
+					<subreportParameterExpression><![CDATA[$P{dsMonthlyPremium}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040201_product_sub_1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="11" y="69" width="584" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub5".equals( $F{pageCode} )? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="riderHcpIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesIns">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesIns}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderTermRider">
+					<subreportParameterExpression><![CDATA[$P{dsRiderTermRider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsChartUpSekaligus">
+					<subreportParameterExpression><![CDATA[$P{dsChartUpSekaligus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsOneRow">
+					<subreportParameterExpression><![CDATA[$P{dsOneRow}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpFamilyParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpFamilyParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titlePayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{titlePayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderEarlyStageCi99">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEarlyStageCi99}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpLadies">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpLadies}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcp">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcp}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="participantEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{participantEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpProviderParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpProviderParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderEkaSehat">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEkaSehat}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderHcpProviderIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpProviderIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsUpSekaligusTahunan">
+					<subreportParameterExpression><![CDATA[$P{dsUpSekaligusTahunan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderHcpLadiesIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpLadiesIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderEkaSehatParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEkaSehatParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderEkaSehatIndex">
+					<subreportParameterExpression><![CDATA[$P{riderEkaSehatIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPaIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPaIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderEkaSehatInnerLimitIndex">
+					<subreportParameterExpression><![CDATA[$P{riderEkaSehatInnerLimitIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderTermRiderIndex">
+					<subreportParameterExpression><![CDATA[$P{riderTermRiderIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesMedExpenseInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesMedExpenseInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderBabyIndex">
+					<subreportParameterExpression><![CDATA[$P{riderBabyIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesMedExpenseInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesMedExpenseInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorTpdDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorTpdDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesInsSummary">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesInsSummary}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiverCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiverCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorTpdCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorTpdCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titlePackage">
+					<subreportParameterExpression><![CDATA[$P{titlePackage}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpPro">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpPro}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderEkaSehatInnerLimitParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderEkaSehatInnerLimitParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderScholarRider">
+					<subreportParameterExpression><![CDATA[$P{dsRiderScholarRider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiver5Tpd10CiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver5Tpd10CiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorCiDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorCiDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPaRisk">
+					<subreportParameterExpression><![CDATA[$P{riderPaRisk}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderBaby">
+					<subreportParameterExpression><![CDATA[$P{dsRiderBaby}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsTableFactor">
+					<subreportParameterExpression><![CDATA[$P{dsTableFactor}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usia_scholar">
+					<subreportParameterExpression><![CDATA[$P{usia_scholar}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesInsTitle">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesInsTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderScholarRiderTitle">
+					<subreportParameterExpression><![CDATA[$P{riderScholarRiderTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="title">
+					<subreportParameterExpression><![CDATA[$P{title}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiver5Tpd10Ci">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiver5Tpd10Ci}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorCiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorCiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderHcpFamilyIndex">
+					<subreportParameterExpression><![CDATA[$P{riderHcpFamilyIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpFamily">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpFamily}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="participantEkaSehatInnerLimit">
+					<subreportParameterExpression><![CDATA[$P{participantEkaSehatInnerLimit}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverCiIndex">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverCiIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesMedExpenseIndex">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesMedExpenseIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayor5Tpd10CiDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayor5Tpd10CiDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderMedicalPlusIndex">
+					<subreportParameterExpression><![CDATA[$P{riderMedicalPlusIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpFam">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpFam}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderLadiesMedExpenseParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderLadiesMedExpenseParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="participantLadiesMedExpense">
+					<subreportParameterExpression><![CDATA[$P{participantLadiesMedExpense}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderEarlyStageCi99Index">
+					<subreportParameterExpression><![CDATA[$P{riderEarlyStageCi99Index}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="participantMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{participantMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorTpdCiDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorTpdCiDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPaClone">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPaClone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderTpdIndex">
+					<subreportParameterExpression><![CDATA[$P{riderTpdIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="baseBenefitHcpLad">
+					<subreportParameterExpression><![CDATA[$P{baseBenefitHcpLad}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayor5Tpd10CiDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayor5Tpd10CiDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesMedExpenseInnerLimitIndex">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesMedExpenseInnerLimitIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorTpdDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorTpdDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderLadiesInsIndex">
+					<subreportParameterExpression><![CDATA[$P{riderLadiesInsIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpLadiesParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpLadiesParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiverTpd">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiverTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPayorSpouseTpdDeath">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPayorSpouseTpdDeath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiver5Tpd10CiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiver5Tpd10CiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderTpd">
+					<subreportParameterExpression><![CDATA[$P{dsRiderTpd}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderWaiverTpdCiTitle">
+					<subreportParameterExpression><![CDATA[$P{riderWaiverTpdCiTitle}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderMedicalPlusParticipants">
+					<subreportParameterExpression><![CDATA[$P{dsRiderMedicalPlusParticipants}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderPayorSpouseTpdDeathIndex">
+					<subreportParameterExpression><![CDATA[$P{riderPayorSpouseTpdDeathIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderPa">
+					<subreportParameterExpression><![CDATA[$P{dsRiderPa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="riderScholarRiderIndex">
+					<subreportParameterExpression><![CDATA[$P{riderScholarRiderIndex}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderHcpProvider">
+					<subreportParameterExpression><![CDATA[$P{dsRiderHcpProvider}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRiderWaiverTpdCi">
+					<subreportParameterExpression><![CDATA[$P{dsRiderWaiverTpdCi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsOneRow}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040201_product_sub_3_summary.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="131">
+			<subreport>
+				<reportElement x="24" y="0" width="536" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["sub5".equals( $F{pageCode} ) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnFooter>
+</jasperReport>

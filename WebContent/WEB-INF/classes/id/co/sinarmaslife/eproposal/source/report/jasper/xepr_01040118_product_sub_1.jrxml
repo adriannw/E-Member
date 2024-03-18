@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040118_product_sub_1" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="jenis" class="java.lang.String">
+		<parameterDescription><![CDATA[jenis]]></parameterDescription>
+	</parameter>
+	<parameter name="subTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[subTitle]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, '10,000,000.00' as nonAccidentBenefit, '20,000,000.00' as accidentBenefit, '10,000,000.00' as estimatedBalance, '10,000,000.00' as lifeBenefit from dual]]>
+	</queryString>
+	<field name="accidentBenefit" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="nonAccidentBenefit" class="java.lang.String"/>
+	<field name="yearNo" class="java.lang.String"/>
+	<field name="lifeBenefit" class="java.lang.String"/>
+	<field name="estimatedBalance" class="java.lang.String"/>
+	<title>
+		<band height="289">
+			<staticText>
+				<reportElement x="168" y="16" width="217" height="21"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="16" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[STABLE SAVE]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="16" y="64" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="88" width="273" height="17" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="11" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[MANFAAT ASURANSI "STABLE SAVE"]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="104" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="104" width="513" height="29"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung hidup pada akhir tahun polis keempat, maka akan dibayarkan Manfaat Asuransi sebesar Saldo Premi Deposit dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="132" width="513" height="117"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia karena kecelakaan sebelum mencapai usia 70 tahun dalam Masa Asuransi dan Asuransi masih berlaku maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 100% (seratus perseratus) Uang Pertanggungan dengan Maksimum Manfaat Asuransi karena Kecelakaan sebesar Rp. 1.000.000.000 (satu Milyar rupiah) ditambah dengan Saldo Premi Deposit dan selanjutnya pertanggungan berakhir.
+Dalam hal Tertanggung dilindungi oleh lebih dari 1 (satu) Polis yang diterbitkan Penanggung dan masing-masing Polis dalam mata uang yang berbeda, maka Uang Pertanggungan Kecelakaan yang dapat dibayarkan dalam salah satu atau kedua jenis mata uang tersebut, dengan ketentuan jumlah maksimal Uang Pertangungan yang dapat dibayarkan atas Polis-Polis tersebut adalah setara dengan Rp. 1.000.000.000,- (satu milyar Rupiah) berdasarkan kurs nilai tukar yang ditetapkan oleh Penanggung.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="132" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="248" width="513" height="41"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia bukan karena Kecelakaan dalam Masa Asuransi dan Asuransi masih berlaku, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar Saldo Premi Deposit dan selanjutnya pertanggungan berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="248" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="32" y="40" width="497" height="21"/>
+				<box padding="0">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="16" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{subTitle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="45">
+			<staticText>
+				<reportElement x="88" y="4" width="89" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Estimasi Saldo
+Premi Deposit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="4" width="57" height="41"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ulang Tahun
+Polis ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="4" width="89" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Tunai (NT)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="4" width="97" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian
+bukan karena
+Kecelakaan (max)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="4" width="97" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian
+karena
+Kecelakaan (max)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="4" width="89" height="41"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Hidup]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="88" y="4" width="89" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Tunai
+Manfaat Akhir MGI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="4" width="97" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian
+bukan karena
+Kecelakaan (max)##)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="4" width="97" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian
+karena
+Kecelakaan (max)##)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="4" width="89" height="41">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat 
+Pembatalan Polis 
+#)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<frame>
+				<reportElement x="32" y="0" width="57" height="20" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="4" width="57" height="13"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{yearNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="88" y="0" width="89" height="20" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="4" width="17" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="4" width="65" height="12"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{estimatedBalance}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="176" y="0" width="89" height="20" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="4" width="17" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="4" width="64" height="13"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{cashValue}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="264" y="0" width="97" height="20" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="4" width="17" height="14"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="4" width="72" height="14"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{nonAccidentBenefit}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="360" y="0" width="97" height="20" isRemoveLineWhenBlank="true"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="4" width="17" height="14"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="4" width="72" height="14"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{accidentBenefit}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="456" y="0" width="89" height="20"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="16" y="3" width="65" height="16"/>
+					<box padding="0">
+						<pen lineWidth="0.0" lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{lifeBenefit}]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="0" y="3" width="18" height="16"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{currencySymbol}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="409">
+			<staticText>
+				<reportElement positionType="Float" x="32" y="0" width="57" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="88" y="0" width="89" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="176" y="0" width="89" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="264" y="0" width="97" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="8" width="105" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Keterangan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="20" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="20" width="497" height="21"/>
+				<textElement textAlignment="Left">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[MGI dapat berubah pada saat Jatuh Tempo Investasi dan Investasi dilanjutkan ( Roll Over ) dengan ketentuan Jatuh Tempo Investasi untuk MGI lanjutan ( Roll Over ) tidak melebihi akhir kontrak Asuransi.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="16" y="284" width="136" height="17"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="312" width="232" height="13"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="324" width="24" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[v1.0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="360" y="0" width="97" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="456" y="0" width="89" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="41" width="497" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pada proposal ini diasumsikan bahwa Investasi dilanjutkan ( Roll Over ) sampai akhir kontrak asuransi dengan memilih MGI 12 Bulan sebagai MGI lanjutan ( Roll Over ).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="41" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="62" width="497" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Besarnya Saldo Premi Deposit dan Nilai Tunai hanya merupakan illustrasi. Besarnya Saldo Premi Deposit dan Nilai Tunai tergantung dengan tingkat suku bunga yang diberikan setiap awal MGI dan dapat berubah setiap jatuh tempo MGI.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="62" width="9" height="13">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="83" width="497" height="53" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Perhitungan Saldo Premi Deposit dan Nilai Tunai setelah pajak adalah asumsi perhitungan dengan menggunakan peraturan perpajakan (Undang-undang Perpajakan) yang berlaku pada saat proposal ini dibuat sesuai dengan tanggal proposal di mana pajak dikenakan sebesar 20% dari hasil investasi untuk penarikan dana yang umur polisnya kurang atau sama dengan 3 tahun. Jika peraturan perundang-undangan perpajakan ini berubah pada saat mengambil manfaat atau Nilai Tunai maka ketentuan perpajakan akan mengikuti peraturan perpajakan yang baru.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="83" width="9" height="13">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="157" width="497" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Pemegang Polis membatalkan polis atau mengambil Nilai Tunai bukan pada saat akhir masa Asuransi/jatuh tempo Polis, maka jumlah Nilai Tunai yang dibayarkan adalah sebagaimana tabel berikut dan sejak saat itu Polis Berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="157" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="224" width="497" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Tunai Pada Perhitungan ini adalah Nilai Tunai yang diambil sebelum akhir masa asuransi (Jatuh Tempo Polis) sesuai dengan MGI yang dipilih.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="224" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="245" width="497" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Saldo Premi Deposit untuk manfaat meninggal dunia adalah Saldo Premi Deposit yang dihitung berdasarkan tanggal tertanggung meninggal dunia.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="245" width="9" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "bukan manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="20" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[*)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="88" y="180" width="217" height="14"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahun Polis Ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="305" y="180" width="41" height="14"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="346" y="180" width="41" height="14"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="387" y="180" width="41" height="14"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="428" y="180" width="41" height="14"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="88" y="194" width="217" height="25"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Tunai (% dari {Premi Awal/Nilai Investasi pada Awal MGI + Hasil Investasi pada saat Polis dibatalkan })]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="305" y="194" width="41" height="25"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[90%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="346" y="194" width="41" height="25"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[90%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="387" y="194" width="41" height="25"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[95%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="428" y="194" width="41" height="25"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[100%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="157" width="9" height="13">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[#)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="136" width="9" height="13">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="136" width="497" height="21" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Besarnya Manfaat Hasil investasi setiap ulang bulan polis dapat berubah sesuai dengan jumlah hari yang dilewati setiap ulang bulan dan tingkat hasil investasi yang diberika setiap awal MGI.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="136" width="9" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[**)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="266" width="17" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[##)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="266" width="497" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{jenis} == "manfaat bulanan")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asumsi bahwa kematian sering terjadi pada akhir bulan/akhir tahun/jatuh tempo MGI.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

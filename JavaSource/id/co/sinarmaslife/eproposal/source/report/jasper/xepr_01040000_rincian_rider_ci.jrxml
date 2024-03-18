@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_ci" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="5" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Critical Illness "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderCi" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderCi]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan1' as subject, 'R-100' as descr, ' 1 ' as term
+from dual
+union
+select 'Jenis Santunan2' as subject, 'R-200' as descr, ' 2  ' as term
+from dual
+union
+select 'Jenis Santunan3' as subject, 'R-300' as descr, '  3 ' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<pageHeader>
+		<band height="521">
+			<staticText>
+				<reportElement positionType="Float" x="7" y="304" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="33" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderCi}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="128" y="5" width="271" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="188" width="500" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tertanggung mulai berhak atas Manfaat Asuransi apabila Asuransi Tambahan ini telah berlaku  dan melewati Masa Tunggu.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="205" width="500" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asuransi Tambahan ini memberikan Manfaat Asuransi apabila Tertanggung  untuk pertama kalinya  selama masa pertanggungan didiagnosa menderita salah satu Penyakit Kritis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="206" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="97" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="135" width="505" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="188" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="168" width="220" height="15"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Critical Illness "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="269" width="500" height="32"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung untuk yang pertama kali didiagnosa mengalami kondisi kritis dari salah satu jenis 31 penyakit kritis yang dijamin dalam Asuransi Tambahan ini, maka akan dibayarkan manfaat Asuransi sebesar 100% Uang Pertanggungan atau  sisa dari Uang Pertanggungan dalam hal ketentuan pada no 3 telah terpenuhi dan selanjutnya Asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="350" width="500" height="44"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimum total manfaat Asuransi tambahan atas salah satu dari 31 Jenis Penyakit Kritis (termasuk kondisi kritis salah satu penyakit kanker stadium I, II, atau III yang pertama kalinya jika diderita) yang dapat dibayarkan bagi Tertanggung yang  sama  adalah  sebesar Rp.5,000,000,000.00 untuk polis dalam mata uang rupiah atau sebesar US$. 500,000.00 untuk polis dalam mata uang US Dollar atau jumlah nilai yang setara Rp.5,000,000,000.00 apabila polis dalam mata uang rupiah dan US Dollar.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="115" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderCi}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="61" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="269" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="304" width="500" height="41"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimum total manfaat Asuransi untuk salah satu penyakit Kanker yang diderita pertama kali untuk Stadium I , II, atau III yang dapat dibayarkan bagi Tertanggung yang sama adalah sebesar Rp.400,000,000.00 untuk polis dalam mata uang rupiah atau sebesar US$. 40,000.00 untuk polis dalam mata uang US Dollar, atau jumlah nilai yang setara Rp.400,000,000.00  apabila polis dalam mata uang rupiah dan US Dollar.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="350" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="229" width="13" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="229" width="500" height="39"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung untuk yang pertama kali selama Pertanggungan, didiagnosa mengalami kondisi kritis salah satu penyakit Kanker Stadium I, II, atau III (yang dapat dibuktikan dengan hasil pemeriksaan Patologi Anatomi) maka akan dibayarkan manfaat Asuransi sebesar 20% Uang Pertanggungan sebanyak 1x (satu kali), dengan tetap memperhatikan maksimum total manfaat Asuransi pada nomor 5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="9" y="79" width="497" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="16" y="411" width="529" height="100"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50">
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="9" width="545" height="34"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="31">
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="6" width="553" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

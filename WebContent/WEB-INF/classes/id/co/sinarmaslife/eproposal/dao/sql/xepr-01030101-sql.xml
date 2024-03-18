@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <!-- selectLstBusinessOptionVOList -->
+    <resultMap id="selectLstBusinessOptionVOList.result" class="OptionVO">
+        <result property="value" column="VALUE" javaType="String" jdbcType="NUMBER"/>
+        <result property="label" column="LSBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+
+    <!--Other products are used in Hardcoded.java-->
+    <!--It's not write not write in Hardcoded.java and this file concurently -->
+    <select id="selectLstBusinessOptionVOList" resultClass="OptionVO" resultMap="selectLstBusinessOptionVOList.result" >
+        SELECT lsbs_id, lsbs_id || '==>' || lsbs_name as value, lsbs_name
+        FROM EKA.LST_BISNIS
+        WHERE 1=1
+        <isNotNull property="cdList">
+            <iterate prepend="AND lsbs_id in" property="cdList" open="(" close=")" conjunction=",">
+                #cdList[]#
+            </iterate>
+        </isNotNull>
+        and flag_proposal = 1
+        ORDER BY lsbs_name ASC
+        <!--AND lsbs_id in ( 45, 53, 54, 163, 160, 115, 116, 152, 153, 167, 159, 134,
+                         73, 141, 142, 172, 173, 166, 168, 175, 176, 140, 120, 128, 129, 127, 155, 
+                         174, 112, 179, 183, 1, 169, 180, 182, 177, 185, 298, 191, 137, 114, 96, 184, 207, 198, 189, 193, 201, 202, 111, 199, 206)
+        ORDER BY lsbs_name ASC-->
+    </select>
+
+    <!--select for filtering products-->
+    <select id="selectLstBusinessFilteredOptionVOList" parameterClass="java.util.HashMap" resultClass="java.lang.String" >
+        select distinct b.lsbs_id || '==>' || NVL( b.hardcoded_flag, c.lsbs_name ) as value
+        from eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP_DETAIL b, eka.LST_BISNIS c
+        where 1 = 1
+            and a.msag_id = #msagId#
+            <isNotNull property="groupId">
+            and a.group_id =  #groupId#
+            </isNotNull>
+            and a.group_id = b.group_id
+        	and b.lsbs_id = c.lsbs_id
+        	<isNotNull property="lsbsId">
+        	and c.lsbs_id = #lsbsId#
+        	</isNotNull>
+    </select>
+    
+    <select id="selectLsbsIdByMsagIdList" parameterClass="java.lang.String" resultClass="java.lang.String" >
+        select distinct b.lsbs_id 
+        from eka.LST_USER_PRODUCT a, eka.LST_USER_PRODUCT_GROUP_DETAIL b, eka.LST_BISNIS c
+        where 1 = 1
+            and a.msag_id = #msagId#
+            and a.group_id = b.group_id
+        	and b.lsbs_id = c.lsbs_id
+    </select>
+    
+    <select id="selectLastDay" resultClass="java.lang.String">
+    select to_char(last_day(sysdate),'dd') last_date from dual
+    </select>
+</sqlMap>
+
+
+

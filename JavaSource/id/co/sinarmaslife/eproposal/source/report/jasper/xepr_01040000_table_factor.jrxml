@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_table_factor" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="titleAge" class="java.lang.String">
+		<parameterDescription><![CDATA[titleAge]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Usia Anak"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titleCol1" class="java.lang.String">
+		<parameterDescription><![CDATA[titleCol1]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Scholarship s.d usia 22 tahun"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="titleCol2" class="java.lang.String">
+		<parameterDescription><![CDATA[titleCol2]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Scholarship s.d usia 25 tahun"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as age, '23' as rate1, '27' as rate2 from dual
+union
+select '2' as age, '24' as rate1, '24' as rate2 from dual]]>
+	</queryString>
+	<field name="age" class="java.lang.String"/>
+	<field name="rate1" class="java.lang.String"/>
+	<field name="rate2" class="java.lang.String"/>
+	<variable name="idx_eka_sehat" class="java.lang.Integer" resetType="None" incrementType="Report" calculation="Count">
+		<variableExpression><![CDATA[new Integer( "1" )]]></variableExpression>
+		<initialValueExpression><![CDATA[new Integer( "0" )]]></initialValueExpression>
+	</variable>
+	<columnHeader>
+		<band height="10">
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="40" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box padding="0">
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titleAge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="177" y="0" width="137" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titleCol2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="40" y="0" width="137" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="0">
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titleCol1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="10">
+			<textField>
+				<reportElement positionType="Float" x="40" y="0" width="137" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="10">
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rate1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="177" y="0" width="137" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box topPadding="0" leftPadding="7" bottomPadding="0" rightPadding="10">
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rate2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="40" height="10" isRemoveLineWhenBlank="true" backcolor="#FFFFFF"/>
+				<box padding="0">
+					<pen lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

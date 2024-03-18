@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<sqlMapConfig>
+
+    <settings cacheModelsEnabled="true" enhancementEnabled="true"
+              lazyLoadingEnabled="true" useStatementNamespaces="true"/>
+
+
+    <!--common-->
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-00000000-common-list-without-condition-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-00000000-general-sql.xml"/>
+
+    <!--other-->
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01010101-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01020201-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01020202-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01020301-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01020401-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01030101-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01030102-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01030501-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01030502-sql.xml"/>
+
+    <!--products sql-->
+    <!--non unit link products-->
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040101-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040102-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040103-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040104-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040105-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040106-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040107-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040108-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040109-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040110-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040111-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040112-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040113-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040114-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040115-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040116-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040117-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040118-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040119-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040120-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040121-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040124-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040125-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040126-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040127-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040128-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040130-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040131-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040133-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040136-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040137-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040147-sql.xml"/>
+    
+    <!--unit link products-->
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040201-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040202-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040203-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040204-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040205-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040206-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040207-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040208-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040209-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040210-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040211-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040212-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040213-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040214-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040215-sql.xml"/>
+    <sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040216-sql.xml"/>
+	<sqlMap resource="id/co/sinarmaslife/eproposal/dao/sql/xepr-01040219-sql.xml"/>
+</sqlMapConfig>
+

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_hcp_syariah" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="5" bottomMargin="5">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Hospital Protection Syariah"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderHCP" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderHCP]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderHcpParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderHcpParticipants]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan' as subject, 'R-100' as descr, '  ' as term
+from dual
+
+union
+
+select '- Rawat Inap krn sakit' as subject,  '100,000'  as descr, 'Maks 100 hari per satu tahun polis *)' as term
+from dual
+
+union
+
+select '- Rawat Inap di ruang ICU' as subject, '200,000' as descr, 'Maks 30 hari per satu tahun polis' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<pageHeader>
+		<band height="365">
+			<staticText>
+				<reportElement positionType="Float" x="22" y="297" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[c.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="36" y="237" width="478" height="73"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta menjalani Rawat Inap di Rumah Sakit baik karena sakit maupun Kecelakaan pada saat asuransi masih berlaku, maka Wakil Para Peserta akan memberikan Santunan Harian Rawat Inap berdasarkan jenis perawatannya selama dirawat di Rumah Sakit sebesar yang telah ditetapkan dalam Tabel Manfaat
+Jumlah hari perawatan di Rumah Sakit yang dapat dijamin dalam satu tahun Polis baik perawatan yang disebabkan karena Penyakit dan atau Kecelakaan termasuk perawatan di Unit Perawatan Intensive (ICU/ICCU) maksimum adalah 100 (seratus) hari dalam 1 (satu) Polis.
+Sedangkan jumlah hari perawatan di ICU/ICCU maksimum adalah 30 (tiga puluh) hari dalam 1 (satu) tahun Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="267" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="209" width="489" height="15"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Peserta mulai berhak mendapatkan Manfaat Asuransi apabila Asuransi Tambahan ini telah  berlaku dan melewati  Masa Tunggu.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="8" y="190" width="224" height="13"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Hospital Protection Syariah"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="142" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderHCP}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="163" width="505" height="21"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note : 
+  ** Biaya Asuransi Syariah dapat berubah mengikuti pertambahan usia Peserta
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="224" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="237" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="109" width="497" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="36" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderHCP}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="128" width="121" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi Syariah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="95" width="103" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="40" y="360" width="441" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<textField hyperlinkType="None">
+				<reportElement x="142" y="13" width="249" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="64" width="522" height="27"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Program asuransi  Santunan Rawat Inap  ini merupakan asuransi tambahan yang memberikan manfaat berupa pembayaran Santunan Harian Rawat Inap apabila Peserta menjalani rawat inap di Rumah Sakit baik yang disebabkan oleh penyakit maupun kecelakaan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="224" width="455" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi Tambahan ini :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="312" width="491" height="39"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Peserta mempunyai  lebih dari satu Polis yang diterbitkan oleh Wakil Para Peserta yang juga memberikan manfaat Asuransi Tambahan ini, maka besarnya Santunan Harian Rawat Inap yang dapat dibayarkan oleh Wakil Para Peserta untuk Peserta yang sama ditetapkan tidak melebihi Rp. 1.000.000,- (satu juta rupiah) atau US$. 100,- (seratus Dollar Amerika Serikat) per hari per Rawat Inap.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="312" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="12">
+			<textField hyperlinkType="None">
+				<reportElement x="49" y="0" width="191" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($F{subject}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$F{subject}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="240" y="0" width="56" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($F{descr} !=null)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{descr}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="304" y="0" width="164" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($F{term}!=null)]]></printWhenExpression>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{term}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="468" y="0" width="13" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement/>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="40" y="0" width="9" height="12"/>
+				<box padding="0">
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement markup="none"/>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="27"/>
+	</lastPageFooter>
+	<summary>
+		<band height="152">
+			<frame>
+				<reportElement positionType="Float" x="40" y="1" width="441" height="28"/>
+				<box padding="0">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement positionType="Float" x="9" y="14" width="416" height="10"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Tidak ada Pembayaran Manfaat Asuransi untuk hal-hal yang dikecualikan dalam Polis.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" x="9" y="5" width="416" height="10"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[*) Total perawatan karena sakit, kecelakaan dan di ruang ICU maksimal 100 hari per satu tahun Polis.]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="16" y="42" width="529" height="100"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</summary>
+</jasperReport>

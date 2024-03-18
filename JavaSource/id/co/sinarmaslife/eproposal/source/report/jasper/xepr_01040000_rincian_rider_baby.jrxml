@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_baby" pageWidth="595" pageHeight="990" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="5" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="riderBabyIndex" class="java.lang.String"/>
+	<parameter name="planBaby" class="java.lang.String">
+		<parameterDescription><![CDATA[planBaby]]></parameterDescription>
+		<defaultValueExpression><![CDATA["Plan 3"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderBaby" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderBaby]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderBaby" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderBaby]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, '10,000,000.00' as nonAccidentBenefit, '20,000,000.00' as accidentBenefit, '10,000,000.00' as estimatedBalance, '10,000,000.00' as lifeBenefit from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="725">
+			<subreport>
+				<reportElement x="8" y="39" width="546" height="18" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderBaby}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="192" y="2" width="152" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN  SMiLE BABY "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="62" width="526" height="23"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Program asuransi jiwa individu tambahan yang memberikan jaminan/ proteksi terhadap Tertanggung (Anak) sejak masih dalam kandungan sampai Tertanggung (Anak) berusia 5 tahun dan juga terhadap ibu selama masa kehamilan dan setelah melahirkan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="92" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="107" width="121" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	  Tidak ada risiko investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="124" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="158" width="505" height="22"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note : 
+  * Biaya Asuransi dibayarkan selama 5 tahun
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="391" width="233" height="65"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="281" width="136" height="62"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="247" width="233" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="282" width="233" height="61"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="220" width="136" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="391" width="136" height="65"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="281" width="104" height="62"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="343" width="136" height="48"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="247" width="136" height="35"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="220" width="104" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="391" width="104" height="65"/>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="379" y="285" width="99" height="55"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai dengan maksimal manfaat dari plan yang diambil, atau sampai dengan bayi berusia 30 hari (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="343" width="104" height="48"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="247" width="104" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="13" y="253" width="201" height="25"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian atas ibu atau ibu dan janin/ calon bayi (terjadi bersamaan) di masa kehamilan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="343" width="233" height="48"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="220" width="233" height="27"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="188" width="473" height="16"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="227" y="191" width="73" height="10"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[" "+ $P{planBaby}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="13" y="289" width="201" height="28"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Komplikasi kehamilan dan komplikasi setelah kelahiran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="13" y="225" width="201" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kematian atas janin/ calon bayi di masa kehamilan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="247" y="223" width="129" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pengembalian seluruh Premi ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="383" y="225" width="80" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7"/>
+				</textElement>
+				<text><![CDATA[per kejadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="383" y="253" width="89" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[per kejadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="379" y="349" width="98" height="38"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimal 20x manfaat dari plan yang diambil, atau sampai dengan bayi berusia 60 hari (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="380" y="395" width="97" height="55"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai dengan maksimal manfaat dari plan yang diambil, atau sampai dengan anak berusia 5 tahun (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="349" width="201" height="36"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Perawatan bayi di inkubator/ intensive Care Unit (ICU)/ High Dependency Unit (HDU) setelah kelahiran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="401" width="201" height="20"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Kelainan bawaan pada anak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="462" width="473" height="163"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.	Manfaat Kelainan Bawaan/ Congenital Conditions (15 kondisi) bagi Tertanggung Pertama :
+1.1.	Atresia ani (Anal Atresia)
+1.2.	Artrial Septal Defect
+1.3.	Cerebral Palsy
+1.4.	Kelainan bawaan pada langit-langit mulut umumnya berhubungan dengan bibir   sumbing (Cleft Lip)
+1.5.	Kelainan bentuk kaki (Club Foot)
+1.6.	Buta bawaan (Congenital Blindness)
+1.7.	Tuli bawaan (Congenital Deafness)
+1.8.	Hernia Diafragmatik Bawaan
+1.9.	Pergeseran Panggul bawaan
+1.10.	Infantile Hidrosefalus
+1.11.	Retinopati prematur
+1.12.	Spina Bifida
+1.13.	Tetralogy of Fallot
+1.14.	Transposisi pembuluh darah besar (Transposition of Great Vessels)
+1.15.	Ventrikuler Septal Defect 
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="627" width="490" height="94"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.	Manfaat bagi Tertanggung Kedua (Ibu) :
+2.1.	Komplikasi Kehamilan (Pregnancy Complications)
+2.1.1.	Lepasnya placenta (Abruptio placentae)
+2.1.2.	Emboli Cairan Ketuban (Amniotic Fluid Embolism)
+2.1.3.	Disseminated Intravascular Coagulation (DIC)
+2.1.4.	Fatty liver pada kehamilan
+2.1.5.	Pre-Eclampsia atau Eclampsia
+2.2.	Komplikasi Kelahiran (Post-Natal Complications)
+2.2.1.	Pendarahan Postpartum yang memerlukan Histerektomi 
+]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="138" width="545" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderBaby}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="157" y="22" width="268" height="15"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="11" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["PT MSIG Life Insurance Indonesia Tbk"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="Float" x="7" y="204" width="233" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="240" y="204" width="136" height="16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="Float" x="376" y="204" width="104" height="16"/>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="38" y="207" width="151" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Manfaat ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="267" y="206" width="57" height="11"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah Manfaat]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="248" y="289" width="80" height="20"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "10,000,000" : $P{planBaby}.equals("Plan 2")?"20,000,000" : "30,000,000")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="248" y="352" width="105" height="29"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "250,000" : $P{planBaby}.equals("Plan 2")?"500,000" : "1,000,000") + " per Hari"]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="248" y="400" width="105" height="29"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "50,000,000" : $P{planBaby}.equals("Plan 2")?"100,000,000" : "150,000,000")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="244" y="249" width="129" height="31"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Mana yang lebih besar, Rp" +
+($P{planBaby}.equals("Plan 1")? "50 juta" : $P{planBaby}.equals("Plan 2")?"50 juta" : "100 juta") +
+", atau pengembalian seluruh Premi "]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

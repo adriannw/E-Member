@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_manfaat_term_rider" pageWidth="530" pageHeight="842" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<queryString>
+		<![CDATA[select
+	 '5 tahun.' as termOfManfaatTermRider, 
+	'yang ditunjuk akan dibayarkan manfaat tambahan sebesar 100% Uang Pertanggungan Pokok (Seratus juta rupiah).' as amountInSpeechManfaatTermRider
+from dual]]>
+	</queryString>
+	<field name="amountInSpeechManfaatTermRider" class="java.lang.String"/>
+	<field name="termOfManfaatTermRider" class="java.lang.String"/>
+	<pageHeader>
+		<band height="79">
+			<staticText>
+				<reportElement x="-1" y="-1" width="67" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Term Rider]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="28" width="505" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Term Rider merupakan pertanggungan tambahan untuk meningkatkan benefit santunan kematian dimana Uang Pertanggungannya merupakan kelipatan Uang Pertanggungan Pokok.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="28" width="11" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="163" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Masa Pertanggungan (SMiLe Term Rider) : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="52" width="505" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia dalam masa pertanggungan dan SMiLe Term Rider masih berlaku, maka kepada yang ditunjuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="52" width="11" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="169" y="17" width="104" height="12"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{termOfManfaatTermRider}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="17" y="65" width="504" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{amountInSpeechManfaatTermRider}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

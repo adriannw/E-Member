@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040142_product_sub_1" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="575" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String">
+		<parameterDescription><![CDATA[agentName]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, '10,000,000.00' as nonAccidentBenefit, '20,000,000.00' as accidentBenefit, '10,000,000.00' as estimatedBalance, '10,000,000.00' as lifeBenefit from dual]]>
+	</queryString>
+	<summary>
+		<band height="390">
+			<staticText>
+				<reportElement x="1" y="45" width="505" height="13"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Masa Tunggu pada produk SMiLe Medical Syariah untuk pelayanan-pelayanan atau kondisi berikut ini :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="81" width="481" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Semua jenis penyakit yang terjadi/timbul dalam 30 ( tiga puluh ) hari pertama dari saat Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini, kecuali yang disebabkan oleh Kecelakaan.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="113" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="113" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pengerasan sumsum tulang (multiple Sclerosis)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="57" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="57" width="489" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jenis penyakit yang diderita pada :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="69" width="481" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[30 (tiga puluh ) hari pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="69" width="17" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="323" width="497" height="33"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Semua jenis penyakit kronis yang telah diderita sebelum menjadi Peserta asuransi SMiLe Medical Syariah. Setelah lebih dari 18 (delapan belas) bulan Peserta diasuransikan, penyakit tersebut akan dijamin asalkan selama 18 (delapan belas) tersebut Peserta tidak pernah berkonsultasi, meminta advis dokter, tidak menerima perawatan maupun pengobatan yang berkaitan dengan penyakit tersebut.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="101" width="17" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="101" width="481" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[12 ( dua belas ) bulan pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="125" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Asma, TBC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="125" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="137" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Pelebaran Pembuluh Darah/ Varises seperti Varises tungkai, haemorrhoids (wasir) dll.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="137" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="149" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jantung, Tekanan darah Tinggi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="149" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="161" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Ayan, Cerebro Vascular Disorder (Stroke)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="161" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="173" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="173" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Segala jenis Kanker dan segala jenis Tumor.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="185" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="185" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Gangguan Kelenjar Tyroid/ Gondok seperti Hypotiroid, Hyperthyroid (Pembesaran Kelenjar Thyroid).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="197" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Hepatitis B, Hepatitis Non A Non B, Hepatitis C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="197" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="209" width="488" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Gangguan Lambung dan Usus Besar, Usus Kecil, Appendix/ Usus Buntu, Hati, Kandung Empedu (contoh: Radang Kandung Empedu), dispepsia, Batu Empedu, dan Gangguan saluran pencernaan lainnya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="209" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="230" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Kelainan kulit yang tidak membutuhkan Antibiotik untuk pengobatannya.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="230" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="255" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Radang Persendian (Rheumatik/Gout) atau Gangguan tulang persendian dan penyakit otot lain]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="255" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="266" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="266" width="488" height="21"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Katarak, Ketidaknormalan pada Nasal Septum atau Turbinates (Hidung atau Sinus) dan Tonsil yang sakit dan perlu dioperasi/ Operasi Amandel.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="286" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Gondok, Hernia (Turun Berok), Fistula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="286" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="298" width="488" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Endometriosis (Jaringan sejenis selaput lendir rahim di luar rongga rahim), termasuk kelainan sistem reproduksi (misalnya kista).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="298" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="311" width="17" height="12"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="311" width="481" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[18 (delapan belas) bulan pertama dari Tanggal Efektif Kepesertaan Awal Asuransi Kesehatan ini]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="242" width="9" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="242" width="403" height="12"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Kencing Manis, Ginjal (Batu Ginjal, Kolik), Batu pada organ saluran kencing (Kencing Batu)]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

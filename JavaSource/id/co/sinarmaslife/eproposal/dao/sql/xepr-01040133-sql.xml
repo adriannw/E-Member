@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+	<select id="selectLdecRateToGetTunai_180" resultClass="java.math.BigDecimal" parameterClass="java.util.Map">
+        SELECT EKA.LST_TABLE.LSTAB_VALUE
+        FROM EKA.LST_TABLE
+        WHERE ( EKA.LST_TABLE.LSTAB_JENIS = 2 ) AND
+        ( EKA.LST_TABLE.LSBS_ID = 180) AND
+        ( EKA.LST_TABLE.LKU_ID = '01' ) AND
+        ( EKA.LST_TABLE.LSCB_ID = 3 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_BAYAR = 10 ) AND
+        ( EKA.LST_TABLE.LSTAB_LAMA_TANGGUNG = 10 ) AND
+        ( EKA.LST_TABLE.LSTAB_TAHUN_KE = #liTahunKe# ) AND
+        ( EKA.LST_TABLE.LSTAB_AGE = #liUsia# )
+    </select>
+    
+</sqlMap>

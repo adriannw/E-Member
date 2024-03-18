@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_payor_5_tpd_10_ci_death_syariah" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="dsCommonHeaderRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderPayor5Tpd10CiDeath" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderPayor5Tpd10CiDeath]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePayor5Tpd10CiDeath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["5/10"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Jenis Santunan1' as subject, 'R-100' as descr, ' 1 ' as term
+from dual
+union
+select 'Jenis Santunan2' as subject, 'R-200' as descr, ' 2  ' as term
+from dual
+union
+select 'Jenis Santunan3' as subject, 'R-300' as descr, '  3 ' as term
+from dual]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="descr" class="java.lang.String"/>
+	<field name="term" class="java.lang.String"/>
+	<pageHeader>
+		<band height="659">
+			<staticText>
+				<reportElement positionType="Float" x="24" y="324" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[b.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="180" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="165" width="386" height="16"/>
+				<textElement markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat SMiLe Payor  "+$P{titlePayor5Tpd10CiDeath} +" TPD/CI/Death Syariah"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="262" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="53" width="103" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="131" width="505" height="28"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note: 
+  ** Biaya Asuransi Syariah dapat berubah mengikuti pertambahan usia Peserta
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="90" width="103" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="212" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="13" y="71" width="497" height="15"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="111" width="505" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderPayor5Tpd10CiDeath}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="304" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[a.]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="29" width="512" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderPayor5Tpd10CiDeath}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="64" y="6" width="385" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN SMiLe Payor "+$P{titlePayor5Tpd10CiDeath}+" TPD/CI/Death Syariah"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="180" width="497" height="124"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Asuransi Tambahan ini akan membebaskan Pemegang Polis membayar Premi Lanjutan yang harus dibayar apabila Pemegang Polis untuk pertama kalinya didiagnosa menderita salah satu Penyakit Kritis atau menderita Cacat Tetap Total atau Meninggal Dunia sesuai dengan Syarat-Syarat Khusus Asuransi Tambahan ini.
+Premi Lanjutan yang dibebaskan adalah pembayaran Premi lanjutannya yang jatuh tempo yang harus dibayar setelah Pemegang Polis untuk pertama kalinya didiagnosa menderita salah satu Penyakit Kritis atau menderita Cacat Tetap Total atau Meninggal Dunia dan selama Pemegang Polis menderita Penyakit Kritis atau Cacat TetapTotal sampai berakhirnya Asuransi Tambahan.
+Besarnya Premi lanjutan yang dibebaskan sebagaimana dimaksud dalam butir 2, untuk setiap Pemegang Polis adalah sebesar Premi Lanjutan sesuai cara bayar.
+Pembebasan pembayaran Premi Lanjutan sebagaimana dimaksud dalam butir 2 dan butir 3 mulai berlaku efektif sejak Pemegang Polis untuk pertama kalinya didiagnosa menderita salah satu Penyakit Kritis atau menderita Cacat Tetap Total atau Meninggal Dunia dan telah melewati Masa Tunggu.
+Dengan telah dibayarkannya Manfaat Asuransi sebagaimana dimaksud dalam butir 1, maka :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="241" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="290" width="13" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="304" width="481" height="21"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi berdasarkan Polis dasar tetap berlaku sebagaimana yang tercantum dalam Syarat-Syarat Umum Polis dan Syarat-Syarat Khusus Polis Dasar.
+
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="40" y="325" width="481" height="51"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Khusus apabila Manfaat Asuransi akibat didiagnosa menderita atau mengalami salah satu Penyakit Kritis sebagaimana yang tercantum dalam Pasal 1 butir 6 baik karena sakit maupun kecelakaan atau meninggal dunia sesuai dengan Syarat-Syarat Khusus SMiLe Payor "+$P{titlePayor5Tpd10CiDeath}+" CI/TPD/Death ini telah dibayarkan, maka kepesertaan Pemegang Polis pada Asuransi Tambahan Lainnya yang memberikan manfaat kesehatan (apabila ada) akan batal. Berikut Asuransi Tambahan Lainnya yang memberikan manfaat kesehatan:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="40" y="365" width="396" height="83"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[- SMiLe Hospital Protection (Family)
+- SMiLe Medical
+- SMiLe Hospital Protection (+)
+- SMiLe Ladies Hospital Protection
+- SMiLe Ladies Medical
+- SMiLe Medical +
+- dan Asuransi tambahan Lainnya yang akan ditentukan kemudian
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement positionType="Float" x="16" y="465" width="529" height="184"/>
+				<box padding="0">
+					<pen lineWidth="0.0"/>
+				</box>
+			</frame>
+		</band>
+	</pageHeader>
+	<pageFooter>
+		<band height="23"/>
+	</pageFooter>
+</jasperReport>

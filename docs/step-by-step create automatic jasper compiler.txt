@@ -1,0 +1,26 @@
+- Buat file applicationContext.xml
+isi dengan :
+	<bean id="jasperCompiler" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+		<property name="servletClass" value="com.ekalife.servlet.JasperCompilerServlet" />
+		<property name="servletName" value="jasper" />
+	</bean>
+	
+- Buat file JasperCompilerServlet.java
+logic utama compilenya : 
+JasperCompileManager.compileReportToFile(context.getRealPath(value))
+
+- di web.xml
+isi/tambah dengan :
+<context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>
+    	classpath:/id/co/sinarmaslife/std/spring/config/spring-formatter.xml
+		/WEB-INF/applicationContext*.xml
+	</param-value>
+</context-param>
+
+==> tambahan di eproposal.properties
+- untuk main report :
+report.dana_sejahtera_new=id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040104_product
+- untuk sub report		
+		subreport.dana_sejahtera_new_1=id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040104_product_sekaligus

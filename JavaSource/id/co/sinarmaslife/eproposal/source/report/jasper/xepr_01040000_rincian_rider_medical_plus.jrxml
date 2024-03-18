@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rincian_rider_medical_plus" pageWidth="595" pageHeight="970" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="title" class="java.lang.String">
+		<parameterDescription><![CDATA[title]]></parameterDescription>
+		<defaultValueExpression><![CDATA["SMiLe Medical+ "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeaderRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonHeaderRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonBiayaRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsCommonBiayaRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRj" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRj]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlus" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusParticipants" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusParticipants]]></parameterDescription>
+	</parameter>
+	<parameter name="participantMedicalPlus" class="java.lang.String">
+		<parameterDescription><![CDATA[participantMedicalPlus]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRg" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRg]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusRb" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusRb]]></parameterDescription>
+	</parameter>
+	<parameter name="dsRincianRiderMedicalPlusPk" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[dsRincianRiderMedicalPlusPk]]></parameterDescription>
+	</parameter>
+	<parameter name="standalone" class="java.lang.String"/>
+	<parameter name="dsOneRow" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="dsOneRow2" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<queryString>
+		<![CDATA[select '1' as idx_medical_plus, 'Samuel' as name_medical_plus, '27' as age_medical_plus, 'L' as sex_medical_plus from dual
+union
+select '2' as idx_medical_plus, 'Nela' as name_medical_plus, '28' as age_medical_plus, 'L' as sex_medical_plus from dual]]>
+	</queryString>
+	<field name="idx_medical_plus" class="java.lang.String"/>
+	<field name="name_medical_plus" class="java.lang.String"/>
+	<field name="age_medical_plus" class="java.lang.String"/>
+	<field name="sex_medical_plus" class="java.lang.String"/>
+	<title>
+		<band height="203">
+			<staticText>
+				<reportElement positionType="Float" x="7" y="50" width="104" height="15"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Risiko Investasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="115" width="505" height="21">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Note : 
+  ** Biaya Asuransi dapat berubah mengikuti pertambahan usia Tertanggung
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="10" y="65" width="497" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[-	 Tidak ada risiko investasi]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="96" width="509" height="19" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonBiayaRincianRiderMedicalPlus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_rincian.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="146" y="3" width="223" height="13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["RINCIAN "+$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="80" width="107" height="16" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.FALSE : Boolean.TRUE]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Investasi]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="136" width="178" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Manfaat "+$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="7" y="21" width="522" height="21" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderRincianRiderMedicalPlus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="163" width="569" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsRincianRiderMedicalPlus">
+					<subreportParameterExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlus}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_medical_plus_ri.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="183" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusParticipants}!=null)]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlusParticipants}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rincian_rider_participant.jasper"]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="7" y="150" width="569" height="12"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["standalone".equals($P{standalone})? "     Jaminan Rawat Inap  " : "Tertanggung mulai berhak mendapatkan Manfaat Asuransi apabila Asuransi Tambahan ini telah berlaku dan melewati Masa Tunggu"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="40">
+			<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRj}!=null)]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="0" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRj}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlusRj}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rj.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="20" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA["standalone".equals( $P{standalone}) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsOneRow2}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040222_product_sub_note_rincian.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20">
+			<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRg}!=null)]]></printWhenExpression>
+			<subreport>
+				<reportElement x="8" y="0" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRg}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlusRg}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rg.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRb}!=null)]]></printWhenExpression>
+			<subreport>
+				<reportElement x="8" y="0" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusRb}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlusRb}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_rb.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<summary>
+		<band height="21">
+			<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusPk}!=null)]]></printWhenExpression>
+			<subreport>
+				<reportElement positionType="Float" x="8" y="0" width="569" height="20" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{dsRincianRiderMedicalPlusPk}!=null)]]></printWhenExpression>
+				</reportElement>
+				<subreportParameter name="standalone">
+					<subreportParameterExpression><![CDATA[$P{standalone}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{dsRincianRiderMedicalPlusPk}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_rider_medical_plus_pk.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

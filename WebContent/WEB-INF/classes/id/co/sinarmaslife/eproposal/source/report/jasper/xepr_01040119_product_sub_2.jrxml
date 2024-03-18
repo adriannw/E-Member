@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040119_product_sub_2" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="40" topMargin="0" bottomMargin="0" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select 'Santunan Harian Rawat Inap Di Rumah Sakit per hari' as ket, '1,000,000' as batasanManfaat from dual
+union
+select 'Santunan Harian Rawat Inap Di Ruang ICU per hari' as ket, '2,000,000' as batasanManfaat from dual]]>
+	</queryString>
+	<field name="ket" class="java.lang.String"/>
+	<field name="batasanManfaat" class="java.lang.String"/>
+	<columnHeader>
+		<band height="17" isSplitAllowed="false">
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="352" y="0" width="89" height="17"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Batasan Manfaat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="0" width="337" height="17"/>
+				<box border="1Point" padding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Ket]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13">
+			<textField>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="0" width="337" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="5" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="0"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" mode="Transparent" x="352" y="0" width="89" height="13"/>
+				<box topBorder="None" topPadding="0" leftBorder="1Point" leftPadding="0" bottomBorder="None" bottomPadding="0" rightBorder="1Point" rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{batasanManfaat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="97">
+			<frame>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="0" width="337" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" mode="Transparent" x="352" y="0" width="89" height="5"/>
+				<box padding="0" topBorder="None" leftBorder="1Point" bottomBorder="1Point" rightBorder="1Point"/>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="5" width="424" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[* Total Maksimum Manfaat Santunan Rawat Inap di Rumah Sakit (HCP):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="17" width="9" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="17" width="473" height="24"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Maksimum Manfaat HCP baik karena Sakit, ICU maupun Kecelakaan yang dapat dibayarkan untuk 1 (satu) orang Tertanggung selama 10 (sepuluh) tahun Masa Pertanggungan HCP adalah 150% dari Uang Pertanggungan (UP)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="41" width="473" height="24"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Bila Total Manfaat HCP telah mencapai 150% dari UP (meskipun masa pertanggungan HCP kurang dari 10 tahun), maka pertanggungan HCP akan otomatis berakhir dan pertanggungan akan berjalan sampai akhir kontrak tanpa manfaat HCP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="41" width="9" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[b)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="65" width="9" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[c)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="65" width="473" height="32"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Akan tetapi, apabila sampai akhir kontrak, Total Manfaat HCP yang sudah dibayarkan kurang dari 100% UP, maka 50% dari selisih antara 100% UP dengan Total Manfaat HCP yang telah dibayarkan akan diberikan kepada Pemegang Polis/Yang Ditunjuk sebagai Cash Bonus.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

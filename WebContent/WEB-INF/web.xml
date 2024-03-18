@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>E-Member</display-name>
+    <description>E-Member Online</description>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Halaman error bersifat server-specific (404,500,..) -->
+    <!--	<error-page>-->
+    <!--		<error-code>404</error-code>-->
+    <!--		<location>/include/error.jsp?e=404</location>-->
+    <!--	</error-page>-->
+    <!--	<error-page>-->
+    <!--		<error-code>500</error-code>-->
+    <!--		<location>/include/error.jsp?e=500</location>-->
+    <!--	</error-page>-->
+
+    <!-- Filter Sitemesh -->
+    <filter>
+        <filter-name>sitemesh</filter-name>
+        <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>sitemesh</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!-- GZIP Filter -->
+    <filter>
+        <filter-name>GZipFilter</filter-name>
+        <filter-class>id.co.sinarmaslife.std.util.filter.GZIPFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>GZipFilter</filter-name>
+        <url-pattern>*.js</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>GZipFilter</filter-name>
+        <url-pattern>*.css</url-pattern>
+    </filter-mapping>
+
+    <!-- Default waktu timeout user dalam hitungan menit -->
+    <session-config>
+        <session-timeout>240</session-timeout>
+    </session-config>
+
+    <!--
+         Listener Spring, mengambil setting global/root di file bernama applicationContext.xml secara default,
+         atau bisa specify di context-param bernama contextConfigLocation
+     -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+        	classpath:/id/co/sinarmaslife/std/spring/config/spring-formatter.xml
+			/WEB-INF/applicationContext*.xml
+			/WEB-INF/spring*.xml
+        </param-value>
+    </context-param>
+
+<!--
+
+     <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+ --> 
+ 
+     <listener>
+        <listener-class>id.com.context.CustomContextListener</listener-class>
+    </listener>
+ 
+    <!-- Spring's Dispatcher Servlet -->
+    <servlet>
+        <servlet-name>spring</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>
+                /WEB-INF/spring-context.xml
+                /WEB-INF/spring-formatter.xml
+                /WEB-INF/spring-module-dao-servlet.xml
+                /WEB-INF/spring-module-business-servlet.xml
+                /WEB-INF/spring-module-general-servlet.xml
+                /WEB-INF/spring-module-url-mapping.xml
+            </param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet>
+		<servlet-name>jersey-servlet</servlet-name>
+		<servlet-class>
+                     com.sun.jersey.spi.container.servlet.ServletContainer
+                </servlet-class>
+		<init-param>
+		     <param-name>com.sun.jersey.config.property.packages</param-name>
+		     <param-value>id.co.sinarmaslife.eproposal.webservice.rest.server</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>jersey-servlet</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+    
+    <!-- SOAP
+    <listener>
+        <listener-class>
+                com.sun.xml.ws.transport.http.servlet.WSServletContextListener
+        </listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>Proposal</servlet-name>
+        <servlet-class>
+        	com.sun.xml.ws.transport.http.servlet.WSServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Proposal</servlet-name>
+        <url-pattern>/Proposal</url-pattern>
+    </servlet-mapping>
+     -->
+     
+   
+    <listener>
+        <listener-class>
+        	id.co.sinarmaslife.servlet.JasperCompilerServletListener
+    	</listener-class>
+    </listener>
+   
+
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>spring</servlet-name>
+        <url-pattern>*.pdf</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+     <servlet-name>MemberServlet</servlet-name>
+     <servlet-class>id.co.sinarmaslife.eproposal.web.MemberRESTController</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+	    <servlet-name>MemberServlet</servlet-name>
+	    <url-pattern>/member/*</url-pattern>
+    </servlet-mapping> 
+
+</web-app>

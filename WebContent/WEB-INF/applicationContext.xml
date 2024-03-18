@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<description>
+		Konfigurasi Utama dari E-Proposal, termasuk:
+		- Setting untuk Database dan Connection Pooling-nya 
+			(ada di file jdbc.properties, cukup rubah entry ini untuk merubah database, misalnya dari eka8i ke ekatest)
+		- Data Access Objects (DAO) dan Proses2
+			(Semua object yang mengakses database, termasuk proses2 seperti jurnal/input/komisi/produksi/etc..)
+		- Transaction Manager
+			(Semua object yang menjadi 'atasan' dari DAO yang ada, berguna untuk mengatur transaksi)
+		- File2 properties, seperti menyimpan akses user, dan setting2 lainnya 
+			(seperti ekalife.ini di program PowerBuilder)
+		- Bean2 tambahan lainnya
+	</description>
+
+	<!-- <bean id="jasperCompiler" class="org.springframework.web.servlet.mvc.ServletWrappingController">
+			<property name="servletClass" value="id.co.sinarmaslife.servlet.JasperCompilerServlet" />
+			<property name="servletName" value="jasper" />
+	</bean> -->
+
+</beans>

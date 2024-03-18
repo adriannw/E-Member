@@ -1,0 +1,40 @@
+Penambahan versioning sistem
+
+v1.202.60 - 14/11/2016
+Penambahan produk baru Bank Victoria:
+-VIP HOSPITAL PLAN (195), VIP EDU PLAN (208), VIP MEDICAL PLAN (183)
+
+v1.202.47 - 09/06/2016
+Penambahan produk baru:
+-Simas Magna Link (213) dan Simas Prime Link (134)
+
+
+v1.202.45 - 22/04/2016
+Penambahan produk baru:
+-SMiLe Medical (AC)/SMART MEDICAL CARE reff: BSM/BTN (183-46-90)
+-Superlink Syariah (200-5/6)
+-Laporan Disclaimer Bancassurance
+
+
+v1.202.43 - 23/12/2015
+Perubahan Layout Disclaimer(Tanda-Tangan Pemohon/Agen) menjadi di bagian bawah report e-proposal
+pada produk unit link: CERDAS SIMPOL/SMiLe LINK 99/88/ untuk tanda-tangan by Sistem (Android) E-SPAJ
+
+
+v1.202.41 - #70383 - 27/04/2015
+Perubahan Ketentuan Akseptasi PRINT-OUT PROPOSAL ULINK di BANCASSURANCE Produk SIMPOL, SMiLe Link Satu, VIP Family Plan(190)
+
+LAYAK JUAL jika :
+Terdapat **/nil bukan pada tahun pertama di asumsi rendah, tapi tidak ada sama sekali **/nil di asumsi sedang dan tinggi.
+**/nil selain tahun ke-1 di asumsi rendah tapi tidak ada **/nil sampai usia 99 di asumsi sedang dan tinggi.
+
+v1.202.40 - #  - 01/04/2015
+Update asumsi biaya investasi (bunga) produk asuransi Unit Link berdasar SE No.025/AJS-SE/IV/2015:
+									 {Low  Medium  High} 
+Excellink/Simas Fixed Income Fund      5% 	 8% 	10%
+Excellink/Simas Dynamic Fund 	       6% 	10% 	14% 
+Excellink/Simas Aggressive Fund 	   7% 	12% 	18%
+dari sebelumnya :
+Excellink Fixed Income Fund	  		 0.04   0.08	0.12
+Excellink Dynamic Fund	      	      0.1	0.14	0.18
+Excellink Aggressive Fund	 	     0.14	0.18	0.22

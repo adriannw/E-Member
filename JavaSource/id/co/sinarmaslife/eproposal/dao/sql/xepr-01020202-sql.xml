@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="id.co.sinarmaslife.eproposal">
+
+    <resultMap id="selectedBusiness.result" class="id.co.sinarmaslife.standard.model.vo.ViewSelectedListBusiness">
+        <result property="groupId" column="GROUP_ID" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsbsId" column="LSBS_ID" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsbsName" column="LSBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lsdbsNumber" column="LSDBS_NUMBER" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsdbsName" column="LSDBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="hardcodedFlag" column="HARDCODED_FLAG" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lsdbsAktif" column="LSDBS_AKTIF" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+    
+    <select id="selectedBusinessList" resultMap="selectedBusiness.result" parameterClass="java.util.Map">
+		select d.GROUP_ID, d.LSBS_ID, d.LSBS_NAME, d.LSDBS_NUMBER, e.LSDBS_NAME, d.HARDCODED_FLAG, e.LSDBS_AKTIF
+			from(
+	 			select a.GROUP_ID, a.LSBS_ID, b.LSBS_NAME, a.LSDBS_NUMBER, a.HARDCODED_FLAG
+	 			from eka.LST_USER_PRODUCT_GROUP_DETAIL a, eka.LST_BISNIS b
+	 				where a.LSBS_ID = b.LSBS_ID 
+	 	   			and a.GROUP_ID = #GROUP_ID#
+				) d, eka.LST_DET_BISNIS e
+			where d.LSDBS_NUMBER = e.LSDBS_NUMBER and d.LSBS_ID = e.LSBS_ID
+			order by d.LSBS_ID, d.lsdbs_number asc
+	</select>
+	
+	<select id="selectedHardcodedBusinessList" resultMap="selectedBusiness.result" parameterClass="java.util.Map">		
+		 select a.GROUP_ID, a.LSBS_ID, null as LSBS_NAME, a.LSDBS_NUMBER, null as LSDBS_NAME, a.HARDCODED_FLAG,
+          b.LSDBS_AKTIF           
+             from eka.LST_USER_PRODUCT_GROUP_DETAIL a, eka.LST_DET_BISNIS b
+                    where a.GROUP_ID = #GROUP_ID# and a.HARDCODED_FLAG is not null
+                    AND a.lsbs_id=b.lsbs_id AND A.LSDBS_NUMBER=B.LSDBS_NUMBER
+            order by a.LSBS_ID, a.lsdbs_number asc
+	</select>
+	
+	<resultMap id="selectBusiness.result" class="id.co.sinarmaslife.standard.model.vo.ViewListBusiness">
+        <result property="lsbsId" column="LSBS_ID" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsbsName" column="LSBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lsdbsNumber" column="LSDBS_NUMBER" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsdbsName" column="LSDBS_NAME" javaType="String" jdbcType="VARCHAR2"/>
+        <result property="lsdbsAktif" column="LSDBS_AKTIF" javaType="String" jdbcType="NUMBER"/>
+    </resultMap>
+    
+    <select id="selectBusinessList" resultMap="selectBusiness.result" parameterClass="java.util.Map">
+		select a.LSBS_ID, a.LSBS_NAME, b.LSDBS_NUMBER, b.LSDBS_NAME, b.LSDBS_AKTIF 
+			from (
+	 			select LSBS_ID, LSBS_NAME from eka.LST_BISNIS
+	 				where LSBS_ID in(
+	   			  		select distinct LSBS_ID from eka.LST_USER_PRODUCT_GROUP_DETAIL
+							where GROUP_ID = #GROUP_ID#
+						)
+				) a, eka.LST_DET_BISNIS b
+			where a.LSBS_ID = b.LSBS_ID
+			order by a.LSBS_ID, b.lsdbs_number asc
+	</select>
+	
+    <select id="selectAddBusiness" resultMap="selectBusiness.result" parameterClass="java.util.Map">
+    	 select a.LSBS_ID, b.LSBS_NAME, a.LSDBS_NUMBER, a.LSDBS_NAME, a.LSDBS_AKTIF 
+    	 from eka.LST_DET_BISNIS a, eka.LST_BISNIS b
+    	 	where a.LSBS_ID = b.LSBS_ID
+    	 	and a.LSBS_ID = #LSBS_ID#
+	</select>
+	
+	<insert id="addBusiness" parameterClass="java.util.Map">
+    	 insert into eka.LST_USER_PRODUCT_GROUP_DETAIL(GROUP_ID, LSBS_ID, LSDBS_NUMBER, HARDCODED_FLAG) values(#GROUP_ID#, #LSBS_ID#, #LSDBS_NUMBER#, #HARDCODED_FLAG#)
+	</insert>
+	
+	<resultMap id="selectBusinessIdList.result" class="id.co.sinarmaslife.standard.model.vo.ViewListIdBusiness">
+        <result property="id" column="ID" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectBusinessParentIdList" resultMap="selectBusinessIdList.result" parameterClass="java.util.Map">
+    	 select distinct LSBS_ID as id from eka.LST_USER_PRODUCT_GROUP_DETAIL
+    	 	where GROUP_ID = #GROUP_ID#
+    	 	order by lsbs_id asc
+	</select>
+	
+	<insert id="selectedNewChildList" parameterClass="java.util.Map">
+    	 insert into eka.LST_USER_PRODUCT_GROUP_DETAIL(GROUP_ID, LSBS_ID, LSDBS_NUMBER, HARDCODED_FLAG) values(#GROUP_ID#, #LSBS_ID#, #LSDBS_NUMBER#, #HARDCODED_FLAG#)
+	</insert>
+	
+	<delete id="unselectedChildList" parameterClass="java.util.Map">
+    	 delete eka.LST_USER_PRODUCT_GROUP_DETAIL
+			where GROUP_ID = #GROUP_ID# and LSBS_ID = #LSBS_ID# and LSDBS_NUMBER = #LSDBS_NUMBER#
+	</delete>
+	
+	<delete id="unselectedParentList" parameterClass="java.util.Map">
+    	 delete eka.LST_USER_PRODUCT_GROUP_DETAIL
+			where GROUP_ID = #GROUP_ID# and LSBS_ID = #LSBS_ID#
+	</delete>
+	
+	<delete id="unselectedHardcodedParentList" parameterClass="java.util.Map">
+    	 delete eka.LST_USER_PRODUCT_GROUP_DETAIL
+			where GROUP_ID = #GROUP_ID# and HARDCODED_FLAG = #HARDCODED_FLAG#
+	</delete>
+	
+	<resultMap id="selectHardcodedBusiness.result" class="id.co.sinarmaslife.standard.model.vo.ViewListHardcodedBusiness">
+        <result property="lsbsId" column="LSBS_ID" javaType="String" jdbcType="NUMBER"/>
+        <result property="lsdbsNumber" column="LSDBS_NUMBER" javaType="String" jdbcType="NUMBER"/>
+        <result property="hardcodedFlag" column="HARDCODED_FLAG" javaType="String" jdbcType="VARCHAR2"/>
+    </resultMap>
+    
+    <select id="selectBusinessHardcodedParentIdList" resultMap="selectHardcodedBusiness.result" parameterClass="java.util.Map">
+    	select LSBS_ID, LSDBS_NUMBER, HARDCODED_FLAG from eka.LST_USER_PRODUCT_GROUP_DETAIL
+			where GROUP_ID = #GROUP_ID# and HARDCODED_FLAG is not null 
+			order by lsbs_id, lsdbs_number asc
+    </select>
+    
+    <select id="selectGroupNameLabel" resultClass="java.lang.String" parameterClass="java.util.Map">
+		select group_name from eka.LST_USER_PRODUCT_GROUP
+			where group_id = #group_id#
+	</select>
+	
+</sqlMap>

@@ -1,0 +1,53 @@
+ 01010101 Halaman Utama Login
+ 01010102 Logout
+
+ 01020101 maintenance
+ 01020201 Product Access Group
+ 01020202 ubah business
+ 01020301 Look Up Agent
+
+ 01030301 membuat surat
+ 01030302 preview surat
+ 01030401 membuat cover
+ 01030402 preview cover
+ 01030501 lihat provider
+ 01030502 lihat detail provider
+ 01030601 lihat dokumen Tindakan Medis
+ 01030701 lihat Swine Flu provider
+ 01030901 preview DPLK
+
+ 01030101 data proposal
+ 01030102 detail proposal
+ 01030103 rider page
+ 01030104 top up / draw page
+ 01030105 class page
+ 01030106 additional participant page
+ 01030107 additional participant eka sehat page
+
+NON UNIT LINK PRODUCTS
+ 01030202  01040101 Super Protection (45)
+ 01030203  01040102 Super Sehat (53)
+ 01030204  01040103 Super Sehat Plus (54)
+ 01030205  01040104 Dana sejahtera New (163)
+ 01030206  01040105 Super sejahtera (39)                   Hide
+ 01030207  01040106 Power Simponi Rupiah (95)              Hide
+ 01030208  01040107 Power Save New (142)                   Selected Show
+ 01030209  01040108 Power Save Bulanan (158)               Selected Show
+ 01030211  01040109 Platinum Save (155)                    Hide
+ 01030218  01040110 Hidup Bahagia (167)
+ 01030219  01040111 Stable Link (164)
+ 01030220           Investimax (165)
+
+UNIT LINK PRODUCTS
+ 01030210  01040201 Eka Link Family (159)
+*01030212 *01040202 Eka Link Family Syariah (160)
+ 01030213  01040203 Artha Link (162)                       Selected Show (rupiah dollar)
+*01030213 *01040203 Eka Link 88(162)                       Selected Show (rupiah only)
+*01030213 *01040203 Eka Link 88 Plus (162)                 Selected Show (rupiah only)
+ 01030214  01040204 Eka Link 80 (115)
+ 01030215  01040205 Eka Link 80 Plus (116)
+*01030216 *01040206 Eka Link 80 Syariah (152)
+*01030217 *01040207 Eka Link 80 Plus Syariah (153)
+//// 01030221  Platinum Link (165)
+//// 01030222  Amanah Link (165)
+

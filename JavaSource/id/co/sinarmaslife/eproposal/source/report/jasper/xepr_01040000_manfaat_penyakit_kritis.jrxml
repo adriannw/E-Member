@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_manfaat_penyakit_kritis" pageWidth="530" pageHeight="842" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select
+	 '5 tahun.' as termOfPayment, 
+	'Penyakit Kritis merupakan pertanggungan tambahan yang dapat mempercepat timbulnya manfaat asuransi sebesar Lima puluh juta Rupiah apabila berdasarkan diagnosa Tertanggung dinyatakan menderita salah satu penyakit kritis sebagai berikut :' as paragraph1
+from dual]]>
+	</queryString>
+	<field name="paragraph1" class="java.lang.String"/>
+	<field name="termOfPayment" class="java.lang.String"/>
+	<pageHeader>
+		<band height="280">
+			<staticText>
+				<reportElement x="-1" y="-1" width="98" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Penyakit Kritis (PK)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="122" height="12"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Masa Pertanggungan PK :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="128" y="16" width="104" height="13"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{termOfPayment}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="28" width="521" height="17"/>
+				<staticText>
+					<reportElement positionType="Float" x="7" y="3" width="17" height="14"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[1.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement positionType="Float" x="24" y="4" width="497" height="12"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{paragraph1}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="72" y="48" width="185" height="140"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Serangan Jantung
+Penyakit Motor Neuron
+Penyakit Parkinson
+Penyakit Hati Kronis
+Penyakit Paru Kronis
+Pencangkokan Organ Mayor
+Multiple Sklerosis
+Hepatitis Virus Fulminan
+Hipertensi Arteri Pulmoner
+Kehilangan Kemampuan Melihat
+Penyakit Alzheimer
+Penyakit Pembuluh Koroner
+Kehilangan Kemampuan Berbicara
+Kehilangan Kemampuan Mendengar
+Meningitis Bakteri]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="48" width="17" height="140"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="280" y="48" width="17" height="140"/>
+				<textElement textAlignment="Right">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[16.
+17.
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+26.
+27.
+28.
+29.
+30.
+31.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="304" y="48" width="185" height="149"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Terminal Illness
+Stroke
+Kanker
+Anemia Aplastik
+Distrofi Otot
+Luka Bakar Mayor
+Tumor Otak Jinak
+Radang Otak
+Cardiomyopathy
+Polio
+Bedah Aorta
+Gagal Ginjal
+Kelumpuhan
+Koma
+Hidrosefalus
+Operasi Penggantian Katub jantung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="201" width="17" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="201" width="497" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tertanggung mulai berhak atas Manfaat Asuransi ini, apabila Asuransi tambahan ini mulai berlaku dan telah melewati masa tunggu (90 hari), kecuali Tertanggung menderita penyakit kritis sebagai akibat kecelakaan tidak ada masa tunggu.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="226" width="497" height="22"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dengan dibayarkannya Manfaat Asuransi ini, maka Jumlah Uang Pertanggungan Pokok akan dikurangi dengan Manfaat Asuransi yang dipercepat yang sudah dibayarkan. Premi serta manfaat lainnya akan diperhitungkan kembali sesuai dengan Uang Pertanggungan yang baru.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="226" width="17" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="250" width="497" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dengan dibayarkannya Manfaat Asuransi ini, maka seluruh Asuransi Tambahan ( Rider ) lainnya menjadi batal.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="250" width="17" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="265" width="497" height="13"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tidak ada pembayaran manfaat Asuransi untuk hal-hal yang dikecualikan dalam Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="265" width="17" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

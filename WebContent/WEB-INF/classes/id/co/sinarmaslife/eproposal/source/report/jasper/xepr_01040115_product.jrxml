@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040115_product" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="10" bottomMargin="10" isSummaryNewPage="true" whenResourceMissingType="Empty">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 2007"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="totalDana" class="java.lang.String">
+		<parameterDescription><![CDATA[totalDana]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPersentaseUp" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPersentaseUp]]></parameterDescription>
+	</parameter>
+	<parameter name="descDs1" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[descDs1]]></parameterDescription>
+	</parameter>
+	<parameter name="descDs2" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[descDs2]]></parameterDescription>
+	</parameter>
+	<parameter name="totalPremiPokok" class="java.lang.String">
+		<parameterDescription><![CDATA[totalPremiPokok]]></parameterDescription>
+	</parameter>
+	<parameter name="namaAnak" class="java.lang.String">
+		<parameterDescription><![CDATA[namaAnak]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaAnak" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaAnak]]></parameterDescription>
+	</parameter>
+	<parameter name="namaOrangTua" class="java.lang.String">
+		<parameterDescription><![CDATA[namaOrangTua]]></parameterDescription>
+	</parameter>
+	<parameter name="usiaOrangTua" class="java.lang.String">
+		<parameterDescription><![CDATA[usiaOrangTua]]></parameterDescription>
+	</parameter>
+	<parameter name="uangPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[uangPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPertanggungan" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPertanggungan]]></parameterDescription>
+	</parameter>
+	<parameter name="masaPembayaranPremi" class="java.lang.String">
+		<parameterDescription><![CDATA[masaPembayaranPremi]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTahunan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTahunan]]></parameterDescription>
+	</parameter>
+	<parameter name="premiSemesteran" class="java.lang.String">
+		<parameterDescription><![CDATA[premiSemesteran]]></parameterDescription>
+	</parameter>
+	<parameter name="premiTriwulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiTriwulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="tglProposal" class="java.lang.String">
+		<parameterDescription><![CDATA[tglProposal]]></parameterDescription>
+	</parameter>
+	<parameter name="investasi" class="java.lang.String">
+		<parameterDescription><![CDATA[investasi]]></parameterDescription>
+	</parameter>
+	<parameter name="keterangan" class="java.lang.String">
+		<parameterDescription><![CDATA[keterangan]]></parameterDescription>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="premiBulanan" class="java.lang.String">
+		<parameterDescription><![CDATA[premiBulanan]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="umur_tt" class="java.lang.Integer">
+		<parameterDescription><![CDATA[umur_tt]]></parameterDescription>
+	</parameter>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '9,800,000.00' as cashValue, '11,000,000.00' as nonAccBenefit, '20,000,000.00' as accBenefit, '-' as stageBonus  from dual]]>
+	</queryString>
+	<field name="yearNo" class="java.lang.String"/>
+	<field name="cashValue" class="java.lang.String"/>
+	<field name="nonAccBenefit" class="java.lang.String"/>
+	<field name="accBenefit" class="java.lang.String"/>
+	<field name="stageBonus" class="java.lang.String"/>
+	<background>
+		<band height="55">
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement mode="Transparent" x="0" y="14" width="513" height="37" forecolor="#808080"/>
+				<box padding="5">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None">
+					<font fontName="Arial Black" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{validityMsg}]]></textFieldExpression>
+			</textField>
+			<image hyperlinkType="None">
+				<reportElement x="0" y="26" width="145" height="29">
+					<printWhenExpression><![CDATA[new Boolean( $P{validityMsg} == null || "".equals( $P{validityMsg}.trim() ) )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression class="java.lang.String"><![CDATA[$P{logoPath}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="488" y="26" width="24" height="13"/>
+				<textElement textAlignment="Left">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="480" y="26" width="8" height="13"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="456" y="26" width="24" height="13"/>
+				<textElement textAlignment="Right">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="52">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="32" width="513" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="uangPertanggungan">
+					<subreportParameterExpression><![CDATA[$P{uangPertanggungan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPersentaseUp">
+					<subreportParameterExpression><![CDATA[$P{totalPersentaseUp}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaAnak">
+					<subreportParameterExpression><![CDATA[$P{usiaAnak}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaOrangTua">
+					<subreportParameterExpression><![CDATA[$P{usiaOrangTua}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalDana">
+					<subreportParameterExpression><![CDATA[$P{totalDana}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="namaOrangTua">
+					<subreportParameterExpression><![CDATA[$P{namaOrangTua}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="namaAnak">
+					<subreportParameterExpression><![CDATA[$P{namaAnak}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="masaPembayaranPremi">
+					<subreportParameterExpression><![CDATA[$P{masaPembayaranPremi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="masaPertanggungan">
+					<subreportParameterExpression><![CDATA[$P{masaPertanggungan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="umur_tt">
+					<subreportParameterExpression><![CDATA[$P{umur_tt}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{descDs1}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040115_product_sub_1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<subreport>
+				<reportElement positionType="Float" x="0" y="0" width="513" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="tglProposal">
+					<subreportParameterExpression><![CDATA[$P{tglProposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaAnak">
+					<subreportParameterExpression><![CDATA[$P{usiaAnak}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="usiaOrangTua">
+					<subreportParameterExpression><![CDATA[$P{usiaOrangTua}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="premiSemesteran">
+					<subreportParameterExpression><![CDATA[$P{premiSemesteran}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="masaPembayaranPremi">
+					<subreportParameterExpression><![CDATA[$P{masaPembayaranPremi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="premiBulanan">
+					<subreportParameterExpression><![CDATA[$P{premiBulanan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="masaPertanggungan">
+					<subreportParameterExpression><![CDATA[$P{masaPertanggungan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="premiTriwulanan">
+					<subreportParameterExpression><![CDATA[$P{premiTriwulanan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="uangPertanggungan">
+					<subreportParameterExpression><![CDATA[$P{uangPertanggungan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="investasi">
+					<subreportParameterExpression><![CDATA[$P{investasi}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentName">
+					<subreportParameterExpression><![CDATA[$P{agentName}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalDana">
+					<subreportParameterExpression><![CDATA[$P{totalDana}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="premiTahunan">
+					<subreportParameterExpression><![CDATA[$P{premiTahunan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="keterangan">
+					<subreportParameterExpression><![CDATA[$P{keterangan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="totalPremiPokok">
+					<subreportParameterExpression><![CDATA[$P{totalPremiPokok}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="namaOrangTua">
+					<subreportParameterExpression><![CDATA[$P{namaOrangTua}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="namaAnak">
+					<subreportParameterExpression><![CDATA[$P{namaAnak}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="no_proposal">
+					<subreportParameterExpression><![CDATA[$P{no_proposal}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{descDs2}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040115_product_sub_2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</columnHeader>
+</jasperReport>

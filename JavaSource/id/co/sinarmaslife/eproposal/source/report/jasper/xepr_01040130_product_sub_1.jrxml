@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<!DOCTYPE jasperReport PUBLIC "-//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+
+<jasperReport name="xepr_01040130_product_sub_1" pageWidth="530" pageHeight="600" whenNoDataType="AllSectionsNoDetail" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.HGuides" value="401"/>
+	<parameter name="tglProposal" class="java.lang.String">
+		<parameterDescription><![CDATA[tglProposal]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select 'Nama Tertanggung' as label, 'Samuel' as content from dual
+union
+select 'Usia Tertanggung' as label, '22 tahun' as content from dual
+union
+select 'Masa Pertanggungan' as label, '27 tahun' as content from dual
+union
+select 'Masa Pembayaran Premi' as label, '5 tahun' as content from dual
+union
+select 'Uang Pertanggungan (UP)' as label, 'Rp.100,000,000.00' as content from dual]]>
+	</queryString>
+	<title>
+		<band height="157">
+			<staticText>
+				<reportElement x="0" y="0" width="168" height="16"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANFAAT ASURANSI:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="21" width="527" height="44"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Program Asuransi ini merupakan Asuransi Kematian berjangka satu tahun( term Insurance ). Apabila Tertanggung meninggal dunia pada waktu asuransi masih berjalan, kepada Ahli Waris yang ditunjuk dibayarkan sejumlah Uang Pertanggungan. Apabila Tertanggung tetap hidup mencapai jangka waktu kontrak Asuransi, maka perusahaan tindak berkewajiban mambayar apapun kepada Tertanggung ataupun Ahli Warisnya.]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="0" y="96" width="153" height="20"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{tglProposal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="117" width="188" height="1"/>
+				<graphicElement/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="118" width="184" height="20"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

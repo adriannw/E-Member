@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040132_product_sub_1" pageWidth="595" pageHeight="900" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<parameter name="logoPath" class="java.lang.String">
+		<defaultValueExpression><![CDATA["images/logo_ajs.gif"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dsCommonHeader" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Jakarta, 11 Mei 1980"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencySymbol" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Rp."]]></defaultValueExpression>
+	</parameter>
+	<parameter name="validityMsg" class="java.lang.String"/>
+	<parameter name="titleReport" class="java.lang.String">
+		<parameterDescription><![CDATA[titleReport]]></parameterDescription>
+	</parameter>
+	<parameter name="umur" class="java.lang.Integer">
+		<parameterDescription><![CDATA[umur]]></parameterDescription>
+	</parameter>
+	<parameter name="manfaat" class="net.sf.jasperreports.engine.JRDataSource">
+		<parameterDescription><![CDATA[manfaat]]></parameterDescription>
+	</parameter>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="agentName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '10,000,000.00' as cashValue, 
+'10,000,000.00' as nonCelaka, '20,000,000.00' as celaka, 
+'10,000,000.00' as lifeBenefit, '10,000,000.00' as lifeBenefitNotTake from dual]]>
+	</queryString>
+	<field name="CASHVALUE" class="java.lang.String"/>
+	<field name="CELAKA" class="java.lang.String"/>
+	<field name="LIFEBENEFIT" class="java.lang.String"/>
+	<field name="LIFEBENEFITNOTTAKE" class="java.lang.String"/>
+	<field name="NONCELAKA" class="java.lang.String"/>
+	<field name="YEARNO" class="java.lang.String"/>
+	<title>
+		<band height="505">
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="16" width="217" height="21"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="16" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SIMAS MAXISAVE"]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="16" y="44" width="529" height="20" isRemoveLineWhenBlank="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeader}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="16" y="120" width="105" height="17" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[MANFAAT ASURANSI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="140" width="513" height="81"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung hidup pada akhir tahun polis kelima dan semua Premi Tahunan dibayarkan penuh*, maka akan dibayarkan Manfaat Asuransi sebesar 570% dari Premi Tahunannya. Apabila Manfaat Hidup ini tidak diambil pada akhir tahun polis kelima, maka Pemegang Polis dapat mengambilnya di akhir tahun Polis keenam, atau ketujuh atau kedelapan. Besarnya Manfaat Asuransi pada akhir tahun keenam, ketujuh atau kedelapan berturut-turut adalah 600% , 633% atau 675% dari Premi Tahunannya. Manfaat hidup ini hanya dibayarkan sekali saja sesuai dengan pilihan Pemegang Polis. Setelah diterimanya Manfaat Asuransi ini pertanggungan tetap berjalan seperti biasa kecuali apabila diambil pada akhir tahun Polis ke delapan maka sejak saat itu asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="140" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="221" width="513" height="36"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia karena Kecelakaan dalam lima tahun pertama sejak berlakunya Polis, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 200% Uang Pertanggungan ditambah dengan Nilai Tunai, dan sejak saat itu asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="221" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="120" y="120" width="369" height="17" isRemoveLineWhenBlank="true"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA['"'+$P{titleReport}+'"']]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="257" width="513" height="35"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia karena kecelakaan setelah akhir tahun polis kelima, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 200% Uang Pertanggungan ditambah dengan Manfaat Hidup yang belum diambil(bila ada), dan sejak saat itu asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="257" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="292" width="513" height="35" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 0 &&  $P{umur}.intValue() < 56)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia bukan karena kecelakaan dalam lima tahun pertama sejak berlakunya Polis, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi sebesar 100% Uang Pertanggungan ditambah dengan Nilai Tunai, dan sejak saat itu asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="292" width="9" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 0 &&  $P{umur}.intValue() < 56)]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="449" width="513" height="25"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tidak ada pembayaran Manfaat Asuransi apabila Tertanggung meninggal dunia bukan karena Kecelakaan setelah akhir tahun Polis kelima kecuali Manfaat Hidupnya belum diambil(bila ada).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="449" width="9" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="66" width="529" height="25" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{titleReport}.equals("SMiLe Multi Invest GOLD"))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isBold="true" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Untuk meningkatkan Manfaat Asuransi, khusus untuk program SMiLe Multi Invest "Gold" selama tahun Polis pertama
+Anda mendapatkan kesempatan untuk menambah Premi sebesar 50% dari Premi Tahunannya. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="327" width="9" height="13" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="327" width="513" height="23" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung meninggal dunia bukan karena kecelakaan dalam lima tahun pertama sejak berlakunya Polis, maka kepada Yang Ditunjuk akan dibayarkan Manfaat Asuransi yang besarnya sebagai berikut :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="350" width="161" height="24" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Meninggal dunia bukan karena
+Kecelakaan di tahun Polis ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="374" width="161" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="386" width="161" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="398" width="161" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="410" width="161" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="32" y="422" width="161" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="374" width="201" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pengembalian Premi yg telah dibayarkan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="386" width="201" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[40% Uang Pertanggungan + Nilai Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="398" width="201" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[60% Uang Pertanggungan + Nilai Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="422" width="201" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[100% Uang Pertanggungan + Nilai Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="350" width="201" height="24" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Manfaat Asuransi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="192" y="410" width="201" height="12" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[80% Uang Pertanggungan + Nilai Tunai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="32" y="434" width="513" height="15" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{umur}.intValue() > 55 &&  $P{umur}.intValue() < 61)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Sejak diterimanya Manfaat Asuransi ini maka Asuransi berakhir.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="91" width="529" height="25" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($P{titleReport}.equals("SMiLe Multi Invest PLATINUM"))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="9" isBold="true" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Untuk meningkatkan Manfaat Asuransi, khusus untuk program SMiLe Multi Invest "Platinum" selama tahun Polis pertama
+Anda mendapatkan kesempatan untuk menambah Premi sebesar 100% dari Premi Tahunannya. ]]></text>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="0" y="485" width="553" height="20" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="validityMsg">
+					<subreportParameterExpression><![CDATA[$P{validityMsg}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="currencySymbol">
+					<subreportParameterExpression><![CDATA[$P{currencySymbol}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="umur">
+					<subreportParameterExpression><![CDATA[$P{umur}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="dsCommonHeader">
+					<subreportParameterExpression><![CDATA[$P{dsCommonHeader}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="titleReport">
+					<subreportParameterExpression><![CDATA[$P{titleReport}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="logoPath">
+					<subreportParameterExpression><![CDATA[$P{logoPath}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{manfaat}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040145_product_sub_3.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="472" width="513" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" isItalic="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[* ketentuan pembayaran premi seperti yang tercantum dalam polis]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040216_product_sub_7" pageWidth="600" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="560" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" isTitleNewPage="true">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="agentCode" class="java.lang.String">
+		<parameterDescription><![CDATA[agentCode]]></parameterDescription>
+	</parameter>
+	<parameter name="placeAndDate" class="java.lang.String">
+		<parameterDescription><![CDATA[placeAndDate]]></parameterDescription>
+	</parameter>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="dsCommonHeaderSmall3" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="titleHcp" class="java.lang.String">
+		<parameterDescription><![CDATA[titleHcp]]></parameterDescription>
+	</parameter>
+	<parameter name="titleCi" class="java.lang.String"/>
+	<parameter name="titleTpd" class="java.lang.String">
+		<parameterDescription><![CDATA[titleTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="titleWaiverTpd" class="java.lang.String">
+		<parameterDescription><![CDATA[titleWaiverTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="titleWaiverCi" class="java.lang.String">
+		<parameterDescription><![CDATA[titleWaiverCi]]></parameterDescription>
+	</parameter>
+	<parameter name="titlePayorTpd" class="java.lang.String">
+		<parameterDescription><![CDATA[titlePayorTpd]]></parameterDescription>
+	</parameter>
+	<parameter name="dsInformationSum" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="totalBiayaInformationSum" class="java.lang.String"/>
+	<parameter name="paymentMode" class="java.lang.String"/>
+	<parameter name="titleEkaSehat" class="java.lang.String">
+		<parameterDescription><![CDATA[titleEkaSehat]]></parameterDescription>
+	</parameter>
+	<parameter name="riderWaiverTpdCiTitle" class="java.lang.String">
+		<parameterDescription><![CDATA[riderWaiverTpdCiTitle]]></parameterDescription>
+	</parameter>
+	<parameter name="titleLadiesmedical" class="java.lang.String">
+		<parameterDescription><![CDATA[titleLadiesmedical]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[select '1' as yearNo, '33' as insuredAge, '1,000.00' as rider0, '50.00' as rider1, '40.00' as rider2, '1,005.00' as rider3, '1,020' as rider4, '1,090' as rider5, '2,010' as rider6, '2,050' as rider8, '2,050' as rider12, '2,050' as rider10, '2,050' as rider11, '2,050' as rider9, '2,050' as rider7, '2,050' as rider13, '2,050' as rider14, '2,050' as rider15, '2,050' as rider16, '2,050' as rider17, '2,050' as rider18, '2,050' as rider19, '2,050' as rider20 from dual
+union
+select '2' as yearNo, '34' as insuredAge, '1,000.00' as rider0, '50.00' as rider1, '40.00' as rider2, '1,005.00' as rider3, '1,020' as rider4, '1,090' as rider5, '2,010' as rider6, '2,050' as rider8, '2,050' as rider12, '2,050' as rider10, '2,050' as rider11, '2,050' as rider9, '2,050' as rider7, '2,050' as rider13, '2,050' as rider14, '2,050' as rider15, '2,050' as rider16, '2,050' as rider17, '2,050' as rider18, '2,050' as rider19, '2,050' as rider20 from dual]]>
+	</queryString>
+	<field name="yearNo" class="java.lang.String"/>
+	<field name="insuredAge" class="java.lang.String"/>
+	<field name="rider0" class="java.lang.String">
+		<fieldDescription><![CDATA[rider0]]></fieldDescription>
+	</field>
+	<field name="rider1" class="java.lang.String">
+		<fieldDescription><![CDATA[rider1]]></fieldDescription>
+	</field>
+	<field name="rider2" class="java.lang.String">
+		<fieldDescription><![CDATA[rider2]]></fieldDescription>
+	</field>
+	<field name="rider3" class="java.lang.String">
+		<fieldDescription><![CDATA[rider3]]></fieldDescription>
+	</field>
+	<field name="rider4" class="java.lang.String">
+		<fieldDescription><![CDATA[rider4]]></fieldDescription>
+	</field>
+	<field name="rider5" class="java.lang.String">
+		<fieldDescription><![CDATA[rider5]]></fieldDescription>
+	</field>
+	<field name="rider6" class="java.lang.String">
+		<fieldDescription><![CDATA[rider6]]></fieldDescription>
+	</field>
+	<field name="rider8" class="java.lang.String">
+		<fieldDescription><![CDATA[rider8]]></fieldDescription>
+	</field>
+	<field name="rider12" class="java.lang.String">
+		<fieldDescription><![CDATA[rider12]]></fieldDescription>
+	</field>
+	<field name="rider10" class="java.lang.String">
+		<fieldDescription><![CDATA[rider10]]></fieldDescription>
+	</field>
+	<field name="rider11" class="java.lang.String">
+		<fieldDescription><![CDATA[rider11]]></fieldDescription>
+	</field>
+	<field name="rider9" class="java.lang.String">
+		<fieldDescription><![CDATA[rider9]]></fieldDescription>
+	</field>
+	<field name="rider7" class="java.lang.String">
+		<fieldDescription><![CDATA[rider7]]></fieldDescription>
+	</field>
+	<field name="rider13" class="java.lang.String">
+		<fieldDescription><![CDATA[rider13]]></fieldDescription>
+	</field>
+	<field name="rider14" class="java.lang.String">
+		<fieldDescription><![CDATA[rider14]]></fieldDescription>
+	</field>
+	<field name="rider15" class="java.lang.String">
+		<fieldDescription><![CDATA[rider15]]></fieldDescription>
+	</field>
+	<field name="rider16" class="java.lang.String">
+		<fieldDescription><![CDATA[rider16]]></fieldDescription>
+	</field>
+	<field name="rider17" class="java.lang.String">
+		<fieldDescription><![CDATA[rider17]]></fieldDescription>
+	</field>
+	<field name="rider18" class="java.lang.String">
+		<fieldDescription><![CDATA[rider18]]></fieldDescription>
+	</field>
+	<field name="rider19" class="java.lang.String">
+		<fieldDescription><![CDATA[rider19]]></fieldDescription>
+	</field>
+	<field name="rider20" class="java.lang.String">
+		<fieldDescription><![CDATA[rider20]]></fieldDescription>
+	</field>
+	<pageHeader>
+		<band height="121">
+			<staticText>
+				<reportElement positionType="Float" x="104" y="116" width="57" height="5"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="79" width="57" height="38"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Ladies Hospital Protection]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="116" width="57" height="5"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="116" width="25" height="5"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="116" width="25" height="5"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="160" y="79" width="57" height="38"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{titleLadiesmedical}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="116" width="57" height="5"/>
+				<box padding="0">
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="59" width="177" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PREMI TAMBAHAN (RIDER LADIES)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="79" width="25" height="38"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Usia
+Ttg]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="79" width="25" height="38"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Thn
+Polis
+Ke]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="104" y="79" width="57" height="38"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["SMiLe Ladies Insurance"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="79" width="218" height="1"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="116" width="218" height="1"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="120" width="218" height="1"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="79" width="1" height="42"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="24" y="79" width="1" height="42"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="48" y="79" width="1" height="42"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="104" y="79" width="1" height="42"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="160" y="79" width="1" height="42"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="216" y="79" width="1" height="42"/>
+			</line>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="177" y="59" width="137" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{paymentMode}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="144" y="10" width="321" height="25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="38" width="561" height="18" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<dataSourceExpression><![CDATA[$P{dsCommonHeaderSmall3}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_common_header_small.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="10">
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="24" y="0" width="25" height="10"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{insuredAge}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="104" y="0" width="53" height="10">
+					<printWhenExpression><![CDATA[new Boolean(!$F{rider17}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rider17}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="0" y="0" width="25" height="10"/>
+				<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{yearNo}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="160" y="0" width="53" height="10">
+					<printWhenExpression><![CDATA[new Boolean(!$F{rider20}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rider20}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="48" y="0" width="53" height="10"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rider18}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="24" y="0" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="48" y="0" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="104" y="0" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="160" y="0" width="1" height="10"/>
+			</line>
+			<line>
+				<reportElement x="216" y="0" width="1" height="10"/>
+			</line>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="160" y="0" width="53" height="10">
+					<printWhenExpression><![CDATA[new Boolean(!$F{rider19}.equals(""))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="5">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{rider19}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="72">
+			<staticText>
+				<reportElement positionType="Float" x="104" y="0" width="57" height="6"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="0" width="25" height="6"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="160" y="0" width="57" height="6"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="0" width="25" height="6"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="48" y="0" width="57" height="6"/>
+				<box padding="0">
+					<topPen lineWidth="0.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement/>
+			</staticText>
+			<subreport>
+				<reportElement positionType="Float" x="0" y="45" width="552" height="20"/>
+				<subreportParameter name="placeAndDate">
+					<subreportParameterExpression><![CDATA[$P{placeAndDate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="agentCode">
+					<subreportParameterExpression><![CDATA[$P{agentCode}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["id/co/sinarmaslife/eproposal/source/report/jasper/xepr_01040000_disclaimer.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="0" y="5" width="218" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="6"/>
+			</line>
+			<line>
+				<reportElement x="24" y="0" width="1" height="6"/>
+			</line>
+			<line>
+				<reportElement x="48" y="0" width="1" height="6"/>
+			</line>
+			<line>
+				<reportElement x="104" y="0" width="1" height="6"/>
+			</line>
+			<line>
+				<reportElement x="160" y="0" width="1" height="6"/>
+			</line>
+			<line>
+				<reportElement x="216" y="0" width="1" height="6"/>
+			</line>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="9" width="553" height="22"/>
+				<box padding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Ubuntu Light" size="8" isItalic="false" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[**) Premi asuransi untuk pertanggungan tambahan (rider) diambil dari Premi tambahan yang dibayarkan sepanjang Masa Pembayaran Premi (terpisah dari Premi Pokok dan Premi Top Up Berkala). Premi asuransi tambahan (Rider) tidak masuk ke dalam dana investasi.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

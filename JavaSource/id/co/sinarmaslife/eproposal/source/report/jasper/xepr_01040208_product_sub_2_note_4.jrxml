@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040208_product_sub_2_note_4" pageWidth="560" pageHeight="183" columnWidth="560" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="12"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<summary>
+		<band height="180">
+			<staticText>
+				<reportElement positionType="Float" x="20" y="71" width="528" height="7"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Pokok (Maintenance Fee) sebesar 0,542% per bulan dari Dana Investasi Pokok selama 7 tahun]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="9" width="10" height="7"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="16" width="544" height="13"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi diatas adalah berdasarkan nilai unit dan asumsi tingkat pertumbuhan bunga (net) yang tetap per tahun. Asumsi bunga bukan merupakan tolak ukur untuk perhitungan rata-rata tingkat pertumbuhan yang terendah dan yang tertinggi. Realisasi hasil pengembangan dapat lebih tinggi atau rendah dari tingkat pengembalian untuk ILLUSTRASI diatas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="9" width="544" height="7"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Nilai Polis diatas hanya merupakan ILUSTRASI dan besarnya TIDAK DIJAMIN, tergantung pada kinerja investasi Penanggung dan tidak terlepas dari risiko investasi berdasarkan jenis investasi yang dipilih oleh Pemegang Polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="2" y="1" width="80" height="9"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="6" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Catatan:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="11" y="29" width="544" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi Manfaat diatas sudah diperhitungkan dengan :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="36" width="304" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Akuisisi sebesar 0% dari tahun pertama
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="16" width="10" height="9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="78" width="528" height="7"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Ilustrasi ini harus ditandatangani oleh Pemohon dan dilampirkan pada proposal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="29" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="173" width="514" height="7"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Proposal ini hanya sebuah ILUSTRASI, BUKAN SUATU KONTRAK ASURANSI, untuk penjelasan lebih lengkapnya lihat dokumen polis.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="43" width="304" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Akuisisi sebesar 5% dari premi Top Up
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="49" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="56" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="50" width="304" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya pengelolaan investasi sesuai dengan jenis fund yang dipilih
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="64" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="57" width="304" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Asuransi
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="64" width="304" height="7"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Biaya Administrasi Rp 0,-
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="78" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="92" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="92" width="528" height="19"/>
+				<textElement verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[biaya premi terhenti (premium holiday fee) akan dipotong melalui pengurangan unit dana investasi Premi Top Up per bulan (jika ada) selama premi terhenti sebelum dipotong biaya lainnya. Jika Dana investasi Premi Top Up tidak mencukupi, biaya premi terhenti akan dipotong melalui dana investasi Premi Pokok. Besarnya adalah setara dengan A / (1-A) x B . dimana: A= Faktor biaya premi terhenti, B= Total biaya administrasi, biaya asuransi, biaya pokok pada bulan berjalan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="111" width="33" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ Thn ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="119" width="33" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ % Faktor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="54" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="54" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="78" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="78" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="102" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[70 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="102" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="126" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="126" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[30 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="150" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[20 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="150" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="174" y="111" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6 dst.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="174" y="119" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="141" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="128" width="528" height="13"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila premi untuk 2 tahun pertama  tidak dibayar lunas selambat-lambatnya dalam masa leluasa pembayaran premi, maka otomatis polis menjadi batal dan dianggap sebagai penarikan seluruh dana investasi  serta akan dikenakan biaya penarikan adalah sebesar: faktor biaya penarikan x dana investasi Premi Pokok/Premi Top Up. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="141" width="528" height="7"/>
+				<textElement lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[*** Asumsi penarikan belum termasuk biaya penarikan. Biaya penarikan adalah sebesar : faktor biaya penarikan x dana invetasi Premi Pokok/Top Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="19" y="148" width="156" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Tahun ke]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="174" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="198" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="222" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="246" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="270" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="294" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="294" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[25 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="270" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[35 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="246" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[45 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="222" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[55 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="198" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[65 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="174" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[75 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="19" y="156" width="156" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Faktor Biaya Penarikan dari Dana Investasi Premi Pokok
+Faktor Biaya Penarikan dari Dana Investasi Premi Top Up]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="319" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="319" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[15 %
+  0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="344" y="148" width="25" height="9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[8 dst]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="344" y="156" width="25" height="17"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[0 %
+0 %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="35" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="42" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="12" y="70" width="8" height="8"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="6" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[ -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="3" y="85" width="10" height="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Top" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="15" y="85" width="528" height="7"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
+					<font fontName="Ubuntu Light" size="5" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Estimasi Manfaat Meninggal diatas adalah Uang Pertanggungan ditambah dengan Nilai Polis.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

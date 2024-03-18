@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040139_product_sub5" pageWidth="595" pageHeight="980" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" scriptletClass="id.co.sinarmaslife.standard.util.jasper.JasperScriptlet">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<property name="com.jasperassistant.designer.HGuides" value="193"/>
+	<parameter name="planBaby" class="java.lang.String"/>
+	<parameter name="placeAndDate" class="java.lang.String"/>
+	<parameter name="agentCode" class="java.lang.String"/>
+	<parameter name="no_proposal" class="java.lang.String"/>
+	<parameter name="agentName" class="java.lang.String"/>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["SMART PLAN PROTECTION "]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from
+(
+select 'sub6' as pageCode from dual
+) order by pageCode]]>
+	</queryString>
+	<field name="pageCode" class="java.lang.String">
+		<fieldDescription><![CDATA[pageCode]]></fieldDescription>
+	</field>
+	<summary>
+		<band height="957">
+			<rectangle>
+				<reportElement x="388" y="226" width="104" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="196" y="182" width="192" height="44" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="226" width="183" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="182" width="183" height="44" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="388" y="131" width="104" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="196" y="91" width="192" height="40" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="91" width="183" height="40" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="196" y="69" width="192" height="22" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="69" width="183" height="22" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="388" y="50" width="104" height="19" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="50" width="375" height="19" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="388" y="182" width="104" height="44" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="196" y="131" width="192" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="196" y="226" width="192" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="388" y="69" width="104" height="22" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement x="390" y="229" width="94" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "50,000,000" : $P{planBaby}.equals("Plan 2")?"100,000,000" : "150,000,000")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="137" y="52" width="108" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="10" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Benefit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="184" width="181" height="38" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimal 20x manfaat dari plan yang diambil, atau sampai dengan bayi berusia 60 hari (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="395" y="145" width="87" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "10,000,000" : $P{planBaby}.equals("Plan 2")?"20,000,000" : "30,000,000")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="200" y="74" width="182" height="14" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Perkejadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="229" width="169" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Kelainan bawaan pada anak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="187" width="168" height="33" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Perawatan bayi di inkubator/ICU/HDU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="75" width="80" height="13" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Refund Premi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="32" width="217" height="14" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2. Pertanggungan Tambahan (SMILe Baby)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="388" y="91" width="104" height="40" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="13" y="131" width="183" height="51" isRemoveLineWhenBlank="true"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="17" y="73" width="172" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pertanggungan jiwa atas janin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="95" width="172" height="34" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Pertanggungan jiwa atas Ibu atau Ibu dan calon bayi (terjadi bersamaan) dimasa kehamilan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="133" width="182" height="47" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai dengan maksimal manfaat dari plan yang dimabil atau sampai dengan bayi berusia 30 hari (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="137" width="160" height="35" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Komplikasi kehamilan dan komplikasi setelah kelahiran]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="399" y="52" width="80" height="14" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Ubuntu Light" size="10" isBold="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{planBaby}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="399" y="98" width="80" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "50,000,000" : $P{planBaby}.equals("Plan 2")?"50,000,000" : "100,000,000")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="199" y="96" width="183" height="31" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Maksimal dari refund premi atau besar manfaat per kejadian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="229" width="182" height="46" isRemoveLineWhenBlank="true"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Dibayarkan sesuai biaya yang timbul sampai 
+dengan maksimal manfaat dari plan yang 
+diambil, atau sampai dengan anak berusia 5 tahun (mana yang lebih dahulu)]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="392" y="197" width="92" height="17" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Ubuntu Light" size="9" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{planBaby}.equals("Plan 1")? "250,000" : $P{planBaby}.equals("Plan 2")?"500,000" : "1,000,000")]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="15" y="837" width="201" height="10"/>
+				<textElement markup="none">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{placeAndDate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="15" y="847" width="225" height="10">
+					<printWhenExpression><![CDATA[new Boolean($P{agentName}!= null)]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["No Proposal : " +$P{no_proposal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="8" y="705" width="508" height="20"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="8" y="753" width="508" height="20"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="8" y="786" width="508" height="20"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="8" y="807" width="508" height="20"/>
+				<textElement/>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="15" y="859" width="225" height="9">
+					<printWhenExpression><![CDATA[new Boolean($P{agentName}!= null)]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="none">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Disajikan Oleh : " + $P{agentName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="241" y="849" width="272" height="32"/>
+				<textElement>
+					<font size="7" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pernyataan Pemohon :
+Saya menyatakan telah membaca dan mengerti isi proposal dan illustrasi terlampir.
+Tanda Tangan Pemohon :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="16" y="943" width="89" height="8"/>
+				<textElement markup="none">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[ResourceBundle.getBundle("eproposal").getString("proposal.version") + "(EP)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Transparent" x="16" y="933" width="208" height="10"/>
+				<box topPadding="1" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proposal ini bukan merupakan bagian dari polis]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="15" y="878" width="225" height="10"/>
+				<textElement markup="none">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe KID INSURANCE") ?  "Tanda Tangan Agen : " : "Tanda Tangan Bancassurance Consultant : " )]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" mode="Transparent" x="15" y="868" width="223" height="10"/>
+				<textElement markup="none">
+					<font size="7" isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[($P{title}.equals("SMiLe KID INSURANCE") ?  "Kode Agen : " : "Kode Bancassurance Consultant : " )+$P{agentCode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

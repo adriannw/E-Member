@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_manfaat_personal_accident" pageWidth="530" pageHeight="842" columnWidth="530" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="false"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="4"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<queryString>
+		<![CDATA[select
+	 '5 tahun.' as termOfPayment, 
+	'Apabila Tertanggung meninggal dunia karena kecelakaan dalam masa Pertanggungan SMiLe PA Rider masih berlaku, maka akan dibayarkan Manfaat Asuransi Tambahan sebesar 100% Uang Pertanggungan Pokok (Seratus juta rupiah).' as paragraph1
+from dual]]>
+	</queryString>
+	<field name="paragraph1" class="java.lang.String"/>
+	<field name="termOfPayment" class="java.lang.String"/>
+	<pageHeader>
+		<band height="93">
+			<staticText>
+				<reportElement x="-1" y="-1" width="215" height="18"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="10" isBold="true" isUnderline="true" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Personal Accident (PA)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="15" width="163" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Masa Pertanggungan (SMiLe PA Rider) : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="8" y="48" width="16" height="14"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="168" y="16" width="104" height="12"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{termOfPayment}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="0" y="28" width="521" height="17"/>
+				<staticText>
+					<reportElement positionType="Float" x="7" y="3" width="17" height="14"/>
+					<textElement>
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<text><![CDATA[1.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement positionType="Float" x="24" y="4" width="489" height="12"/>
+					<textElement textAlignment="Justified">
+						<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{paragraph1}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement positionType="Float" x="24" y="48" width="496" height="24"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Tertanggung mengalami kecelakaan yang mengakibatkan menderita cacat tetap seluruh atau sebagian, maka akan dibayarkan Manfaat Asuransi sebesar prosentase tertentu dari Uang Pertanggungan SMiLe PA Rider.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="7" y="69" width="16" height="16"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="23" y="69" width="496" height="24"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[Apabila Manfaat Asuransi Tambahan SMiLe PA Rider yang dibayarkan telah mencapai 100% Uang Pertanggungan SMiLe PA Rider, maka Asuransi SMiLe PA Rider berakhir.]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

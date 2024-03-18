@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created using JasperAssistant (http://www.jasperassistant.com) -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="xepr_01040000_rider_early_stage_ci99_summary" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="com.jasperassistant.designer.DataSource" value="E-Proposal"/>
+	<property name="com.jasperassistant.designer.Grid" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGrid" value="true"/>
+	<property name="com.jasperassistant.designer.GridWidth" value="8"/>
+	<property name="com.jasperassistant.designer.GridHeight" value="3"/>
+	<property name="com.jasperassistant.designer.Margins" value="true"/>
+	<property name="com.jasperassistant.designer.Rulers" value="true"/>
+	<property name="com.jasperassistant.designer.SnapToGuides" value="true"/>
+	<parameter name="riderEarlyStageCi99Index" class="java.lang.String">
+		<defaultValueExpression><![CDATA["11"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select 1 from dual]]>
+	</queryString>
+	<pageHeader>
+		<band height="240">
+			<staticText>
+				<reportElement x="24" y="43" width="528" height="195"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[2. Apabila Tertanggung didiagnosa  menderita salah satu dari 25 kondisi penyakit kritis pada tahap menengah (dibuktikan dengan hasil pemeriksaan dokter ahli)  dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 100% (seratus per seratus)  Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 2.000.000.000,-/USD 200.000,- per Tertanggung yang  sama dikurangi dengan manfaat yang sudah dibayarkan pada nomor 1 (jika ada), jika Uang Pertanggungan yang dimiliki oleh Tertanggung lebih besar dari Rp.2.000.000.000,-/USD 200.000,- maka pertanggungan tetap berjalan, namun apabila Uang Pertanggungan yang dimiliki oleh Tertanggung sama besar atau lebih kecil dari Rp.2.000.000.000,-/USD 200.000,- maka Pertanggungan Asuransi Tambahan ini berakhir.
+3. Apabila Tertanggung didiagnosa  menderita salah satu dari 38 kondisi penyakit kritis pada tahap akhir (dibuktikan dengan hasil pemeriksaan dokter ahli) dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 100% (seratus per seratus)  Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 5.000.000.000,-/USD 500.000,- per Tertanggung yang sama dikurangi dengan manfaat yang sudah dibayarkan pada nomor 1 dan nomor 2 (jika ada) dan selanjutnya Asuransi Tambahan ini berakhir.
+4. Tambahan Manfaat - Apabila Tertanggung didiagnosa dan memerlukan perawatan berupa Angioplasti dan penatalaksanaan invasif lainnya untuk penyakit Pembuluh Darah Jantung (dibuktikan dengan hasil pemeriksaan dokter ahli) dalam masa berlakunya Asuransi Tambahan ini,  maka diberikan manfaat sebesar 10% (sepuluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 75.000.000,-/USD 7.500,- per Tertanggung yang sama. Pembayaran tambahan manfaat ini dapat diberikan apabila klaim Manfaat Penyakit Kritis Tahap Awal,  Menengah dan Akhir belum pernah dibayarkan sepenuhnya. Tambahan manfaat ini hanya berlaku untuk 1 (satu) kali klaim.
+5. Tambahan Manfaat  - Apabila Tertanggung didiagnosa menderita komplikasi diabetes (dibuktikan dengan hasil pemeriksaan dokter ahli) dalam masa berlakunya Asuransi Tambahan ini , maka diberikan manfaat 20% (dua puluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 200.000.000,-/USD 20.000,- per Tertanggung yang sama. Pembayaran tambahan manfaat ini dapat diberikan apabila klaim Manfaat  Penyakit Kritis Tahap Awal, Menengah dan Akhir belum pernah dibayarkan sepenuhnya. Tambahan manfaat ini hanya berlaku untuk 1 (satu) kali klaim.
+6. Jika total manfaat yang dibayarkan untuk Point 1, 2 dan 3 sudah mencapai 100% (seratus per seratus) Uang Pertanggungan Asuransi Tambahan maka pertanggungan Asuransi ini berakhir walaupun Tambahan manfaat Pada point 4 dan 5 belum dibayarkan
+7. Jumlah keseluruhan Manfaat Asuransi Tambahan yang dapat dibayarkan maksimum 130% (seratus tiga puluh per seratus) Uang Pertanggungan Asuransi Tambahan.]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="8" y="2" width="16" height="13"/>
+				<textElement>
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{riderEarlyStageCi99Index}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="2" width="153" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Ubuntu Light" size="8" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<text><![CDATA[SMiLe Early Stage Critical Illness 99 :]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="24" y="15" width="528" height="28"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Ubuntu Light" size="7" pdfFontName="Ubuntu Light"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["1.  Apabila Tertanggung didiagnosa  menderita salah satu dari 34 kondisi penyakit kritis pada tahap awal (dibuktikan dengan hasil pemeriksaan dokter ahli)  dalam masa berlakunya Asuransi Tambahan ini, maka diberikan manfaat sebesar 50% (lima puluh per seratus) Uang Pertanggungan Asuransi Tambahan dengan maksimum yang dapat dibayarkan oleh Penanggung sebesar Rp. 500.000.000,-/USD 50.000,- per Tertanggung yang sama"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
